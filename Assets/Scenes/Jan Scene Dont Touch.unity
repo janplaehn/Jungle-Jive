@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickVertical
-  triggerButton: LegTrigger
+  joystickAxis: LeftStickHorizontal2
+  triggerButton: 
   maxRotation: 90
   startRotation: 0
 --- !u!212 &365112526
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystickAxis: LeftStickVertical
-  triggerButton: ArmTrigger
+  triggerButton: 
   maxRotation: 90
   startRotation: 270
 --- !u!212 &955165526
@@ -400,9 +400,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickHorizontal
-  triggerButton: ArmTrigger
-  maxRotation: 90
+  joystickAxis: RightStickVertical
+  triggerButton: 
+  maxRotation: -90
   startRotation: 90
 --- !u!212 &1401754068
 SpriteRenderer:
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickHorizontal
-  triggerButton: LegTrigger
-  maxRotation: 90
+  joystickAxis: RightStickHorizontal2
+  triggerButton: 
+  maxRotation: -90
   startRotation: 0
 --- !u!212 &1685701669
 SpriteRenderer:
