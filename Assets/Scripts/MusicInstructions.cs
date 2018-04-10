@@ -12,7 +12,7 @@ public class MusicInstructions : MonoBehaviour {
     public AudioSource musicSource;
     private int lastPairIndex = 0;
     private bool finished = false;
-    public enum DanceMove
+    public enum DanceMoveEnum
     {
         LeftArmUp,
         RightArmUp,
@@ -36,7 +36,7 @@ public class MusicInstructions : MonoBehaviour {
             {
                 Invoke("ClearInstructionImage", 0.5f);
                 Debug.Log(timingPairs[lastPairIndex].firstValue);
-                instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue];
+                instruction.sprite = instructionImageArray[ timingPairs[lastPairIndex].firstValue.instructionImageIndex ];
                 lastPairIndex++;
                 if(timingPairs.Length <= lastPairIndex)
                 {
