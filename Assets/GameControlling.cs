@@ -8,7 +8,7 @@ public class GameControlling : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        instructions[0] = new Pair<MusicInstructions.DanceMove, float>(MusicInstructions.DanceMove.BothArmsUp, 1f);
+        instructions[0] = new Pair<MusicInstructions.DanceMove, float>(MusicInstructions.DanceMove.RightArmUp, 1f);
         instructions[1] = new Pair<MusicInstructions.DanceMove, float>(MusicInstructions.DanceMove.LeftArmUp, 2f);
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
     }

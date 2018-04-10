@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicInstructions : MonoBehaviour {
-    private Pair<DanceMove, float>[] pairs;
+    private Pair<DanceMove, float>[] timingPairs;
+    public Sprite[] instructionImageArray;
+    public Image instruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
     private int lastPairIndex = 0;
@@ -17,7 +20,7 @@ public class MusicInstructions : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (pairs.Length == 0)
+        if (timingPairs.Length == 0)
         {
             finished = true;
         }
@@ -28,11 +31,13 @@ public class MusicInstructions : MonoBehaviour {
 		if(finished == false)
         {
             accumulatedTime += Time.deltaTime;
-            if(accumulatedTime >= pairs[lastPairIndex].secondValue)
+            if(accumulatedTime >= timingPairs[lastPairIndex].secondValue)
             {
-                Debug.Log(pairs[lastPairIndex].firstValue);
+                Invoke("ClearInstructionImage", 0.5f);
+                Debug.Log(timingPairs[lastPairIndex].firstValue);
+                instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue];
                 lastPairIndex++;
-                if(pairs.Length <= lastPairIndex)
+                if(timingPairs.Length <= lastPairIndex)
                 {
                     finished = true;
                     lastPairIndex = 0;
@@ -46,7 +51,12 @@ public class MusicInstructions : MonoBehaviour {
     {
         musicSource.clip = givenMusic;
         musicSource.Play();
-        pairs = givenPairs;
+        timingPairs = givenPairs;
         finished = false;
+    }
+
+    private void ClearInstructionImage()
+    {
+        instruction.sprite = null;
     }
 }
