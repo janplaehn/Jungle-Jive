@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MusicInstructions : MonoBehaviour {
     private Pair<DanceMove, float>[] timingPairs;
+    public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
     private float accumulatedTime = 0f;
@@ -57,6 +58,6 @@ public class MusicInstructions : MonoBehaviour {
 
     private void ClearInstructionImage()
     {
-        instruction.sprite = null;
+        instruction.sprite = voidSprite;
     }
 }
