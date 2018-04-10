@@ -5,7 +5,6 @@ using UnityEngine;
 public class LimbMovement : MonoBehaviour {
 
     public string joystickAxis;
-    public string triggerButton;
     [Range(-180, 180)]  public float maxRotation;
     [Range(0, 360)] public float startRotation;
 
