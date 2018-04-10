@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmMovement : MonoBehaviour {
+public class LimbMovement : MonoBehaviour {
 
     public string joystickAxis;
+    public string triggerButton;
     [Range(-180, 180)]  public float maxRotation;
     [Range(0, 360)] public float startRotation;
 
@@ -13,6 +14,8 @@ public class ArmMovement : MonoBehaviour {
     }
 	
 	void Update () {
-        transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation + startRotation);
+        if (Input.GetKey(triggerButton)) {
+            transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation + startRotation);
+        }
     }
 }
