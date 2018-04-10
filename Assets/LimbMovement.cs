@@ -14,8 +14,8 @@ public class LimbMovement : MonoBehaviour {
     }
 	
 	void Update () {
-        if (Input.GetKey(triggerButton)) {
+        //if (Input.GetKey(triggerButton)) {
             transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation + startRotation);
-        }
+        //}
     }
 }
