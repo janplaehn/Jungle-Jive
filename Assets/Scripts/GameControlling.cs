@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameControlling : MonoBehaviour {
     public AudioClip music;
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[3];
+
     // Use this for initialization
     void Start()
     {
@@ -22,14 +23,40 @@ public class GameControlling : MonoBehaviour {
         rightArmUp.RightArmPosition = 2f;
         rightArmUp.RightLegPosition = -1f;
         instructions[1] = new Pair<DanceMove, float>(rightArmUp, 3f);
+
+        DanceMove bothArmsUp;
+        bothArmsUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsUp;
+        bothArmsUp.RightArmPosition = 2f;
+        bothArmsUp.LeftArmPosition = 2f;
+        bothArmsUp.RightLegPosition = -1f;
+        bothArmsUp.LeftLegPosition = -1f;
+        instructions[2] = new Pair<DanceMove, float>(bothArmsUp, 3f);
+
+        DanceMove bothArmsDown;
+        bothArmsDown.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsDown;
+        bothArmsDown.RightArmPosition = 0f;
+        bothArmsDown.LeftArmPosition = 0f;
+        bothArmsDown.RightLegPosition = -1f;
+        bothArmsDown.LeftLegPosition = -1f;
+        instructions[3] = new Pair<DanceMove, float>(bothArmsDown, 3f);
+
+        DanceMove splitArmsUp;
+        splitArmsUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.SplitArmsUp;
+        splitArmsUp.RightArmPosition = 2f;
+        splitArmsUp.LeftArmPosition = 2f;
+        splitArmsUp.RightLegPosition = 1f;
+        splitArmsUp.LeftLegPosition = 1f;
+        instructions[4] = new Pair<DanceMove, float>(splitArmsUp, 3f);
+
         DanceMove endMove;
         endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsUp;
         endMove.LeftArmPosition = -1f;
         endMove.LeftLegPosition = -1f;
         endMove.RightArmPosition = -1f;
         endMove.RightLegPosition = -1f;
-        instructions[2] = new Pair<DanceMove, float>(endMove, 5f);
+        instructions[5] = new Pair<DanceMove, float>(endMove, 5f);
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
+
     }
     void Update()
     {
