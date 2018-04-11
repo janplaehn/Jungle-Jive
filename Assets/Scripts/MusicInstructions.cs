@@ -40,7 +40,8 @@ public class MusicInstructions : MonoBehaviour {
             accumulatedTime += Time.deltaTime;
             if(accumulatedTime >= timingPairs[lastPairIndex].secondValue)
             {
-                Invoke("ClearInstructionImage", 0.5f);
+                //Invoke("ClearInstructionImage", 1f);
+                ClearInstructionImage();
                 Debug.Log(timingPairs[lastPairIndex].firstValue);
                 instruction.sprite = instructionImageArray[ timingPairs[lastPairIndex].firstValue.instructionImageIndex ];
                 lastMove = timingPairs[lastPairIndex].firstValue;

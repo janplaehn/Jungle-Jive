@@ -19,13 +19,13 @@ public class LimbMovement : MonoBehaviour {
     public int GetLimbState()
     {
         int tempLimbState = -1;
-        if (Mathf.DeltaAngle(transform.rotation.eulerAngles.z, startRotation) < 40 && Mathf.DeltaAngle(transform.rotation.eulerAngles.z, startRotation) > -40)
+        if (Mathf.DeltaAngle(transform.rotation.eulerAngles.z, startRotation) < 30 && Mathf.DeltaAngle(transform.rotation.eulerAngles.z, startRotation) > -30)
         {
             tempLimbState = 1;
-        } else if (Mathf.DeltaAngle(transform.rotation.eulerAngles.z, startRotation) >= 40)
+        } else if (Mathf.DeltaAngle(transform.rotation.eulerAngles.z, startRotation) >= 30)
         {
             tempLimbState = 0;
-        } else if (Mathf.DeltaAngle(transform.rotation.eulerAngles.z, startRotation) <= -40)
+        } else if (Mathf.DeltaAngle(transform.rotation.eulerAngles.z, startRotation) <= -30)
         {
             tempLimbState = 2;
         }

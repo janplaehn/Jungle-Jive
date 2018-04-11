@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(MusicInstructions))]
 public class GameControlling : MonoBehaviour {
     public AudioClip music;
-    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[2];
+    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[3];
     // Use this for initialization
     void Start()
     {
@@ -21,7 +21,14 @@ public class GameControlling : MonoBehaviour {
         rightArmUp.LeftLegPosition = -1f;
         rightArmUp.RightArmPosition = 2f;
         rightArmUp.RightLegPosition = -1f;
-        instructions[1] = new Pair<DanceMove, float>(rightArmUp, 2f);
+        instructions[1] = new Pair<DanceMove, float>(rightArmUp, 3f);
+        DanceMove endMove;
+        endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsUp;
+        endMove.LeftArmPosition = -1f;
+        endMove.LeftLegPosition = -1f;
+        endMove.RightArmPosition = -1f;
+        endMove.RightLegPosition = -1f;
+        instructions[2] = new Pair<DanceMove, float>(endMove, 5f);
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
     }
     void Update()

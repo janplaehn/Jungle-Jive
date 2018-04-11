@@ -913,42 +913,46 @@ Prefab:
     - target: {fileID: 114508685992993978, guid: 14a24cb0064e7494c89668ab4d828e76,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickVertical
+      value: RightStickVertical2
       objectReference: {fileID: 0}
     - target: {fileID: 114542550828462130, guid: 14a24cb0064e7494c89668ab4d828e76,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickVertical
+      value: LeftStickVertical2
       objectReference: {fileID: 0}
     - target: {fileID: 114689944626319678, guid: 14a24cb0064e7494c89668ab4d828e76,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal2
+      value: RightStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 114459442096361078, guid: 14a24cb0064e7494c89668ab4d828e76,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal2
+      value: LeftStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 114755042216442716, guid: 14a24cb0064e7494c89668ab4d828e76,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal2
+      value: LeftStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 114082058014402758, guid: 14a24cb0064e7494c89668ab4d828e76,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal2
+      value: RightStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 114680084442214906, guid: 14a24cb0064e7494c89668ab4d828e76,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickVertical
+      value: RightStickVertical2
       objectReference: {fileID: 0}
     - target: {fileID: 114808520970247492, guid: 14a24cb0064e7494c89668ab4d828e76,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickVertical
+      value: LeftStickVertical2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475959446650600, guid: 14a24cb0064e7494c89668ab4d828e76, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14a24cb0064e7494c89668ab4d828e76, type: 2}
@@ -1095,6 +1099,42 @@ Prefab:
     - target: {fileID: 4082469092883154, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063306827908870, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: LeftStickHorizontal2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371802438797082, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: RightStickHorizontal2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114202915736014426, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: LeftStickHorizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114955545107525826, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: RightStickHorizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675472842211258, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_TagString
+      value: RightArm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279928438712566, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_TagString
+      value: LeftArm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337557511797006, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_TagString
+      value: RightLeg
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051421914064068, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_TagString
+      value: LeftLeg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
