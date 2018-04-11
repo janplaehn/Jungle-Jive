@@ -10,6 +10,9 @@ public class MusicInstructions : MonoBehaviour {
     public Image instruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
+    private ScoringSystem scoringSystem;
+    private InputCheck inputCheck;
+    private DanceMove lastMove;
     private int lastPairIndex = 0;
     private bool finished = false;
     public enum DanceMoveEnum
@@ -21,6 +24,9 @@ public class MusicInstructions : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        lastMove = timingPairs[0].firstValue;
+        inputCheck = GetComponent<InputCheck>();
+        scoringSystem = GetComponent<ScoringSystem>();
         if (timingPairs.Length == 0)
         {
             finished = true;
@@ -37,6 +43,7 @@ public class MusicInstructions : MonoBehaviour {
                 Invoke("ClearInstructionImage", 0.5f);
                 Debug.Log(timingPairs[lastPairIndex].firstValue);
                 instruction.sprite = instructionImageArray[ timingPairs[lastPairIndex].firstValue.instructionImageIndex ];
+                lastMove = timingPairs[lastPairIndex].firstValue;
                 lastPairIndex++;
                 if(timingPairs.Length <= lastPairIndex)
                 {
@@ -59,5 +66,6 @@ public class MusicInstructions : MonoBehaviour {
     private void ClearInstructionImage()
     {
         instruction.sprite = voidSprite;
+        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
     }
 }

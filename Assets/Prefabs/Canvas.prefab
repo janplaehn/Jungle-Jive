@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 222024348214999410}
   - component: {fileID: 114555805271820798}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ScoreLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 222678795362511806}
   - component: {fileID: 114175383757902124}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: ScoreRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Right Score
+  m_Text: 0
 --- !u!114 &114244912132920148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,7 +297,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Left Score
+  m_Text: 0
 --- !u!222 &222024348214999410
 CanvasRenderer:
   m_ObjectHideFlags: 1
