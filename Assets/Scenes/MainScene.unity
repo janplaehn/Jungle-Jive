@@ -1673,6 +1673,7 @@ MonoBehaviour:
   neutralFace:
   - {fileID: 21300002, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
   - {fileID: 21300006, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300006, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
   sadFace:
   - {fileID: 21300008, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
   - {fileID: 21300010, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
