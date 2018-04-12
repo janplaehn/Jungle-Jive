@@ -43,7 +43,7 @@ public class TextFeedback : MonoBehaviour {
     }
 
     void SetSprite(Sprite[] spriteArray) {
-        int spriteNumber = Random.Range(0, spriteArray.Length - 1);
+        int spriteNumber = Random.Range(0, spriteArray.Length);
         GetComponent<Image>().overrideSprite = spriteArray[spriteNumber];
     }
 
