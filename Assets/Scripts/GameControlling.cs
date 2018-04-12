@@ -71,7 +71,6 @@ public class GameControlling : MonoBehaviour {
         endMove.RightArmPosition = -1f;
         endMove.LeftLegPosition = -1f;
         endMove.RightLegPosition = -1f;
-        instructions[8] = new Pair<DanceMove, float>(endMove, 17f);
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
 
         instructions[0] = new Pair<DanceMove, float>(bothArmsUp, 1f);
