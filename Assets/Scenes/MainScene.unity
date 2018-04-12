@@ -1103,12 +1103,12 @@ Prefab:
     - target: {fileID: 114063306827908870, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal2
+      value: LeftStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 114371802438797082, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal2
+      value: RightStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 114202915736014426, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
