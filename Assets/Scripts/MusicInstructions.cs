@@ -8,6 +8,7 @@ public class MusicInstructions : MonoBehaviour {
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
+    public Image nextInstruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
     private ScoringSystem scoringSystem;
@@ -27,12 +28,14 @@ public class MusicInstructions : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         lastMove = timingPairs[0].firstValue;
+        nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
         inputCheck = GetComponent<InputCheck>();
         scoringSystem = GetComponent<ScoringSystem>();
         if (timingPairs.Length == 0)
         {
             finished = true;
         }
+
 	}
 	
 	// Update is called once per frame
@@ -46,11 +49,20 @@ public class MusicInstructions : MonoBehaviour {
                 ClearInstructionImage();
                 Debug.Log(timingPairs[lastPairIndex].firstValue);
                 instruction.sprite = instructionImageArray[ timingPairs[lastPairIndex].firstValue.instructionImageIndex ];
+                if(lastPairIndex + 1 < timingPairs.Length - 1)
+                {
+                    nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+                } else
+                {
+                    nextInstruction.sprite = voidSprite;
+                }
                 lastMove = timingPairs[lastPairIndex].firstValue;
                 lastPairIndex++;
                 if(timingPairs.Length <= lastPairIndex)
                 {
                     finished = true;
+                    instruction.sprite = voidSprite;
+                    nextInstruction.sprite = voidSprite;
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
                 }
@@ -69,6 +81,7 @@ public class MusicInstructions : MonoBehaviour {
     private void ClearInstructionImage()
     {
         instruction.sprite = voidSprite;
+        nextInstruction.sprite = voidSprite;
         scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
     }
 }
