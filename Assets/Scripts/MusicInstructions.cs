@@ -16,6 +16,7 @@ public class MusicInstructions : MonoBehaviour {
     private DanceMove lastMove;
     private int lastPairIndex = 0;
     private bool finished = false;
+    private bool moveRated = false;
     public enum DanceMoveEnum
     {
         LeftArmUp,
@@ -43,10 +44,57 @@ public class MusicInstructions : MonoBehaviour {
 		if(finished == false)
         {
             accumulatedTime += Time.deltaTime;
-            if(accumulatedTime >= timingPairs[lastPairIndex].secondValue)
+
+
+
+            if (accumulatedTime <= timingPairs[lastPairIndex].secondValue)
+            {
+                if (inputCheck.CheckLimbs(lastMove) == 1 && moveRated == false)
+                {
+                    scoringSystem.AddFirstPlayerScore(100);
+                    moveRated = true;
+                }
+                
+            } else
+            {
+                Debug.Log("switch");
+                
+                if (moveRated == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
+                lastPairIndex++;
+                if (timingPairs.Length <= lastPairIndex)
+                {
+                    Debug.Log("oof");
+                    finished = true;
+                    instruction.sprite = voidSprite;
+                    nextInstruction.sprite = voidSprite;
+                    lastPairIndex = 0;
+                    accumulatedTime = 0f;
+                    return;
+                }
+
+                moveRated = false;
+                accumulatedTime = 0f;
+                
+                instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                if (lastPairIndex + 1 < timingPairs.Length - 1)
+                {
+                    nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+                }
+                else
+                {
+                    nextInstruction.sprite = voidSprite;
+                }
+                lastMove = timingPairs[lastPairIndex].firstValue;
+            }
+
+
+
+
+
+            /*if(accumulatedTime >= timingPairs[lastPairIndex].secondValue)
             {
                 //Invoke("ClearInstructionImage", 1f);
-                ClearInstructionImage();
+                //ClearInstructionImage();
                 Debug.Log(timingPairs[lastPairIndex].firstValue);
                 instruction.sprite = instructionImageArray[ timingPairs[lastPairIndex].firstValue.instructionImageIndex ];
                 if(lastPairIndex + 1 < timingPairs.Length - 1)
@@ -66,7 +114,7 @@ public class MusicInstructions : MonoBehaviour {
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
                 }
-            }
+            }*/
         }
 	}
 
