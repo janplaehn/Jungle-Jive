@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 [RequireComponent(typeof(MusicInstructions))]
 public class GameControlling : MonoBehaviour {
     public AudioClip music;
@@ -69,5 +71,15 @@ public class GameControlling : MonoBehaviour {
 
         Debug.Log("LeftArm: " + GameObject.FindGameObjectWithTag("LeftArm").GetComponent<LimbMovement>().GetLimbState() + "RightArm: " + GameObject.FindGameObjectWithTag("RightArm").GetComponent<LimbMovement>().GetLimbState());
         //Debug.Log("LeftLeg: " + GameObject.FindGameObjectWithTag("LeftLeg").GetComponent<LimbMovement>().GetLimbState() + "RightLeg: " + GameObject.FindGameObjectWithTag("RightLeg").GetComponent<LimbMovement>().GetLimbState());
+    }
+
+    public void GameOver()
+    {
+        Invoke("GoToLeaderBoard", 2f);
+    }
+
+    private void GoToLeaderBoard()
+    {
+        SceneManager.LoadScene("ClementScene");
     }
 }

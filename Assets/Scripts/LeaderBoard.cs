@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Text))]
 public class LeaderBoard : MonoBehaviour {
@@ -10,10 +11,11 @@ public class LeaderBoard : MonoBehaviour {
     bool draw = false;
     const int leaderBoardLength = 10;
     public Text[] leaderBoardText;
-
+    public float goToMenuTimer;
 	// Use this for initialization
 	void Start () {
         GetLeaderBoard();
+        Invoke("GoToMenu", goToMenuTimer);
     }
 
     void GetLeaderBoard()
@@ -105,5 +107,10 @@ public class LeaderBoard : MonoBehaviour {
         {
             ReplaceValueInIntArray(index-1, a, array);
         }
+    }
+
+    void GoToMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 }

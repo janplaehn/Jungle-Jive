@@ -65,6 +65,7 @@ public class MusicInstructions : MonoBehaviour {
                     nextInstruction.sprite = voidSprite;
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
+                    gameObject.GetComponent<GameControlling>().GameOver();
                 }
             }
         }
