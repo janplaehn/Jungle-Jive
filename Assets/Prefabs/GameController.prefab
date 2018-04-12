@@ -136,6 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstPlayerScoreDisplay: {fileID: 0}
   secondPlayerScoreDisplay: {fileID: 0}
+  firstPlayerTextFeedback: {fileID: 0}
+  secondPlayerTextFeedback: {fileID: 0}
 --- !u!114 &114803011154840648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,5 +166,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216, type: 3}
   - {fileID: 21300000, guid: 686c55ee68ede6c439026dce82ef9a48, type: 3}
   - {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216, type: 3}
+  - {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216, type: 3}
+  - {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216, type: 3}
+  - {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216, type: 3}
+  - {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216, type: 3}
   instruction: {fileID: 0}
+  nextInstruction: {fileID: 0}
   musicSource: {fileID: 82982055185355104}
