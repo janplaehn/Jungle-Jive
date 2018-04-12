@@ -585,6 +585,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7e66bbc06453636499d0ce10eaff4df1, type: 3}
   spritesHorrible:
   - {fileID: 21300000, guid: 2f2e631dd6ea161438a9a16d2008a168, type: 3}
+  displayDuration: 1
 --- !u!114 &663109291
 MonoBehaviour:
   m_ObjectHideFlags: 0
