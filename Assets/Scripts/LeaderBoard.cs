@@ -10,9 +10,9 @@ public class LeaderBoard : MonoBehaviour {
     bool draw = false;
     const int leaderBoardLength = 10;
     public Text[] leaderBoardText;
+
 	// Use this for initialization
 	void Start () {
-        PlayerPrefs.SetInt(ScoringSystem.secondPlayerScoreKey, 520);
         GetLeaderBoard();
     }
 
@@ -26,8 +26,15 @@ public class LeaderBoard : MonoBehaviour {
                 ReplaceValueInIntArray(i, PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey), scoreArray);
                 newScorePlayerOne = PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey);
                 break;
+            } else
+            {
+                if(scoreArray[i] == PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0))
+                {
+                    break;
+                }
             }
         }
+
         for (int i = scoreArray.Length - 1; i >= 0; i--)
         {
             if (scoreArray[i] < PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0))
@@ -43,6 +50,13 @@ public class LeaderBoard : MonoBehaviour {
 
                 break;
             }
+            else
+            {
+                if (scoreArray[i] == PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0))
+                {
+                    break;
+                }
+            }
         }
 
         for(int i = leaderBoardText.Length - 1; i >= 0; i--)
@@ -53,12 +67,12 @@ public class LeaderBoard : MonoBehaviour {
                 temp += " New High Score by both player!";
             } else
             {
-                if(newScorePlayerOne == i)
+                if(newScorePlayerOne == scoreArray[i])
                 {
                     temp += " New High Score by player one!";
                 } else
                 {
-                    if (newScorePlayerTwo == i)
+                    if (newScorePlayerTwo == scoreArray[i])
                     {
                         temp += " New High Score by player two!";
                     }
@@ -66,6 +80,7 @@ public class LeaderBoard : MonoBehaviour {
             }
             leaderBoardText[i].text = temp;
         }
+
         PlayerPrefs.SetInt(ScoringSystem.firstPlayerScoreKey, 0);
         PlayerPrefs.SetInt(ScoringSystem.secondPlayerScoreKey, 0);
     }
