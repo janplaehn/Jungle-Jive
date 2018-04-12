@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(MusicInstructions))]
 public class GameControlling : MonoBehaviour {
     public AudioClip music;
-    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[9];
+    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[19];
 
     // Use this for initialization
     void Start()
@@ -65,6 +65,15 @@ public class GameControlling : MonoBehaviour {
         rightArmRightLegUp.RightLegPosition = 2f;
         rightArmRightLegUp.LeftLegPosition = 0f;   /// should it be 0f or -1f? Not sure - Krzesimir
 
+        DanceMove endMove;
+        endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsUp;
+        endMove.LeftArmPosition = -1f;
+        endMove.RightArmPosition = -1f;
+        endMove.LeftLegPosition = -1f;
+        endMove.RightLegPosition = -1f;
+        instructions[8] = new Pair<DanceMove, float>(endMove, 17f);
+        GetComponent<MusicInstructions>().SetMusic(music, instructions);
+
         instructions[0] = new Pair<DanceMove, float>(bothArmsUp, 1f);
         instructions[1] = new Pair<DanceMove, float>(bothArmsDown, 3f);
         instructions[2] = new Pair<DanceMove, float>(leftArmUp, 5f);
@@ -83,17 +92,7 @@ public class GameControlling : MonoBehaviour {
         instructions[15] = new Pair<DanceMove, float>(bothArmsUp, 31f);
         instructions[16] = new Pair<DanceMove, float>(splitArmsUp, 33f);
         instructions[17] = new Pair<DanceMove, float>(splitArmsDown, 35f);
-
-
-
-        DanceMove endMove;
-        endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsUp;
-        endMove.LeftArmPosition = -1f;
-        endMove.RightArmPosition = -1f;
-        endMove.LeftLegPosition = -1f;
-        endMove.RightLegPosition = -1f;
-        instructions[8] = new Pair<DanceMove, float>(endMove, 17f);
-        GetComponent<MusicInstructions>().SetMusic(music, instructions);
+        instructions[18] = new Pair<DanceMove, float>(endMove, 37f);
 
     }
     void Update()
