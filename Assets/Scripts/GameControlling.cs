@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(MusicInstructions))]
 public class GameControlling : MonoBehaviour {
     public AudioClip music;
-    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[3];
+    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[6];
 
     // Use this for initialization
     void Start()
@@ -12,15 +12,15 @@ public class GameControlling : MonoBehaviour {
         DanceMove leftArmUp;
         leftArmUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.LeftArmUp;
         leftArmUp.LeftArmPosition = 2f;
-        leftArmUp.LeftLegPosition = -1f;
         leftArmUp.RightArmPosition = 0f;
+        leftArmUp.LeftLegPosition = -1f;
         leftArmUp.RightLegPosition = -1f;
         instructions[0] = new Pair<DanceMove, float>(leftArmUp, 1f);
         DanceMove rightArmUp;
         rightArmUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.RightArmUp;
         rightArmUp.LeftArmPosition = 0f;
-        rightArmUp.LeftLegPosition = -1f;
         rightArmUp.RightArmPosition = 2f;
+        rightArmUp.LeftLegPosition = -1f;
         rightArmUp.RightLegPosition = -1f;
         instructions[1] = new Pair<DanceMove, float>(rightArmUp, 3f);
 
@@ -30,7 +30,7 @@ public class GameControlling : MonoBehaviour {
         bothArmsUp.LeftArmPosition = 2f;
         bothArmsUp.RightLegPosition = -1f;
         bothArmsUp.LeftLegPosition = -1f;
-        instructions[2] = new Pair<DanceMove, float>(bothArmsUp, 3f);
+        instructions[2] = new Pair<DanceMove, float>(bothArmsUp, 5f);
 
         DanceMove bothArmsDown;
         bothArmsDown.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsDown;
@@ -38,23 +38,23 @@ public class GameControlling : MonoBehaviour {
         bothArmsDown.LeftArmPosition = 0f;
         bothArmsDown.RightLegPosition = -1f;
         bothArmsDown.LeftLegPosition = -1f;
-        instructions[3] = new Pair<DanceMove, float>(bothArmsDown, 3f);
+        instructions[3] = new Pair<DanceMove, float>(bothArmsDown, 7f);
 
         DanceMove splitArmsUp;
         splitArmsUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.SplitArmsUp;
         splitArmsUp.RightArmPosition = 2f;
         splitArmsUp.LeftArmPosition = 2f;
-        splitArmsUp.RightLegPosition = 1f;
-        splitArmsUp.LeftLegPosition = 1f;
-        instructions[4] = new Pair<DanceMove, float>(splitArmsUp, 3f);
+        splitArmsUp.RightLegPosition = 2f;
+        splitArmsUp.LeftLegPosition = 2f;
+        instructions[4] = new Pair<DanceMove, float>(splitArmsUp, 9f);
 
         DanceMove endMove;
         endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsUp;
         endMove.LeftArmPosition = -1f;
-        endMove.LeftLegPosition = -1f;
         endMove.RightArmPosition = -1f;
+        endMove.LeftLegPosition = -1f;
         endMove.RightLegPosition = -1f;
-        instructions[5] = new Pair<DanceMove, float>(endMove, 5f);
+        instructions[5] = new Pair<DanceMove, float>(endMove, 11f);
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
 
     }
