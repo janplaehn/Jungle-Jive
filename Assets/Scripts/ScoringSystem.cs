@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoringSystem : MonoBehaviour {
+    public static string firstPlayerScoreKey = "FirstPlayerScore";
+    public static string secondPlayerScoreKey = "SecondPlayerScore";
     int firstPlayerScore = 0;
     int secondPlayerScore = 0;
     public Text firstPlayerScoreDisplay;
@@ -14,12 +16,14 @@ public class ScoringSystem : MonoBehaviour {
     public void AddFirstPlayerScore(int scoreAmount) {
         firstPlayerScore += scoreAmount;
         firstPlayerScoreDisplay.text = firstPlayerScore.ToString();
+        PlayerPrefs.SetInt(firstPlayerScoreKey, firstPlayerScore);
         firstPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount);
     }
 
     public void AddSecondPlayerScore(int scoreAmount) {
         secondPlayerScore += scoreAmount;
         secondPlayerScoreDisplay.text = secondPlayerScore.ToString();
+        PlayerPrefs.SetInt(secondPlayerScoreKey, secondPlayerScore);
         secondPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount);
     }
 
