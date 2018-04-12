@@ -964,6 +964,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: instructionImageArray.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4764533378347120, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 864.77637
@@ -1025,6 +1030,18 @@ Prefab:
     - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instructionImageArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216,
+        type: 3}
+    - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: instructionImageArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216,
+        type: 3}
+    - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: instructionImageArray.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216,
         type: 3}
