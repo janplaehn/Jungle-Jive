@@ -29,7 +29,7 @@ public class LimbMovement : MonoBehaviour {
         {
             tempLimbState = 2;
         }
-        if (gameObject.tag == "RightArm") tempLimbState -= 2; tempLimbState = Mathf.Abs(tempLimbState);
+        if (gameObject.tag == "RightArm" || gameObject.tag == "RightLeg") tempLimbState -= 2; tempLimbState = Mathf.Abs(tempLimbState);
         return tempLimbState;
     }//TODO: get number based on rotation
 }

@@ -1121,25 +1121,31 @@ Prefab:
         type: 2}
       propertyPath: instructionImageArray.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 686c55ee68ede6c439026dce82ef9a48,
+      objectReference: {fileID: 21300008, guid: 7e9c56428da1f2549a0d6cdf33a4eb05,
         type: 3}
     - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instructionImageArray.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216,
+      objectReference: {fileID: 21300002, guid: 7e9c56428da1f2549a0d6cdf33a4eb05,
         type: 3}
     - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instructionImageArray.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216,
+      objectReference: {fileID: 21300006, guid: 7e9c56428da1f2549a0d6cdf33a4eb05,
         type: 3}
     - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instructionImageArray.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 0d5551dd7f1af7a4ba0f1a938ac64216,
+      objectReference: {fileID: 21300004, guid: 7e9c56428da1f2549a0d6cdf33a4eb05,
+        type: 3}
+    - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: instructionImageArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e9c56428da1f2549a0d6cdf33a4eb05,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
@@ -1216,12 +1222,12 @@ Prefab:
     - target: {fileID: 114063306827908870, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal2
+      value: LeftStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 114371802438797082, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal2
+      value: RightStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 114202915736014426, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
