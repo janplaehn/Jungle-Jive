@@ -585,6 +585,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7e66bbc06453636499d0ce10eaff4df1, type: 3}
   spritesHorrible:
   - {fileID: 21300000, guid: 2f2e631dd6ea161438a9a16d2008a168, type: 3}
+  displayDuration: 1
 --- !u!114 &663109291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,6 +1148,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 7e9c56428da1f2549a0d6cdf33a4eb05,
         type: 3}
+    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: firstPlayerTextFeedback
+      value: 
+      objectReference: {fileID: 663109288}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
