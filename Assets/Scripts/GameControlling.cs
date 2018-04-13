@@ -66,7 +66,7 @@ public class GameControlling : MonoBehaviour {
         rightArmRightLegUp.LeftLegPosition = 0f;   /// should it be 0f or -1f? Not sure - Krzesimir
 
         DanceMove endMove;
-        endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsUp;
+        endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.SplitArmsDown;
         endMove.LeftArmPosition = -1f;
         endMove.RightArmPosition = -1f;
         endMove.LeftLegPosition = -1f;
