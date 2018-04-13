@@ -11,7 +11,6 @@ TextureImporter:
     21300008: InstructionsSheet_4
     21300010: InstructionsSheet_5
     21300012: InstructionsSheet_6
-    21300014: InstructionsSheet_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -111,10 +110,10 @@ TextureImporter:
       name: InstructionsSheet_0
       rect:
         serializedVersion: 2
-        x: 316
-        y: 1887
-        width: 299
-        height: 690
+        x: 0
+        y: 1801.3333
+        width: 900.6667
+        height: 900.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,10 +124,10 @@ TextureImporter:
       name: InstructionsSheet_1
       rect:
         serializedVersion: 2
-        x: 1191
-        y: 1963
-        width: 357
-        height: 576
+        x: 900
+        y: 1801.3333
+        width: 900.6667
+        height: 900.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,10 +138,10 @@ TextureImporter:
       name: InstructionsSheet_2
       rect:
         serializedVersion: 2
-        x: 1990
-        y: 2046
-        width: 556
-        height: 477
+        x: 1800
+        y: 1801.3333
+        width: 900.6667
+        height: 900.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +152,10 @@ TextureImporter:
       name: InstructionsSheet_3
       rect:
         serializedVersion: 2
-        x: 316
-        y: 1034
-        width: 266
-        height: 613
+        x: 0
+        y: 901.3333
+        width: 900.6667
+        height: 900.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,10 +166,10 @@ TextureImporter:
       name: InstructionsSheet_4
       rect:
         serializedVersion: 2
-        x: 1171
-        y: 1071
-        width: 357
-        height: 575
+        x: 900
+        y: 901.3333
+        width: 900.6667
+        height: 900.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +180,10 @@ TextureImporter:
       name: InstructionsSheet_5
       rect:
         serializedVersion: 2
-        x: 1979
-        y: 1129
-        width: 556
-        height: 418
+        x: 0
+        y: 1.333313
+        width: 900.6667
+        height: 900.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,24 +194,10 @@ TextureImporter:
       name: InstructionsSheet_6
       rect:
         serializedVersion: 2
-        x: 222
-        y: 114
-        width: 479
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: InstructionsSheet_7
-      rect:
-        serializedVersion: 2
-        x: 1106
-        y: 125
-        width: 479
-        height: 605
+        x: 900
+        y: 1.333313
+        width: 900.6667
+        height: 900.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

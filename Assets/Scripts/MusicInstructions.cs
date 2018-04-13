@@ -23,9 +23,6 @@ public class MusicInstructions : MonoBehaviour {
         BothArmsUp,
         BothArmsDown,
         SplitArmsUp,
-        SplitArmsDown,
-        LeftArmLeftLegUp,
-        RightArmRightLegUp,
     }
 
 	// Use this for initialization
