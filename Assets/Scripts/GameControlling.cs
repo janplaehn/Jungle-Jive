@@ -48,14 +48,14 @@ public class GameControlling : MonoBehaviour {
         leftArmLeftLegUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.LeftArmLeftLegUp;
         leftArmLeftLegUp.RightArmPosition = 1f;
         leftArmLeftLegUp.LeftArmPosition = 2f;
-        leftArmLeftLegUp.RightLegPosition = 2f;
-        leftArmLeftLegUp.LeftLegPosition = 0f;   /// should it be 0f or -1f? Not sure - Krzesimir
+        leftArmLeftLegUp.RightLegPosition = 1f;
+        leftArmLeftLegUp.LeftLegPosition = 2f;
         DanceMove rightArmRightLegUp;
         rightArmRightLegUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.RightArmRightLegUp;
-        rightArmRightLegUp.RightArmPosition = 1f;
-        rightArmRightLegUp.LeftArmPosition = 2f;
+        rightArmRightLegUp.RightArmPosition = 2f;
+        rightArmRightLegUp.LeftArmPosition = 1f;
         rightArmRightLegUp.RightLegPosition = 2f;
-        rightArmRightLegUp.LeftLegPosition = 0f;   /// should it be 0f or -1f? Not sure - Krzesimir
+        rightArmRightLegUp.LeftLegPosition = 1f;
         DanceMove endMove;
         endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.SplitArmsDown;
         endMove.LeftArmPosition = -1f;

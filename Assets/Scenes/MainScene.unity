@@ -1250,22 +1250,22 @@ Prefab:
     - target: {fileID: 114063306827908870, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal
+      value: LeftStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114371802438797082, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal
+      value: RightStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114202915736014426, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal
+      value: LeftStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114955545107525826, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal
+      value: RightStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 1675472842211258, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_TagString
@@ -1640,6 +1640,16 @@ Prefab:
     - target: {fileID: 4948695327055190, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_LocalPosition.y
       value: 1.363
+      objectReference: {fileID: 0}
+    - target: {fileID: 212061555528044996, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 212925453852315656, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
