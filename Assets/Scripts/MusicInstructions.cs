@@ -16,17 +16,19 @@ public class MusicInstructions : MonoBehaviour {
     private DanceMove lastMove;
     private int lastPairIndex = 0;
     private bool finished = false;
-    public enum DanceMoveEnum
-    {
+    public enum DanceMoveEnum {
         LeftArmUp,
         RightArmUp,
         BothArmsUp,
         BothArmsDown,
         SplitArmsUp,
+        SplitArmsDown,
+        LeftArmLeftLegUp,
+        RightArmRightLegUp,
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         lastMove = timingPairs[0].firstValue;
         nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
         inputCheck = GetComponent<InputCheck>();
