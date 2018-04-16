@@ -8,6 +8,7 @@ public class MusicInstructions : MonoBehaviour {
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
+    //public Image timing;
     public Image nextInstruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
@@ -17,6 +18,9 @@ public class MusicInstructions : MonoBehaviour {
     private int lastPairIndex = 0;
     private bool finished = false;
     private bool moveRated = false;
+
+    public float instructionTime;
+    private float errorMargin = 0.2f;
     public enum DanceMoveEnum
     {
         LeftArmUp,
@@ -47,11 +51,20 @@ public class MusicInstructions : MonoBehaviour {
 
 
 
-            if (accumulatedTime <= timingPairs[lastPairIndex].secondValue)
+            if (accumulatedTime <= instructionTime)
             {
                 if (inputCheck.CheckLimbs(lastMove) == 1 && moveRated == false)
                 {
-                    scoringSystem.AddFirstPlayerScore(100);
+                    if (accumulatedTime >= timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime <= timingPairs[lastPairIndex].secondValue + errorMargin)
+                    {
+                        scoringSystem.AddFirstPlayerScore(400);
+                        
+                    } else
+                    {
+                        scoringSystem.AddFirstPlayerScore(85 );
+                            
+                        
+                    }
                     moveRated = true;
                 }
                 
@@ -76,6 +89,8 @@ public class MusicInstructions : MonoBehaviour {
                 accumulatedTime = 0f;
                 
                 instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                //timing.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                //timing.transform.localScale = new Vector3 (5,5,5);
                 if (lastPairIndex + 1 < timingPairs.Length - 1)
                 {
                     nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
@@ -132,4 +147,5 @@ public class MusicInstructions : MonoBehaviour {
         nextInstruction.sprite = voidSprite;
         scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
     }
+
 }
