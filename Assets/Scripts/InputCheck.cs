@@ -26,7 +26,7 @@ public class InputCheck : MonoBehaviour {
         return (int) (100 * CheckLimbs(currentMove));
     }
 
-    float CheckLimbs(DanceMove currentMove)
+    public float CheckLimbs(DanceMove currentMove)
     {
         float index = 0f;
         float score = 0f;
@@ -52,5 +52,34 @@ public class InputCheck : MonoBehaviour {
         }
         return score / index;
         
+    }
+    public int GetMaxScore (DanceMove currentMove)
+    {
+        return 100 * GetLimbMultiplier(currentMove);
+    }
+    private int GetLimbMultiplier (DanceMove currentMove)
+    {
+        int index = 0;
+        if (currentMove.LeftArmPosition != -1)
+        {
+            index++;
+            
+        }
+        if (currentMove.RightArmPosition != -1)
+        {
+            index++;
+            
+        }
+        if (currentMove.LeftLegPosition != -1)
+        {
+            index++;
+            
+        }
+        if (currentMove.RightLegPosition != -1)
+        {
+            index++;
+            
+        }
+        return index;
     }
 }

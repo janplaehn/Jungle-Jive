@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(MusicInstructions))]
 public class GameControlling : MonoBehaviour {
     public AudioClip music;
-    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[19];
+    public float moveReactionTime;
+    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[18];
     // Use this for initialization
     void Start() {
         DanceMove leftArmUp;
@@ -56,32 +57,26 @@ public class GameControlling : MonoBehaviour {
         rightArmRightLegUp.LeftArmPosition = 1f;
         rightArmRightLegUp.RightLegPosition = 2f;
         rightArmRightLegUp.LeftLegPosition = 1f;
-        DanceMove endMove;
-        endMove.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.SplitArmsDown;
-        endMove.LeftArmPosition = -1f;
-        endMove.RightArmPosition = -1f;
-        endMove.LeftLegPosition = -1f;
-        endMove.RightLegPosition = -1f;
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
-        instructions[0] = new Pair<DanceMove, float>(bothArmsUp, 1f);
-        instructions[1] = new Pair<DanceMove, float>(bothArmsDown, 3f);
-        instructions[2] = new Pair<DanceMove, float>(leftArmUp, 5f);
-        instructions[3] = new Pair<DanceMove, float>(rightArmUp, 7f);
-        instructions[4] = new Pair<DanceMove, float>(bothArmsUp, 9f);
-        instructions[5] = new Pair<DanceMove, float>(leftArmUp, 11f);
-        instructions[6] = new Pair<DanceMove, float>(rightArmUp, 13f);
-        instructions[7] = new Pair<DanceMove, float>(bothArmsUp, 15f);
-        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, 17f);
-        instructions[9] = new Pair<DanceMove, float>(leftArmUp, 19f);
-        instructions[10] = new Pair<DanceMove, float>(leftArmLeftLegUp, 21f);
-        instructions[11] = new Pair<DanceMove, float>(leftArmUp, 23f);
-        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, 25f);
-        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, 27f);
-        instructions[14] = new Pair<DanceMove, float>(rightArmUp, 29f);
-        instructions[15] = new Pair<DanceMove, float>(bothArmsUp, 31f);
-        instructions[16] = new Pair<DanceMove, float>(splitArmsUp, 33f);
-        instructions[17] = new Pair<DanceMove, float>(splitArmsDown, 35f);
-        instructions[18] = new Pair<DanceMove, float>(endMove, 37f);
+        instructions[0] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[1] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[2] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+        instructions[4] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[5] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[6] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+        instructions[7] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[9] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[10] = new Pair<DanceMove, float>(leftArmLeftLegUp, moveReactionTime);
+        instructions[11] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, moveReactionTime);
+        instructions[14] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+        instructions[15] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[16] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);
+        instructions[17] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
+ 
     }
     void Update() {
         //Debug.Log("LeftArm: " + GameObject.FindGameObjectWithTag("LeftArm").GetComponent<LimbMovement>().GetLimbState() + "RightArm: " + GameObject.FindGameObjectWithTag("RightArm").GetComponent<LimbMovement>().GetLimbState());

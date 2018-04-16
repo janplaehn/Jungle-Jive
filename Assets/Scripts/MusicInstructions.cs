@@ -8,6 +8,7 @@ public class MusicInstructions : MonoBehaviour {
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
+    //public Image timing;
     public Image nextInstruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
@@ -16,7 +17,12 @@ public class MusicInstructions : MonoBehaviour {
     private DanceMove lastMove;
     private int lastPairIndex = 0;
     private bool finished = false;
-    public enum DanceMoveEnum {
+    private bool moveRated = false;
+
+    public float instructionTime;
+    private float errorMargin = 0.2f;
+    public enum DanceMoveEnum
+    {
         LeftArmUp,
         RightArmUp,
         BothArmsUp,
@@ -27,8 +33,8 @@ public class MusicInstructions : MonoBehaviour {
         RightArmRightLegUp,
     }
 
-    // Use this for initialization
-    void Start () {
+	// Use this for initialization
+	void Start () {
         lastMove = timingPairs[0].firstValue;
         nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
         inputCheck = GetComponent<InputCheck>();
@@ -45,10 +51,67 @@ public class MusicInstructions : MonoBehaviour {
 		if(finished == false)
         {
             accumulatedTime += Time.deltaTime;
-            if(accumulatedTime >= timingPairs[lastPairIndex].secondValue)
+
+
+
+            if (accumulatedTime <= instructionTime)
+            {
+                if (inputCheck.CheckLimbs(lastMove) == 1 && moveRated == false)
+                {
+                    if (accumulatedTime >= timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime <= timingPairs[lastPairIndex].secondValue + errorMargin)
+                    {
+                        scoringSystem.AddFirstPlayerScore(100);
+                        
+                    } else
+                    {
+                        scoringSystem.AddFirstPlayerScore(75);
+                    }
+                    moveRated = true;
+                }
+                
+            } else
+            {
+                Debug.Log("switch");
+                
+                if (moveRated == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
+                lastPairIndex++;
+                if (timingPairs.Length <= lastPairIndex)
+                {
+                    Debug.Log("oof");
+                    finished = true;
+                    instruction.sprite = voidSprite;
+                    nextInstruction.sprite = voidSprite;
+                    lastPairIndex = 0;
+                    accumulatedTime = 0f;
+                    GetComponent<GameControlling>().GameOver();
+                    return;
+                }
+
+                moveRated = false;
+                accumulatedTime = 0f;
+                
+                instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                //timing.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                //timing.transform.localScale = new Vector3 (5,5,5);
+                if (lastPairIndex + 1 <= timingPairs.Length - 1)
+                {
+                    nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+                }
+                else
+                {
+                    nextInstruction.sprite = voidSprite;
+                }
+                lastMove = timingPairs[lastPairIndex].firstValue;
+            }
+
+
+
+
+
+            /*if(accumulatedTime >= timingPairs[lastPairIndex].secondValue)
             {
                 //Invoke("ClearInstructionImage", 1f);
-                ClearInstructionImage();
+                //ClearInstructionImage();
                 Debug.Log(timingPairs[lastPairIndex].firstValue);
                 instruction.sprite = instructionImageArray[ timingPairs[lastPairIndex].firstValue.instructionImageIndex ];
                 if(lastPairIndex + 1 < timingPairs.Length - 1)
@@ -67,9 +130,8 @@ public class MusicInstructions : MonoBehaviour {
                     nextInstruction.sprite = voidSprite;
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
-                    gameObject.GetComponent<GameControlling>().GameOver();
                 }
-            }
+            }*/
         }
 	}
 
@@ -87,4 +149,5 @@ public class MusicInstructions : MonoBehaviour {
         nextInstruction.sprite = voidSprite;
         scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
     }
+
 }
