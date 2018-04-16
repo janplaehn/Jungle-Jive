@@ -55,6 +55,7 @@ public class InputCheck : MonoBehaviour {
     }
     public int GetMaxScore (DanceMove currentMove)
     {
+        return 100 * GetLimbMultiplier(currentMove);
     }
     private int GetLimbMultiplier (DanceMove currentMove)
     {
