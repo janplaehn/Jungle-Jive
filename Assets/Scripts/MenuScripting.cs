@@ -19,19 +19,23 @@ public class MenuScripting : MonoBehaviour {
         SceneManager.LoadScene(scene);
     }
     
-    public void ToggleOptions()
-    {
-        if(options.activeSelf == true)
-        {
-            options.SetActive(false);
-        } else
-        {
-            options.SetActive(true);
+    public void RaiseVolume() {
+        if (AudioListener.volume < 1) {
+            AudioListener.volume += 0.1f;
+            Debug.Log(AudioListener.volume);
+        }
+        else {
+            Debug.Log("Max volume reached");
         }
     }
-    public void ChangeVolume()
-    {
-        AudioListener.volume = slider.value;
-        Debug.Log(AudioListener.volume);
+
+    public void ReduceVolume() {
+        if (AudioListener.volume > 0) {
+            AudioListener.volume -= 0.1f;
+            Debug.Log(AudioListener.volume);
+        }
+        else {
+            Debug.Log("Min volume reached");
+        }
     }
 }

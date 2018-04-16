@@ -20,6 +20,7 @@ public class ButtonTrigger : MonoBehaviour {
             timeLeft = chargeTime;
         }
         if (timeLeft <= 0) {
+            timeLeft = chargeTime;
             button.GetComponent<Button>().onClick.Invoke();
         }
         SetChargeBarWidth();
