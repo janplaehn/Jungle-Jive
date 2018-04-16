@@ -64,7 +64,7 @@ public class MusicInstructions : MonoBehaviour {
                         
                     } else
                     {
-                        scoringSystem.AddFirstPlayerScore(85 );
+                        scoringSystem.AddFirstPlayerScore(75);
                             
                         
                     }
@@ -85,6 +85,7 @@ public class MusicInstructions : MonoBehaviour {
                     nextInstruction.sprite = voidSprite;
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
+                    GetComponent<GameControlling>().GameOver();
                     return;
                 }
 
@@ -94,7 +95,7 @@ public class MusicInstructions : MonoBehaviour {
                 instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
                 //timing.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
                 //timing.transform.localScale = new Vector3 (5,5,5);
-                if (lastPairIndex + 1 < timingPairs.Length - 1)
+                if (lastPairIndex + 1 <= timingPairs.Length - 1)
                 {
                     nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
                 }
