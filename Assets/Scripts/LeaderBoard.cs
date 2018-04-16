@@ -63,20 +63,20 @@ public class LeaderBoard : MonoBehaviour {
 
         for(int i = leaderBoardText.Length - 1; i >= 0; i--)
         {
-            string temp = "High Score " + (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + scoreArray[i].ToString() + " points!";
+            string temp = (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + scoreArray[i].ToString() + " points";
             if(draw == true && newScorePlayerOne == scoreArray[i])
             {
-                temp += " New High Score by both player!";
+                temp += " New Highscores!";
             } else
             {
                 if(newScorePlayerOne == scoreArray[i])
                 {
-                    temp += " New High Score by player one!";
+                    temp += " New Highscore Player One!";
                 } else
                 {
                     if (newScorePlayerTwo == scoreArray[i])
                     {
-                        temp += " New High Score by player two!";
+                        temp += " New Highscore Player Two!";
                     }
                 }
             }

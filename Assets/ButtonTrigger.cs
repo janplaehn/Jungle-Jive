@@ -11,15 +11,19 @@ public class ButtonTrigger : MonoBehaviour {
 
     private float timeLeft;
     private bool isCharging;
-	
-	void Update () {
+
+    private void Awake() {
+        timeLeft = chargeTime;
+    }
+
+    void Update () {
         if (isCharging) {
             timeLeft -= Time.deltaTime;
         }
         else {
             timeLeft = chargeTime;
         }
-        if (timeLeft <= 0) {
+        if (timeLeft <= 0 && isCharging) {
             timeLeft = chargeTime;
             button.GetComponent<Button>().onClick.Invoke();
         }
@@ -29,6 +33,7 @@ public class ButtonTrigger : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "hand") {
             isCharging = true;
+            timeLeft = chargeTime;
         }
     }
 
