@@ -60,11 +60,11 @@ public class MusicInstructions : MonoBehaviour {
                 {
                     if (accumulatedTime >= timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime <= timingPairs[lastPairIndex].secondValue + errorMargin)
                     {
-                        scoringSystem.AddFirstPlayerScore(100);
+                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 2), inputCheck.GetMaxScore(lastMove));
                         
                     } else
                     {
-                        scoringSystem.AddFirstPlayerScore(75);
+                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1), inputCheck.GetMaxScore(lastMove));
                     }
                     moveRated = true;
                 }
@@ -72,8 +72,8 @@ public class MusicInstructions : MonoBehaviour {
             } else
             {
                 Debug.Log("switch");
-                
-                if (moveRated == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
+
+                if (moveRated == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1), inputCheck.GetMaxScore(lastMove));
                 lastPairIndex++;
                 if (timingPairs.Length <= lastPairIndex)
                 {
@@ -143,11 +143,5 @@ public class MusicInstructions : MonoBehaviour {
         finished = false;
     }
 
-    private void ClearInstructionImage()
-    {
-        instruction.sprite = voidSprite;
-        nextInstruction.sprite = voidSprite;
-        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
-    }
 
 }
