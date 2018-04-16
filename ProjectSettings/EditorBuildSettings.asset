@@ -5,8 +5,8 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MenuScene.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/dd545fe3fcc2d3048bffc69ac7179271
     guid: dd545fe3fcc2d3048bffc69ac7179271
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Clementscene.unity
     guid: 31afee246a61ae44f8189860e259c704
+  - enabled: 1
+    path: Assets/Scenes/OptionsScene.unity
+    guid: e37d79a02f8e0c44781c51035fb3f4a6
