@@ -51,5 +51,6 @@ public class InputCheck : MonoBehaviour {
             if (rightLeg.GetLimbState() == currentMove.RightLegPosition) score++;
         }
         return score / index;
+        
     }
 }

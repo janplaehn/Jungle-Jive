@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Text))]
 public class LeaderBoard : MonoBehaviour {
@@ -10,10 +11,11 @@ public class LeaderBoard : MonoBehaviour {
     bool draw = false;
     const int leaderBoardLength = 10;
     public Text[] leaderBoardText;
-
+    public float goToMenuTimer;
 	// Use this for initialization
 	void Start () {
         GetLeaderBoard();
+        Invoke("GoToMenu", goToMenuTimer);
     }
 
     void GetLeaderBoard()
@@ -61,7 +63,7 @@ public class LeaderBoard : MonoBehaviour {
 
         for(int i = leaderBoardText.Length - 1; i >= 0; i--)
         {
-            string temp = "High Score " + (i + 1).ToString() + " : " + scoreArray[i].ToString() + " points!";
+            string temp = "High Score " + (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + scoreArray[i].ToString() + " points!";
             if(draw == true && newScorePlayerOne == scoreArray[i])
             {
                 temp += " New High Score by both player!";
@@ -105,5 +107,10 @@ public class LeaderBoard : MonoBehaviour {
         {
             ReplaceValueInIntArray(index-1, a, array);
         }
+    }
+
+    void GoToMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 }
