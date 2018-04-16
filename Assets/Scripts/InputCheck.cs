@@ -26,7 +26,7 @@ public class InputCheck : MonoBehaviour {
         return (int) (100 * CheckLimbs(currentMove));
     }
 
-    float CheckLimbs(DanceMove currentMove)
+    public float CheckLimbs(DanceMove currentMove)
     {
         float index = 0f;
         float score = 0f;
