@@ -26,7 +26,6 @@ public class ButtonTrigger : MonoBehaviour {
 	}
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Collision Entered");
         if (collision.gameObject.tag == "hand") {
             isCharging = true;
         }
