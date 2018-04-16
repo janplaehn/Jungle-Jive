@@ -717,16 +717,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leaderBoardText:
-  - {fileID: 471064231}
-  - {fileID: 1909981208}
-  - {fileID: 1382841256}
-  - {fileID: 442025180}
-  - {fileID: 1091929711}
-  - {fileID: 518499854}
-  - {fileID: 926939258}
-  - {fileID: 1529873614}
-  - {fileID: 1021079104}
   - {fileID: 1786278205}
+  - {fileID: 1021079104}
+  - {fileID: 1529873614}
+  - {fileID: 926939258}
+  - {fileID: 518499854}
+  - {fileID: 1091929711}
+  - {fileID: 442025180}
+  - {fileID: 1382841256}
+  - {fileID: 1909981208}
+  - {fileID: 471064231}
   goToMenuTimer: 5
 --- !u!114 &1085386742
 MonoBehaviour:
