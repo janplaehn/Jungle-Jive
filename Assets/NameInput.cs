@@ -8,7 +8,8 @@ public class NameInput : MonoBehaviour {
 
     public GameObject[] letterGameObjects;
 
-    [HideInInspector] public static string playerName;
+    [HideInInspector] public static string playerOneName;
+    [HideInInspector] public static string playerTwoName;
 
     private GameObject currentLetter;
     private int currentLetterIndex;
@@ -43,11 +44,11 @@ public class NameInput : MonoBehaviour {
     public void ConfirmLetters(string Scene) {
         currentLetter.GetComponent<Text>().fontStyle = FontStyle.Normal;
         if (currentLetterIndex == letterGameObjects.Length - 1) {
-            playerName = "";
+            playerOneName = "";
             foreach (GameObject go in letterGameObjects) {
-                playerName = playerName +  ((char)(go.GetComponent<Text>().text[0])).ToString();
+                playerOneName = playerOneName +  ((char)(go.GetComponent<Text>().text[0])).ToString();
             }
-            Debug.Log(playerName + " entered");
+            Debug.Log(playerOneName + " entered");
             SceneManager.LoadScene(Scene);
         }
         else {

@@ -72,11 +72,13 @@ public class LeaderBoard : MonoBehaviour {
                 if(newScorePlayerOne == scoreArray[i])
                 {
                     temp += " New Highscore Player One!";
+                    temp = NameInput.playerOneName + " " + temp;
                 } else
                 {
                     if (newScorePlayerTwo == scoreArray[i])
                     {
                         temp += " New Highscore Player Two!";
+                        temp = NameInput.playerTwoName + " " + temp;
                     }
                 }
             }
