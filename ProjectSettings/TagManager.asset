@@ -8,6 +8,8 @@ TagManager:
   - LeftArm
   - LeftLeg
   - RightLeg
+  - hand
+  - foot
   layers:
   - Default
   - TransparentFX
