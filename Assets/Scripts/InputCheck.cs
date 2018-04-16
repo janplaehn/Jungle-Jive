@@ -53,8 +53,10 @@ public class InputCheck : MonoBehaviour {
         return score / index;
         
     }
-
-    private int getLimbMultiplier (DanceMove currentMove)
+    public int GetMaxScore (DanceMove currentMove)
+    {
+    }
+    private int GetLimbMultiplier (DanceMove currentMove)
     {
         int index = 0;
         if (currentMove.LeftArmPosition != -1)
