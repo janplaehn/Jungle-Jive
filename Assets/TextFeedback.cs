@@ -4,52 +4,40 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TextFeedback : MonoBehaviour {
-
+    public GameObject feedbackObject;
     public Sprite[] spritesPerfect;
     public Sprite[] spritesGood;
     public Sprite[] spritesOk;
     public Sprite[] spritesBad;
     public Sprite[] spritesHorrible;
     public float displayDuration;
-
-    void Start () {
-        GetComponent<Image>().enabled = false;
-    }
 	
     public void GiveTextFeedback(int score) {
-        GetComponent<Image>().enabled = true;
+        GameObject temp = Instantiate(feedbackObject, transform.position, transform.rotation);
         switch (score) {
             case 0:
-                SetSprite(spritesHorrible);
+                temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesHorrible));
                 break;
             case 25:
-                SetSprite(spritesBad);
+                temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesBad));
                 break;
             case 50:
-                SetSprite(spritesOk);
+                temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesOk));
                 break;
             case 75:
-                SetSprite(spritesGood);
+                temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesGood));
                 break;
             case 100:
-                SetSprite(spritesPerfect);
+                temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesPerfect));
                 break;
             default:
+                temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesPerfect));
                 Debug.LogWarning("Invalid score format " + score + " detected. Unable to display text feedback Sprite.");
-                GetComponent<Image>().enabled = false;
                 break;
         }
-        StartCoroutine(DisableSprite());
     }
 
-    void SetSprite(Sprite[] spriteArray) {
-        int spriteNumber = Random.Range(0, spriteArray.Length);
-        GetComponent<Image>().overrideSprite = spriteArray[spriteNumber];
+    Sprite SetSprite(Sprite[] spriteArray) {
+        return spriteArray[Random.Range(0, spriteArray.Length)];
     }
-
-    IEnumerator DisableSprite() {
-        yield return new WaitForSeconds(displayDuration);
-        GetComponent<Image>().enabled = false;
-    }
-
 }
