@@ -60,13 +60,11 @@ public class MusicInstructions : MonoBehaviour {
                 {
                     if (accumulatedTime >= timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime <= timingPairs[lastPairIndex].secondValue + errorMargin)
                     {
-                        scoringSystem.AddFirstPlayerScore(400);
+                        scoringSystem.AddFirstPlayerScore(100);
                         
                     } else
                     {
                         scoringSystem.AddFirstPlayerScore(75);
-                            
-                        
                     }
                     moveRated = true;
                 }
