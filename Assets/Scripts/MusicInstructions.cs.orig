@@ -17,12 +17,16 @@ public class MusicInstructions : MonoBehaviour {
     private DanceMove lastMove;
     private int lastPairIndex = 0;
     private bool finished = false;
+<<<<<<< HEAD
     private bool moveRated = false;
 
     public float instructionTime;
     private float errorMargin = 0.2f;
     public enum DanceMoveEnum
     {
+=======
+    public enum DanceMoveEnum {
+>>>>>>> origin/master
         LeftArmUp,
         RightArmUp,
         BothArmsUp,
@@ -33,8 +37,8 @@ public class MusicInstructions : MonoBehaviour {
         RightArmRightLegUp,
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         lastMove = timingPairs[0].firstValue;
         nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
         inputCheck = GetComponent<InputCheck>();
@@ -131,6 +135,7 @@ public class MusicInstructions : MonoBehaviour {
                     nextInstruction.sprite = voidSprite;
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
+                    gameObject.GetComponent<GameControlling>().GameOver();
                 }
             }*/
         }

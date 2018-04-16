@@ -1147,6 +1147,18 @@ Prefab:
       propertyPath: nextInstruction
       value: 
       objectReference: {fileID: 1183197442}
+<<<<<<< HEAD
+    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: moveReactionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: instructionTime
+      value: 2
+      objectReference: {fileID: 0}
+=======
     - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: firstPlayerHead
@@ -1170,16 +1182,7 @@ Prefab:
       value: 
       objectReference: {fileID: 21300014, guid: 6c5200afb01440a4e8f159a3c317ce80,
         type: 3}
-    - target: {fileID: 114913706369060946, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: instructionTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: moveReactionTime
-      value: 1
-      objectReference: {fileID: 0}
+>>>>>>> origin/master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
