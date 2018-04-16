@@ -375,13 +375,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b8fdfceb84591e24ab38022d2d3ed9a0, type: 3}
   - {fileID: 21300000, guid: 4818cf6f9aa89fc41b1b860bd06d4057, type: 3}
   spritesGood:
-  - {fileID: 21300000, guid: 022d3c3ece5bdec429741b6da4c420d5, type: 3}
+  - {fileID: 21300000, guid: 764eda2ba2558424abcdd2b53c434085, type: 3}
   spritesOk:
   - {fileID: 21300000, guid: 08b5decd89a2df144a9e460fc56f595d, type: 3}
   spritesBad:
   - {fileID: 21300000, guid: 7e66bbc06453636499d0ce10eaff4df1, type: 3}
   spritesHorrible:
-  - {fileID: 21300000, guid: 2f2e631dd6ea161438a9a16d2008a168, type: 3}
+  - {fileID: 21300000, guid: 62646adb8220f004bad0644acaff4e70, type: 3}
   displayDuration: 1
 --- !u!1 &652965630
 GameObject:
