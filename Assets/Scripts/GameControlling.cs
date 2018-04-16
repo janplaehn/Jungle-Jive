@@ -90,6 +90,6 @@ public class GameControlling : MonoBehaviour {
         Invoke("QuitToLeaderboard", 5f);
     }
     private void QuitToLeaderboard() {
-        SceneManager.LoadScene("ClementScene");
+        SceneManager.LoadScene("EnterNameScene");
     }
 }
