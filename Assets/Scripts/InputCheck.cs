@@ -21,9 +21,9 @@ public class InputCheck : MonoBehaviour {
 		
 	}
 
-    public int CheckScore(DanceMove currentMove)
+    public int CheckScore(DanceMove currentMove, int timeMultiplier)
     {
-        return (int) (100 * CheckLimbs(currentMove));
+        return (int) (100 * GetLimbMultiplier(currentMove) * CheckLimbs(currentMove) * timeMultiplier);
     }
 
     public float CheckLimbs(DanceMove currentMove)
@@ -55,7 +55,7 @@ public class InputCheck : MonoBehaviour {
     }
     public int GetMaxScore (DanceMove currentMove)
     {
-        return 100 * GetLimbMultiplier(currentMove);
+        return 100 * GetLimbMultiplier(currentMove) * 2; // times two is for when the player times their dance move perfectly
     }
     private int GetLimbMultiplier (DanceMove currentMove)
     {
