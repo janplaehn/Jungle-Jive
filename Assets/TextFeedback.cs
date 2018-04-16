@@ -12,9 +12,33 @@ public class TextFeedback : MonoBehaviour {
     public Sprite[] spritesHorrible;
     public float displayDuration;
 	
-    public void GiveTextFeedback(int score) {
+    public void GiveTextFeedback(int score, int maxScore) {
         GameObject temp = Instantiate(feedbackObject, transform.position, transform.rotation);
-        switch (score) {
+        float percentage = ((float) (score) / (float) (maxScore)) * 100f;
+        if (percentage == 0f)
+        {
+            temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesHorrible));
+        }
+        else if (percentage< 25f && percentage != 0f)
+        {
+            temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesBad));
+        } else if(percentage >= 25f && percentage < 50f)
+        {
+            temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesOk));
+        } else if (percentage >= 50f && percentage < 75f)
+        {
+            temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesGood));
+        }
+        else if (percentage >= 75f)
+        {
+            temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesPerfect));
+        } else
+        {
+            temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesPerfect));
+            Debug.LogWarning("Invalid score format " + percentage + " detected. Unable to display text feedback Sprite.");
+        }
+        Debug.Log(score + " " + maxScore + " " + percentage);
+        /*switch (score/maxScore * 10) {
             case 0:
                 temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesHorrible));
                 break;
@@ -34,7 +58,7 @@ public class TextFeedback : MonoBehaviour {
                 temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesPerfect));
                 Debug.LogWarning("Invalid score format " + score + " detected. Unable to display text feedback Sprite.");
                 break;
-        }
+        }*/
     }
 
     Sprite SetSprite(Sprite[] spriteArray) {
