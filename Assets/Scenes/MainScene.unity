@@ -780,22 +780,22 @@ Prefab:
     - target: {fileID: 114063306827908870, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal2
+      value: P2LeftStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114371802438797082, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal2
+      value: P2RightStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114202915736014426, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal2
+      value: P2LeftStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114955545107525826, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal2
+      value: P2RightStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 1675472842211258, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_TagString
@@ -1212,6 +1212,26 @@ Prefab:
     - target: {fileID: 1728021830205612, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_Name
       value: Grandma2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114325120810008606, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: P2LeftStickVertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 114635293512431228, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: P2LeftStickVertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 114289743232044418, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: P2RightStickVertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 114081312718325312, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: P2RightStickVertical
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
