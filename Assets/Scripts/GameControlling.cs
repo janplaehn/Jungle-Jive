@@ -9,12 +9,8 @@ public class GameControlling : MonoBehaviour {
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
 
     void Start() {
-        DanceMove leftArmUp;
-        leftArmUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.LeftArmUp;
-        leftArmUp.LeftArmPosition = 2f;
-        leftArmUp.RightArmPosition = 0f;
-        leftArmUp.LeftLegPosition = -1f;
-        leftArmUp.RightLegPosition = -1f;
+        //DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
+        DanceMove leftArmUp = new DanceMove(0f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
         DanceMove rightArmUp;
         rightArmUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.RightArmUp;
         rightArmUp.LeftArmPosition = 0f;
@@ -65,7 +61,7 @@ public class GameControlling : MonoBehaviour {
         instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
         instructions[4] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[5] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
         instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
         instructions[7] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
         instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
