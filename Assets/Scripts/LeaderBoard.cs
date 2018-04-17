@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class LeaderBoard : MonoBehaviour {
     int newScorePlayerOne = -1;
     int newScorePlayerTwo = -1;
-    bool draw = false;
     const int leaderBoardLength = 10;
     public Text[] leaderBoardText;
     public float goToMenuTimer;
@@ -37,36 +36,26 @@ public class LeaderBoard : MonoBehaviour {
             if (scoreArray[i] < PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0))
             {
                 newScorePlayerTwo = PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey);
-                if (newScorePlayerOne == newScorePlayerTwo)
-                {
-                    draw = true;
-                } else
-                {
-                    ReplaceValueInIntArray(i, PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey), scoreArray, NameInput.playerTwoName);
-                }
-
+                ReplaceValueInIntArray(i, PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey), scoreArray, NameInput.playerTwoName);
                 break;
             }
         }
 
+        bool playerOneShown = false;
+        bool playerTwoShown = false;
         for(int i = leaderBoardText.Length - 1; i >= 0; i--)
         {
-            string temp = (PlayerPrefs.GetString("HighScoreString" + i.ToString(), "")) + " : ";
-            temp += (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + (PlayerPrefs.GetString("HighScoreString" + i.ToString(), "")) + " : " + scoreArray[i].ToString() + " points";
-            if(draw == true && newScorePlayerOne == scoreArray[i])
+            string temp = (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + (PlayerPrefs.GetString("HighScoreString" + i.ToString(), "")) + " : " + scoreArray[i].ToString() + " points";
+            if(newScorePlayerOne == scoreArray[i] && !playerOneShown)
             {
-                temp += " New Highscores!";
+                temp += " New Highscore Player One!";
+                playerOneShown = true;
             } else
             {
-                if(newScorePlayerOne == scoreArray[i])
+                if (newScorePlayerTwo == scoreArray[i] && !playerTwoShown)
                 {
-                    temp += " New Highscore Player One!";
-                } else
-                {
-                    if (newScorePlayerTwo == scoreArray[i])
-                    {
-                        temp += " New Highscore Player Two!";
-                    }
+                    temp += " New Highscore Player Two!";
+                    playerTwoShown = true;
                 }
             }
             leaderBoardText[i].text = temp;
