@@ -86,6 +86,16 @@ public class GameControlling : MonoBehaviour {
         Invoke("QuitToLeaderboard", 5f);
     }
     private void QuitToLeaderboard() {
-        SceneManager.LoadScene("EnterNameScene");
+        int[] temp = new int[10];
+        for (int i = temp.Length - 1; i >= 0; i--) {
+            temp[i] = PlayerPrefs.GetInt("HighScore" + i.ToString(), (i + 1) * 100);
+            PlayerPrefs.SetInt("HighScore" + i.ToString(), temp[i]);
+        }
+        if (temp[0] < GetComponent<ScoringSystem>().GetFirstPlayerScore() || temp[0] < GetComponent<ScoringSystem>().GetFirstPlayerScore()) {
+            SceneManager.LoadScene("EnterNameScene");
+        }
+        else {
+            SceneManager.LoadScene("LeaderboardScene");
+        }
     }
 }
