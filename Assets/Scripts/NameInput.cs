@@ -10,6 +10,7 @@ public class NameInput : MonoBehaviour {
 
     [HideInInspector] public static string playerOneName;
     [HideInInspector] public static string playerTwoName;
+    [HideInInspector] public static bool wasNameEntered;
 
     private GameObject currentLetter;
     private int currentLetterIndex;
