@@ -45,18 +45,16 @@ public class LeaderBoard : MonoBehaviour {
         bool playerTwoShown = false;
         for(int i = leaderBoardText.Length - 1; i >= 0; i--)
         {
-            string temp = (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + (PlayerPrefs.GetString("HighScoreString" + i.ToString(), "")) + " : " + scoreArray[i].ToString() + " points";
-            if(newScorePlayerOne == scoreArray[i] && !playerOneShown)
+            string temp = (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + (PlayerPrefs.GetString("HighScoreString" + i.ToString(), "")) + " : " + scoreArray[i].ToString() + " PTS";
+            leaderBoardText[i].fontStyle = FontStyle.Normal;
+            if (newScorePlayerOne == scoreArray[i] && !playerOneShown)
             {
-                temp += " New Highscore Player One!";
+                leaderBoardText[i].fontStyle = FontStyle.Bold;
                 playerOneShown = true;
-            } else
-            {
-                if (newScorePlayerTwo == scoreArray[i] && !playerTwoShown)
-                {
-                    temp += " New Highscore Player Two!";
+            }
+            else if (newScorePlayerTwo == scoreArray[i] && !playerTwoShown) {
+                    leaderBoardText[i].fontStyle = FontStyle.Bold;
                     playerTwoShown = true;
-                }
             }
             leaderBoardText[i].text = temp;
         }
