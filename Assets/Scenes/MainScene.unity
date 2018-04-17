@@ -334,60 +334,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!1 &646290920
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 646290921}
-  - component: {fileID: 646290922}
-  m_Layer: 0
-  m_Name: FeedBack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &646290921
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 646290920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1761898501}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &646290922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 646290920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2201012f4d8f544ab2122d2211bde2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  feedbackObject: {fileID: 1032947653305246, guid: 74d3f43f2ccd6f741bba86324d732bed,
-    type: 2}
-  spritesPerfect:
-  - {fileID: 21300000, guid: b8fdfceb84591e24ab38022d2d3ed9a0, type: 3}
-  - {fileID: 21300000, guid: ca8aab84bafe73a49a1a32fac19447c7, type: 3}
-  spritesGood:
-  - {fileID: 21300000, guid: 764eda2ba2558424abcdd2b53c434085, type: 3}
-  spritesOk:
-  - {fileID: 21300000, guid: b587899ba0406ff44a9488fe0de0b20a, type: 3}
-  spritesBad:
-  - {fileID: 21300000, guid: 7e66bbc06453636499d0ce10eaff4df1, type: 3}
-  spritesHorrible:
-  - {fileID: 21300000, guid: 62646adb8220f004bad0644acaff4e70, type: 3}
-  displayDuration: 1
 --- !u!1 &652965630
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +926,7 @@ Prefab:
         type: 2}
       propertyPath: feedbackOrigin
       value: 
-      objectReference: {fileID: 646290920}
+      objectReference: {fileID: 0}
     - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: firstPlayerScoreDisplay
@@ -995,7 +941,7 @@ Prefab:
         type: 2}
       propertyPath: firstPlayerTextFeedback
       value: 
-      objectReference: {fileID: 646290920}
+      objectReference: {fileID: 0}
     - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: firstPlayerHead
@@ -1506,7 +1452,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4220233202943106, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114198044542359150, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
@@ -1520,14 +1466,21 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: ca8aab84bafe73a49a1a32fac19447c7,
         type: 3}
+    - target: {fileID: 114198044542359150, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: spritesBad.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: a68a0f11db90a1b43a0355616d636bd5,
+        type: 3}
+    - target: {fileID: 114198044542359150, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: spritesHorrible.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: ff06772eb608a924c8771c8eeaeddd79,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1761898501 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4082469092883154, guid: 128cc50a803005a45927d28fba53a834,
-    type: 2}
-  m_PrefabInternal: {fileID: 1761898500}
 --- !u!1001 &1817246090
 Prefab:
   m_ObjectHideFlags: 0
