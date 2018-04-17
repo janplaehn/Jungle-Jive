@@ -17,8 +17,8 @@ public class NameInput : MonoBehaviour {
     [HideInInspector] public static string playerOneName;
     [HideInInspector] public static string playerTwoName;
     [HideInInspector] public static bool wasNameEntered;
-    [HideInInspector] public static bool hasPlayerOneHighscore;
-    [HideInInspector] public static bool hasPlayerTwoHighscore;
+    [HideInInspector] public static bool hasPlayerOneHighscore = true;
+    [HideInInspector] public static bool hasPlayerTwoHighscore = true;
 
     private static int namesEntered = 0;
     private GameObject currentLetter;
@@ -39,6 +39,7 @@ public class NameInput : MonoBehaviour {
             Character.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             namesEntered++;
+            hasPlayerOneHighscore = true;
         }
         if (!hasPlayerTwoHighscore && player == Player.Player2) {
             foreach (GameObject button in PlayerButtons) {
@@ -47,6 +48,7 @@ public class NameInput : MonoBehaviour {
             Character.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             namesEntered++;
+            hasPlayerTwoHighscore = true;
         }
     }
 
