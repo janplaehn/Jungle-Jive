@@ -93,9 +93,11 @@ public class GameControlling : MonoBehaviour {
         }
         if (temp[0] < GetComponent<ScoringSystem>().GetFirstPlayerScore() || temp[0] < GetComponent<ScoringSystem>().GetFirstPlayerScore()) {
             SceneManager.LoadScene("EnterNameScene");
+            NameInput.wasNameEntered = true;
         }
         else {
             SceneManager.LoadScene("LeaderboardScene");
+            NameInput.wasNameEntered = false;
         }
     }
 }
