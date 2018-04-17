@@ -19,6 +19,7 @@ public class MusicInstructions : MonoBehaviour {
     private int lastPairIndex = 0;
     private bool finished = false;
     private bool moveRated = false;
+    public Sprite timingSprite;
 
     public float instructionTime;
     private float errorMargin = 0.2f;
@@ -93,7 +94,7 @@ public class MusicInstructions : MonoBehaviour {
                 accumulatedTime = 0f;
                 
                 instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
-                timing.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                timing.sprite = timingSprite;
                 timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
                 if (lastPairIndex + 1 <= timingPairs.Length - 1)
                 {
@@ -105,35 +106,6 @@ public class MusicInstructions : MonoBehaviour {
                 }
                 lastMove = timingPairs[lastPairIndex].firstValue;
             }
-
-
-
-
-
-            /*if(accumulatedTime >= timingPairs[lastPairIndex].secondValue)
-            {
-                //Invoke("ClearInstructionImage", 1f);
-                //ClearInstructionImage();
-                Debug.Log(timingPairs[lastPairIndex].firstValue);
-                instruction.sprite = instructionImageArray[ timingPairs[lastPairIndex].firstValue.instructionImageIndex ];
-                if(lastPairIndex + 1 < timingPairs.Length - 1)
-                {
-                    nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
-                } else
-                {
-                    nextInstruction.sprite = voidSprite;
-                }
-                lastMove = timingPairs[lastPairIndex].firstValue;
-                lastPairIndex++;
-                if(timingPairs.Length <= lastPairIndex)
-                {
-                    finished = true;
-                    instruction.sprite = voidSprite;
-                    nextInstruction.sprite = voidSprite;
-                    lastPairIndex = 0;
-                    accumulatedTime = 0f;
-                }
-            }*/
         }
 	}
 
