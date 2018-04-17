@@ -9,12 +9,8 @@ public class GameControlling : MonoBehaviour {
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
 
     void Start() {
-        DanceMove leftArmUp;
-        leftArmUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.LeftArmUp;
-        leftArmUp.LeftArmPosition = 2f;
-        leftArmUp.RightArmPosition = 0f;
-        leftArmUp.LeftLegPosition = -1f;
-        leftArmUp.RightLegPosition = -1f;
+        //DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
+        DanceMove leftArmUp = new DanceMove(0f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
         DanceMove rightArmUp;
         rightArmUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.RightArmUp;
         rightArmUp.LeftArmPosition = 0f;
