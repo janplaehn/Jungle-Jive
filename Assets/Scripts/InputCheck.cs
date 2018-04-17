@@ -8,12 +8,27 @@ public class InputCheck : MonoBehaviour {
     LimbMovement leftLeg;
     LimbMovement rightLeg;
 
-	// Use this for initialization
-	void Start () {
+    LimbMovement leftArmP2;
+    LimbMovement rightArmP2;
+    LimbMovement leftLegP2;
+    LimbMovement rightLegP2;
+
+    public enum Players
+    {
+        PlayerOne,
+        PlayerTwo,
+    }
+    // Use this for initialization
+    void Start () {
         leftArm = GameObject.FindGameObjectWithTag("LeftArm").GetComponent<LimbMovement>();
         rightArm = GameObject.FindGameObjectWithTag("RightArm").GetComponent<LimbMovement>();
         leftLeg = GameObject.FindGameObjectWithTag("LeftLeg").GetComponent<LimbMovement>();
         rightLeg = GameObject.FindGameObjectWithTag("RightLeg").GetComponent<LimbMovement>();
+
+        leftArmP2 = GameObject.FindGameObjectWithTag("LeftArmP2").GetComponent<LimbMovement>();
+        rightArmP2 = GameObject.FindGameObjectWithTag("RightArmP2").GetComponent<LimbMovement>();
+        leftLegP2 = GameObject.FindGameObjectWithTag("LeftLegP2").GetComponent<LimbMovement>();
+        rightLegP2 = GameObject.FindGameObjectWithTag("RightLegP2").GetComponent<LimbMovement>();
     }
 	
 	// Update is called once per frame
@@ -21,35 +36,61 @@ public class InputCheck : MonoBehaviour {
 		
 	}
 
-    public int CheckScore(DanceMove currentMove, int timeMultiplier)
+    public int CheckScore(DanceMove currentMove, int timeMultiplier, Players player)
     {
-        return (int) (100 * GetLimbMultiplier(currentMove) * CheckLimbs(currentMove) * timeMultiplier);
+        return (int) (100 * GetLimbMultiplier(currentMove) * CheckLimbs(currentMove, player) * timeMultiplier);
     }
 
-    public float CheckLimbs(DanceMove currentMove)
+    public float CheckLimbs(DanceMove currentMove, Players player)
     {
         float index = 0f;
         float score = 0f;
-        if (currentMove.LeftArmPosition != -1)
+        if (player == Players.PlayerOne)
         {
-            index++;
-            if (leftArm.GetLimbState() == currentMove.LeftArmPosition) score ++;
-        }
-        if (currentMove.RightArmPosition != -1)
+            if (currentMove.LeftArmPosition != -1)
+            {
+                index++;
+                if (leftArm.GetLimbState() == currentMove.LeftArmPosition) score++;
+            }
+            if (currentMove.RightArmPosition != -1)
+            {
+                index++;
+                if (rightArm.GetLimbState() == currentMove.RightArmPosition) score++;
+            }
+            if (currentMove.LeftLegPosition != -1)
+            {
+                index++;
+                if (leftLeg.GetLimbState() == currentMove.LeftLegPosition) score++;
+            }
+            if (currentMove.RightLegPosition != -1)
+            {
+                index++;
+                if (rightLeg.GetLimbState() == currentMove.RightLegPosition) score++;
+            }
+        } else if (player == Players.PlayerTwo)
         {
-            index++;
-            if (rightArm.GetLimbState() == currentMove.RightArmPosition) score++;
+            if (currentMove.LeftArmPosition != -1)
+            {
+                index++;
+                if (leftArmP2.GetLimbState() == currentMove.LeftArmPosition) score++;
+            }
+            if (currentMove.RightArmPosition != -1)
+            {
+                index++;
+                if (rightArmP2.GetLimbState() == currentMove.RightArmPosition) score++;
+            }
+            if (currentMove.LeftLegPosition != -1)
+            {
+                index++;
+                if (leftLegP2.GetLimbState() == currentMove.LeftLegPosition) score++;
+            }
+            if (currentMove.RightLegPosition != -1)
+            {
+                index++;
+                if (rightLegP2.GetLimbState() == currentMove.RightLegPosition) score++;
+            }
         }
-        if (currentMove.LeftLegPosition != -1)
-        {
-            index++;
-            if (leftLeg.GetLimbState() == currentMove.LeftLegPosition) score++;
-        }
-        if (currentMove.RightLegPosition != -1)
-        {
-            index++;
-            if (rightLeg.GetLimbState() == currentMove.RightLegPosition) score++;
-        }
+        
         return score / index;
         
     }
