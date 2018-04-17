@@ -65,7 +65,7 @@ public class GameControlling : MonoBehaviour {
         instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
         instructions[4] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[5] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
         instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
         instructions[7] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
         instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
