@@ -12,7 +12,7 @@ public class LeaderBoard : MonoBehaviour {
     const int leaderBoardLength = 10;
     public Text[] leaderBoardText;
     public float goToMenuTimer;
-	// Use this for initialization
+
 	void Start () {
         GetLeaderBoard();
         Invoke("GoToMenu", goToMenuTimer);
@@ -28,12 +28,6 @@ public class LeaderBoard : MonoBehaviour {
                 ReplaceValueInIntArray(i, PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey), scoreArray);
                 newScorePlayerOne = PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey);
                 break;
-            } else
-            {
-                if(scoreArray[i] == PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0))
-                {
-                    break;
-                }
             }
         }
 
@@ -51,13 +45,6 @@ public class LeaderBoard : MonoBehaviour {
                 }
 
                 break;
-            }
-            else
-            {
-                if (scoreArray[i] == PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0))
-                {
-                    break;
-                }
             }
         }
 
