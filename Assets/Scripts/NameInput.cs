@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class NameInput : MonoBehaviour {
 
+    public enum Player {Player1, Player2};
+    public Player player;
     public GameObject[] letterGameObjects;
 
     [HideInInspector] public static string playerOneName;
@@ -45,11 +47,24 @@ public class NameInput : MonoBehaviour {
     public void ConfirmLetters(string Scene) {
         currentLetter.GetComponent<Text>().fontStyle = FontStyle.Normal;
         if (currentLetterIndex == letterGameObjects.Length - 1) {
-            playerOneName = "";
-            foreach (GameObject go in letterGameObjects) {
-                playerOneName = playerOneName +  ((char)(go.GetComponent<Text>().text[0])).ToString();
-            }
-            Debug.Log(playerOneName + " entered");
+            switch (player) {
+                case Player.Player1:
+                    playerOneName = "";
+                    foreach (GameObject go in letterGameObjects) {
+                        playerOneName = playerOneName + ((char)(go.GetComponent<Text>().text[0])).ToString();
+                        Debug.Log(playerOneName + " entered");
+                    }
+                    break;
+                case Player.Player2:
+                    playerTwoName = "";
+                    foreach (GameObject go in letterGameObjects) {
+                        playerTwoName = playerTwoName + ((char)(go.GetComponent<Text>().text[0])).ToString();
+                        Debug.Log(playerTwoName + " entered");
+                    }
+                    break;
+                default:
+                    break;
+            }           
             SceneManager.LoadScene(Scene);
         }
         else {
