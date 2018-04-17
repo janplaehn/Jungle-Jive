@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - RightArm
+  - LeftArm
+  - LeftLeg
+  - RightLeg
+  - hand
+  - foot
+  - RightArmP2
+  - LeftArmP2
+  - RightLegP2
+  - LeftLegP2
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
