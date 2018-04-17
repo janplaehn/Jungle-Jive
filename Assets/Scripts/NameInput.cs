@@ -10,10 +10,17 @@ public class NameInput : MonoBehaviour {
     public Player player;
     public GameObject[] letterGameObjects;
 
+    public GameObject[] PlayerButtons;
+    public GameObject Character;
+    public GameObject Canvas;
+
     [HideInInspector] public static string playerOneName;
     [HideInInspector] public static string playerTwoName;
     [HideInInspector] public static bool wasNameEntered;
+    [HideInInspector] public static bool hasPlayerOneHighscore;
+    [HideInInspector] public static bool hasPlayerTwoHighscore;
 
+    private static int namesEntered = 0;
     private GameObject currentLetter;
     private int currentLetterIndex;
 
@@ -24,6 +31,23 @@ public class NameInput : MonoBehaviour {
         currentLetter = letterGameObjects[0];
         currentLetterIndex = 0;
         currentLetter.GetComponent<Text>().fontStyle = FontStyle.Bold;
+
+        if (!hasPlayerOneHighscore && player == Player.Player1) {
+            foreach (GameObject button in PlayerButtons) {
+                button.gameObject.SetActive(false);
+            }
+            Character.gameObject.SetActive(false);
+            Canvas.gameObject.SetActive(false);
+            namesEntered++;
+        }
+        if (!hasPlayerTwoHighscore && player == Player.Player2) {
+            foreach (GameObject button in PlayerButtons) {
+                button.gameObject.SetActive(false);
+            }
+            Character.gameObject.SetActive(false);
+            Canvas.gameObject.SetActive(false);
+            namesEntered++;
+        }
     }
 
     public void NextLetter() {
@@ -52,20 +76,28 @@ public class NameInput : MonoBehaviour {
                     playerOneName = "";
                     foreach (GameObject go in letterGameObjects) {
                         playerOneName = playerOneName + ((char)(go.GetComponent<Text>().text[0])).ToString();
-                        Debug.Log(playerOneName + " entered");
                     }
+                    Debug.Log(playerOneName + " entered");
+                    namesEntered++;
                     break;
                 case Player.Player2:
                     playerTwoName = "";
                     foreach (GameObject go in letterGameObjects) {
                         playerTwoName = playerTwoName + ((char)(go.GetComponent<Text>().text[0])).ToString();
-                        Debug.Log(playerTwoName + " entered");
                     }
+                    Debug.Log(playerTwoName + " entered");
+                    namesEntered++;
                     break;
                 default:
                     break;
-            }           
-            SceneManager.LoadScene(Scene);
+            }
+            foreach (GameObject button in PlayerButtons) {
+                button.gameObject.SetActive(false);
+            }
+            if (namesEntered >= 2) {
+                namesEntered = 0;
+                SceneManager.LoadScene(Scene);
+            }
         }
         else {
             currentLetter = letterGameObjects[currentLetterIndex + 1];
