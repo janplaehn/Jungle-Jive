@@ -10,49 +10,14 @@ public class GameControlling : MonoBehaviour {
 
     void Start() {
         //DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
-        DanceMove leftArmUp = new DanceMove(0f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
-        DanceMove rightArmUp;
-        rightArmUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.RightArmUp;
-        rightArmUp.LeftArmPosition = 0f;
-        rightArmUp.RightArmPosition = 2f;
-        rightArmUp.LeftLegPosition = -1f;
-        rightArmUp.RightLegPosition = -1f;
-        DanceMove bothArmsUp;
-        bothArmsUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsUp;
-        bothArmsUp.RightArmPosition = 2f;
-        bothArmsUp.LeftArmPosition = 2f;
-        bothArmsUp.RightLegPosition = -1f;
-        bothArmsUp.LeftLegPosition = -1f;
-        DanceMove bothArmsDown;
-        bothArmsDown.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.BothArmsDown;
-        bothArmsDown.RightArmPosition = 0f;
-        bothArmsDown.LeftArmPosition = 0f;
-        bothArmsDown.RightLegPosition = -1f;
-        bothArmsDown.LeftLegPosition = -1f;
-        DanceMove splitArmsUp;
-        splitArmsUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.SplitArmsUp;
-        splitArmsUp.RightArmPosition = 2f;
-        splitArmsUp.LeftArmPosition = 2f;
-        splitArmsUp.RightLegPosition = 2f;
-        splitArmsUp.LeftLegPosition = 2f;
-        DanceMove splitArmsDown;
-        splitArmsDown.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.SplitArmsDown;
-        splitArmsDown.RightArmPosition = 0f;
-        splitArmsDown.LeftArmPosition = 0f;
-        splitArmsDown.RightLegPosition = 2f;
-        splitArmsDown.LeftLegPosition = 2f;
-        DanceMove leftArmLeftLegUp;
-        leftArmLeftLegUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.LeftArmLeftLegUp;
-        leftArmLeftLegUp.RightArmPosition = 1f;
-        leftArmLeftLegUp.LeftArmPosition = 2f;
-        leftArmLeftLegUp.RightLegPosition = 1f;
-        leftArmLeftLegUp.LeftLegPosition = 2f;
-        DanceMove rightArmRightLegUp;
-        rightArmRightLegUp.instructionImageIndex = (int)MusicInstructions.DanceMoveEnum.RightArmRightLegUp;
-        rightArmRightLegUp.RightArmPosition = 2f;
-        rightArmRightLegUp.LeftArmPosition = 1f;
-        rightArmRightLegUp.RightLegPosition = 2f;
-        rightArmRightLegUp.LeftLegPosition = 1f;
+        DanceMove leftArmUp =          new DanceMove(0f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
+        DanceMove rightArmUp =         new DanceMove(2f, 0f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.RightArmUp);
+        DanceMove bothArmsUp =         new DanceMove(2f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.BothArmsUp);
+        DanceMove bothArmsDown =       new DanceMove(0f, 0f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.BothArmsDown);
+        DanceMove splitArmsUp =        new DanceMove(2f, 2f, 2f,  2f, (int)MusicInstructions.DanceMoveEnum.SplitArmsUp);
+        DanceMove splitArmsDown =      new DanceMove(0f, 0f, 2f,  2f, (int)MusicInstructions.DanceMoveEnum.SplitArmsDown);
+        DanceMove leftArmLeftLegUp =   new DanceMove(1f, 2f, 1f,  2f, (int)MusicInstructions.DanceMoveEnum.LeftArmLeftLegUp);
+        DanceMove rightArmRightLegUp = new DanceMove(2f, 1f, 2f,  1f, (int)MusicInstructions.DanceMoveEnum.RightArmRightLegUp);
 
       //  moveReactionTime = 2f;
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
