@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 60470986415862946}
   - component: {fileID: 114087861345423734}
   - component: {fileID: 114734143335886456}
+  - component: {fileID: 114419475433672234}
   m_Layer: 0
   m_Name: head
   m_TagString: Untagged
@@ -1152,15 +1153,15 @@ MonoBehaviour:
     type: 2}
   spritesPerfect:
   - {fileID: 21300000, guid: b8fdfceb84591e24ab38022d2d3ed9a0, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: ca8aab84bafe73a49a1a32fac19447c7, type: 3}
   spritesGood:
   - {fileID: 21300000, guid: 764eda2ba2558424abcdd2b53c434085, type: 3}
   spritesOk:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: b587899ba0406ff44a9488fe0de0b20a, type: 3}
   spritesBad:
-  - {fileID: 21300000, guid: 7e66bbc06453636499d0ce10eaff4df1, type: 3}
+  - {fileID: 21300000, guid: a68a0f11db90a1b43a0355616d636bd5, type: 3}
   spritesHorrible:
-  - {fileID: 21300000, guid: 62646adb8220f004bad0644acaff4e70, type: 3}
+  - {fileID: 21300000, guid: ff06772eb608a924c8771c8eeaeddd79, type: 3}
   displayDuration: 1
 --- !u!114 &114202915736014426
 MonoBehaviour:
@@ -1218,6 +1219,28 @@ MonoBehaviour:
   joystickAxis: RightStickHorizontal2
   maxRotation: -90
   startRotation: 0
+--- !u!114 &114419475433672234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1635710914331560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b1431e334cd3c4e91cdd48f8614aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  happyFace:
+  - {fileID: 21300000, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300004, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300002, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  neutralFace:
+  - {fileID: 21300006, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300008, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  sadFace:
+  - {fileID: 21300010, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300012, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300014, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
 --- !u!114 &114635293512431228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1389,7 +1412,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1830013555
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300016, guid: bcfcabc9d8c2cb44e9866465574ec5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1873,7 +1896,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1830013555
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300022, guid: bcfcabc9d8c2cb44e9866465574ec5d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -941,7 +941,8 @@ Prefab:
         type: 2}
       propertyPath: firstPlayerTextFeedback
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1032947653305246, guid: 74d3f43f2ccd6f741bba86324d732bed,
+        type: 2}
     - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: firstPlayerHead

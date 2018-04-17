@@ -35,7 +35,6 @@ public class MusicInstructions : MonoBehaviour {
         LeftArmLeftLegUp,
         RightArmRightLegUp,
     }
-
 	// Use this for initialization
 	void Start () {
         lastMove = timingPairs[0].firstValue;
