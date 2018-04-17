@@ -58,7 +58,7 @@ public class GameControlling : MonoBehaviour {
         rightArmRightLegUp.RightLegPosition = 2f;
         rightArmRightLegUp.LeftLegPosition = 1f;
 
-        moveReactionTime = 2f;
+      //  moveReactionTime = 2f;
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
         instructions[0] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[1] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
@@ -71,13 +71,13 @@ public class GameControlling : MonoBehaviour {
         instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[9] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
         instructions[10] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        moveReactionTime = 2.5f;
+        //moveReactionTime = 2.5f;
         instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, moveReactionTime);
-        moveReactionTime = 2f;
+        //moveReactionTime = 2f;
         instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
         instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, moveReactionTime);
         instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
-        moveReactionTime = 1f;
+        //moveReactionTime = 1f;
         instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);
 
     }
@@ -90,6 +90,6 @@ public class GameControlling : MonoBehaviour {
         Invoke("QuitToLeaderboard", 5f);
     }
     private void QuitToLeaderboard() {
-        SceneManager.LoadScene("ClementScene");
+        SceneManager.LoadScene("EnterNameScene");
     }
 }

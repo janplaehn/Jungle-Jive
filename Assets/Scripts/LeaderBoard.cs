@@ -12,7 +12,7 @@ public class LeaderBoard : MonoBehaviour {
     const int leaderBoardLength = 10;
     public Text[] leaderBoardText;
     public float goToMenuTimer;
-	// Use this for initialization
+
 	void Start () {
         GetLeaderBoard();
         Invoke("GoToMenu", goToMenuTimer);
@@ -28,12 +28,6 @@ public class LeaderBoard : MonoBehaviour {
                 ReplaceValueInIntArray(i, PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey), scoreArray);
                 newScorePlayerOne = PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey);
                 break;
-            } else
-            {
-                if(scoreArray[i] == PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0))
-                {
-                    break;
-                }
             }
         }
 
@@ -52,31 +46,26 @@ public class LeaderBoard : MonoBehaviour {
 
                 break;
             }
-            else
-            {
-                if (scoreArray[i] == PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0))
-                {
-                    break;
-                }
-            }
         }
 
         for(int i = leaderBoardText.Length - 1; i >= 0; i--)
         {
-            string temp = "High Score " + (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + scoreArray[i].ToString() + " points!";
+            string temp = (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + scoreArray[i].ToString() + " points";
             if(draw == true && newScorePlayerOne == scoreArray[i])
             {
-                temp += " New High Score by both player!";
+                temp += " New Highscores!";
             } else
             {
                 if(newScorePlayerOne == scoreArray[i])
                 {
-                    temp += " New High Score by player one!";
+                    temp += " New Highscore Player One!";
+                    temp = NameInput.playerOneName + " " + temp;
                 } else
                 {
                     if (newScorePlayerTwo == scoreArray[i])
                     {
-                        temp += " New High Score by player two!";
+                        temp += " New Highscore Player Two!";
+                        temp = NameInput.playerTwoName + " " + temp;
                     }
                 }
             }

@@ -8,6 +8,7 @@ public class MusicInstructions : MonoBehaviour {
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
+    public Image timing;
     //public Image timing;
     public Image nextInstruction;
     private float accumulatedTime = 0f;
@@ -21,6 +22,7 @@ public class MusicInstructions : MonoBehaviour {
 
     public float instructionTime;
     private float errorMargin = 0.2f;
+    private float scaleTiming = 1;
     public enum DanceMoveEnum
     {
         LeftArmUp,
@@ -56,24 +58,26 @@ public class MusicInstructions : MonoBehaviour {
 
             if (accumulatedTime <= instructionTime)
             {
+                animateTiming(instructionTime/2, accumulatedTime);
                 if (inputCheck.CheckLimbs(lastMove) == 1 && moveRated == false)
                 {
-                    if (accumulatedTime >= timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime <= timingPairs[lastPairIndex].secondValue + errorMargin)
+                    if (accumulatedTime > timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime < timingPairs[lastPairIndex].secondValue + errorMargin)
                     {
-                        scoringSystem.AddFirstPlayerScore(100);
+                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 2), inputCheck.GetMaxScore(lastMove));
                         
                     } else
                     {
-                        scoringSystem.AddFirstPlayerScore(75);
+                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1), inputCheck.GetMaxScore(lastMove));
                     }
                     moveRated = true;
+                    timing.sprite = voidSprite;
                 }
                 
             } else
             {
                 Debug.Log("switch");
-                
-                if (moveRated == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
+
+                if (moveRated == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1), inputCheck.GetMaxScore(lastMove));
                 lastPairIndex++;
                 if (timingPairs.Length <= lastPairIndex)
                 {
@@ -91,8 +95,8 @@ public class MusicInstructions : MonoBehaviour {
                 accumulatedTime = 0f;
                 
                 instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
-                //timing.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
-                //timing.transform.localScale = new Vector3 (5,5,5);
+                timing.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
                 if (lastPairIndex + 1 <= timingPairs.Length - 1)
                 {
                     nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
@@ -143,11 +147,12 @@ public class MusicInstructions : MonoBehaviour {
         finished = false;
     }
 
-    private void ClearInstructionImage()
+    void animateTiming (float perfectTime, float accumulatedTime)
     {
-        instruction.sprite = voidSprite;
-        nextInstruction.sprite = voidSprite;
-        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove));
-    }
+        timing.rectTransform.localScale = new Vector3(1 + (2 * (perfectTime - accumulatedTime)) / perfectTime, 1 + (2 * (perfectTime - accumulatedTime)) / perfectTime, 0);
+        if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1) {
+            timing.sprite = voidSprite;
+        }
 
+    }
 }
