@@ -10,6 +10,10 @@ TagManager:
   - RightLeg
   - hand
   - foot
+  - RightArmP2
+  - LeftArmP2
+  - RightLegP2
+  - LeftLegP2
   layers:
   - Default
   - TransparentFX

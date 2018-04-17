@@ -18,7 +18,8 @@ public class MusicInstructions : MonoBehaviour {
     private DanceMove lastMove;
     private int lastPairIndex = 0;
     private bool finished = false;
-    private bool moveRated = false;
+    private bool moveRatedP1 = false;
+    private bool moveRatedP2 = false;
     public Sprite timingSprite;
 
     public float instructionTime;
@@ -59,24 +60,37 @@ public class MusicInstructions : MonoBehaviour {
             if (accumulatedTime <= instructionTime)
             {
                 animateTiming(instructionTime/2, accumulatedTime);
-                if (inputCheck.CheckLimbs(lastMove) == 1 && moveRated == false)
+                if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
                 {
                     if (accumulatedTime > timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime < timingPairs[lastPairIndex].secondValue + errorMargin)
                     {
-                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 2), inputCheck.GetMaxScore(lastMove));
+                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
                         
                     } else
                     {
-                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1), inputCheck.GetMaxScore(lastMove));
+                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
                     }
-                    moveRated = true;
-                    timing.sprite = voidSprite;
+                    moveRatedP1 = true;
                 }
-                
+                if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerTwo) == 1 && moveRatedP2 == false)
+                {
+                    if (accumulatedTime > timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime < timingPairs[lastPairIndex].secondValue + errorMargin)
+                    {
+                        scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
+
+                    }
+                    else
+                    {
+                        scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
+                    }
+                    moveRatedP2 = true;
+                }
+                if (accumulatedTime >= instructionTime / 2) timing.sprite = voidSprite;
             } else
             {
 
-                if (moveRated == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1), inputCheck.GetMaxScore(lastMove));
+                if (moveRatedP1 == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
+                if (moveRatedP2 == false) scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
                 lastPairIndex++;
                 if (timingPairs.Length <= lastPairIndex)
                 {
@@ -89,7 +103,8 @@ public class MusicInstructions : MonoBehaviour {
                     return;
                 }
 
-                moveRated = false;
+                moveRatedP1 = false;
+                moveRatedP2 = false;
                 accumulatedTime = 0f;
                 
                 instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];

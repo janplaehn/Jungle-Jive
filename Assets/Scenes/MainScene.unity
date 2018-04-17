@@ -799,19 +799,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1675472842211258, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_TagString
-      value: RightArm
+      value: RightArmP2
       objectReference: {fileID: 0}
     - target: {fileID: 1279928438712566, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_TagString
-      value: LeftArm
+      value: LeftArmP2
       objectReference: {fileID: 0}
     - target: {fileID: 1337557511797006, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_TagString
-      value: RightLeg
+      value: RightLegP2
       objectReference: {fileID: 0}
     - target: {fileID: 1051421914064068, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_TagString
-      value: LeftLeg
+      value: LeftLegP2
       objectReference: {fileID: 0}
     - target: {fileID: 212652678821752452, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
@@ -1213,6 +1213,10 @@ Prefab:
       propertyPath: m_Name
       value: Grandma2
       objectReference: {fileID: 0}
+    - target: {fileID: 1178872442537718, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_Name
+      value: FeedBack2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_IsPrefabParent: 0
@@ -1398,6 +1402,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14a24cb0064e7494c89668ab4d828e76, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1484235424 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1178872442537718, guid: 128cc50a803005a45927d28fba53a834,
+    type: 2}
+  m_PrefabInternal: {fileID: 1761898500}
 --- !u!1001 &1565195995
 Prefab:
   m_ObjectHideFlags: 0
@@ -1456,8 +1465,7 @@ Prefab:
         type: 2}
       propertyPath: firstPlayerTextFeedback
       value: 
-      objectReference: {fileID: 1032947653305246, guid: 74d3f43f2ccd6f741bba86324d732bed,
-        type: 2}
+      objectReference: {fileID: 1484235424}
     - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: firstPlayerHead
