@@ -75,13 +75,11 @@ public class MusicInstructions : MonoBehaviour {
                 
             } else
             {
-                Debug.Log("switch");
 
                 if (moveRated == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1), inputCheck.GetMaxScore(lastMove));
                 lastPairIndex++;
                 if (timingPairs.Length <= lastPairIndex)
                 {
-                    Debug.Log("oof");
                     finished = true;
                     instruction.sprite = voidSprite;
                     nextInstruction.sprite = voidSprite;

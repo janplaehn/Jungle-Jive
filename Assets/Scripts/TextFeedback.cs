@@ -19,26 +19,27 @@ public class TextFeedback : MonoBehaviour {
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesHorrible));
         }
-        else if (percentage< 25f && percentage != 0f)
+        else if (percentage < 25f && percentage != 0f)
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesBad));
-        } else if(percentage >= 25f && percentage < 50f)
+        }
+        else if (percentage >= 25f && percentage < 50f)
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesOk));
-        } else if (percentage >= 50f && percentage < 75f)
+        }
+        else if (percentage >= 50f && percentage < 75f)
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesGood));
         }
         else if (percentage >= 75f)
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesPerfect));
-        } else
+        }
+        else
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesPerfect));
             Debug.LogWarning("Invalid score format " + percentage + " detected. Unable to display text feedback Sprite.");
-        }
-        Debug.Log(score + " " + maxScore + " " + percentage);
-        /*switch (score/maxScore * 10) {
+        }           /*switch (score/maxScore * 10) {
             case 0:
                 temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesHorrible));
                 break;
