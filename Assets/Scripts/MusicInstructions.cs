@@ -151,6 +151,5 @@ public class MusicInstructions : MonoBehaviour {
         if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1) {
             timing.sprite = voidSprite;
         }
-
     }
 }
