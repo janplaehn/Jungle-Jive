@@ -8,28 +8,34 @@ public class FaceFeedback : MonoBehaviour {
     public Sprite[] neutralFace;
     public Sprite[] sadFace;
 
-    public void GiveFaceFeedback(int score) {
-        switch (score) {
-            case 0:
-                SetSprite(sadFace);
-                break;
-            case 25:
-                SetSprite(sadFace);
-                break;
-            case 50:
-                SetSprite(neutralFace);
-                break;
-            case 75:
-                SetSprite(happyFace);
-                break;
-            case 100:
-                SetSprite(happyFace);
-                break;
-            default:
-                Debug.LogWarning("Invalid score format " + score + " detected. Unable to display face feedback Sprite.");
-                SetSprite(neutralFace);
-                break;
+    public void GiveFaceFeedback(int score, int maxScore) {
+        float percentage = ((float)(score) / (float)(maxScore)) * 100f;
+        if (percentage == 0f)
+        {
+            SetSprite(sadFace);
         }
+        else if (percentage < 25f && percentage != 0f)
+        {
+            SetSprite(sadFace);
+        }
+        else if (percentage >= 25f && percentage < 50f)
+        {
+            SetSprite(neutralFace);
+        }
+        else if (percentage >= 50f && percentage < 75f)
+        {
+            SetSprite(happyFace);
+        }
+        else if (percentage >= 75f)
+        {
+            SetSprite(happyFace);
+        }
+        else
+        {
+            SetSprite(neutralFace);
+            Debug.LogWarning("Invalid score format " + percentage + " detected. Unable to display face feedback Sprite.");
+        }
+        
     }
 
     void SetSprite(Sprite[] spriteArray) {

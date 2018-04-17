@@ -20,7 +20,7 @@ public class ScoringSystem : MonoBehaviour {
         firstPlayerScoreDisplay.text = firstPlayerScore.ToString();
         PlayerPrefs.SetInt(firstPlayerScoreKey, firstPlayerScore);
         firstPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore);
-        firstPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount);
+        firstPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount, maxScore);
     }
 
     public void AddSecondPlayerScore(int scoreAmount, int maxScore) {
@@ -28,7 +28,7 @@ public class ScoringSystem : MonoBehaviour {
         secondPlayerScoreDisplay.text = secondPlayerScore.ToString();
         PlayerPrefs.SetInt(secondPlayerScoreKey, secondPlayerScore);
         secondPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore);
-        secondPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount);
+        secondPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount, maxScore);
     }
 
     public int GetFirstPlayerScore() { return firstPlayerScore; }
