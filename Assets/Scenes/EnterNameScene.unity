@@ -528,6 +528,15 @@ MonoBehaviour:
   - {fileID: 910576273}
   - {fileID: 561637458}
   - {fileID: 1990737287}
+  PlayerButtons:
+  - {fileID: 799080060}
+  - {fileID: 540144493}
+  - {fileID: 71211157}
+  - {fileID: 1067849472}
+  - {fileID: 975533407}
+  - {fileID: 759461369}
+  Character: {fileID: 793047534}
+  Canvas: {fileID: 2094115649}
 --- !u!4 &367221157
 Transform:
   m_ObjectHideFlags: 0
@@ -1285,22 +1294,22 @@ Prefab:
     - target: {fileID: 114063306827908870, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal2
+      value: P2LeftStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114371802438797082, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal2
+      value: P2RightStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114202915736014426, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: LeftStickHorizontal2
+      value: P2LeftStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 114955545107525826, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
       propertyPath: joystickAxis
-      value: RightStickHorizontal2
+      value: P2RightStickHorizontal2
       objectReference: {fileID: 0}
     - target: {fileID: 1675472842211258, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_TagString
@@ -1694,7 +1703,29 @@ Prefab:
       propertyPath: m_Name
       value: Grandma
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114325120810008606, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: P2LeftStickVertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 114635293512431228, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: P2LeftStickVertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 114289743232044418, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: P2RightStickVertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 114081312718325312, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: joystickAxis
+      value: P2RightStickVertical
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114734143335886456, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+    - {fileID: 114419475433672234, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &781811881 stripped
@@ -1702,33 +1733,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4082469092883154, guid: 128cc50a803005a45927d28fba53a834,
     type: 2}
   m_PrefabInternal: {fileID: 781811880}
---- !u!1 &781811882 stripped
+--- !u!1 &793047534 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1635710914331560, guid: 128cc50a803005a45927d28fba53a834,
+  m_PrefabParentObject: {fileID: 1728021830205612, guid: 128cc50a803005a45927d28fba53a834,
     type: 2}
-  m_PrefabInternal: {fileID: 781811880}
---- !u!114 &781811883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 781811882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b1431e334cd3c4e91cdd48f8614aec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  happyFace:
-  - {fileID: 21300000, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300004, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300002, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  neutralFace:
-  - {fileID: 21300006, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300008, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  sadFace:
-  - {fileID: 21300010, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300012, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300014, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  m_PrefabInternal: {fileID: 850584636}
 --- !u!1 &799080060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2473,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114734143335886456, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+    - {fileID: 114419475433672234, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &853990387
@@ -2673,6 +2684,15 @@ MonoBehaviour:
   - {fileID: 953208443}
   - {fileID: 939254752}
   - {fileID: 519622978}
+  PlayerButtons:
+  - {fileID: 1125274685}
+  - {fileID: 449698317}
+  - {fileID: 1275126716}
+  - {fileID: 569828424}
+  - {fileID: 1685550236}
+  - {fileID: 1525340844}
+  Character: {fileID: 1770036739}
+  Canvas: {fileID: 853990387}
 --- !u!4 &913259133
 Transform:
   m_ObjectHideFlags: 0
@@ -4510,7 +4530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760918432}
   m_Layer: 0
-  m_Name: --1ndPlayer:--------------
+  m_Name: --1stPlayer:--------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4529,6 +4549,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1770036739 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1728021830205612, guid: 128cc50a803005a45927d28fba53a834,
+    type: 2}
+  m_PrefabInternal: {fileID: 781811880}
 --- !u!1 &1945160505
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,30 +4809,3 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &2109129812 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1635710914331560, guid: 128cc50a803005a45927d28fba53a834,
-    type: 2}
-  m_PrefabInternal: {fileID: 850584636}
---- !u!114 &2109129814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2109129812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b1431e334cd3c4e91cdd48f8614aec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  happyFace:
-  - {fileID: 21300000, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300004, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300002, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  neutralFace:
-  - {fileID: 21300006, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300008, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  sadFace:
-  - {fileID: 21300010, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300012, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300014, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
