@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(MusicInstructions))]
 public class GameControlling : MonoBehaviour {
     public AudioClip music;
-    public float moveReactionTime;
+    public float baseMoveReactionTime;
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
 
     void Start() {
@@ -21,25 +21,25 @@ public class GameControlling : MonoBehaviour {
 
       //  moveReactionTime = 2f;
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
-        instructions[0] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[1] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
-        instructions[4] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
-        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
-        instructions[7] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[9] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        instructions[10] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[0] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
+        instructions[1] = new Pair<DanceMove, float>(leftArmUp, baseMoveReactionTime);
+        instructions[2] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
+        instructions[3] = new Pair<DanceMove, float>(rightArmUp, baseMoveReactionTime);
+        instructions[4] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
+        instructions[5] = new Pair<DanceMove, float>(rightArmUp, baseMoveReactionTime);
+        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, baseMoveReactionTime);
+        instructions[7] = new Pair<DanceMove, float>(leftArmUp, baseMoveReactionTime);
+        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
+        instructions[9] = new Pair<DanceMove, float>(leftArmUp, baseMoveReactionTime);
+        instructions[10] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
         //moveReactionTime = 2.5f;
-        instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, moveReactionTime);
+        instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, baseMoveReactionTime + 1.5f);
         //moveReactionTime = 2f;
-        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
-        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, moveReactionTime);
-        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
+        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, baseMoveReactionTime+ 1f);
+        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, baseMoveReactionTime + 1f);
+        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, baseMoveReactionTime + 1f);
         //moveReactionTime = 1f;
-        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);
+        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, baseMoveReactionTime);
 
     }
     void Update() {

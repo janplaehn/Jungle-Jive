@@ -106,7 +106,7 @@ public class MusicInstructions : MonoBehaviour {
                 moveRatedP1 = false;
                 moveRatedP2 = false;
                 accumulatedTime = 0f;
-                
+                instructionTime = timingPairs[lastPairIndex].secondValue * 2;
                 instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
                 timing.sprite = timingSprite;
                 timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
