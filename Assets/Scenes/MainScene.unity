@@ -1221,6 +1221,12 @@ Prefab:
       propertyPath: joystickAxis
       value: P2RightStickVertical
       objectReference: {fileID: 0}
+    - target: {fileID: 114198044542359150, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: spritesPerfect.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7076ee93413c34942aebda5d36193a19,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_IsPrefabParent: 0
@@ -1595,6 +1601,12 @@ Prefab:
       propertyPath: isPlayerOne
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114198044542359150, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: spritesPerfect.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7076ee93413c34942aebda5d36193a19,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_IsPrefabParent: 0
