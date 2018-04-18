@@ -14,13 +14,13 @@ public class Skin : MonoBehaviour {
         leftBiceps = 2,
         rightBiceps = 3,
         leftForearm = 4,
+        rightForearm = 7,
         leftThigh = 5,
         rightThigh = 6,
-        rightForearm = 7,
         leftHand = 8,
+        rightHand = 11,
         leftTibia = 9,
         rightTibia = 10,
-        rightHand = 11,
         leftFoot = 12,
         rightFoot = 13
     }

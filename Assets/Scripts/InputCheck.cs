@@ -67,7 +67,8 @@ public class InputCheck : MonoBehaviour {
                 index++;
                 if (rightLeg.GetLimbState() == currentMove.RightLegPosition) score++;
             }
-        } else if (player == Players.PlayerTwo)
+        }
+        else if (player == Players.PlayerTwo)
         {
             if (currentMove.LeftArmPosition != -1)
             {
@@ -90,10 +91,10 @@ public class InputCheck : MonoBehaviour {
                 if (rightLegP2.GetLimbState() == currentMove.RightLegPosition) score++;
             }
         }
-        
+
         return score / index;
-        
     }
+
     public int GetMaxScore (DanceMove currentMove)
     {
         return 100 * GetLimbMultiplier(currentMove) * 2; // times two is for when the player times their dance move perfectly
