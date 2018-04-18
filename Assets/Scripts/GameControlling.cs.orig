@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControlling : MonoBehaviour {
 
     public AudioClip music;
-    public float baseMoveReactionTime;
-    public bool gamePaused;
-
+    public float moveReactionTime;
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
 
     static public Skin firstPlayerSkin;
@@ -19,6 +17,13 @@ public class GameControlling : MonoBehaviour {
     public GameObject playerTwo;
     void Start() {
 <<<<<<< HEAD
+        CreateSkins();
+        CreateInstructions();
+=======
+<<<<<<< HEAD
+        CreateSkins();
+        CreateInstructions();
+=======
         gamePaused = false;
         //DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
         DanceMove leftArmUp =          new DanceMove(0f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
@@ -52,24 +57,13 @@ public class GameControlling : MonoBehaviour {
         //moveReactionTime = 1f;
         instructions[15] = new Pair<DanceMove, float>(splitArmsUp, baseMoveReactionTime);
 
-=======
-        CreateSkins();
-        CreateInstructions();
->>>>>>> c0f13920aea3237df1036252dd2b0a0bef475073
+>>>>>>> master
+>>>>>>> 791ef78b753ce853582de40d409375702a4ba850
     }
 
     void Update() {
         //Debug.Log("LeftArm: " + GameObject.FindGameObjectWithTag("LeftArm").GetComponent<LimbMovement>().GetLimbState() + "RightArm: " + GameObject.FindGameObjectWithTag("RightArm").GetComponent<LimbMovement>().GetLimbState());
         //Debug.Log("LeftLeg: " + GameObject.FindGameObjectWithTag("LeftLeg").GetComponent<LimbMovement>().GetLimbState() + "RightLeg: " + GameObject.FindGameObjectWithTag("RightLeg").GetComponent<LimbMovement>().GetLimbState());
-        if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.Alpha4)) {
-            PlayerPrefs.DeleteAll();
-            Debug.LogWarning("Playerprefs Deleted!");
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            changePause();
-        }
     }
 
     public void GameOver() {
@@ -104,18 +98,9 @@ public class GameControlling : MonoBehaviour {
     }
 
 <<<<<<< HEAD
-   public void changePause ()
-    {
-        if (gamePaused == false)
-        {
-            Time.timeScale = 0;
-            gamePaused = true;
-        } else
-        {
-            Time.timeScale = 1;
-            gamePaused = false;
-        }
 =======
+<<<<<<< HEAD
+>>>>>>> 791ef78b753ce853582de40d409375702a4ba850
     void CreateInstructions()
     {
         //DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
@@ -174,6 +159,21 @@ public class GameControlling : MonoBehaviour {
         secondPlayerSkin = skins[secondPlayerIndex];
         playerOne.GetComponent<SkinSetting>().SetSkins();
         playerTwo.GetComponent<SkinSetting>().SetSkins();
->>>>>>> c0f13920aea3237df1036252dd2b0a0bef475073
+<<<<<<< HEAD
+=======
+=======
+   public void changePause ()
+    {
+        if (gamePaused == false)
+        {
+            Time.timeScale = 0;
+            gamePaused = true;
+        } else
+        {
+            Time.timeScale = 1;
+            gamePaused = false;
+        }
+>>>>>>> master
+>>>>>>> 791ef78b753ce853582de40d409375702a4ba850
     }
 }

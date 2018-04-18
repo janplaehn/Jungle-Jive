@@ -1499,10 +1499,9 @@ Prefab:
     - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
 <<<<<<< HEAD
-      propertyPath: baseMoveReactionTime
-      value: 1
-      objectReference: {fileID: 0}
 =======
+<<<<<<< HEAD
+>>>>>>> 791ef78b753ce853582de40d409375702a4ba850
       propertyPath: skinObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1223220890565020, guid: 5252d215976143644a4af389735fe87f,
@@ -1517,7 +1516,14 @@ Prefab:
       propertyPath: playerTwo
       value: 
       objectReference: {fileID: 260539751}
->>>>>>> c0f13920aea3237df1036252dd2b0a0bef475073
+<<<<<<< HEAD
+=======
+=======
+      propertyPath: baseMoveReactionTime
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> master
+>>>>>>> 791ef78b753ce853582de40d409375702a4ba850
     m_RemovedComponents:
     - {fileID: 114242741108959480, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}

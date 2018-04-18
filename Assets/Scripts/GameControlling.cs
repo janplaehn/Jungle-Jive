@@ -15,7 +15,9 @@ public class GameControlling : MonoBehaviour {
     private Skin[] skins;
     public GameObject playerOne;
     public GameObject playerTwo;
+    private bool isPaused;
     void Start() {
+        isPaused = false;
         CreateSkins();
         CreateInstructions();
     }
@@ -23,6 +25,10 @@ public class GameControlling : MonoBehaviour {
     void Update() {
         //Debug.Log("LeftArm: " + GameObject.FindGameObjectWithTag("LeftArm").GetComponent<LimbMovement>().GetLimbState() + "RightArm: " + GameObject.FindGameObjectWithTag("RightArm").GetComponent<LimbMovement>().GetLimbState());
         //Debug.Log("LeftLeg: " + GameObject.FindGameObjectWithTag("LeftLeg").GetComponent<LimbMovement>().GetLimbState() + "RightLeg: " + GameObject.FindGameObjectWithTag("RightLeg").GetComponent<LimbMovement>().GetLimbState());
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            changePauseState();
+        }
     }
 
     public void GameOver() {
@@ -114,5 +120,19 @@ public class GameControlling : MonoBehaviour {
         secondPlayerSkin = skins[secondPlayerIndex];
         playerOne.GetComponent<SkinSetting>().SetSkins();
         playerTwo.GetComponent<SkinSetting>().SetSkins();
+    }
+
+    public void changePauseState()
+    {
+        if (isPaused == false)
+        {
+            Time.timeScale = 0;
+            isPaused = true;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            isPaused = false;
+        }
     }
 }
