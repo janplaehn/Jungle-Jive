@@ -10,7 +10,6 @@ public class SkinSetting : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        SetSkin();
 	}
 
     public void SetSkin()

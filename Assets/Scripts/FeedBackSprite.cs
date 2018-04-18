@@ -10,8 +10,7 @@ public class FeedBackSprite : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        direction.x = Random.Range(-1f, 1f);
-        direction.y = Random.Range(0.1f, -1f);
+        direction.y = -1f;
         direction.Normalize();
         Destroy(gameObject, lifeTime);
 	}
