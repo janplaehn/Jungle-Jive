@@ -6,37 +6,25 @@ using UnityEngine.SceneManagement;
 public class GameControlling : MonoBehaviour {
 
     public AudioClip music;
-    public float baseMoveReactionTime;
-    public bool gamePaused;
-
+    public float moveReactionTime;
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
-
+    private bool gamePaused = false;
     static public Skin firstPlayerSkin;
     static public Skin secondPlayerSkin;
     public GameObject[] skinObjects;
     private Skin[] skins;
     public GameObject playerOne;
     public GameObject playerTwo;
+
     void Start() {
         CreateSkins();
         CreateInstructions();
-
-        gamePaused = false;
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
     }
 
     void Update() {
         //Debug.Log("LeftArm: " + GameObject.FindGameObjectWithTag("LeftArm").GetComponent<LimbMovement>().GetLimbState() + "RightArm: " + GameObject.FindGameObjectWithTag("RightArm").GetComponent<LimbMovement>().GetLimbState());
         //Debug.Log("LeftLeg: " + GameObject.FindGameObjectWithTag("LeftLeg").GetComponent<LimbMovement>().GetLimbState() + "RightLeg: " + GameObject.FindGameObjectWithTag("RightLeg").GetComponent<LimbMovement>().GetLimbState());
-        if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.Alpha4)) {
-            PlayerPrefs.DeleteAll();
-            Debug.LogWarning("Playerprefs Deleted!");
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            changePause();
-        }
     }
 
     public void GameOver() {
@@ -69,7 +57,6 @@ public class GameControlling : MonoBehaviour {
             NameInput.wasNameEntered = false;
         }
     }
-    
     void CreateInstructions()
     {
         //DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
@@ -81,25 +68,25 @@ public class GameControlling : MonoBehaviour {
         DanceMove splitArmsDown = new DanceMove(0f, 0f, 2f, 2f, (int)MusicInstructions.DanceMoveEnum.SplitArmsDown);
         DanceMove leftArmLeftLegUp = new DanceMove(1f, 2f, 1f, 2f, (int)MusicInstructions.DanceMoveEnum.LeftArmLeftLegUp);
         DanceMove rightArmRightLegUp = new DanceMove(2f, 1f, 2f, 1f, (int)MusicInstructions.DanceMoveEnum.RightArmRightLegUp);
-        instructions[0] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
-        instructions[1] = new Pair<DanceMove, float>(leftArmUp, baseMoveReactionTime);
-        instructions[2] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
-        instructions[3] = new Pair<DanceMove, float>(rightArmUp, baseMoveReactionTime);
-        instructions[4] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
-        instructions[5] = new Pair<DanceMove, float>(rightArmUp, baseMoveReactionTime);
-        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, baseMoveReactionTime);
-        instructions[7] = new Pair<DanceMove, float>(leftArmUp, baseMoveReactionTime);
-        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
-        instructions[9] = new Pair<DanceMove, float>(leftArmUp, baseMoveReactionTime);
-        instructions[10] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
+        instructions[0] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[1] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+        instructions[4] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[7] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[9] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[10] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         //moveReactionTime = 2.5f;
-        instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, baseMoveReactionTime * 2.5f);
+        instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, moveReactionTime * 2.5f);
         //moveReactionTime = 2f;
-        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, baseMoveReactionTime * 2f);
-        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, baseMoveReactionTime * 2f);
-        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, baseMoveReactionTime * 2f);
+        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime * 2f);
+        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, moveReactionTime * 2f);
+        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime * 2f);
         //moveReactionTime = 1f;
-        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, baseMoveReactionTime);
+        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);
     }
 
     private void CreateSkins()
