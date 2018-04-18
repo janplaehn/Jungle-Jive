@@ -1513,6 +1513,11 @@ Prefab:
       propertyPath: secondPlayerHead
       value: 
       objectReference: {fileID: 1446791511}
+    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: baseMoveReactionTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114242741108959480, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
