@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameControlling : MonoBehaviour {
     public AudioClip music;
     public float baseMoveReactionTime;
+    public bool gamePaused;
+
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
 
     void Start() {
+        gamePaused = false;
         //DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
         DanceMove leftArmUp =          new DanceMove(0f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
         DanceMove rightArmUp =         new DanceMove(2f, 0f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.RightArmUp);
@@ -33,11 +36,11 @@ public class GameControlling : MonoBehaviour {
         instructions[9] = new Pair<DanceMove, float>(leftArmUp, baseMoveReactionTime);
         instructions[10] = new Pair<DanceMove, float>(bothArmsDown, baseMoveReactionTime);
         //moveReactionTime = 2.5f;
-        instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, baseMoveReactionTime + 1.5f);
+        instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, baseMoveReactionTime * 2.5f);
         //moveReactionTime = 2f;
-        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, baseMoveReactionTime+ 1f);
-        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, baseMoveReactionTime + 1f);
-        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, baseMoveReactionTime + 1f);
+        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, baseMoveReactionTime *  2f);
+        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, baseMoveReactionTime *2f);
+        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, baseMoveReactionTime *2f);
         //moveReactionTime = 1f;
         instructions[15] = new Pair<DanceMove, float>(splitArmsUp, baseMoveReactionTime);
 
@@ -48,6 +51,11 @@ public class GameControlling : MonoBehaviour {
         if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.Alpha4)) {
             PlayerPrefs.DeleteAll();
             Debug.LogWarning("Playerprefs Deleted!");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            changePause();
         }
     }
 
@@ -79,6 +87,19 @@ public class GameControlling : MonoBehaviour {
         else {
             SceneManager.LoadScene("LeaderboardScene");
             NameInput.wasNameEntered = false;
+        }
+    }
+
+   public void changePause ()
+    {
+        if (gamePaused == false)
+        {
+            Time.timeScale = 0;
+            gamePaused = true;
+        } else
+        {
+            Time.timeScale = 1;
+            gamePaused = false;
         }
     }
 }
