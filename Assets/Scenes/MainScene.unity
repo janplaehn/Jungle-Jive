@@ -2189,7 +2189,7 @@ Prefab:
     - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: skinObjects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4764533378347120, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2295,6 +2295,12 @@ Prefab:
       propertyPath: playerTwo
       value: 
       objectReference: {fileID: 260539751}
+    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: skinObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1904868705511726, guid: dd280e1d54427d344ae8c53f35915bb6,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 114242741108959480, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}

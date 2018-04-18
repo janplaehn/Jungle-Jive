@@ -1265,7 +1265,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4082469092883154, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.75
+      value: -1.32
       objectReference: {fileID: 0}
     - target: {fileID: 4082469092883154, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1723,6 +1723,11 @@ Prefab:
       propertyPath: joystickAxis
       value: P2RightStickVertical
       objectReference: {fileID: 0}
+    - target: {fileID: 50869596603595800, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114734143335886456, guid: 128cc50a803005a45927d28fba53a834, type: 2}
     - {fileID: 114419475433672234, guid: 128cc50a803005a45927d28fba53a834, type: 2}
@@ -2039,7 +2044,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4082469092883154, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.75
+      value: -1.21
       objectReference: {fileID: 0}
     - target: {fileID: 4082469092883154, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_LocalPosition.z

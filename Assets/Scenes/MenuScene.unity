@@ -540,8 +540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3caf8043bc897e844a547744975fc7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  options: {fileID: 0}
-  slider: {fileID: 0}
 --- !u!4 &522821495
 Transform:
   m_ObjectHideFlags: 0
@@ -737,7 +735,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainScene
+          m_StringArgument: SkinSelectScene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

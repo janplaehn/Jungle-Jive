@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuScripting : MonoBehaviour {
-    public GameObject options;
-    public Slider slider;
 	public void QuitGame()
     {
         Debug.Log("Quit Requested");
@@ -15,7 +13,7 @@ public class MenuScripting : MonoBehaviour {
 
     public void ChangeScene(string scene)
     {
-        Debug.Log("Change Scene Requested");
+        Debug.Log("Change Scene to " + scene + " Requested");
         SceneManager.LoadScene(scene);
     }
     
