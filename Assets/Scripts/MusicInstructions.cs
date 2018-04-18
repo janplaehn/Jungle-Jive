@@ -59,7 +59,7 @@ public class MusicInstructions : MonoBehaviour {
 
             if (accumulatedTime <= instructionTime)
             {
-                animateTiming(instructionTime/2, accumulatedTime);
+                animateTiming(timingPairs[lastPairIndex].secondValue, accumulatedTime);
                 if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
                 {
                     if (accumulatedTime > timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime < timingPairs[lastPairIndex].secondValue + errorMargin)
@@ -85,7 +85,7 @@ public class MusicInstructions : MonoBehaviour {
                     }
                     moveRatedP2 = true;
                 }
-                if (accumulatedTime >= instructionTime / 2) timing.sprite = voidSprite;
+                if (accumulatedTime >= timingPairs[lastPairIndex].secondValue) timing.sprite = voidSprite;
             } else
             {
 
@@ -106,7 +106,7 @@ public class MusicInstructions : MonoBehaviour {
                 moveRatedP1 = false;
                 moveRatedP2 = false;
                 accumulatedTime = 0f;
-                
+                instructionTime = timingPairs[lastPairIndex].secondValue + 1f;
                 instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
                 timing.sprite = timingSprite;
                 timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
