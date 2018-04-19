@@ -40,8 +40,14 @@ public class SkinControlling : MonoBehaviour {
     static public void ChangeFirstPlayerSkin(int indexDifference)
     {
         int firstPlayerIndex = PlayerPrefs.GetInt("FirstPlayerSkin", -1);
+        if(firstPlayerIndex + indexDifference < 0)
+        {
+            PlayerPrefs.SetInt("FirstPlayerSkin", skins.Length - 1);
+        } else
+        {
+            PlayerPrefs.SetInt("FirstPlayerSkin", firstPlayerIndex + indexDifference);
+        }
         firstPlayerSkin = skins[firstPlayerIndex + indexDifference];
-        PlayerPrefs.SetInt("FirstPlayerSkin", firstPlayerIndex + indexDifference);
     }
 
     static public void ChangeSecondPlayerSkin(int indexDifference)
@@ -51,21 +57,27 @@ public class SkinControlling : MonoBehaviour {
             PlayerPrefs.SetInt("SecondPlayerSkin", 0);
         } else {
             PlayerPrefs.SetInt("SecondPlayerSkin", secondPlayerIndex + indexDifference);
-
         }
         secondPlayerSkin = skins[PlayerPrefs.GetInt("SecondPlayerSkin", -1)];
-
-
     }
 
     static public void SetFirstPlayerSkin(int index) {
+        if(index > skins.Length - 1 || index < 0)
+        {
+            Debug.LogError("requested index out of range");
+            return;
+        }
         firstPlayerSkin = skins[index];
         PlayerPrefs.SetInt("FirstPlayerSkin", index);
     }
 
     static public void SetSecondPlayerSkin(int index) {
+        if (index > skins.Length - 1 || index < 0)
+        {
+            Debug.LogError("requested index out of range");
+            return;
+        }
         secondPlayerSkin = skins[index];
         PlayerPrefs.SetInt("SecondPlayerSkin", index);
     }
-
 }
