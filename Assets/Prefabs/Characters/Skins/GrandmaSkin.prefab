@@ -72,7 +72,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
   neutralFace:
   - {fileID: 21300008, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300006, guid: bcfcabc9d8c2cb44e9866465574ec5d9, type: 3}
+  - {fileID: 21300002, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
   sadFace:
   - {fileID: 21300010, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
   - {fileID: 21300012, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
