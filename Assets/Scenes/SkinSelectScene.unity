@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a561d06dbd221f340af1dd2ef7d7f5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeTime: 0.3
+  chargeTime: 0.6
   button: {fileID: 716518210}
   chargeBar: {fileID: 148160778}
 --- !u!61 &457512052
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a561d06dbd221f340af1dd2ef7d7f5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeTime: 0.3
+  chargeTime: 0.6
   button: {fileID: 1281701996}
   chargeBar: {fileID: 810704963}
 --- !u!61 &479250619
@@ -2632,7 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a561d06dbd221f340af1dd2ef7d7f5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeTime: 0.3
+  chargeTime: 0.6
   button: {fileID: 513218343}
   chargeBar: {fileID: 1029717480}
 --- !u!61 &1717239137
@@ -3240,7 +3240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a561d06dbd221f340af1dd2ef7d7f5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeTime: 0.3
+  chargeTime: 0.6
   button: {fileID: 1021626912}
   chargeBar: {fileID: 1378390405}
 --- !u!61 &1952930908
