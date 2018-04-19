@@ -25,7 +25,7 @@ public class CharacterSelection : MonoBehaviour {
     public void NextCharacter() {
         switch (player) {
             case Player.Player1:
-                if (PlayerPrefs.GetInt("FirstPlayerSkin", -1) < SkinControlling.skins.Length - 1) {
+                if (PlayerPrefs.GetInt("FirstPlayerSkin", 0) < SkinControlling.skins.Length - 1) {
                     SkinControlling.ChangeFirstPlayerSkin(1);
                 }
                 else {
@@ -33,7 +33,7 @@ public class CharacterSelection : MonoBehaviour {
                 }
                 break;
             case Player.Player2:
-                if (PlayerPrefs.GetInt("SecondPlayerSkin", -1) < SkinControlling.skins.Length - 1) {
+                if (PlayerPrefs.GetInt("SecondPlayerSkin", 0) < SkinControlling.skins.Length - 1) {
                     SkinControlling.ChangeSecondPlayerSkin(1);
                 }
                 else {
