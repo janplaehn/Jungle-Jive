@@ -8,17 +8,9 @@ public class GameControlling : MonoBehaviour {
     public AudioClip music;
     public float moveReactionTime;
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
-
-    static public Skin firstPlayerSkin;
-    static public Skin secondPlayerSkin;
-    public GameObject[] skinObjects;
-    private Skin[] skins;
-    public GameObject playerOne;
-    public GameObject playerTwo;
     private bool isPaused;
     void Start() {
         isPaused = false;
-        CreateSkins();
         CreateInstructions();
     }
 
@@ -97,30 +89,7 @@ public class GameControlling : MonoBehaviour {
         instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);
     }
     
-    private void CreateSkins()
-    {
-        skins = new Skin[skinObjects.Length];
-        for(int i = 0; i < skinObjects.Length; i++)
-        {
-            skins[i] = skinObjects[i].GetComponent<Skin>();
-        }
-        int firstPlayerIndex = PlayerPrefs.GetInt("FirstPlayerSkin", -1);
-        if(firstPlayerIndex == -1)
-        {
-            PlayerPrefs.SetInt("FirstPlayerSkin", 0);
-            firstPlayerIndex = 0;
-        }
-        int secondPlayerIndex = PlayerPrefs.GetInt("SecondPlayerSkin", -1);
-        if (secondPlayerIndex == -1)
-        {
-            PlayerPrefs.SetInt("SecondPlayerSkin", skins.Length - 1);
-            secondPlayerIndex = skins.Length - 1;
-        }
-        firstPlayerSkin = skins[firstPlayerIndex];
-        secondPlayerSkin = skins[secondPlayerIndex];
-        playerOne.GetComponent<SkinSetting>().SetSkins();
-        playerTwo.GetComponent<SkinSetting>().SetSkins();
-    }
+    
 
     public void changePauseState()
     {
