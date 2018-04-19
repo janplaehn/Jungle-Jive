@@ -18,11 +18,11 @@ public class SkinSetting : MonoBehaviour {
         {
             if (isFirstPlayer)
             {
-                spriteRenderer.sprite = GameControlling.firstPlayerSkin.skinSprites[(int)index];
+                spriteRenderer.sprite = SkinControlling.firstPlayerSkin.skinSprites[(int)index];
             }
             else
             {
-                spriteRenderer.sprite = GameControlling.secondPlayerSkin.skinSprites[(int)index];
+                spriteRenderer.sprite = SkinControlling.secondPlayerSkin.skinSprites[(int)index];
             }
         }
     }
