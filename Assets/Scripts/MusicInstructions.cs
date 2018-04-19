@@ -71,13 +71,13 @@ public class MusicInstructions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(finished == false)
+		if(finished == false && isPaused == false)
         {
             accumulatedTime += Time.deltaTime;
 
 
 
-            if (accumulatedTime <= instructionTime && isPaused == false)
+            if (accumulatedTime <= instructionTime)
             {
                 animateTiming(timingPairs[lastPairIndex].secondValue, accumulatedTime);
                 if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
