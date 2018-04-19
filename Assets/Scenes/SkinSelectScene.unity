@@ -365,11 +365,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 513218344}
-  - {fileID: 716518211}
   - {fileID: 1705332593}
+  - {fileID: 716518211}
   - {fileID: 1407539787}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -694,7 +694,7 @@ Transform:
   m_LocalScale: {x: 0.5708517, y: 0.5708517, z: 0.5708517}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479250616
 GameObject:
@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848806844}
+      - m_Target: {fileID: 1740602795}
         m_MethodName: ConfirmCharacters
         m_Mode: 5
         m_Arguments:
@@ -1182,7 +1182,7 @@ RectTransform:
   - {fileID: 1920060141}
   - {fileID: 148160779}
   m_Father: {fileID: 294350322}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848806844}
+      - m_Target: {fileID: 1740602795}
         m_MethodName: PreviousCharacter
         m_Mode: 1
         m_Arguments:
@@ -1827,7 +1827,7 @@ Transform:
   m_LocalScale: {x: 0.5708517, y: 0.5708517, z: 0.5708517}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152259844
 GameObject:
@@ -2107,7 +2107,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848806844}
+      - m_Target: {fileID: 1740602795}
         m_MethodName: NextCharacter
         m_Mode: 1
         m_Arguments:
@@ -2551,7 +2551,7 @@ RectTransform:
   - {fileID: 377934600}
   - {fileID: 1784435211}
   m_Father: {fileID: 294350322}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2691,7 +2691,7 @@ Transform:
   m_LocalScale: {x: 0.5708517, y: 0.5708517, z: 0.5708517}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1740602794
 GameObject:
@@ -2702,6 +2702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740602796}
   - component: {fileID: 1740602795}
+  - component: {fileID: 1740602797}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2721,14 +2722,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  playerObject: {fileID: 2122915821}
+  playerObject: {fileID: 848885729}
   PlayerButtons:
-  - {fileID: 1717239134}
-  - {fileID: 1150939575}
-  - {fileID: 457512049}
-  - {fileID: 513218343}
-  - {fileID: 716518210}
-  - {fileID: 1705332589}
+  - {fileID: 1952930905}
+  - {fileID: 1747533531}
+  - {fileID: 479250616}
+  - {fileID: 1021626912}
+  - {fileID: 1281701996}
+  - {fileID: 523440564}
 --- !u!4 &1740602796
 Transform:
   m_ObjectHideFlags: 0
@@ -2742,6 +2743,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1740602797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740602794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54cb1defc83aff74fb6c0e8a7e323290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinObjects:
+  - {fileID: 1223220890565020, guid: 5252d215976143644a4af389735fe87f, type: 2}
+  - {fileID: 1904868705511726, guid: dd280e1d54427d344ae8c53f35915bb6, type: 2}
 --- !u!1 &1747533531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,7 +2997,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1848806843}
   - component: {fileID: 1848806844}
-  - component: {fileID: 1848806842}
   m_Layer: 0
   m_Name: 2ndGameController (1)
   m_TagString: Untagged
@@ -2990,20 +3004,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1848806842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1848806841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54cb1defc83aff74fb6c0e8a7e323290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skinObjects:
-  - {fileID: 1223220890565020, guid: 5252d215976143644a4af389735fe87f, type: 2}
-  - {fileID: 1904868705511726, guid: dd280e1d54427d344ae8c53f35915bb6, type: 2}
 --- !u!4 &1848806843
 Transform:
   m_ObjectHideFlags: 0
@@ -3029,14 +3029,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  playerObject: {fileID: 848885729}
+  playerObject: {fileID: 2122915821}
   PlayerButtons:
-  - {fileID: 1952930905}
-  - {fileID: 1747533531}
-  - {fileID: 479250616}
-  - {fileID: 1021626912}
-  - {fileID: 1281701996}
-  - {fileID: 523440564}
+  - {fileID: 1717239134}
+  - {fileID: 1150939575}
+  - {fileID: 457512049}
+  - {fileID: 513218343}
+  - {fileID: 716518210}
+  - {fileID: 1705332589}
 --- !u!1 &1856232010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,6 +3868,10 @@ Prefab:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1728021830205612, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114734143335886456, guid: 128cc50a803005a45927d28fba53a834, type: 2}
     - {fileID: 114419475433672234, guid: 128cc50a803005a45927d28fba53a834, type: 2}
@@ -3920,7 +3924,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4082469092883154, guid: 128cc50a803005a45927d28fba53a834, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 114063306827908870, guid: 128cc50a803005a45927d28fba53a834,
         type: 2}
