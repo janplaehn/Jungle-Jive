@@ -1864,6 +1864,10 @@ Prefab:
       propertyPath: isFirstPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1728021830205612, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_IsPrefabParent: 0
@@ -2211,6 +2215,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c3678ea7035f2b94dbabbcd7c37b7546, type: 2}
+    - target: {fileID: 1728021830205612, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_TagString
+      value: Player1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128cc50a803005a45927d28fba53a834, type: 2}
   m_IsPrefabParent: 0
