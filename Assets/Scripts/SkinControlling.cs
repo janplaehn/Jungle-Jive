@@ -6,7 +6,7 @@ public class SkinControlling : MonoBehaviour {
     static public Skin firstPlayerSkin;
     static public Skin secondPlayerSkin;
     static public Skin[] skins;
-    static public GameObject[] skinObjects;
+    public GameObject[] skinObjects;
 
     private void Start()
     {
