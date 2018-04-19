@@ -7,13 +7,19 @@ public class LimbMovement : MonoBehaviour {
     public string joystickAxis;
     [Range(-180, 180)]  public float maxRotation;
     [Range(0, 360)] public float startRotation;
+    public bool isPaused;
 
 	void Start () {
+        isPaused = false;
         transform.rotation = transform.rotation = Quaternion.Euler(0, 0, startRotation);
     }
 	
 	void Update () {
-        transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation + startRotation);
+        if (isPaused == false)
+        {
+            transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation + startRotation);
+
+        }
     }
 
     public int GetLimbState()

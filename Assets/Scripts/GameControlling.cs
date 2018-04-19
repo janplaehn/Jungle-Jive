@@ -97,11 +97,13 @@ public class GameControlling : MonoBehaviour {
         {
             Time.timeScale = 0;
             isPaused = true;
+            GetComponent<MusicInstructions>().isPaused = true;
         }
         else
         {
             Time.timeScale = 1;
             isPaused = false;
+            GetComponent<MusicInstructions>().isPaused = false;
         }
     }
 }

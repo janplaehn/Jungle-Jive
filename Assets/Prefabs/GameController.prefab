@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114803011154840648}
   - component: {fileID: 114447834668686820}
   - component: {fileID: 114002296949874820}
-  - component: {fileID: 114242741108959480}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -136,32 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d522a8444ca884e9c7004dc2d7f536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114242741108959480
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1345692485888624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2201012f4d8f544ab2122d2211bde2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  feedbackObject: {fileID: 1032947653305246, guid: 74d3f43f2ccd6f741bba86324d732bed,
-    type: 2}
-  feedbackOrigin: {fileID: 0}
-  spritesPerfect:
-  - {fileID: 21300000, guid: b8fdfceb84591e24ab38022d2d3ed9a0, type: 3}
-  - {fileID: 21300000, guid: 4818cf6f9aa89fc41b1b860bd06d4057, type: 3}
-  spritesGood:
-  - {fileID: 21300000, guid: 022d3c3ece5bdec429741b6da4c420d5, type: 3}
-  spritesOk:
-  - {fileID: 21300000, guid: 08b5decd89a2df144a9e460fc56f595d, type: 3}
-  spritesBad:
-  - {fileID: 21300000, guid: 7e66bbc06453636499d0ce10eaff4df1, type: 3}
-  spritesHorrible:
-  - {fileID: 21300000, guid: 2f2e631dd6ea161438a9a16d2008a168, type: 3}
-  displayDuration: 1
 --- !u!114 &114447834668686820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +187,10 @@ MonoBehaviour:
   - {fileID: 21300012, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
   - {fileID: 21300014, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
   instruction: {fileID: 0}
+  timing: {fileID: 0}
   nextInstruction: {fileID: 0}
   musicSource: {fileID: 82982055185355104}
+  introTime: 0
+  timingSprite: {fileID: 21300000, guid: 18bee67797f8e7b4c964b6087c38f4b6, type: 3}
   instructionTime: 2
+  isPaused: 0

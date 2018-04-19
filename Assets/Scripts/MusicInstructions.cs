@@ -26,6 +26,7 @@ public class MusicInstructions : MonoBehaviour {
     public float instructionTime;
 
     private float errorMargin = 0.2f;
+    public bool isPaused;
     private float scaleTiming = 1;
     public enum DanceMoveEnum
     {
@@ -40,6 +41,7 @@ public class MusicInstructions : MonoBehaviour {
     }
 	// Use this for initialization
 	void Start () {
+        isPaused = false;
         finished = true;
         intro = true;
         lastMove = timingPairs[0].firstValue;
@@ -75,7 +77,7 @@ public class MusicInstructions : MonoBehaviour {
 
 
 
-            if (accumulatedTime <= instructionTime)
+            if (accumulatedTime <= instructionTime && isPaused == false)
             {
                 animateTiming(timingPairs[lastPairIndex].secondValue, accumulatedTime);
                 if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
