@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chargeTime: 0.6
-  button: {fileID: 1281701996}
+  button: {fileID: 716518210}
   chargeBar: {fileID: 810704963}
 --- !u!61 &479250619
 BoxCollider2D:
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848806844}
+      - m_Target: {fileID: 1740602795}
         m_MethodName: PreviousCharacter
         m_Mode: 1
         m_Arguments:
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848806844}
+      - m_Target: {fileID: 1740602795}
         m_MethodName: NextCharacter
         m_Mode: 1
         m_Arguments:
@@ -2492,7 +2492,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848806844}
+      - m_Target: {fileID: 1740602795}
         m_MethodName: ConfirmCharacters
         m_Mode: 5
         m_Arguments:
@@ -2702,6 +2702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740602796}
   - component: {fileID: 1740602795}
+  - component: {fileID: 1740602797}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2743,6 +2744,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1740602797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740602794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54cb1defc83aff74fb6c0e8a7e323290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinObjects:
+  - {fileID: 1223220890565020, guid: 5252d215976143644a4af389735fe87f, type: 2}
+  - {fileID: 1904868705511726, guid: dd280e1d54427d344ae8c53f35915bb6, type: 2}
 --- !u!1 &1747533531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,7 +2833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chargeTime: 1.4
-  button: {fileID: 523440564}
+  button: {fileID: 1705332589}
   chargeBar: {fileID: 1856232010}
 --- !u!61 &1747533534
 BoxCollider2D:
@@ -3241,7 +3256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chargeTime: 0.6
-  button: {fileID: 1021626912}
+  button: {fileID: 513218343}
   chargeBar: {fileID: 1378390405}
 --- !u!61 &1952930908
 BoxCollider2D:
@@ -4345,6 +4360,85 @@ Prefab:
         type: 2}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509128220889328, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114133870308262056, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114265966890605998, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114238743151679602, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114647155221560626, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114538428688431938, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114599067377780378, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853639701109784, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114647648061078960, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114541179236765902, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114525973467556324, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114119861681316228, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114831652394025850, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114260770004586558, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114129548304730226, guid: 128cc50a803005a45927d28fba53a834,
+        type: 2}
+      propertyPath: isFirstPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1728021830205612, guid: 128cc50a803005a45927d28fba53a834, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114734143335886456, guid: 128cc50a803005a45927d28fba53a834, type: 2}
