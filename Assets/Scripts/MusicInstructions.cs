@@ -47,7 +47,21 @@ public class MusicInstructions : MonoBehaviour {
             finished = true;
         }
 
-	}
+        instructionTime = timingPairs[lastPairIndex].secondValue + 1f;
+        instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+        timing.sprite = timingSprite;
+        timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+        if (lastPairIndex + 1 <= timingPairs.Length - 1)
+        {
+            nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+        }
+        else
+        {
+            nextInstruction.sprite = voidSprite;
+        }
+        lastMove = timingPairs[lastPairIndex].firstValue;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
