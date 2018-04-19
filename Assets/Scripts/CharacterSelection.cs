@@ -10,7 +10,6 @@ public class CharacterSelection : MonoBehaviour {
 
     public GameObject playerObject;
     public GameObject[] PlayerButtons;
-    public GameObject Canvas;
 
     [HideInInspector] public static string playerCostume;
     [HideInInspector] public static string playerTwoCostume;
@@ -72,6 +71,7 @@ public class CharacterSelection : MonoBehaviour {
     }
 
     public void ConfirmCharacters(string Scene) {
+        charactersConfirmed++;
         foreach (GameObject button in PlayerButtons) {
                 button.gameObject.SetActive(false);
             }
