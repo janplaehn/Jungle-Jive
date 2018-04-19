@@ -1,23 +1,23 @@
 fileFormatVersion: 2
 guid: def5bfcf854afa44eb8a26bd3d636f2d
-timeCreated: 1524051374
+timeCreated: 1523443314
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Garndma - Copy_0
-    21300002: Garndma - Copy_1
-    21300004: Garndma - Copy_2
-    21300006: Garndma - Copy_3
-    21300008: Garndma - Copy_4
-    21300010: Garndma - Copy_5
-    21300012: Garndma - Copy_6
-    21300014: Garndma - Copy_7
-    21300016: Garndma - Copy_8
-    21300018: Garndma - Copy_9
-    21300020: Garndma - Copy_10
-    21300022: Garndma - Copy_11
-    21300024: Garndma - Copy_12
-    21300026: Garndma - Copy_13
+    21300000: Avatar1SpriteSheet_0
+    21300002: Avatar1SpriteSheet_1
+    21300004: Avatar1SpriteSheet_2
+    21300006: Avatar1SpriteSheet_3
+    21300008: Avatar1SpriteSheet_4
+    21300010: Avatar1SpriteSheet_5
+    21300012: Avatar1SpriteSheet_6
+    21300014: Avatar1SpriteSheet_7
+    21300016: Avatar1SpriteSheet_8
+    21300018: Avatar1SpriteSheet_9
+    21300020: Avatar1SpriteSheet_10
+    21300022: Avatar1SpriteSheet_11
+    21300024: Avatar1SpriteSheet_12
+    21300026: Avatar1SpriteSheet_13
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -124,21 +124,21 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Garndma - Copy_0
+      name: Avatar1SpriteSheet_0
       rect:
         serializedVersion: 2
         x: 6
         y: 468
         width: 80
         height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5135733, y: 0.01323586}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_1
+      name: Avatar1SpriteSheet_1
       rect:
         serializedVersion: 2
         x: 127
@@ -152,169 +152,169 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_2
+      name: Avatar1SpriteSheet_2
       rect:
         serializedVersion: 2
         x: 9
         y: 326
         width: 43
         height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.47474772, y: 0.85537195}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_3
+      name: Avatar1SpriteSheet_3
       rect:
         serializedVersion: 2
         x: 328
         y: 330
         width: 41
         height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5264833, y: 0.8450391}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_4
+      name: Avatar1SpriteSheet_4
       rect:
         serializedVersion: 2
         x: 10
         y: 213
         width: 30
         height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.8806102}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_5
+      name: Avatar1SpriteSheet_5
       rect:
         serializedVersion: 2
         x: 65
         y: 171
         width: 77
         height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6128166, y: 0.85642713}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_6
+      name: Avatar1SpriteSheet_6
       rect:
         serializedVersion: 2
         x: 226
         y: 175
         width: 73
         height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.42562574, y: 0.81740487}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_7
+      name: Avatar1SpriteSheet_7
       rect:
         serializedVersion: 2
         x: 327
         y: 217
         width: 36
         height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.62065125, y: 0.8506419}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_8
+      name: Avatar1SpriteSheet_8
       rect:
         serializedVersion: 2
         x: 5
         y: 138
         width: 36
         height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.86808777}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_9
+      name: Avatar1SpriteSheet_9
       rect:
         serializedVersion: 2
         x: 132
         y: 31
         width: 40
         height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.28282815, y: 0.9082828}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_10
+      name: Avatar1SpriteSheet_10
       rect:
         serializedVersion: 2
         x: 201
         y: 32
         width: 38
         height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7286016, y: 0.92374974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_11
+      name: Avatar1SpriteSheet_11
       rect:
         serializedVersion: 2
         x: 332
         y: 143
         width: 40
         height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.41856003, y: 0.82575786}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_12
+      name: Avatar1SpriteSheet_12
       rect:
         serializedVersion: 2
         x: 14
         y: 5
         width: 69
         height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7990044, y: 0.86878204}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Garndma - Copy_13
+      name: Avatar1SpriteSheet_13
       rect:
         serializedVersion: 2
         x: 269
         y: 8
         width: 68
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.22853537, y: 0.81322926}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

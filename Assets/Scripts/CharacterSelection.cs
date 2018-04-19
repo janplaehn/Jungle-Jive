@@ -10,7 +10,6 @@ public class CharacterSelection : MonoBehaviour {
 
     public GameObject playerObject;
     public GameObject[] PlayerButtons;
-    public GameObject Canvas;
 
     [HideInInspector] public static string playerCostume;
     [HideInInspector] public static string playerTwoCostume;
@@ -26,51 +25,44 @@ public class CharacterSelection : MonoBehaviour {
     public void NextCharacter() {
         switch (player) {
             case Player.Player1:
-                int firstPlayerSkinIndex = PlayerPrefs.GetInt("FirstPlayerSkin", -1);
-                if (PlayerPrefs.GetInt("FirstPlayerSkin", -1) < skinCount - 1) {
-                    firstPlayerSkinIndex++;
+                if (PlayerPrefs.GetInt("FirstPlayerSkin", -1) < SkinControlling.skins.Length - 1) {
+                    SkinControlling.ChangeFirstPlayerSkin(1);
                 }
                 else {
-                    firstPlayerSkinIndex = 0;
+                    SkinControlling.SetFirstPlayerSkin(0);
                 }
-                PlayerPrefs.SetInt("FirstPlayerSkin", firstPlayerSkinIndex);
                 break;
             case Player.Player2:
-                int secondPlayerSkinIndex = PlayerPrefs.GetInt("SecondPlayerSkin", -1);
-                if (PlayerPrefs.GetInt("SecondPlayerSkin", -1) < skinCount - 1) {
-                    secondPlayerSkinIndex++;
+                if (PlayerPrefs.GetInt("SecondPlayerSkin", -1) < SkinControlling.skins.Length - 1) {
+                    SkinControlling.ChangeSecondPlayerSkin(1);
                 }
                 else {
-                    secondPlayerSkinIndex = 0;
+                    SkinControlling.SetSecondPlayerSkin(0);
                 }
-                PlayerPrefs.SetInt("SecondPlayerSkin", secondPlayerSkinIndex);
                 break;
             default:
                 break;
         }
+        playerObject.GetComponent<SkinSetting>().SetSkins();
     }
 
     public void PreviousCharacter() {
         switch (player) {
             case Player.Player1:
-                int firstPlayerSkinIndex = PlayerPrefs.GetInt("FirstPlayerSkin", -1);
                 if (PlayerPrefs.GetInt("FirstPlayerSkin", -1) > 0) {
-                    firstPlayerSkinIndex--;
+                    SkinControlling.ChangeFirstPlayerSkin(-1);
                 }
                 else {
-                    firstPlayerSkinIndex = skinCount - 1;
+                    SkinControlling.SetFirstPlayerSkin(SkinControlling.skins.Length - 1);
                 }
-                PlayerPrefs.SetInt("FirstPlayerSkin", firstPlayerSkinIndex);
                 break;
             case Player.Player2:
-                int secondPlayerSkinIndex = PlayerPrefs.GetInt("SecondPlayerSkin", -1);
                 if (PlayerPrefs.GetInt("SecondPlayerSkin", -1) > 0) {
-                    secondPlayerSkinIndex--;
+                    SkinControlling.ChangeSecondPlayerSkin(-1);
                 }
                 else {
-                    secondPlayerSkinIndex = skinCount - 1;
+                    SkinControlling.SetSecondPlayerSkin(SkinControlling.skins.Length - 1);
                 }
-                PlayerPrefs.SetInt("SecondPlayerSkin", secondPlayerSkinIndex);
                 break;
             default:
                 break;
@@ -79,6 +71,7 @@ public class CharacterSelection : MonoBehaviour {
     }
 
     public void ConfirmCharacters(string Scene) {
+        charactersConfirmed++;
         foreach (GameObject button in PlayerButtons) {
                 button.gameObject.SetActive(false);
             }

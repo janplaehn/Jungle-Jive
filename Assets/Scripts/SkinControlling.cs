@@ -41,12 +41,31 @@ public class SkinControlling : MonoBehaviour {
     {
         int firstPlayerIndex = PlayerPrefs.GetInt("FirstPlayerSkin", -1);
         firstPlayerSkin = skins[firstPlayerIndex + indexDifference];
+        PlayerPrefs.SetInt("FirstPlayerSkin", firstPlayerIndex + indexDifference);
     }
 
     static public void ChangeSecondPlayerSkin(int indexDifference)
     {
         int secondPlayerIndex = PlayerPrefs.GetInt("SecondPlayerSkin", -1);
-        secondPlayerSkin = skins[secondPlayerIndex + indexDifference];
+        if (secondPlayerIndex + indexDifference > skins.Length - 1) {
+            PlayerPrefs.SetInt("SecondPlayerSkin", 0);
+        } else {
+            PlayerPrefs.SetInt("SecondPlayerSkin", secondPlayerIndex + indexDifference);
+
+        }
+        secondPlayerSkin = skins[PlayerPrefs.GetInt("SecondPlayerSkin", -1)];
+
+
+    }
+
+    static public void SetFirstPlayerSkin(int index) {
+        firstPlayerSkin = skins[index];
+        PlayerPrefs.SetInt("FirstPlayerSkin", index);
+    }
+
+    static public void SetSecondPlayerSkin(int index) {
+        secondPlayerSkin = skins[index];
+        PlayerPrefs.SetInt("SecondPlayerSkin", index);
     }
 
 }

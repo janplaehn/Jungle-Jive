@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinSprites:
-  - {fileID: 21300000, guid: bcfcabc9d8c2cb44e9866465574ec5d9, type: 3}
+  - {fileID: 21300000, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
   - {fileID: 21300002, guid: bcfcabc9d8c2cb44e9866465574ec5d9, type: 3}
   - {fileID: 21300004, guid: bcfcabc9d8c2cb44e9866465574ec5d9, type: 3}
   - {fileID: 21300006, guid: bcfcabc9d8c2cb44e9866465574ec5d9, type: 3}
