@@ -108,6 +108,7 @@ public class GameControlling : MonoBehaviour {
             {
                 i.isPaused = true;
             }
+            FindObjectOfType<AudioSource>().Pause();
         }
         else
         {
@@ -124,6 +125,8 @@ public class GameControlling : MonoBehaviour {
             {
                 i.isPaused = false;
             }
+            FindObjectOfType<AudioSource>().UnPause();
+
         }
     }
 }
