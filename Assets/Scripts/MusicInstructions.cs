@@ -17,12 +17,14 @@ public class MusicInstructions : MonoBehaviour {
     private InputCheck inputCheck;
     private DanceMove lastMove;
     private int lastPairIndex = 0;
-    private bool finished = false;
+    private bool finished;
     private bool moveRatedP1 = false;
     private bool moveRatedP2 = false;
+    private bool intro;
+    public float introTime;
     public Sprite timingSprite;
-
     public float instructionTime;
+
     private float errorMargin = 0.2f;
     private float scaleTiming = 1;
     public enum DanceMoveEnum
@@ -38,6 +40,8 @@ public class MusicInstructions : MonoBehaviour {
     }
 	// Use this for initialization
 	void Start () {
+        finished = true;
+        intro = true;
         lastMove = timingPairs[0].firstValue;
         nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
         inputCheck = GetComponent<InputCheck>();
@@ -133,6 +137,15 @@ public class MusicInstructions : MonoBehaviour {
                     nextInstruction.sprite = voidSprite;
                 }
                 lastMove = timingPairs[lastPairIndex].firstValue;
+            }
+        } else if (intro == true)
+        {
+            accumulatedTime += Time.deltaTime;
+            if (accumulatedTime >= introTime)
+            {
+                finished = false;
+                intro = false;
+                accumulatedTime = 0f;
             }
         }
 	}
