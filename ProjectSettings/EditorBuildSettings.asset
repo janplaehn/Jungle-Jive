@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OptionsScene.unity
     guid: e37d79a02f8e0c44781c51035fb3f4a6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SkinSelectScene.unity
     guid: 6036e8797ffa3a84092d870a9d995f1f
   - enabled: 1

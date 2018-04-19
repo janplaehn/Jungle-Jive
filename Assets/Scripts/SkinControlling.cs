@@ -30,8 +30,10 @@ public class SkinControlling : MonoBehaviour {
         int secondPlayerIndex = PlayerPrefs.GetInt("SecondPlayerSkin", -1);
         if (secondPlayerIndex == -1)
         {
-            PlayerPrefs.SetInt("SecondPlayerSkin", skins.Length - 1);
-            secondPlayerIndex = skins.Length - 1;
+            //PlayerPrefs.SetInt("SecondPlayerSkin", skins.Length - 1);
+            //secondPlayerIndex = skins.Length - 1;
+            PlayerPrefs.SetInt("SecondPlayerSkin", 0);
+            secondPlayerIndex = 0;
         }
         firstPlayerSkin = skins[firstPlayerIndex];
         secondPlayerSkin = skins[secondPlayerIndex];
