@@ -27,6 +27,7 @@ public class GameControlling : MonoBehaviour {
         Invoke("QuitToLeaderboard", 5f);
     }
     private void QuitToLeaderboard() {
+        GetComponent<AudioSource>().Stop();
         int[] temp = new int[10];
         for (int i = temp.Length - 1; i >= 0; i--) {
             temp[i] = PlayerPrefs.GetInt("HighScore" + i.ToString(), (i + 1) * 100);

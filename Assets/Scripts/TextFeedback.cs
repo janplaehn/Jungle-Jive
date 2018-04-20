@@ -18,6 +18,9 @@ public class TextFeedback : MonoBehaviour {
         if (percentage == 0f)
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesHorrible));
+            //Debug.LogError("AAAA");
+            //Debug.LogError(spritesHorrible);
+            //Debug.LogError(SetSprite(spritesHorrible));
         }
         else if (percentage < 25f && percentage != 0f)
         {
