@@ -14,6 +14,7 @@ public class SkinSetting : MonoBehaviour {
     public bool startMenu;
 	// Use this for initialization
 	void Start () {
+        //PlayerPrefs.DeleteAll();
         playerOneIndex = PlayerPrefs.GetInt("FirstPlayerSkin", 0);
         PlayerPrefs.SetInt("FirstPlayerSkin", playerOneIndex);
         playerTwoIndex = PlayerPrefs.GetInt("SecondPlayerSkin", playerTwoPrefabs.Length - 1);

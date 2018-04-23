@@ -19,7 +19,15 @@ public class ScoringSystem : MonoBehaviour {
         firstPlayerScore += scoreAmount;
         firstPlayerScoreDisplay.text = firstPlayerScore.ToString();
         PlayerPrefs.SetInt(firstPlayerScoreKey, firstPlayerScore);
+        if (firstPlayerTextFeedback == null)
+        {
+            firstPlayerTextFeedback = GameObject.FindGameObjectWithTag("Player1Feedback");
+        }
         firstPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore);
+        if(firstPlayerHead == null)
+        {
+            firstPlayerHead = GameObject.FindGameObjectWithTag("Head");
+        }
         firstPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount, maxScore);
     }
 
@@ -27,7 +35,15 @@ public class ScoringSystem : MonoBehaviour {
         secondPlayerScore += scoreAmount;
         secondPlayerScoreDisplay.text = secondPlayerScore.ToString();
         PlayerPrefs.SetInt(secondPlayerScoreKey, secondPlayerScore);
+        if (secondPlayerTextFeedback == null)
+        {
+            secondPlayerTextFeedback = GameObject.FindGameObjectWithTag("Player2Feedback");
+        }
         secondPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore);
+        if (secondPlayerHead == null)
+        {
+            secondPlayerHead = GameObject.FindGameObjectWithTag("HeadP2");
+        }
         secondPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount, maxScore);
     }
 
