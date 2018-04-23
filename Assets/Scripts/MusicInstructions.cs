@@ -74,41 +74,12 @@ public class MusicInstructions : MonoBehaviour {
 		if(finished == false && isPaused == false)
         {
             accumulatedTime += Time.deltaTime;
-
-
-
             if (accumulatedTime <= instructionTime)
             {
                 animateTiming(timingPairs[lastPairIndex].secondValue, accumulatedTime);
-                if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
-                {
-                    if (accumulatedTime > timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime < timingPairs[lastPairIndex].secondValue + errorMargin)
-                    {
-                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
-                        
-                    } else
-                    {
-                        scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
-                    }
-                    moveRatedP1 = true;
-                }
-                if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerTwo) == 1 && moveRatedP2 == false)
-                {
-                    if (accumulatedTime > timingPairs[lastPairIndex].secondValue - errorMargin && accumulatedTime < timingPairs[lastPairIndex].secondValue + errorMargin)
-                    {
-                        scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
-
-                    }
-                    else
-                    {
-                        scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
-                    }
-                    moveRatedP2 = true;
-                }
-                if (accumulatedTime >= timingPairs[lastPairIndex].secondValue) timing.sprite = voidSprite;
+                checkTiming(accumulatedTime);
             } else
             {
-
                 if (moveRatedP1 == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
                 if (moveRatedP2 == false) scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
                 lastPairIndex++;
@@ -167,4 +138,36 @@ public class MusicInstructions : MonoBehaviour {
             timing.sprite = voidSprite;
         }
     }
+
+    void checkTiming (float accTime)
+    {
+        if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
+        {
+            if (accTime > timingPairs[lastPairIndex].secondValue - errorMargin && accTime < timingPairs[lastPairIndex].secondValue + errorMargin)
+            {
+                scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
+
+            }
+            else
+            {
+                scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
+            }
+            moveRatedP1 = true;
+        }
+        if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerTwo) == 1 && moveRatedP2 == false)
+        {
+            if (accTime > timingPairs[lastPairIndex].secondValue - errorMargin && accTime < timingPairs[lastPairIndex].secondValue + errorMargin)
+            {
+                scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
+
+            }
+            else
+            {
+                scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
+            }
+            moveRatedP2 = true;
+        }
+        if (accTime >= timingPairs[lastPairIndex].secondValue) timing.sprite = voidSprite;
+    }
+
 }
