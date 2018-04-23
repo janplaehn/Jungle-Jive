@@ -27,31 +27,7 @@ public class GameControlling : MonoBehaviour {
         Invoke("QuitToLeaderboard", 5f);
     }
     private void QuitToLeaderboard() {
-        int[] temp = new int[10];
-        for (int i = temp.Length - 1; i >= 0; i--) {
-            temp[i] = PlayerPrefs.GetInt("HighScore" + i.ToString(), (i + 1) * 100);
-            PlayerPrefs.SetInt("HighScore" + i.ToString(), temp[i]);
-        }
-        if (temp[0] < GetComponent<ScoringSystem>().GetFirstPlayerScore() || temp[0] < GetComponent<ScoringSystem>().GetFirstPlayerScore()) {
-            if (temp[0] > GetComponent<ScoringSystem>().GetFirstPlayerScore()) {
-                NameInput.hasPlayerOneHighscore = false;
-            }
-            else {
-                NameInput.hasPlayerOneHighscore = true;
-            }
-            if (temp[0] > GetComponent<ScoringSystem>().GetSecondPlayerScore()) {
-                NameInput.hasPlayerTwoHighscore = false;
-            }
-            else {
-                NameInput.hasPlayerTwoHighscore = true;
-            }
-            SceneManager.LoadScene("EnterNameScene");
-            NameInput.wasNameEntered = true;
-        }
-        else {
-            SceneManager.LoadScene("LeaderboardScene");
-            NameInput.wasNameEntered = false;
-        }
+        SceneManager.LoadScene("EnterNameScene");
     }
 
     void CreateInstructions()
