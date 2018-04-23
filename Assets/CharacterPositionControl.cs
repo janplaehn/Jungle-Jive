@@ -14,7 +14,6 @@ public class CharacterPositionControl : MonoBehaviour {
 	}
 	
 	void Update () {
-        Debug.Log(feet[1].transform.position.y);
         foreach (GameObject foot in feet) {
             if (foot.transform.position.y <= minYPosition) {
                 Debug.Log("Character too low, Pullback initiated");

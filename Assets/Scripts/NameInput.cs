@@ -11,7 +11,7 @@ public class NameInput : MonoBehaviour {
     public GameObject[] letterGameObjects;
 
     public GameObject[] PlayerButtons;
-    public GameObject Character;
+    //public GameObject Character;
     public GameObject Canvas;
 
     [HideInInspector] public static string playerOneName;
@@ -25,6 +25,32 @@ public class NameInput : MonoBehaviour {
     private int currentLetterIndex;
 
 	void Start () {
+
+        int[] temp = new int[10];
+        for (int i = temp.Length - 1; i >= 0; i--) {
+            temp[i] = PlayerPrefs.GetInt("HighScore" + i.ToString(), (i + 1) * 100);
+            PlayerPrefs.SetInt("HighScore" + i.ToString(), temp[i]);
+        }
+        if (temp[0] < PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0) || temp[0] < PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0)) {
+            if (temp[0] > PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0)) {
+                hasPlayerOneHighscore = false;
+            }
+            else {
+                hasPlayerOneHighscore = true;
+            }
+            if (temp[0] > PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0)) {
+                hasPlayerTwoHighscore = false;
+            }
+            else {
+                hasPlayerTwoHighscore = true;
+            }
+            wasNameEntered = true;
+        }
+        else {
+            SceneManager.LoadScene("LeaderboardScene");
+            wasNameEntered = false;
+        }
+
         foreach (GameObject go in letterGameObjects) {
             go.GetComponent<Text>().text = "A";
         }
@@ -36,7 +62,7 @@ public class NameInput : MonoBehaviour {
             foreach (GameObject button in PlayerButtons) {
                 button.gameObject.SetActive(false);
             }
-            Character.gameObject.SetActive(false);
+            //Character.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             namesEntered++;
             hasPlayerOneHighscore = true;
@@ -45,12 +71,21 @@ public class NameInput : MonoBehaviour {
             foreach (GameObject button in PlayerButtons) {
                 button.gameObject.SetActive(false);
             }
-            Character.gameObject.SetActive(false);
+            //Character.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             namesEntered++;
             hasPlayerTwoHighscore = true;
         }
     }
+
+    //private void Update()
+    //{
+    //    if(Character == null)
+    //    {
+    //        if (player == Player.Player1) Character = GameObject.FindGameObjectWithTag("Player1");
+    //        if (player == Player.Player2) Character = GameObject.FindGameObjectWithTag("Player2");
+    //    }
+    //}
 
     public void NextLetter() {
         if (currentLetter.GetComponent<Text>().text == "Z") {

@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4044831275187216}
   - component: {fileID: 50079243887773884}
-  - component: {fileID: 114447931156186260}
   m_Layer: 0
   m_Name: Grandma_PlayerTwo
   m_TagString: Player2
@@ -39,11 +38,9 @@ GameObject:
   - component: {fileID: 212309935253919672}
   - component: {fileID: 60007686438850986}
   - component: {fileID: 114979289572221348}
-  - component: {fileID: 114336085922850008}
-  - component: {fileID: 114974024575890038}
   m_Layer: 0
   m_Name: head
-  m_TagString: Untagged
+  m_TagString: HeadP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +56,6 @@ GameObject:
   - component: {fileID: 212730885087089006}
   - component: {fileID: 60003773821355368}
   - component: {fileID: 114768711094360204}
-  - component: {fileID: 114492412966284090}
   m_Layer: 0
   m_Name: lowerLeg_l
   m_TagString: Untagged
@@ -78,7 +74,6 @@ GameObject:
   - component: {fileID: 212452932358149912}
   - component: {fileID: 60229062802468960}
   - component: {fileID: 114848782215518692}
-  - component: {fileID: 114930619416469054}
   m_Layer: 0
   m_Name: upperArm_l
   m_TagString: LeftArmP2
@@ -96,7 +91,6 @@ GameObject:
   - component: {fileID: 4339613401063766}
   - component: {fileID: 212862342755688244}
   - component: {fileID: 60036462444393516}
-  - component: {fileID: 114748922906555698}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -114,7 +108,6 @@ GameObject:
   - component: {fileID: 4865082621907716}
   - component: {fileID: 212389925506166228}
   - component: {fileID: 60585632843463740}
-  - component: {fileID: 114565552889593390}
   m_Layer: 0
   m_Name: foot_l
   m_TagString: foot
@@ -133,7 +126,6 @@ GameObject:
   - component: {fileID: 212323789205502292}
   - component: {fileID: 60727435312953136}
   - component: {fileID: 114775935634486340}
-  - component: {fileID: 114480606995347998}
   m_Layer: 0
   m_Name: upperArm_r
   m_TagString: RightArmP2
@@ -152,7 +144,6 @@ GameObject:
   - component: {fileID: 212260317449130980}
   - component: {fileID: 60764466372109168}
   - component: {fileID: 114207580088758322}
-  - component: {fileID: 114519450541628832}
   m_Layer: 0
   m_Name: upperLeg_r
   m_TagString: RightLegP2
@@ -171,7 +162,6 @@ GameObject:
   - component: {fileID: 212864462438640236}
   - component: {fileID: 60313674242661104}
   - component: {fileID: 114538556617247648}
-  - component: {fileID: 114285673131079140}
   m_Layer: 0
   m_Name: foreArm_l
   m_TagString: Untagged
@@ -190,7 +180,6 @@ GameObject:
   - component: {fileID: 212951720438329504}
   - component: {fileID: 60898832250190310}
   - component: {fileID: 114578295760880994}
-  - component: {fileID: 114242653591612006}
   m_Layer: 0
   m_Name: upperLeg_l
   m_TagString: LeftLegP2
@@ -208,7 +197,6 @@ GameObject:
   - component: {fileID: 4716045049673934}
   - component: {fileID: 212869737616560124}
   - component: {fileID: 60035181746161732}
-  - component: {fileID: 114381031908904314}
   m_Layer: 0
   m_Name: foot_r
   m_TagString: foot
@@ -226,7 +214,6 @@ GameObject:
   - component: {fileID: 4827947282916690}
   - component: {fileID: 212649146912762492}
   - component: {fileID: 60340277591460832}
-  - component: {fileID: 114766743455893364}
   m_Layer: 0
   m_Name: hand_r
   m_TagString: hand
@@ -244,7 +231,6 @@ GameObject:
   - component: {fileID: 4767857303980718}
   - component: {fileID: 212574175077975464}
   - component: {fileID: 60385091039555548}
-  - component: {fileID: 114594191037856332}
   m_Layer: 0
   m_Name: hand_l
   m_TagString: hand
@@ -263,7 +249,7 @@ GameObject:
   - component: {fileID: 114887328884547866}
   m_Layer: 0
   m_Name: FeedBack
-  m_TagString: Untagged
+  m_TagString: Player2Feedback
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,7 +265,6 @@ GameObject:
   - component: {fileID: 212930245412309198}
   - component: {fileID: 60199974281845418}
   - component: {fileID: 114543049012500368}
-  - component: {fileID: 114742612618997892}
   m_Layer: 0
   m_Name: lowerLeg_r
   m_TagString: Untagged
@@ -298,7 +283,6 @@ GameObject:
   - component: {fileID: 212592749035628908}
   - component: {fileID: 60993370302484006}
   - component: {fileID: 114485250654881302}
-  - component: {fileID: 114910236780710010}
   m_Layer: 0
   m_Name: foreArm_r
   m_TagString: Untagged
@@ -1117,114 +1101,6 @@ MonoBehaviour:
   maxRotation: 90
   startRotation: 0
   isPaused: 0
---- !u!114 &114242653591612006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1616189383370714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114285673131079140
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1582962510750530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114336085922850008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081009969844218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114381031908904314
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649984251708030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114447931156186260
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1074067474174316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114480606995347998
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1495824846957556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
 --- !u!114 &114485250654881302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1240,42 +1116,6 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 270
   isPaused: 0
---- !u!114 &114492412966284090
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149378845449752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114519450541628832
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1503069685099424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
 --- !u!114 &114538556617247648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1306,24 +1146,6 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 0
   isPaused: 0
---- !u!114 &114565552889593390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1405165576597122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
 --- !u!114 &114578295760880994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1339,78 +1161,6 @@ MonoBehaviour:
   maxRotation: -90
   startRotation: 0
   isPaused: 0
---- !u!114 &114594191037856332
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1807946333840838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114742612618997892
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1946986815978522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114748922906555698
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1307346510628518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114766743455893364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1716026235897076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
 --- !u!114 &114768711094360204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1481,56 +1231,6 @@ MonoBehaviour:
   spritesHorrible:
   - {fileID: 21300000, guid: ff06772eb608a924c8771c8eeaeddd79, type: 3}
   displayDuration: 1
---- !u!114 &114910236780710010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1998852417170004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114930619416469054
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1288185647490608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerOnePrefabs: []
-  playerTwoPrefabs: []
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
-  playerOneSpawn: {fileID: 0}
-  playerTwoSpawn: {fileID: 0}
-  startMenu: 0
---- !u!114 &114974024575890038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081009969844218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b1431e334cd3c4e91cdd48f8614aec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sad: []
-  neutral: []
-  happy: []
 --- !u!114 &114979289572221348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1542,9 +1242,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b1431e334cd3c4e91cdd48f8614aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sad: []
-  neutral: []
-  happy: []
+  sad:
+  - {fileID: 21300010, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300012, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300014, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  neutral:
+  - {fileID: 21300008, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300010, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  happy:
+  - {fileID: 21300000, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300002, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  - {fileID: 21300004, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
 --- !u!212 &212260317449130980
 SpriteRenderer:
   m_ObjectHideFlags: 1

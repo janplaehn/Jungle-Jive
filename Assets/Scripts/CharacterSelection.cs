@@ -8,7 +8,7 @@ public class CharacterSelection : MonoBehaviour {
     public enum Player { Player1, Player2 };
     public Player player;
 
-    public GameObject playerObject;
+    //public GameObject playerObject;
     public GameObject[] PlayerButtons;
     public SkinSetting skinSetting;
 

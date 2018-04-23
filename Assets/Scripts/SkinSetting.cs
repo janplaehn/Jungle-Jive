@@ -14,6 +14,7 @@ public class SkinSetting : MonoBehaviour {
     public bool startMenu;
 	// Use this for initialization
 	void Start () {
+        //PlayerPrefs.DeleteAll();
         playerOneIndex = PlayerPrefs.GetInt("FirstPlayerSkin", 0);
         PlayerPrefs.SetInt("FirstPlayerSkin", playerOneIndex);
         playerTwoIndex = PlayerPrefs.GetInt("SecondPlayerSkin", playerTwoPrefabs.Length - 1);
@@ -29,7 +30,7 @@ public class SkinSetting : MonoBehaviour {
         playerOneIndex += deltaIndex;
         PlayerPrefs.SetInt("FirstPlayerSkin", playerOneIndex);
         Destroy(playerOne);
-        Instantiate(playerOnePrefabs[playerOneIndex], playerOneSpawn.transform.position, Quaternion.identity);
+        playerOne = Instantiate(playerOnePrefabs[playerOneIndex], playerOneSpawn.transform.position, Quaternion.identity);
     }
 
     public void ChangePlayerTwoSkin(int deltaIndex)
@@ -39,6 +40,6 @@ public class SkinSetting : MonoBehaviour {
         playerTwoIndex += deltaIndex;
         PlayerPrefs.SetInt("SecondPlayerSkin", playerTwoIndex);
         Destroy(playerTwo);
-        Instantiate(playerTwoPrefabs[playerTwoIndex], playerTwoSpawn.transform.position, Quaternion.identity);
+        playerTwo = Instantiate(playerTwoPrefabs[playerTwoIndex], playerTwoSpawn.transform.position, Quaternion.identity);
     }
 }

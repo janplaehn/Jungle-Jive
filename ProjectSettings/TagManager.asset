@@ -16,6 +16,10 @@ TagManager:
   - LeftLegP2
   - Player1
   - Player2
+  - Player1Feedback
+  - Player2Feedback
+  - Head
+  - HeadP2
   layers:
   - Default
   - TransparentFX
