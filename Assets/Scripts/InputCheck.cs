@@ -124,4 +124,23 @@ public class InputCheck : MonoBehaviour {
         }
         return index;
     }
+
+    public DanceMove getCurrentMove (bool isPlayerOne) //Gets current position of limbs as DanceMove from player one or two
+    {
+        DanceMove temp = new DanceMove(1, 1, 1, 1, 1);
+        if (isPlayerOne == true)
+        {
+            temp.LeftArmPosition = leftArm.GetLimbState();
+            temp.RightArmPosition = rightArm.GetLimbState();
+            temp.LeftLegPosition = leftLeg.GetLimbState();
+            temp.RightLegPosition = rightLeg.GetLimbState();
+        } else
+        {
+            temp.LeftArmPosition = leftArmP2.GetLimbState();
+            temp.RightArmPosition = rightArmP2.GetLimbState();
+            temp.LeftLegPosition = leftLegP2.GetLimbState();
+            temp.RightLegPosition = rightLegP2.GetLimbState();
+        }
+        return temp;
+    }
 }
