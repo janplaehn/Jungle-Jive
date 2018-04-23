@@ -1,0 +1,387 @@
+fileFormatVersion: 2
+guid: dbf97d3b28cae7444ac239fac03cb290
+timeCreated: 1524487862
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FakeJakob_0
+    21300002: FakeJakob_1
+    21300004: FakeJakob_2
+    21300006: FakeJakob_3
+    21300008: FakeJakob_4
+    21300010: FakeJakob_5
+    21300012: FakeJakob_6
+    21300014: FakeJakob_7
+    21300016: FakeJakob_8
+    21300018: FakeJakob_9
+    21300020: FakeJakob_10
+    21300022: FakeJakob_11
+    21300024: FakeJakob_12
+    21300026: FakeJakob_13
+    21300028: FakeJakob_14
+    21300030: FakeJakob_15
+    21300032: FakeJakob_16
+    21300034: FakeJakob_17
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FakeJakob_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 448
+        width: 100
+        height: 104
+      alignment: 9
+      pivot: {x: 0.5277698, y: 0.072776794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 449
+        width: 100
+        height: 103
+      alignment: 9
+      pivot: {x: 0.5370262, y: 0.086602665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 325
+        width: 126
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_3
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 331
+        width: 45
+        height: 104
+      alignment: 9
+      pivot: {x: 0.52057046, y: 0.8471187}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 330
+        width: 99
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5280501, y: 0.088599876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 214
+        width: 38
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5974373, y: 0.8760452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_6
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 172
+        width: 77
+        height: 152
+      alignment: 9
+      pivot: {x: 0.6202147, y: 0.889747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_7
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 193
+        width: 40
+        height: 125
+      alignment: 9
+      pivot: {x: 0.26859015, y: 0.88506985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_8
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 192
+        width: 38
+        height: 123
+      alignment: 9
+      pivot: {x: 0.62179685, y: 0.8913309}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_9
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 176
+        width: 74
+        height: 134
+      alignment: 9
+      pivot: {x: 0.4499648, y: 0.8315755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_10
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 217
+        width: 33
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8953295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_11
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 138
+        width: 38
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5730781, y: 0.9079132}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 49
+        width: 99
+        height: 103
+      alignment: 9
+      pivot: {x: 0.5467501, y: 0.07761605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 46
+        width: 99
+        height: 100
+      alignment: 9
+      pivot: {x: 0.53739977, y: 0.08345753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_14
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 142
+        width: 38
+        height: 61
+      alignment: 9
+      pivot: {x: 0.4512819, y: 0.90971375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 74
+        width: 67
+        height: 51
+      alignment: 9
+      pivot: {x: 0.19605559, y: 0.89929944}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_16
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 28
+        width: 45
+        height: 107
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9238957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FakeJakob_17
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 6
+        width: 69
+        height: 52
+      alignment: 9
+      pivot: {x: 0.8085503, y: 0.89162076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

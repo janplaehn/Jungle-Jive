@@ -20,21 +20,46 @@ public class InputCheck : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        leftArm = GameObject.FindGameObjectWithTag("LeftArm").GetComponent<LimbMovement>();
-        rightArm = GameObject.FindGameObjectWithTag("RightArm").GetComponent<LimbMovement>();
-        leftLeg = GameObject.FindGameObjectWithTag("LeftLeg").GetComponent<LimbMovement>();
-        rightLeg = GameObject.FindGameObjectWithTag("RightLeg").GetComponent<LimbMovement>();
-
-        leftArmP2 = GameObject.FindGameObjectWithTag("LeftArmP2").GetComponent<LimbMovement>();
-        rightArmP2 = GameObject.FindGameObjectWithTag("RightArmP2").GetComponent<LimbMovement>();
-        leftLegP2 = GameObject.FindGameObjectWithTag("LeftLegP2").GetComponent<LimbMovement>();
-        rightLegP2 = GameObject.FindGameObjectWithTag("RightLegP2").GetComponent<LimbMovement>();
+        GetLimbs(Players.PlayerOne);
+        GetLimbs(Players.PlayerTwo);
     }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        if (leftArm == null)
+        {
+            GetLimbs(Players.PlayerOne);
+        }
+        if (leftArmP2 == null)
+        {
+            GetLimbs(Players.PlayerTwo);
+        }
+    }
+
+    void GetLimbs(Players player)
+    {
+        if(player == Players.PlayerOne)
+        {
+            leftArm = GetLimb("LeftArm");
+            rightArm = GetLimb("RightArm");
+            leftLeg = GetLimb("LeftLeg");
+            rightLeg = GetLimb("RightLeg");
+        } else
+        {
+            leftArmP2 = GetLimb("LeftArmP2");
+            rightArmP2 = GetLimb("RightArmP2");
+            leftLegP2 = GetLimb("LeftLegP2");
+            rightLegP2 = GetLimb("RightLegP2");
+        }
+    }
+
+    LimbMovement GetLimb(string givenTag)
+    {
+        GameObject t = GameObject.FindGameObjectWithTag(givenTag);
+        if (t) return t.GetComponent<LimbMovement>();
+        return null;
+    }
 
     public int CheckScore(DanceMove currentMove, int timeMultiplier, Players player)
     {
@@ -123,5 +148,24 @@ public class InputCheck : MonoBehaviour {
             
         }
         return index;
+    }
+
+    public DanceMove getCurrentMove (bool isPlayerOne) //Gets current position of limbs as DanceMove from player one or two
+    {
+        DanceMove temp = new DanceMove(1, 1, 1, 1, 1);
+        if (isPlayerOne == true)
+        {
+            temp.LeftArmPosition = leftArm.GetLimbState();
+            temp.RightArmPosition = rightArm.GetLimbState();
+            temp.LeftLegPosition = leftLeg.GetLimbState();
+            temp.RightLegPosition = rightLeg.GetLimbState();
+        } else
+        {
+            temp.LeftArmPosition = leftArmP2.GetLimbState();
+            temp.RightArmPosition = rightArmP2.GetLimbState();
+            temp.LeftLegPosition = leftLegP2.GetLimbState();
+            temp.RightLegPosition = rightLegP2.GetLimbState();
+        }
+        return temp;
     }
 }
