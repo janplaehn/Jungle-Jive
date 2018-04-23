@@ -11,7 +11,7 @@ public class NameInput : MonoBehaviour {
     public GameObject[] letterGameObjects;
 
     public GameObject[] PlayerButtons;
-    public GameObject Character;
+    //public GameObject Character;
     public GameObject Canvas;
 
     [HideInInspector] public static string playerOneName;
@@ -62,7 +62,7 @@ public class NameInput : MonoBehaviour {
             foreach (GameObject button in PlayerButtons) {
                 button.gameObject.SetActive(false);
             }
-            Character.gameObject.SetActive(false);
+            //Character.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             namesEntered++;
             hasPlayerOneHighscore = true;
@@ -71,12 +71,21 @@ public class NameInput : MonoBehaviour {
             foreach (GameObject button in PlayerButtons) {
                 button.gameObject.SetActive(false);
             }
-            Character.gameObject.SetActive(false);
+            //Character.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             namesEntered++;
             hasPlayerTwoHighscore = true;
         }
     }
+
+    //private void Update()
+    //{
+    //    if(Character == null)
+    //    {
+    //        if (player == Player.Player1) Character = GameObject.FindGameObjectWithTag("Player1");
+    //        if (player == Player.Player2) Character = GameObject.FindGameObjectWithTag("Player2");
+    //    }
+    //}
 
     public void NextLetter() {
         if (currentLetter.GetComponent<Text>().text == "Z") {
