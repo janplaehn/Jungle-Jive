@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-[RequireComponent(typeof(MusicInstructions))]
-public class GameControlling : MonoBehaviour {
 
+public class GameControlling : MonoBehaviour {
+    public GameObject MusicInstruction1;
+    public GameState stateManager;
     public AudioClip music;
     public float moveReactionTime;
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
@@ -43,7 +44,6 @@ public class GameControlling : MonoBehaviour {
         DanceMove rightArmRightLegUp = new DanceMove(2f, 1f, 2f, 1f, (int)MusicInstructions.DanceMoveEnum.RightArmRightLegUp);
 
         //  moveReactionTime = 2f;
-        GetComponent<MusicInstructions>().SetMusic(music, instructions);
         instructions[0] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[1] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
         instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
@@ -63,16 +63,12 @@ public class GameControlling : MonoBehaviour {
         instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
         //moveReactionTime = 1f;
         instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);
-        StartCoroutine(LateStart());
+        MusicInstruction1.GetComponent<MusicInstructions>().SetMusic(music, instructions);
+        stateManager.AddState(MusicInstruction1, GameState.GameStates.MusicInstruction);
 
     }
     
-    IEnumerator LateStart ()
-    {
-        yield return new WaitForEndOfFrame();
-        GameObject.FindGameObjectWithTag("Player1").GetComponent<Freestyle>().SetActiveAt(4, 5);
-        GameObject.FindGameObjectWithTag("Player2").GetComponent<Freestyle>().SetActiveAt(4, 5);
-    }
+
     
 
     public void changePauseState()
