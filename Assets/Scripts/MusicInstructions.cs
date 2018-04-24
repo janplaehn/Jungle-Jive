@@ -18,6 +18,7 @@ public class MusicInstructions : MonoBehaviour {
     private DanceMove lastMove;
     private int lastPairIndex = 0;
     private bool finished;
+    public bool stateFinished = false;
     private bool moveRatedP1 = false;
     private bool moveRatedP2 = false;
     private bool intro;
@@ -66,19 +67,24 @@ public class MusicInstructions : MonoBehaviour {
             nextInstruction.sprite = voidSprite;
         }
         lastMove = timingPairs[lastPairIndex].firstValue;
-
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if(finished == false && isPaused == false)
+		
+	}
+
+    public void OnUpdate ()
+    {
+        if (finished == false && isPaused == false)
         {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime <= instructionTime)
             {
                 animateTiming(timingPairs[lastPairIndex].secondValue, accumulatedTime);
                 checkTiming(accumulatedTime);
-            } else
+            }
+            else
             {
                 if (moveRatedP1 == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
                 if (moveRatedP2 == false) scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
@@ -86,11 +92,12 @@ public class MusicInstructions : MonoBehaviour {
                 if (timingPairs.Length <= lastPairIndex)
                 {
                     finished = true;
+                    stateFinished = true;
                     instruction.sprite = voidSprite;
                     nextInstruction.sprite = voidSprite;
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
-                    GetComponent<GameControlling>().GameOver();
+                    
                     return;
                 }
 
@@ -111,7 +118,8 @@ public class MusicInstructions : MonoBehaviour {
                 }
                 lastMove = timingPairs[lastPairIndex].firstValue;
             }
-        } else if (intro == true)
+        }
+        else if (intro == true)
         {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime >= introTime)
@@ -121,7 +129,7 @@ public class MusicInstructions : MonoBehaviour {
                 accumulatedTime = 0f;
             }
         }
-	}
+    }
 
     public void SetMusic(AudioClip givenMusic, Pair<DanceMove, float>[] givenPairs)
     {

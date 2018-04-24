@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Freestyle : MonoBehaviour {
     private bool isActive;
-    private float activeTimelimit;
-    private float accumulatedTime;
+    private float activeTimelimit = 0;
+    private float accumulatedTime = 0;
+    private float activateTime = 0;
     public List<DanceMove> recentMoves;
     [SerializeField] private bool isPlayerOne;
     private ScoringSystem scoringSystem;
@@ -15,7 +16,7 @@ public class Freestyle : MonoBehaviour {
     int maxScore = 100;
     // Use this for initialization
     void Start () {
-        isActive = false;
+        isActive = true;
         recentMoves = new List<DanceMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
@@ -23,11 +24,10 @@ public class Freestyle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (isActive == true)
-        {
             accumulatedTime += Time.deltaTime;
-            if (accumulatedTime < activeTimelimit)
+            if (accumulatedTime > activateTime && activateTime - accumulatedTime < activeTimelimit)
             {
+                inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = true;
                 DanceMove tempMove = inputCheck.getCurrentMove(isPlayerOne);
                 if (recentMoves.Count >= 5)
                 {
@@ -38,20 +38,16 @@ public class Freestyle : MonoBehaviour {
                     {
                         scoringSystem.AddSecondPlayerScore(GetScore(tempMove), maxScore);
                     }
-                    
-
                 }
                 else
                 {
                     recentMoves.Add(tempMove);
                 }
                 if (recentMoves.Count > 5) recentMoves.RemoveAt(0);
-            } else
+            } else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
             {
-                isActive = false;
+                inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = false;
             }
-            
-        }
     }
 
     int GetScore (DanceMove currentMove)
@@ -86,9 +82,10 @@ public class Freestyle : MonoBehaviour {
         return temp;
     }
 
-    public void SetActiveFor (float activeTime)
+    public void SetActiveAt (float activeAt, float activeDuration)
     {
-        isActive = true;
-        activeTimelimit = activeTime;
+        activeTimelimit = activeDuration;
+        activateTime = activeAt;
+        
     }
 }

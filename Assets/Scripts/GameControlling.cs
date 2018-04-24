@@ -63,8 +63,16 @@ public class GameControlling : MonoBehaviour {
         instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
         //moveReactionTime = 1f;
         instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);
+        StartCoroutine(LateStart());
+
     }
     
+    IEnumerator LateStart ()
+    {
+        yield return new WaitForEndOfFrame();
+        GameObject.FindGameObjectWithTag("Player1").GetComponent<Freestyle>().SetActiveAt(4, 5);
+        GameObject.FindGameObjectWithTag("Player2").GetComponent<Freestyle>().SetActiveAt(4, 5);
+    }
     
 
     public void changePauseState()

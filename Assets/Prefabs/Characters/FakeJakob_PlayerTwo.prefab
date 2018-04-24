@@ -177,6 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4678908326724830}
   - component: {fileID: 50412343033730984}
+  - component: {fileID: 114784925402064062}
   m_Layer: 0
   m_Name: FakeJakob_PlayerTwo
   m_TagString: Player1
@@ -1234,6 +1235,18 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 270
   isPaused: 0
+--- !u!114 &114784925402064062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334711390337900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerOne: 0
 --- !u!114 &114790781872469056
 MonoBehaviour:
   m_ObjectHideFlags: 1
