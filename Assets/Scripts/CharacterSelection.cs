@@ -8,7 +8,6 @@ public class CharacterSelection : MonoBehaviour {
     public enum Player { Player1, Player2 };
     public Player player;
 
-    //public GameObject playerObject;
     public GameObject[] PlayerButtons;
     public SkinSetting skinSetting;
 
@@ -57,6 +56,7 @@ public class CharacterSelection : MonoBehaviour {
             }
             if (charactersConfirmed >= 2) {
                 charactersConfirmed = 0;
+                GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("MenuMusic");
                 SceneManager.LoadScene(Scene);
             }
     }

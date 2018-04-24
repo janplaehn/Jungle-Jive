@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControlling : MonoBehaviour {
 
     public AudioClip music;
+    public float animationSpeed = 1;
     public float moveReactionTime;
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
     private bool isPaused;
