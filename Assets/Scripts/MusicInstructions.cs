@@ -47,8 +47,8 @@ public class MusicInstructions : MonoBehaviour {
         intro = true;
         lastMove = timingPairs[0].firstValue;
         nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
-        inputCheck = GetComponent<InputCheck>();
-        scoringSystem = GetComponent<ScoringSystem>();
+        inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
+        scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
         if (timingPairs.Length == 0)
         {
             finished = true;
@@ -68,11 +68,6 @@ public class MusicInstructions : MonoBehaviour {
         }
         lastMove = timingPairs[lastPairIndex].firstValue;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void OnUpdate ()
     {

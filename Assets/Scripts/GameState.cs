@@ -5,8 +5,7 @@ using UnityEngine;
 public class GameState : MonoBehaviour {
 
     int stateIndex = 0;
-    List<Pair<GameObject, GameStates>> states;
-    GameStates currentStateType;
+    List<Pair<GameObject, GameStates>> states = new List<Pair<GameObject, GameStates>>();
     public enum GameStates{
         MusicInstruction,
         Freestyle,
@@ -14,11 +13,6 @@ public class GameState : MonoBehaviour {
 
     bool started = false;
     bool finished = false;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
