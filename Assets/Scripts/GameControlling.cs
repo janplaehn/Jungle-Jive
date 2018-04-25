@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControlling : MonoBehaviour {
 
     public AudioClip music;
+    public float animationSpeed = 1;
     public float moveReactionTime;
     private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
     private bool isPaused;
@@ -24,8 +25,16 @@ public class GameControlling : MonoBehaviour {
     }
 
     public void GameOver() {
+        GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
+        foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
+            face.GetComponent<AudienceFeedbackController>().BeHappy();
+        }
+        foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace2")) {
+            face.GetComponent<AudienceFeedbackController>().BeHappy();
+        }
         Invoke("QuitToLeaderboard", 5f);
     }
+
     private void QuitToLeaderboard() {
         SceneManager.LoadScene("EnterNameScene");
     }

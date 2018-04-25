@@ -29,6 +29,9 @@ public class ScoringSystem : MonoBehaviour {
             firstPlayerHead = GameObject.FindGameObjectWithTag("Head");
         }
         firstPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount, maxScore);
+        foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
+            face.GetComponent<AudienceFeedbackController>().GiveFaceFeedback(scoreAmount, maxScore);
+        }
     }
 
     public void AddSecondPlayerScore(int scoreAmount, int maxScore) {
@@ -45,6 +48,9 @@ public class ScoringSystem : MonoBehaviour {
             secondPlayerHead = GameObject.FindGameObjectWithTag("HeadP2");
         }
         secondPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount, maxScore);
+        foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace2")) {
+            face.GetComponent<AudienceFeedbackController>().GiveFaceFeedback(scoreAmount, maxScore);
+        }
     }
 
     public int GetFirstPlayerScore() { return firstPlayerScore; }

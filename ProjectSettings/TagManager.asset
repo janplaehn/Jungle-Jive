@@ -20,6 +20,11 @@ TagManager:
   - Player2Feedback
   - Head
   - HeadP2
+  - Bear
+  - Background
+  - HatUnlockUI
+  - FeedbackFace1
+  - FeedbackFace2
   layers:
   - Default
   - TransparentFX
@@ -59,4 +64,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2464953741
+    locked: 0
+  - name: Foreground
+    uniqueID: 2545251397
     locked: 0
