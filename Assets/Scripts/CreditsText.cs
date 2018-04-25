@@ -13,14 +13,11 @@ public class CreditsText : MonoBehaviour {
 	}
 	
     public void ChangeTextState() {
-        if (this.GetComponent<Text>().text == person) {
-            this.GetComponent<Text>().text = role;
-        }
-        else if (this.GetComponent<Text>().text == role) {
-            this.GetComponent<Text>().text = person;
-        }
-        else {
-            Debug.LogWarning("Unknown Text Format");
-        }
+        this.GetComponent<Text>().text = role;
+        Invoke(("ChangeTextBack"), 2f);
+    }
+
+    void ChangeTextBack() {
+        this.GetComponent<Text>().text = person;
     }
 }
