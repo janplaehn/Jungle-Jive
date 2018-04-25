@@ -47,22 +47,19 @@ public class GameControlling : MonoBehaviour {
         instructions[0] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[1] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
         instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
-        instructions[4] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
-        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
-        instructions[7] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[9] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        instructions[10] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        //moveReactionTime = 2.5f;
+        instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime * 0.65f);
+        instructions[4] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime * 0.65f);
+        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime * 0.65f);
+        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime * 0.65f);
+        instructions[7] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[8] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime * 0.65f);
+        instructions[9] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime * 0.65f);
+        instructions[10] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime * 0.65f);
         instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, moveReactionTime);
-        //moveReactionTime = 2f;
-        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime * 0.65f);
         instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, moveReactionTime);
-        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
-        //moveReactionTime = 1f;
-        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);
+        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime * 0.65f);
+        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime * 0.5f);
     }
     
     
