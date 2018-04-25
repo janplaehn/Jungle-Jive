@@ -7,8 +7,4 @@ public class AnimationController : MonoBehaviour {
 	void Start () {
         GetComponent<Animator>().speed = GameObject.Find("GameController").GetComponent<GameControlling>().animationSpeed;
 	}
-	
-	void Update () {
-		
-	}
 }
