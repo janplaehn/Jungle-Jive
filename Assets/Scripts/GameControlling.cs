@@ -25,8 +25,10 @@ public class GameControlling : MonoBehaviour {
     }
 
     public void GameOver() {
+        GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
         Invoke("QuitToLeaderboard", 5f);
     }
+
     private void QuitToLeaderboard() {
         SceneManager.LoadScene("EnterNameScene");
     }
