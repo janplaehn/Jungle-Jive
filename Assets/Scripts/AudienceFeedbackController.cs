@@ -26,6 +26,10 @@ public class AudienceFeedbackController : MonoBehaviour {
 
     }
 
+    public void BeHappy() {
+        SetSprite(happy);
+    }
+
     void SetSprite(Sprite[] spriteArray) {
         int spriteNumber = Random.Range(0, spriteArray.Length);
         GetComponent<SpriteRenderer>().sprite = spriteArray[spriteNumber];

@@ -26,6 +26,12 @@ public class GameControlling : MonoBehaviour {
 
     public void GameOver() {
         GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
+        foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
+            face.GetComponent<AudienceFeedbackController>().BeHappy();
+        }
+        foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace2")) {
+            face.GetComponent<AudienceFeedbackController>().BeHappy();
+        }
         Invoke("QuitToLeaderboard", 5f);
     }
 

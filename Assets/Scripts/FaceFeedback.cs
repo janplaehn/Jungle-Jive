@@ -29,6 +29,14 @@ public class FaceFeedback : MonoBehaviour {
         
     }
 
+    public void BeHappy() {
+        SetSprite(happy);
+    }
+
+    public void BeSad() {
+        SetSprite(sad);
+    }
+
     void SetSprite(Sprite[] spriteArray) {
         int spriteNumber = Random.Range(0, spriteArray.Length);
         GetComponent<SpriteRenderer>().sprite = spriteArray[spriteNumber];
