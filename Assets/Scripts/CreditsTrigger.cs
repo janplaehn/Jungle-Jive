@@ -9,4 +9,8 @@ public class CreditsTrigger : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         Text.GetComponent<CreditsText>().ChangeTextState();
     }
+
+    /*private void OnTriggerExit2D(Collider2D collision) {
+        Text.GetComponent<CreditsText>().ChangeTextState();
+    }*/
 }
