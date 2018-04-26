@@ -14,6 +14,7 @@ public class Freestyle : MonoBehaviour {
     private DanceMove lastMove;
     int repitionScore = 25;
     int maxScore = 100;
+    public bool stateFinished = false;
     // Use this for initialization
     void Start () {
         isActive = true;
@@ -24,30 +25,36 @@ public class Freestyle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-            accumulatedTime += Time.deltaTime;
-            if (accumulatedTime > activateTime && activateTime - accumulatedTime < activeTimelimit)
+
+    }
+    void OnUpdate ()
+    {
+        accumulatedTime += Time.deltaTime;
+        if (accumulatedTime > activateTime && activateTime - accumulatedTime < activeTimelimit)
+        {
+            inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = true;
+            DanceMove tempMove = inputCheck.getCurrentMove(isPlayerOne);
+            if (recentMoves.Count >= 5)
             {
-                inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = true;
-                DanceMove tempMove = inputCheck.getCurrentMove(isPlayerOne);
-                if (recentMoves.Count >= 5)
+                if (isPlayerOne == true)
                 {
-                    if (isPlayerOne == true)
-                    {
-                        scoringSystem.AddFirstPlayerScore(GetScore(tempMove), maxScore);  //Let scoring run through a different function so it doesn't trigger feedback text?
-                    } else
-                    {
-                        scoringSystem.AddSecondPlayerScore(GetScore(tempMove), maxScore);
-                    }
+                    scoringSystem.AddFirstPlayerScore(GetScore(tempMove), maxScore);  //Let scoring run through a different function so it doesn't trigger feedback text?
                 }
                 else
                 {
-                    recentMoves.Add(tempMove);
+                    scoringSystem.AddSecondPlayerScore(GetScore(tempMove), maxScore);
                 }
-                if (recentMoves.Count > 5) recentMoves.RemoveAt(0);
-            } else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
-            {
-                inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = false;
             }
+            else
+            {
+                recentMoves.Add(tempMove);
+            }
+            if (recentMoves.Count > 5) recentMoves.RemoveAt(0);
+        }
+        else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
+        {
+            inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = false;
+        }
     }
 
     int GetScore (DanceMove currentMove)
