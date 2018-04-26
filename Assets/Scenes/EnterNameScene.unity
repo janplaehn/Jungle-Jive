@@ -1820,7 +1820,8 @@ MonoBehaviour:
   playerTwo: {fileID: 0}
   playerOneSpawn: {fileID: 452898356}
   playerTwoSpawn: {fileID: 1479469779}
-  startMenu: 0
+  showSecondPlayer: 1
+  isInMenu: 1
 --- !u!1 &939254752
 GameObject:
   m_ObjectHideFlags: 0
