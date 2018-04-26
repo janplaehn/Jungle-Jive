@@ -2211,6 +2211,11 @@ Prefab:
       propertyPath: playerTwoSpawn
       value: 
       objectReference: {fileID: 1932376759}
+    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: showSecondPlayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
@@ -2947,22 +2952,22 @@ Prefab:
     - target: {fileID: 224349892249896778, guid: fb56b6d188bf79545a79183fa722b1d8,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00002086156
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 224349892249896778, guid: fb56b6d188bf79545a79183fa722b1d8,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 161
+      value: 162.2
       objectReference: {fileID: 0}
     - target: {fileID: 224349892249896778, guid: fb56b6d188bf79545a79183fa722b1d8,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 134.4
+      value: 132.7
       objectReference: {fileID: 0}
     - target: {fileID: 224349892249896778, guid: fb56b6d188bf79545a79183fa722b1d8,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 190.7
+      value: 188.3
       objectReference: {fileID: 0}
     - target: {fileID: 224349892249896778, guid: fb56b6d188bf79545a79183fa722b1d8,
         type: 2}
