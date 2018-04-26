@@ -53,7 +53,7 @@ public class MusicInstructions : MonoBehaviour {
             started = false;
         }
 
-        instructionTime = timingPairs[lastPairIndex].secondValue + 1f;
+        instructionTime = timingPairs[lastPairIndex].secondValue;
         instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
         timing.sprite = timingSprite;
         timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
@@ -98,7 +98,7 @@ public class MusicInstructions : MonoBehaviour {
                 moveRatedP1 = false;
                 moveRatedP2 = false;
                 accumulatedTime = 0f;
-                instructionTime = timingPairs[lastPairIndex].secondValue + 1f;
+                instructionTime = timingPairs[lastPairIndex].secondValue;
                 instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
                 timing.sprite = timingSprite;
                 timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);

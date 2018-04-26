@@ -28,17 +28,17 @@ public class Freestyle : MonoBehaviour {
 	void Update () {
 
     }
-    void OnUpdate ()
+    public void OnUpdate ()
     {
         accumulatedTime += Time.deltaTime;
         if (accumulatedTime > activateTime && activateTime - accumulatedTime < activeTimelimit)
         {
-            inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = true;
+
             DanceMove tempMoveP1 = inputCheck.getCurrentMove(true);
             DanceMove tempMoveP2 = inputCheck.getCurrentMove(false);
-            if (recentMovesP1.Count >= 5 && !CheckIfSameMove(recentMovesP1[5], tempMoveP1))
+            if (recentMovesP1.Count >= 5 && !CheckIfSameMove(recentMovesP1[4], tempMoveP1))
             {
-                for (int i = recentMovesP1.Count; i >= 0; i--)
+                for (int i = recentMovesP1.Count - 1; i >= 0; i--)
                 {
                     if (CheckIfSameMove(recentMovesP1[i], tempMoveP1))
                     {
@@ -55,9 +55,9 @@ public class Freestyle : MonoBehaviour {
                 recentMovesP1.Add(tempMoveP1);
                 scoringSystem.AddFirstPlayerScore(maxScore, maxScore);
             }
-            if (recentMovesP2.Count >= 5 && !CheckIfSameMove(recentMovesP2[5], tempMoveP2))
+            if (recentMovesP2.Count >= 5 && !CheckIfSameMove(recentMovesP2[4], tempMoveP2))
             {
-                for (int i = recentMovesP2.Count; i >= 0; i--)
+                for (int i = recentMovesP2.Count - 1; i >= 0; i--)
                 {
                     if (CheckIfSameMove(recentMovesP2[i], tempMoveP2))
                     {
@@ -80,7 +80,7 @@ public class Freestyle : MonoBehaviour {
         }
         else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
         {
-            inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = false;
+            stateFinished = true;
         }
     }
 
