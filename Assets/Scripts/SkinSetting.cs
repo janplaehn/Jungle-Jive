@@ -7,20 +7,28 @@ public class SkinSetting : MonoBehaviour {
     public GameObject[] playerTwoPrefabs;
     private int playerOneIndex;
     private int playerTwoIndex;
-    public GameObject playerOne;
-    public GameObject playerTwo;
+
+    [HideInInspector] public GameObject playerOne;
+    [HideInInspector] public GameObject playerTwo;
+
     public GameObject playerOneSpawn;
     public GameObject playerTwoSpawn;
-    public bool startMenu;
-	// Use this for initialization
-	void Start () {
+
+    public bool showSecondPlayer;
+    public bool isInMenu;
+
+    void Start() {
         //PlayerPrefs.DeleteAll();
         playerOneIndex = PlayerPrefs.GetInt("FirstPlayerSkin", 0);
         PlayerPrefs.SetInt("FirstPlayerSkin", playerOneIndex);
         playerTwoIndex = PlayerPrefs.GetInt("SecondPlayerSkin", playerTwoPrefabs.Length - 1);
         PlayerPrefs.SetInt("SecondPlayerSkin", playerTwoIndex);
         playerOne = Instantiate(playerOnePrefabs[playerOneIndex], playerOneSpawn.transform.position, Quaternion.identity);
-        if (startMenu == false) playerTwo = Instantiate(playerTwoPrefabs[playerTwoIndex], playerTwoSpawn.transform.position, Quaternion.identity);
+        if (showSecondPlayer == true) playerTwo = Instantiate(playerTwoPrefabs[playerTwoIndex], playerTwoSpawn.transform.position, Quaternion.identity);
+        if (isInMenu) {
+            playerOne.GetComponent<Rigidbody2D>().gravityScale = 0;
+            if (showSecondPlayer == true)  playerTwo.GetComponent<Rigidbody2D>().gravityScale = 0;
+        }
     }
 
     public void ChangePlayerOneSkin(int deltaIndex)
