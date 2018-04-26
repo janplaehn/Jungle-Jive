@@ -7,8 +7,8 @@ public class Freestyle : MonoBehaviour {
     private float activeTimelimit = 0;
     private float accumulatedTime = 0;
     private float activateTime = 0;
-    public List<DanceMove> recentMoves;
-    [SerializeField] private bool isPlayerOne;
+    public List<DanceMove> recentMovesP1;
+    public List<DanceMove> recentMovesP2;
     private ScoringSystem scoringSystem;
     private InputCheck inputCheck;
     private DanceMove lastMove;
@@ -18,7 +18,8 @@ public class Freestyle : MonoBehaviour {
     // Use this for initialization
     void Start () {
         isActive = true;
-        recentMoves = new List<DanceMove>();
+        recentMovesP1 = new List<DanceMove>();
+        recentMovesP2 = new List<DanceMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
     }
@@ -33,23 +34,49 @@ public class Freestyle : MonoBehaviour {
         if (accumulatedTime > activateTime && activateTime - accumulatedTime < activeTimelimit)
         {
             inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = true;
-            DanceMove tempMove = inputCheck.getCurrentMove(isPlayerOne);
-            if (recentMoves.Count >= 5)
+            DanceMove tempMoveP1 = inputCheck.getCurrentMove(true);
+            DanceMove tempMoveP2 = inputCheck.getCurrentMove(false);
+            if (recentMovesP1.Count >= 5 && !CheckIfSameMove(recentMovesP1[5], tempMoveP1))
             {
-                if (isPlayerOne == true)
+                for (int i = recentMovesP1.Count; i >= 0; i--)
                 {
-                    scoringSystem.AddFirstPlayerScore(GetScore(tempMove), maxScore);  //Let scoring run through a different function so it doesn't trigger feedback text?
-                }
-                else
-                {
-                    scoringSystem.AddSecondPlayerScore(GetScore(tempMove), maxScore);
+                    if (CheckIfSameMove(recentMovesP1[i], tempMoveP1))
+                    {
+                        scoringSystem.AddFirstPlayerScore(repitionScore, maxScore);
+                    }
+                    else
+                    {
+                        scoringSystem.AddFirstPlayerScore(maxScore, maxScore);
+                    }
                 }
             }
-            else
+            else if (recentMovesP1.Count < 5)
             {
-                recentMoves.Add(tempMove);
+                recentMovesP1.Add(tempMoveP1);
+                scoringSystem.AddFirstPlayerScore(maxScore, maxScore);
             }
-            if (recentMoves.Count > 5) recentMoves.RemoveAt(0);
+            if (recentMovesP2.Count >= 5 && !CheckIfSameMove(recentMovesP2[5], tempMoveP2))
+            {
+                for (int i = recentMovesP2.Count; i >= 0; i--)
+                {
+                    if (CheckIfSameMove(recentMovesP2[i], tempMoveP2))
+                    {
+                        scoringSystem.AddSecondPlayerScore(repitionScore, maxScore);
+                    }
+                    else
+                    {
+                        scoringSystem.AddSecondPlayerScore(maxScore, maxScore);
+                    }
+                }
+            }
+            else if (recentMovesP2.Count < 5)
+            {
+                recentMovesP2.Add(tempMoveP2);
+                scoringSystem.AddSecondPlayerScore(maxScore, maxScore);
+            }
+            if (recentMovesP1.Count > 5) recentMovesP1.RemoveAt(0);
+            if (recentMovesP2.Count > 5) recentMovesP2.RemoveAt(0);
+
         }
         else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
         {
@@ -57,28 +84,9 @@ public class Freestyle : MonoBehaviour {
         }
     }
 
-    int GetScore (DanceMove currentMove)
-    {
-        int tempScore = 0;
-        for (int i = recentMoves.Count; i >= 0; i--)
-        {
-            if (CheckIfSameMove(currentMove, recentMoves[5])) break;
-            else if (CheckIfSameMove(currentMove, recentMoves[i]))
-            {
-                if (isPlayerOne == true)
-                {
-                    tempScore = repitionScore;
-                }
-                else
-                {
-                    tempScore = repitionScore;
-                }
-                break;
-            }
-        }
-        if (tempScore != repitionScore) tempScore = maxScore;
-        return tempScore;
-    }
+
+
+
     bool CheckIfSameMove (DanceMove move1, DanceMove move2)
     {
         bool temp = false;
