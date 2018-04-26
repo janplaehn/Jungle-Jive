@@ -38,17 +38,23 @@ public class Freestyle : MonoBehaviour {
             DanceMove tempMoveP2 = inputCheck.getCurrentMove(false);
             if (recentMovesP1.Count >= 5 && !CheckIfSameMove(recentMovesP1[4], tempMoveP1))
             {
+                int tempScore = 0;
                 for (int i = recentMovesP1.Count - 1; i >= 0; i--)
                 {
                     if (CheckIfSameMove(recentMovesP1[i], tempMoveP1))
                     {
-                        scoringSystem.AddFirstPlayerScore(repitionScore, maxScore);
+                        tempScore = repitionScore;
+                        break;
                     }
                     else
                     {
-                        scoringSystem.AddFirstPlayerScore(maxScore, maxScore);
+                        if (i == 0)
+                        {
+                            tempScore = maxScore;
+                        }
                     }
                 }
+                scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
             }
             else if (recentMovesP1.Count < 5)
             {
@@ -57,16 +63,22 @@ public class Freestyle : MonoBehaviour {
             }
             if (recentMovesP2.Count >= 5 && !CheckIfSameMove(recentMovesP2[4], tempMoveP2))
             {
+                int tempScore = 0;
                 for (int i = recentMovesP2.Count - 1; i >= 0; i--)
                 {
                     if (CheckIfSameMove(recentMovesP2[i], tempMoveP2))
                     {
-                        scoringSystem.AddSecondPlayerScore(repitionScore, maxScore);
+                        tempScore = repitionScore;
+                        break;
                     }
-                    else
+                    else 
                     {
-                        scoringSystem.AddSecondPlayerScore(maxScore, maxScore);
+                        if (i == 0)
+                        {
+                            tempScore = maxScore;
+                        }
                     }
+                    scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
                 }
             }
             else if (recentMovesP2.Count < 5)
