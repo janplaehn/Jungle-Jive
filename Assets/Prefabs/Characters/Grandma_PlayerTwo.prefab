@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4044831275187216}
   - component: {fileID: 50079243887773884}
-  - component: {fileID: 114802956976493984}
   m_Layer: 0
   m_Name: Grandma_PlayerTwo
   m_TagString: Player2
@@ -328,7 +327,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892240969268952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.24, z: 0}
+  m_LocalPosition: {x: 0, y: -2.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4044831275187216}
@@ -1192,18 +1191,6 @@ MonoBehaviour:
   maxRotation: 90
   startRotation: 270
   isPaused: 0
---- !u!114 &114802956976493984
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1074067474174316}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateFinished: 0
 --- !u!114 &114848782215518692
 MonoBehaviour:
   m_ObjectHideFlags: 1
