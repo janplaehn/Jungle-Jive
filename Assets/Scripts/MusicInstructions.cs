@@ -17,13 +17,14 @@ public class MusicInstructions : MonoBehaviour {
     private InputCheck inputCheck;
     private DanceMove lastMove;
     private int lastPairIndex = 0;
-    private bool started = true;
+    private bool finished;
     public bool stateFinished = false;
     private bool moveRatedP1 = false;
     private bool moveRatedP2 = false;
     private bool intro;
     public float introTime;
     public Sprite timingSprite;
+    [Range(1f, 3f)]  public float maxTimingSpriteSize = 1.5f;
     public float instructionTime;
 
     private float errorMargin = 0.2f;
@@ -43,6 +44,7 @@ public class MusicInstructions : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         isPaused = false;
+        finished = true;
         intro = true;
         lastMove = timingPairs[0].firstValue;
         nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
@@ -50,7 +52,7 @@ public class MusicInstructions : MonoBehaviour {
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
         if (timingPairs.Length == 0)
         {
-            started = false;
+            finished = true;
         }
 
         instructionTime = timingPairs[lastPairIndex].secondValue;
@@ -70,7 +72,7 @@ public class MusicInstructions : MonoBehaviour {
 
     public void OnUpdate ()
     {
-        if (started == true && isPaused == false)
+        if (finished == false && isPaused == false)
         {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime <= instructionTime)
@@ -85,7 +87,7 @@ public class MusicInstructions : MonoBehaviour {
                 lastPairIndex++;
                 if (timingPairs.Length <= lastPairIndex)
                 {
-                    started = false;
+                    finished = true;
                     stateFinished = true;
                     instruction.sprite = voidSprite;
                     nextInstruction.sprite = voidSprite;
@@ -118,7 +120,7 @@ public class MusicInstructions : MonoBehaviour {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime >= introTime)
             {
-                started = true;
+                finished = false;
                 intro = false;
                 accumulatedTime = 0f;
             }
@@ -130,12 +132,12 @@ public class MusicInstructions : MonoBehaviour {
         musicSource.clip = givenMusic;
         musicSource.Play();
         timingPairs = givenPairs;
-        started = true;
+        finished = false;
     }
 
     void animateTiming (float perfectTime, float accumulatedTime)
     {
-        timing.rectTransform.localScale = new Vector3(1 + (2 * (perfectTime - accumulatedTime)) / perfectTime, 1 + (2 * (perfectTime - accumulatedTime)) / perfectTime, 0);
+        timing.rectTransform.localScale = new Vector3(1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 0);
         if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1) {
             timing.sprite = voidSprite;
         }

@@ -40,6 +40,9 @@ public class GameControlling : MonoBehaviour {
     }
 
     private void QuitToLeaderboard() {
+        if (GameObject.Find("MusicManager")) {
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
+        }
         SceneManager.LoadScene("EnterNameScene");
     }
 
