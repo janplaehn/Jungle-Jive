@@ -187,7 +187,7 @@ MonoBehaviour:
   playerTwo: {fileID: 0}
   playerOneSpawn: {fileID: 0}
   playerTwoSpawn: {fileID: 0}
-  showSecondPlayer: 0
+  showSecondPlayer: 1
   isInMenu: 0
 --- !u!114 &114447834668686820
 MonoBehaviour:
