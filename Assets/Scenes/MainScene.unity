@@ -2191,16 +2191,6 @@ Prefab:
       propertyPath: nextInstruction
       value: 
       objectReference: {fileID: 1183197442}
-    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: firstPlayerScoreDisplay
-      value: 
-      objectReference: {fileID: 346900547}
-    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: secondPlayerScoreDisplay
-      value: 
-      objectReference: {fileID: 1354806001}
     - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: playerOneSpawn
@@ -2211,11 +2201,16 @@ Prefab:
       propertyPath: playerTwoSpawn
       value: 
       objectReference: {fileID: 1932376759}
-    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: showSecondPlayer
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: firstPlayerScoreDisplay
+      value: 
+      objectReference: {fileID: 346900547}
+    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: secondPlayerScoreDisplay
+      value: 
+      objectReference: {fileID: 1354806001}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
