@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Freestyle : MonoBehaviour {
     private bool isActive;
-    private float activeTimelimit;
-    private float accumulatedTime;
+    private float activeTimelimit = 0;
+    private float accumulatedTime = 0;
+    private float activateTime = 0;
     public List<DanceMove> recentMoves;
     [SerializeField] private bool isPlayerOne;
     private ScoringSystem scoringSystem;
@@ -13,9 +14,10 @@ public class Freestyle : MonoBehaviour {
     private DanceMove lastMove;
     int repitionScore = 25;
     int maxScore = 100;
+    public bool stateFinished = false;
     // Use this for initialization
     void Start () {
-        isActive = false;
+        isActive = true;
         recentMoves = new List<DanceMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
@@ -23,34 +25,35 @@ public class Freestyle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (isActive == true)
-        {
-            accumulatedTime += Time.deltaTime;
-            if (accumulatedTime < activeTimelimit)
-            {
-                DanceMove tempMove = inputCheck.getCurrentMove(isPlayerOne);
-                if (recentMoves.Count >= 5)
-                {
-                    if (isPlayerOne == true)
-                    {
-                        scoringSystem.AddFirstPlayerScore(GetScore(tempMove), maxScore);  //Let scoring run through a different function so it doesn't trigger feedback text?
-                    } else
-                    {
-                        scoringSystem.AddSecondPlayerScore(GetScore(tempMove), maxScore);
-                    }
-                    
 
+    }
+    void OnUpdate ()
+    {
+        accumulatedTime += Time.deltaTime;
+        if (accumulatedTime > activateTime && activateTime - accumulatedTime < activeTimelimit)
+        {
+            inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = true;
+            DanceMove tempMove = inputCheck.getCurrentMove(isPlayerOne);
+            if (recentMoves.Count >= 5)
+            {
+                if (isPlayerOne == true)
+                {
+                    scoringSystem.AddFirstPlayerScore(GetScore(tempMove), maxScore);  //Let scoring run through a different function so it doesn't trigger feedback text?
                 }
                 else
                 {
-                    recentMoves.Add(tempMove);
+                    scoringSystem.AddSecondPlayerScore(GetScore(tempMove), maxScore);
                 }
-                if (recentMoves.Count > 5) recentMoves.RemoveAt(0);
-            } else
-            {
-                isActive = false;
             }
-            
+            else
+            {
+                recentMoves.Add(tempMove);
+            }
+            if (recentMoves.Count > 5) recentMoves.RemoveAt(0);
+        }
+        else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
+        {
+            inputCheck.gameObject.GetComponent<MusicInstructions>().isPaused = false;
         }
     }
 
@@ -86,9 +89,10 @@ public class Freestyle : MonoBehaviour {
         return temp;
     }
 
-    public void SetActiveFor (float activeTime)
+    public void SetActiveAt (float activeAt, float activeDuration)
     {
-        isActive = true;
-        activeTimelimit = activeTime;
+        activeTimelimit = activeDuration;
+        activateTime = activeAt;
+        
     }
 }
