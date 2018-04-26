@@ -17,7 +17,7 @@ public class MusicInstructions : MonoBehaviour {
     private InputCheck inputCheck;
     private DanceMove lastMove;
     private int lastPairIndex = 0;
-    private bool finished;
+    private bool started = true;
     public bool stateFinished = false;
     private bool moveRatedP1 = false;
     private bool moveRatedP2 = false;
@@ -43,7 +43,6 @@ public class MusicInstructions : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         isPaused = false;
-        finished = true;
         intro = true;
         lastMove = timingPairs[0].firstValue;
         nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
@@ -51,7 +50,7 @@ public class MusicInstructions : MonoBehaviour {
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
         if (timingPairs.Length == 0)
         {
-            finished = true;
+            started = false;
         }
 
         instructionTime = timingPairs[lastPairIndex].secondValue + 1f;
@@ -71,7 +70,7 @@ public class MusicInstructions : MonoBehaviour {
 
     public void OnUpdate ()
     {
-        if (finished == false && isPaused == false)
+        if (started == true && isPaused == false)
         {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime <= instructionTime)
@@ -86,7 +85,7 @@ public class MusicInstructions : MonoBehaviour {
                 lastPairIndex++;
                 if (timingPairs.Length <= lastPairIndex)
                 {
-                    finished = true;
+                    started = false;
                     stateFinished = true;
                     instruction.sprite = voidSprite;
                     nextInstruction.sprite = voidSprite;
@@ -119,7 +118,7 @@ public class MusicInstructions : MonoBehaviour {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime >= introTime)
             {
-                finished = false;
+                started = true;
                 intro = false;
                 accumulatedTime = 0f;
             }
@@ -131,7 +130,7 @@ public class MusicInstructions : MonoBehaviour {
         musicSource.clip = givenMusic;
         musicSource.Play();
         timingPairs = givenPairs;
-        finished = false;
+        started = true;
     }
 
     void animateTiming (float perfectTime, float accumulatedTime)
