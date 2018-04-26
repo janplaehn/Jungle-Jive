@@ -72,6 +72,7 @@ public class InputCheck : MonoBehaviour {
         float score = 0f;
         if (player == Players.PlayerOne)
         {
+            if (leftArm == null) return 0;
             if (currentMove.LeftArmPosition != -1)
             {
                 index++;
@@ -95,6 +96,7 @@ public class InputCheck : MonoBehaviour {
         }
         else if (player == Players.PlayerTwo)
         {
+            if (leftArmP2 == null) return 0;
             if (currentMove.LeftArmPosition != -1)
             {
                 index++;
