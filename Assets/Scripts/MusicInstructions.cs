@@ -120,6 +120,7 @@ public class MusicInstructions : MonoBehaviour {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime >= introTime)
             {
+                timing.enabled = true;
                 finished = false;
                 intro = false;
                 accumulatedTime = 0f;
