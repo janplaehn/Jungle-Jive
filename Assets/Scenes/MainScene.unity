@@ -113,11 +113,20 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &4869620 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1176209007544614, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
     type: 2}
   m_PrefabInternal: {fileID: 1565195995}
+=======
+--- !u!114 &23413725 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114593276062097544, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1565195995}
+  m_Script: {fileID: 11500000, guid: ecc28b26b23415142a7ff2f064c6eedc, type: 3}
+>>>>>>> 6dd647701cc7ac689614b83bd42dbf313ebac0bb
 --- !u!1 &163205596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2190,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: playerOneSpawn
+      value: 
+      objectReference: {fileID: 1387101434}
+    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: playerTwoSpawn
+      value: 
+      objectReference: {fileID: 1932376759}
+    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: firstPlayerScoreDisplay
+      value: 
+      objectReference: {fileID: 346900547}
+    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: secondPlayerScoreDisplay
+      value: 
+      objectReference: {fileID: 1354806001}
     - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instruction
@@ -2193,31 +2222,7 @@ Prefab:
       objectReference: {fileID: 1944069702}
     - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: nextInstruction
-      value: 
-      objectReference: {fileID: 1183197442}
-    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: firstPlayerScoreDisplay
-      value: 
-      objectReference: {fileID: 346900547}
-    - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: secondPlayerScoreDisplay
-      value: 
-      objectReference: {fileID: 1354806001}
-    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: playerOneSpawn
-      value: 
-      objectReference: {fileID: 1387101434}
-    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: playerTwoSpawn
-      value: 
-      objectReference: {fileID: 1932376759}
-    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
+<<<<<<< HEAD
       propertyPath: showSecondPlayer
       value: 1
       objectReference: {fileID: 0}
@@ -2226,10 +2231,16 @@ Prefab:
       propertyPath: MusicInstruction1
       value: 
       objectReference: {fileID: 4869620}
+=======
+      propertyPath: nextInstruction
+      value: 
+      objectReference: {fileID: 1183197442}
+>>>>>>> 6dd647701cc7ac689614b83bd42dbf313ebac0bb
     - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: stateManager
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1960421648}
     - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
@@ -2247,6 +2258,9 @@ Prefab:
       propertyPath: stateFinished
       value: 0
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 23413725}
+>>>>>>> 6dd647701cc7ac689614b83bd42dbf313ebac0bb
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0

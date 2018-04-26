@@ -23,6 +23,10 @@ public class GameState : MonoBehaviour {
                 states[stateIndex].firstValue.GetComponent<MusicInstructions>().OnUpdate();
                 if (states[stateIndex].firstValue.GetComponent<MusicInstructions>().stateFinished == true) NextState();
                 break;
+            case GameStates.Freestyle:
+                states[stateIndex].firstValue.GetComponent<Freestyle>().OnUpdate();
+                if (states[stateIndex].firstValue.GetComponent<Freestyle>().stateFinished == true) NextState();
+                break;
             default:
                 break;
         }
