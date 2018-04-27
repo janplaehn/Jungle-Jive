@@ -73,6 +73,7 @@ public class MusicInstructions : MonoBehaviour {
     {
         if (started == true && isPaused == false)
         {
+            timing.enabled = true;
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime <= instructionTime)
             {
