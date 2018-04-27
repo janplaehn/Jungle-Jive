@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Freestyle : MonoBehaviour {
+public class Freestyle : State {
     public int freestylePrize;
     private bool isActive;
     private float activeTimelimit;
@@ -18,11 +18,8 @@ public class Freestyle : MonoBehaviour {
     public bool stateFinished = false;
     private int playerOneScore;
     private int playerTwoScore;
-    // Use this for initialization
-    void Start () {
-        
-    }
-	public void OnStart()
+
+	public override void OnStart()
     {
         isActive = true;
         recentMovesP1 = new List<DanceMove>();
@@ -30,11 +27,8 @@ public class Freestyle : MonoBehaviour {
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
     }
-	// Update is called once per frame
-	void Update () {
 
-    }
-    public void OnUpdate ()
+    public override bool OnUpdate ()
     {
         Debug.Log(activeTimelimit);
         accumulatedTime += Time.deltaTime;
@@ -99,11 +93,12 @@ public class Freestyle : MonoBehaviour {
         else 
         {
             stateFinished = true;
-            OnStateFinished();
+            return false;
         }
+        return true;
     }
 
-    void OnStateFinished ()
+    public override void OnEnd ()
     {
         if (playerOneScore > playerTwoScore)
         {

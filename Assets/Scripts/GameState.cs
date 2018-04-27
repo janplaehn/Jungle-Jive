@@ -5,11 +5,7 @@ using UnityEngine;
 public class GameState : MonoBehaviour {
 
     int stateIndex = 0;
-    List<Pair<GameObject, GameStates>> states = new List<Pair<GameObject, GameStates>>();
-    public enum GameStates{
-        MusicInstruction,
-        Freestyle,
-    }
+    List<GameObject> states = new List<GameObject>();
 
     bool started = false;
     bool finished = false;
@@ -17,32 +13,24 @@ public class GameState : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!started || finished) return;
-        switch (states[stateIndex].secondValue)
-        {
-            case GameStates.MusicInstruction:
-                states[stateIndex].firstValue.GetComponent<MusicInstructions>().OnUpdate();
-                if (states[stateIndex].firstValue.GetComponent<MusicInstructions>().stateFinished == true) NextState();
-                break;
-            case GameStates.Freestyle:
-                states[stateIndex].firstValue.GetComponent<Freestyle>().OnUpdate();
-                if (states[stateIndex].firstValue.GetComponent<Freestyle>().stateFinished == true) NextState();
-                break;
-            default:
-                break;
+        if(states[stateIndex].GetComponent<State>().OnUpdate() == false) {
+            states[stateIndex].GetComponent<State>().OnEnd();
+            NextState();
         }
 	}
 
-    public void AddState (GameObject stateAdded, GameStates gameStateAdded)
+    public void AddState (GameObject stateAdded)
     {
-        Pair<GameObject, GameStates> temp = new Pair<GameObject, GameStates>(stateAdded, gameStateAdded);
-        states.Add(temp);
+        states.Add(stateAdded);
+        if (states.Count == 1) states[0].GetComponent<State>().OnStart();
         started = true;
         finished = false;
     }
+    
 
     public GameObject GetCurrentState ()
     {
-        return states[stateIndex].firstValue;
+        return states[stateIndex];
     }
 
     private void NextState()
@@ -55,17 +43,7 @@ public class GameState : MonoBehaviour {
             GetComponent<GameControlling>().GameOver();
         } else
         {
-            switch (states[stateIndex].secondValue)
-            {
-                case GameStates.MusicInstruction:
-                    states[stateIndex].firstValue.GetComponent<MusicInstructions>().OnStart();
-                    break;
-                case GameStates.Freestyle:
-                    states[stateIndex].firstValue.GetComponent<Freestyle>().OnStart();
-                    break;
-                default:
-                    break;
-            }
+            states[stateIndex].GetComponent<State>().OnStart();
         }
     }
 

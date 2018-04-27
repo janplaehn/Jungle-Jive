@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MusicInstructions : MonoBehaviour {
+public class MusicInstructions : State {
     private Pair<DanceMove, float>[] timingPairs;
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
     public Image timing;
-    //public Image timing;
     public Image nextInstruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
@@ -41,8 +40,9 @@ public class MusicInstructions : MonoBehaviour {
         LeftArmLeftLegUp,
         RightArmRightLegUp,
     }
+
 	// Use this for initialization
-	void Start () {
+	public override void OnStart () {
         isPaused = false;
         intro = true;
         lastMove = timingPairs[0].firstValue;
@@ -68,11 +68,8 @@ public class MusicInstructions : MonoBehaviour {
         }
         lastMove = timingPairs[lastPairIndex].firstValue;
     }
-    public void OnStart()
-    {
 
-    }
-    public void OnUpdate ()
+    public override bool OnUpdate ()
     {
         if (started == true && isPaused == false)
         {
@@ -97,7 +94,7 @@ public class MusicInstructions : MonoBehaviour {
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
                     
-                    return;
+                    return false;
                 }
 
                 moveRatedP1 = false;
@@ -129,6 +126,8 @@ public class MusicInstructions : MonoBehaviour {
                 accumulatedTime = 0f;
             }
         }
+
+        return true;
     }
 
     public void SetMusic(AudioClip givenMusic, Pair<DanceMove, float>[] givenPairs)
