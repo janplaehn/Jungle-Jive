@@ -37,12 +37,15 @@ public class BirdControl : MonoBehaviour {
                 Invoke("DropItem", 1f);
                 break;
             case FlightState.leave:
-                
+                LeaveScreen();
                 break;
             default:
-                break;
+                break;              
         }
-	}
+        if (System.Math.Abs(transform.position.x) > screenBorder) {
+            Destroy(this.gameObject);
+        }
+    }
 
     void FlyBackAndForth() {
         transform.position += Vector3.right * Time.deltaTime * flightdirection * speed * radiusModifier;
@@ -83,8 +86,5 @@ public class BirdControl : MonoBehaviour {
 
     void LeaveScreen() {
         transform.position += Vector3.right * Time.deltaTime * flightdirection * speed * radiusModifier;
-        if (System.Math.Abs(transform.position.x) > screenBorder) {
-            Destroy(this.gameObject);
-        }
     }
 }
