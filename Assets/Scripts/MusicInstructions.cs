@@ -24,6 +24,7 @@ public class MusicInstructions : MonoBehaviour {
     private bool intro;
     public float introTime;
     public Sprite timingSprite;
+    [Range(1f, 4f)] public float maxTimingSpriteSize = 1.5f;
     public float instructionTime;
 
     private float errorMargin = 0.2f;
@@ -121,6 +122,7 @@ public class MusicInstructions : MonoBehaviour {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime >= introTime)
             {
+                timing.enabled = true;
                 started = true;
                 intro = false;
                 accumulatedTime = 0f;
@@ -138,7 +140,7 @@ public class MusicInstructions : MonoBehaviour {
 
     void animateTiming (float perfectTime, float accumulatedTime)
     {
-        timing.rectTransform.localScale = new Vector3(1 + (2 * (perfectTime - accumulatedTime)) / perfectTime, 1 + (2 * (perfectTime - accumulatedTime)) / perfectTime, 0);
+        timing.rectTransform.localScale = new Vector3(1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 0);
         if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1) {
             timing.sprite = voidSprite;
         }
