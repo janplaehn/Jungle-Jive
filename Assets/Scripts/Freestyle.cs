@@ -58,11 +58,12 @@ public class Freestyle : MonoBehaviour {
                     }
                 }
                 scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
-            }
-            if (recentMovesP1.Count <= 5)
-            {
                 recentMovesP1.Add(tempMoveP1);
             }
+
+            if (recentMovesP1.Count < 5) recentMovesP1.Add(tempMoveP1);
+
+
             if (recentMovesP2.Count >= 5 && !CheckIfSameMove(recentMovesP2[4], tempMoveP2))
             {
                 int tempScore = 0;
@@ -83,10 +84,9 @@ public class Freestyle : MonoBehaviour {
                     scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
                 }
             }
-            else if (recentMovesP2.Count < 5)
-            {
-                recentMovesP2.Add(tempMoveP2);
-            }
+
+            recentMovesP2.Add(tempMoveP2);
+
             if (recentMovesP1.Count > 5) recentMovesP1.RemoveAt(0);
             if (recentMovesP2.Count > 5) recentMovesP2.RemoveAt(0);
 
@@ -96,7 +96,8 @@ public class Freestyle : MonoBehaviour {
             stateFinished = true;
         }
     }
-    
+
+
     bool CheckIfSameMove (DanceMove move1, DanceMove move2)
     {
         bool temp = false;
