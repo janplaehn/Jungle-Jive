@@ -10,11 +10,9 @@ public class LeaderBoard : MonoBehaviour {
     int newScorePlayerTwo = -1;
     const int leaderBoardLength = 10;
     public Text[] leaderBoardText;
-    public float goToMenuTimer;
 
 	void Start () {
         GetLeaderBoard();
-        Invoke("GoToMenu", goToMenuTimer);
     }
 
     void GetLeaderBoard()
@@ -111,10 +109,5 @@ public class LeaderBoard : MonoBehaviour {
             temp += t;
         }
         return temp;
-    }
-
-    void GoToMenu()
-    {
-        SceneManager.LoadScene("MenuScene");
     }
 }
