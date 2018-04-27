@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-[RequireComponent(typeof(MusicInstructions))]
-public class GameControlling : MonoBehaviour {
 
+public class GameControlling : MonoBehaviour {
+    public GameObject MusicInstruction1;
+    public GameObject freestyle;
+    public GameState stateManager;
     public AudioClip music;
     public float animationSpeed = 1;
     public float moveReactionTime;
-    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[16];
+    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[2];
     private bool isPaused;
     void Start() {
         isPaused = false;
@@ -27,10 +29,15 @@ public class GameControlling : MonoBehaviour {
     public void GameOver() {
         GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
-            face.GetComponent<AudienceFeedbackController>().BeHappy();
+            if (face.GetComponent<AudienceFeedbackController>())
+                face.GetComponent<AudienceFeedbackController>().BeHappy();
         }
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace2")) {
-            face.GetComponent<AudienceFeedbackController>().BeHappy();
+            if (face.GetComponent<AudienceFeedbackController>())
+                face.GetComponent<AudienceFeedbackController>().BeHappy();
+        }
+        if (GameObject.Find("MusicManager")) {
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
         }
         Invoke("QuitToLeaderboard", 5f);
     }
@@ -52,25 +59,34 @@ public class GameControlling : MonoBehaviour {
         DanceMove rightArmRightLegUp = new DanceMove(2f, 1f, 2f, 1f, (int)MusicInstructions.DanceMoveEnum.RightArmRightLegUp);
 
         //  moveReactionTime = 2f;
-        GetComponent<MusicInstructions>().SetMusic(music, instructions);
         instructions[0] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[1] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime * 0.65f);
-        instructions[4] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime * 0.65f);
-        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime * 0.65f);
-        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime * 0.65f);
-        instructions[7] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
-        instructions[8] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime * 0.65f);
-        instructions[9] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime * 0.65f);
-        instructions[10] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime * 0.65f);
+        freestyle.AddComponent<Freestyle>().SetActiveAt(0, moveReactionTime * instructions.Length);
+
+       /* instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+        instructions[4] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+        instructions[7] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        instructions[9] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+        instructions[10] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+        //moveReactionTime = 2.5f;
         instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, moveReactionTime);
-        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime * 0.65f);
+        //moveReactionTime = 2f;
+        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
         instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, moveReactionTime);
-        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime * 0.65f);
-        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime * 0.5f);
+        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
+        //moveReactionTime = 1f;
+        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);*/
+        MusicInstruction1.GetComponent<MusicInstructions>().SetMusic(music, instructions);
+        stateManager.AddState(MusicInstruction1, GameState.GameStates.MusicInstruction);
+        stateManager.AddState(freestyle, GameState.GameStates.Freestyle);
+
     }
     
+
     
 
     public void changePauseState()

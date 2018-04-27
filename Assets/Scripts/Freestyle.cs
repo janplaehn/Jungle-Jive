@@ -4,78 +4,100 @@ using UnityEngine;
 
 public class Freestyle : MonoBehaviour {
     private bool isActive;
-    private float activeTimelimit;
-    private float accumulatedTime;
-    public List<DanceMove> recentMoves;
-    [SerializeField] private bool isPlayerOne;
+    private float activeTimelimit = 0;
+    private float accumulatedTime = 0;
+    private float activateTime = 0;
+    public List<DanceMove> recentMovesP1;
+    public List<DanceMove> recentMovesP2;
     private ScoringSystem scoringSystem;
     private InputCheck inputCheck;
     private DanceMove lastMove;
     int repitionScore = 25;
     int maxScore = 100;
+    public bool stateFinished = false;
     // Use this for initialization
     void Start () {
-        isActive = false;
-        recentMoves = new List<DanceMove>();
+        
+    }
+	public void OnStart()
+    {
+        isActive = true;
+        recentMovesP1 = new List<DanceMove>();
+        recentMovesP2 = new List<DanceMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
     }
-	
 	// Update is called once per frame
 	void Update () {
-        if (isActive == true)
-        {
-            accumulatedTime += Time.deltaTime;
-            if (accumulatedTime < activeTimelimit)
-            {
-                DanceMove tempMove = inputCheck.getCurrentMove(isPlayerOne);
-                if (recentMoves.Count >= 5)
-                {
-                    if (isPlayerOne == true)
-                    {
-                        scoringSystem.AddFirstPlayerScore(GetScore(tempMove), maxScore);  //Let scoring run through a different function so it doesn't trigger feedback text?
-                    } else
-                    {
-                        scoringSystem.AddSecondPlayerScore(GetScore(tempMove), maxScore);
-                    }
-                    
 
-                }
-                else
-                {
-                    recentMoves.Add(tempMove);
-                }
-                if (recentMoves.Count > 5) recentMoves.RemoveAt(0);
-            } else
-            {
-                isActive = false;
-            }
-            
-        }
     }
-
-    int GetScore (DanceMove currentMove)
+    public void OnUpdate ()
     {
-        int tempScore = 0;
-        for (int i = recentMoves.Count; i >= 0; i--)
+        accumulatedTime += Time.deltaTime;
+        if (accumulatedTime > activateTime && activateTime - accumulatedTime < activeTimelimit)
         {
-            if (CheckIfSameMove(currentMove, recentMoves[5])) break;
-            else if (CheckIfSameMove(currentMove, recentMoves[i]))
+
+            DanceMove tempMoveP1 = inputCheck.getCurrentMove(true);
+            DanceMove tempMoveP2 = inputCheck.getCurrentMove(false);
+            if (recentMovesP1.Count >= 5 && !CheckIfSameMove(recentMovesP1[4], tempMoveP1))
             {
-                if (isPlayerOne == true)
+                int tempScore = 0;
+                for (int i = recentMovesP1.Count - 1; i >= 0; i--)
                 {
-                    tempScore = repitionScore;
+                    if (CheckIfSameMove(recentMovesP1[i], tempMoveP1))
+                    {
+                        tempScore = repitionScore;
+                        break;
+                    }
+                    else
+                    {
+                        if (i == 0)
+                        {
+                            tempScore = maxScore;
+                        }
+                    }
                 }
-                else
-                {
-                    tempScore = repitionScore;
-                }
-                break;
+                scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
+                recentMovesP1.Add(tempMoveP1);
             }
+
+            if (recentMovesP1.Count < 5) recentMovesP1.Add(tempMoveP1);
+
+
+            if (recentMovesP2.Count >= 5 && !CheckIfSameMove(recentMovesP2[4], tempMoveP2))
+            {
+                int tempScore = 0;
+                for (int i = recentMovesP2.Count - 1; i >= 0; i--)
+                {
+                    if (CheckIfSameMove(recentMovesP2[i], tempMoveP2))
+                    {
+                        tempScore = repitionScore;
+                        break;
+                    }
+                    else 
+                    {
+                        if (i == 0)
+                        {
+                            tempScore = maxScore;
+                        }
+                    }
+                    scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
+                }
+            }
+
+            recentMovesP2.Add(tempMoveP2);
+
+            if (recentMovesP1.Count > 5) recentMovesP1.RemoveAt(0);
+            if (recentMovesP2.Count > 5) recentMovesP2.RemoveAt(0);
+
         }
-        if (tempScore != repitionScore) tempScore = maxScore;
-        return tempScore;
+        else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
+        {
+            stateFinished = true;
+        }
     }
+
+
     bool CheckIfSameMove (DanceMove move1, DanceMove move2)
     {
         bool temp = false;
@@ -86,9 +108,10 @@ public class Freestyle : MonoBehaviour {
         return temp;
     }
 
-    public void SetActiveFor (float activeTime)
+    public void SetActiveAt (float activeAt, float activeDuration)
     {
-        isActive = true;
-        activeTimelimit = activeTime;
+        activeTimelimit = activeDuration;
+        activateTime = activeAt;
+        
     }
 }

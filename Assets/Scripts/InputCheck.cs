@@ -13,6 +13,7 @@ public class InputCheck : MonoBehaviour {
     LimbMovement leftLegP2;
     LimbMovement rightLegP2;
 
+
     public enum Players
     {
         PlayerOne,
@@ -167,5 +168,27 @@ public class InputCheck : MonoBehaviour {
             temp.RightLegPosition = rightLegP2.GetLimbState();
         }
         return temp;
+    }
+
+    public float GetShakingUp(Players player)
+    {
+        float r = 0f;
+        if(player == Players.PlayerOne)
+        {
+            r += GetShakingUp(leftArm);
+            r += GetShakingUp(rightArm);
+        } else
+        {
+            r += GetShakingUp(leftArmP2);
+            r += GetShakingUp(rightArmP2);
+        }
+        return r;
+    }
+
+    private float GetShakingUp(LimbMovement limb)
+    {
+        if (limb.GetLimbState() == 2)
+            return Mathf.Abs(limb.lastRotation - limb.transform.rotation.eulerAngles.z);
+        return 0f;
     }
 }
