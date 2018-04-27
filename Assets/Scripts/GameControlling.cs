@@ -61,7 +61,7 @@ public class GameControlling : MonoBehaviour {
         //  moveReactionTime = 2f;
         instructions[0] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[1] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        freestyle.AddComponent<Freestyle>().SetActiveAt(0, moveReactionTime * instructions.Length);
+        freestyle.GetComponent<Freestyle>().SetActiveFor (5);
 
        /* instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
         instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);

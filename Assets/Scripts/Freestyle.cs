@@ -5,9 +5,9 @@ using UnityEngine;
 public class Freestyle : MonoBehaviour {
     public int freestylePrize;
     private bool isActive;
-    private float activeTimelimit = 0;
-    private float accumulatedTime = 0;
-    private float activateTime = 0;
+    private float activeTimelimit;
+    private float accumulatedTime = 0 ;
+    private float activateTime;
     public List<DanceMove> recentMovesP1;
     public List<DanceMove> recentMovesP2;
     private ScoringSystem scoringSystem;
@@ -16,6 +16,8 @@ public class Freestyle : MonoBehaviour {
     int repitionScore = 25;
     int maxScore = 100;
     public bool stateFinished = false;
+    private int playerOneScore;
+    private int playerTwoScore;
     // Use this for initialization
     void Start () {
         
@@ -34,8 +36,9 @@ public class Freestyle : MonoBehaviour {
     }
     public void OnUpdate ()
     {
+        Debug.Log(activeTimelimit);
         accumulatedTime += Time.deltaTime;
-        if (accumulatedTime > activateTime && activateTime - accumulatedTime < activeTimelimit)
+        if (accumulatedTime < activeTimelimit)
         {
 
             DanceMove tempMoveP1 = inputCheck.getCurrentMove(true);
@@ -58,7 +61,7 @@ public class Freestyle : MonoBehaviour {
                         }
                     }
                 }
-                scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
+                playerOneScore += tempScore;
                 recentMovesP1.Add(tempMoveP1);
             }
 
@@ -82,7 +85,8 @@ public class Freestyle : MonoBehaviour {
                             tempScore = maxScore;
                         }
                     }
-                    scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
+                    playerOneScore += tempScore;
+                    recentMovesP1.Add(tempMoveP1);
                 }
             }
 
@@ -92,15 +96,28 @@ public class Freestyle : MonoBehaviour {
             if (recentMovesP2.Count > 5) recentMovesP2.RemoveAt(0);
 
         }
-        else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
+        else 
         {
             stateFinished = true;
+            OnStateFinished();
         }
     }
 
     void OnStateFinished ()
     {
-
+        if (playerOneScore > playerTwoScore)
+        {
+            scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize);
+        } else if (playerTwoScore > playerOneScore)
+        {
+            scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize);
+        } else
+        {
+            int temp = Random.Range(0, 2);
+            if (temp == 0) scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize);
+            else scoringSystem.AddSecondPlayerScore(freestylePrize, freestylePrize);
+        }
+        Debug.Log(playerOneScore + " " + playerTwoScore);
     }
 
     bool CheckIfSameMove (DanceMove move1, DanceMove move2)
@@ -113,10 +130,8 @@ public class Freestyle : MonoBehaviour {
         return temp;
     }
 
-    public void SetActiveAt (float activeAt, float activeDuration)
+    public void SetActiveFor (float activeDuration)
     {
         activeTimelimit = activeDuration;
-        activateTime = activeAt;
-        
     }
 }
