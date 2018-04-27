@@ -17,13 +17,16 @@ public class Freestyle : MonoBehaviour {
     public bool stateFinished = false;
     // Use this for initialization
     void Start () {
+        
+    }
+	public void OnStart()
+    {
         isActive = true;
         recentMovesP1 = new List<DanceMove>();
         recentMovesP2 = new List<DanceMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
     }
-	
 	// Update is called once per frame
 	void Update () {
 
@@ -56,10 +59,9 @@ public class Freestyle : MonoBehaviour {
                 }
                 scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
             }
-            else if (recentMovesP1.Count < 5)
+            if (recentMovesP1.Count <= 5)
             {
                 recentMovesP1.Add(tempMoveP1);
-                scoringSystem.AddFirstPlayerScore(maxScore, maxScore);
             }
             if (recentMovesP2.Count >= 5 && !CheckIfSameMove(recentMovesP2[4], tempMoveP2))
             {
@@ -84,7 +86,6 @@ public class Freestyle : MonoBehaviour {
             else if (recentMovesP2.Count < 5)
             {
                 recentMovesP2.Add(tempMoveP2);
-                scoringSystem.AddSecondPlayerScore(maxScore, maxScore);
             }
             if (recentMovesP1.Count > 5) recentMovesP1.RemoveAt(0);
             if (recentMovesP2.Count > 5) recentMovesP2.RemoveAt(0);
@@ -95,10 +96,7 @@ public class Freestyle : MonoBehaviour {
             stateFinished = true;
         }
     }
-
-
-
-
+    
     bool CheckIfSameMove (DanceMove move1, DanceMove move2)
     {
         bool temp = false;
