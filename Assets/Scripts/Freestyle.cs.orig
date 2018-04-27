@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Freestyle : MonoBehaviour {
-    public int freestylePrize;
     private bool isActive;
-    private float activeTimelimit = 0;
-    private float accumulatedTime = 0;
-    private float activateTime = 0;
-    public List<DanceMove> recentMovesP1;
-    public List<DanceMove> recentMovesP2;
+    private float activeTimelimit;
+    private float accumulatedTime;
+    public List<DanceMove> recentMoves;
+    [SerializeField] private bool isPlayerOne;
     private ScoringSystem scoringSystem;
     private InputCheck inputCheck;
     private DanceMove lastMove;
     int repitionScore = 25;
     int maxScore = 100;
-    public bool stateFinished = false;
     // Use this for initialization
     void Start () {
+<<<<<<< HEAD
+        isActive = false;
+        recentMoves = new List<DanceMove>();
+=======
         
     }
 	public void OnStart()
@@ -25,11 +26,21 @@ public class Freestyle : MonoBehaviour {
         isActive = true;
         recentMovesP1 = new List<DanceMove>();
         recentMovesP2 = new List<DanceMove>();
+>>>>>>> AlphaBuildIguess
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
     }
 	// Update is called once per frame
 	void Update () {
+<<<<<<< HEAD
+        if (isActive == true)
+        {
+            accumulatedTime += Time.deltaTime;
+            if (accumulatedTime < activeTimelimit)
+            {
+                DanceMove tempMove = inputCheck.getCurrentMove(isPlayerOne);
+                if (recentMoves.Count >= 5)
+=======
 
     }
     public void OnUpdate ()
@@ -44,9 +55,16 @@ public class Freestyle : MonoBehaviour {
             {
                 int tempScore = 0;
                 for (int i = recentMovesP1.Count - 1; i >= 0; i--)
+>>>>>>> AlphaBuildIguess
                 {
-                    if (CheckIfSameMove(recentMovesP1[i], tempMoveP1))
+                    if (isPlayerOne == true)
                     {
+<<<<<<< HEAD
+                        scoringSystem.AddFirstPlayerScore(GetScore(tempMove), maxScore);  //Let scoring run through a different function so it doesn't trigger feedback text?
+                    } else
+                    {
+                        scoringSystem.AddSecondPlayerScore(GetScore(tempMove), maxScore);
+=======
                         tempScore = repitionScore;
                         break;
                     }
@@ -56,8 +74,23 @@ public class Freestyle : MonoBehaviour {
                         {
                             tempScore = maxScore;
                         }
+>>>>>>> AlphaBuildIguess
                     }
+                    
+
                 }
+<<<<<<< HEAD
+                else
+                {
+                    recentMoves.Add(tempMove);
+                }
+                if (recentMoves.Count > 5) recentMoves.RemoveAt(0);
+            } else
+            {
+                isActive = false;
+            }
+            
+=======
                 scoringSystem.AddFirstPlayerScore(tempScore, maxScore);
                 recentMovesP1.Add(tempMoveP1);
             }
@@ -86,23 +119,46 @@ public class Freestyle : MonoBehaviour {
                 }
             }
 
-            if (recentMovesP2.Count < 5) recentMovesP2.Add(tempMoveP2);
+            recentMovesP2.Add(tempMoveP2);
 
             if (recentMovesP1.Count > 5) recentMovesP1.RemoveAt(0);
             if (recentMovesP2.Count > 5) recentMovesP2.RemoveAt(0);
 
-        }
-        else if (accumulatedTime > activateTime && activateTime - accumulatedTime > activeTimelimit)
-        {
-            stateFinished = true;
+>>>>>>> AlphaBuildIguess
         }
     }
 
-    void OnStateFinished ()
+    int GetScore (DanceMove currentMove)
     {
-
+        int tempScore = 0;
+        for (int i = recentMoves.Count; i >= 0; i--)
+        {
+<<<<<<< HEAD
+            if (CheckIfSameMove(currentMove, recentMoves[5])) break;
+            else if (CheckIfSameMove(currentMove, recentMoves[i]))
+            {
+                if (isPlayerOne == true)
+                {
+                    tempScore = repitionScore;
+                }
+                else
+                {
+                    tempScore = repitionScore;
+                }
+                break;
+            }
+=======
+            stateFinished = true;
+>>>>>>> AlphaBuildIguess
+        }
+        if (tempScore != repitionScore) tempScore = maxScore;
+        return tempScore;
     }
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> AlphaBuildIguess
     bool CheckIfSameMove (DanceMove move1, DanceMove move2)
     {
         bool temp = false;
@@ -113,10 +169,9 @@ public class Freestyle : MonoBehaviour {
         return temp;
     }
 
-    public void SetActiveAt (float activeAt, float activeDuration)
+    public void SetActiveFor (float activeTime)
     {
-        activeTimelimit = activeDuration;
-        activateTime = activeAt;
-        
+        isActive = true;
+        activeTimelimit = activeTime;
     }
 }
