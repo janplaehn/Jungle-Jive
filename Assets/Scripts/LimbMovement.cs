@@ -8,6 +8,7 @@ public class LimbMovement : MonoBehaviour {
     [Range(-180, 180)]  public float maxRotation;
     [Range(0, 360)] public float startRotation;
     public bool isPaused;
+    public float lastRotation;
 
 	void Start () {
         isPaused = false;
@@ -17,6 +18,7 @@ public class LimbMovement : MonoBehaviour {
 	void Update () {
         if (isPaused == false)
         {
+            lastRotation = transform.rotation.eulerAngles.z;
             transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation + startRotation);
 
         }
