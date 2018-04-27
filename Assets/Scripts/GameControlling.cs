@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControlling : MonoBehaviour {
     public GameObject MusicInstruction1;
     public GameObject freestyle;
+    public GameObject miniGame1;
     public GameState stateManager;
     public AudioClip music;
     public float animationSpeed = 1;
@@ -81,8 +82,9 @@ public class GameControlling : MonoBehaviour {
         //moveReactionTime = 1f;
         instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);*/
         MusicInstruction1.GetComponent<MusicInstructions>().SetMusic(music, instructions);
-        stateManager.AddState(MusicInstruction1, GameState.GameStates.MusicInstruction);
-        stateManager.AddState(freestyle, GameState.GameStates.Freestyle);
+        stateManager.AddState(miniGame1);
+        stateManager.AddState(MusicInstruction1);
+        stateManager.AddState(freestyle);
 
     }
     
