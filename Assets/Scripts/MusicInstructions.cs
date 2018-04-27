@@ -68,7 +68,10 @@ public class MusicInstructions : MonoBehaviour {
         }
         lastMove = timingPairs[lastPairIndex].firstValue;
     }
+    public void OnStart()
+    {
 
+    }
     public void OnUpdate ()
     {
         if (started == true && isPaused == false)

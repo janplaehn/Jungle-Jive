@@ -48,10 +48,24 @@ public class GameState : MonoBehaviour {
     private void NextState()
     {
         stateIndex += 1;
+
         if (stateIndex > states.Count - 1)
         {
             finished = true;
             GetComponent<GameControlling>().GameOver();
+        } else
+        {
+            switch (states[stateIndex].secondValue)
+            {
+                case GameStates.MusicInstruction:
+                    states[stateIndex].firstValue.GetComponent<MusicInstructions>().OnStart();
+                    break;
+                case GameStates.Freestyle:
+                    states[stateIndex].firstValue.GetComponent<Freestyle>().OnStart();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
