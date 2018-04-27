@@ -6,6 +6,7 @@ public class ItemMiniGame : MonoBehaviour {
 
     public float miniGameTimer = 6f;
     public GameObject miniGameInstruction;
+    public Transform bird;
     private GameObject playerOne;
     private GameObject playerTwo;
     private float playerOneScore;
@@ -18,6 +19,7 @@ public class ItemMiniGame : MonoBehaviour {
         playerOne = GameObject.FindGameObjectWithTag("Player1");
         playerTwo = GameObject.FindGameObjectWithTag("Player2");
         input = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
+        //INSTANTIATE BIRD AND PULL BACK DISCOBALL
         Invoke("QuitState", miniGameTimer);
     }
 
@@ -35,6 +37,12 @@ public class ItemMiniGame : MonoBehaviour {
     private void QuitState()
     {
         finished = true;
-        //make the toucan go to the player who has the most score
+        bird.gameObject.GetComponent<BirdControl>().state = BirdControl.FlightState.decided;
+        if (playerOneScore > playerTwoScore) {
+            bird.gameObject.GetComponent<BirdControl>().hasPlayerOneWon = true;
+        }
+        else {
+            bird.gameObject.GetComponent<BirdControl>().hasPlayerOneWon = false;
+        }
     }
 }
