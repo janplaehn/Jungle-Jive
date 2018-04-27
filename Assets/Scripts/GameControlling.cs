@@ -36,6 +36,9 @@ public class GameControlling : MonoBehaviour {
             if (face.GetComponent<AudienceFeedbackController>())
                 face.GetComponent<AudienceFeedbackController>().BeHappy();
         }
+        if (GameObject.Find("MusicManager")) {
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
+        }
         Invoke("QuitToLeaderboard", 5f);
     }
 
