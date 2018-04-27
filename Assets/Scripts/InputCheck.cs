@@ -174,17 +174,17 @@ public class InputCheck : MonoBehaviour {
 
     public float GetShakingUp(Players player)
     {
-        float r = 0f;
+        float scoreIncrease = 0f;
         if(player == Players.PlayerOne)
         {
-            r += GetShakingUp(leftArm);
-            r += GetShakingUp(rightArm);
+            scoreIncrease += GetShakingUp(leftArm);
+            scoreIncrease += GetShakingUp(rightArm);
         } else
         {
-            r += GetShakingUp(leftArmP2);
-            r += GetShakingUp(rightArmP2);
+            scoreIncrease += GetShakingUp(leftArmP2);
+            scoreIncrease += GetShakingUp(rightArmP2);
         }
-        return r;
+        return scoreIncrease;
     }
 
     private float GetShakingUp(LimbMovement limb)
