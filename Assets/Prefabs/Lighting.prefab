@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightFeedback: {fileID: 108558477243576656}
   trigger: 1
-  brightness: 10
+  brightness: 7
   reactionTime: 2
 --- !u!114 &114105905360189422
 MonoBehaviour:
@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightFeedback: {fileID: 108685691067897590}
   trigger: 1
-  brightness: 10
+  brightness: 7
   reactionTime: 2
 --- !u!114 &114673099795666230
 MonoBehaviour:
@@ -1669,7 +1669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightFeedback: {fileID: 108093051329935004}
   trigger: 1
-  brightness: 10
+  brightness: 7
   reactionTime: 2
 --- !u!114 &114741819329954808
 MonoBehaviour:
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightFeedback: {fileID: 108104424382224706}
   trigger: 1
-  brightness: 10
+  brightness: 7
   reactionTime: 2
 --- !u!114 &114846420695106730
 MonoBehaviour:
