@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxXPosition: 6
   maxYPosition: 3.5
-  speed: 8
+  speed: 10
   screenBorder: 11
   state: 1
   hasPlayerOneWon: 0

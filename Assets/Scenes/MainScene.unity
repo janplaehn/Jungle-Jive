@@ -690,6 +690,24 @@ MonoBehaviour:
   rotationSpeed: 20
   maxRotation: 20
   isReversed: 0
+--- !u!1 &516211706 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1148604870209928, guid: 07664aeecf0fe43479345603b2b0af9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1817246090}
+--- !u!114 &516211709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 516211706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecac6a1556520a5468151d2f60582f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxYPosition: 398
+  speed: 80
 --- !u!1 &533139809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,9 +1652,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdSpawnPosition: {x: 0, y: 4, z: 0}
-  miniGameTimer: 6
+  miniGameTimer: 8
   miniGameInstruction: {fileID: 0}
   bird: {fileID: 4525137313455878, guid: 0d254e04b13d5f74d84fb4c85f97d4c7, type: 2}
+--- !u!1 &1159464347 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1519443191346074, guid: fb56b6d188bf79545a79183fa722b1d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2086001369}
+--- !u!114 &1159464352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1159464347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecac6a1556520a5468151d2f60582f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxYPosition: 380
+  speed: 80
 --- !u!114 &1183197442 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114308381490442162, guid: 07664aeecf0fe43479345603b2b0af9e,
@@ -2796,6 +2832,7 @@ GameObject:
   - component: {fileID: 1944069701}
   - component: {fileID: 1944069703}
   - component: {fileID: 1944069702}
+  - component: {fileID: 1944069704}
   m_Layer: 5
   m_Name: TimingInstruction
   m_TagString: Untagged
@@ -2857,6 +2894,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944069700}
+--- !u!114 &1944069704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944069700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecac6a1556520a5468151d2f60582f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxYPosition: 380
+  speed: 80
 --- !u!1001 &1975401882
 Prefab:
   m_ObjectHideFlags: 0
@@ -3077,6 +3127,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb56b6d188bf79545a79183fa722b1d8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2110277851 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1076601488631914, guid: 07664aeecf0fe43479345603b2b0af9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1817246090}
+--- !u!114 &2110277854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110277851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecac6a1556520a5468151d2f60582f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxYPosition: 349
+  speed: 80
 --- !u!1 &2126201759
 GameObject:
   m_ObjectHideFlags: 0

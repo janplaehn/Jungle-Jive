@@ -23,6 +23,7 @@ public class BirdControl : MonoBehaviour {
         flightdirection = 1;
         playerOneSpawn = GameObject.Find("playerOneSpawn");
         playerTwoSpawn = GameObject.Find("playerTwoSpawn");
+        state = FlightState.undecided;
     }
 	
 	void Update () {
@@ -80,10 +81,13 @@ public class BirdControl : MonoBehaviour {
         foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>()) {
             rb.gravityScale = 1;
         }
-        
-        state = FlightState.leave;
+
+        Invoke("ChangeToLeave", 0.5f);
     }
 
+    void ChangeToLeave() {
+        state = FlightState.leave;
+    }
     void LeaveScreen() {
         transform.position += Vector3.right * Time.deltaTime * flightdirection * speed * radiusModifier;
     }
