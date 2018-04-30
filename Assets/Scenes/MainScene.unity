@@ -2180,6 +2180,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: danceElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4764533378347120, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 864.77637
@@ -2247,6 +2252,11 @@ Prefab:
       propertyPath: playerTwoSpawn
       value: 
       objectReference: {fileID: 1932376759}
+    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: danceElements.Array.data[0].elementType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
