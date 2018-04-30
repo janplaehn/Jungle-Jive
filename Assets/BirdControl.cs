@@ -35,7 +35,7 @@ public class BirdControl : MonoBehaviour {
                 FlyToPlayer();
                 break;
             case FlightState.dropItem:
-                Invoke("DropItem", 1f);
+                Invoke("DropItem", 0.5f);
                 break;
             case FlightState.leave:
                 LeaveScreen();
