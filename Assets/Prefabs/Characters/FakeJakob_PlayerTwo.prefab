@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 4678908326724830}
   - component: {fileID: 50412343033730984}
   - component: {fileID: 114784925402064062}
+  - component: {fileID: 114986769356503162}
   m_Layer: 0
   m_Name: FakeJakob_PlayerTwo
   m_TagString: Player2
@@ -1135,6 +1136,7 @@ MonoBehaviour:
   maxRotation: -120
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114195727575476464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1150,6 +1152,7 @@ MonoBehaviour:
   maxRotation: 90
   startRotation: 270
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114458474678671704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1165,6 +1168,7 @@ MonoBehaviour:
   maxRotation: -90
   startRotation: 90
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114458675652376906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1180,6 +1184,7 @@ MonoBehaviour:
   maxRotation: -90
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114469806170963046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1220,6 +1225,7 @@ MonoBehaviour:
   maxRotation: 90
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114631685065008164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1235,6 +1241,7 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 270
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114784925402064062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1246,6 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freestylePrize: 0
   stateFinished: 0
 --- !u!114 &114790781872469056
 MonoBehaviour:
@@ -1262,6 +1270,7 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114973762683060806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1277,6 +1286,19 @@ MonoBehaviour:
   maxRotation: -120
   startRotation: 90
   isPaused: 0
+  lastRotation: 0
+--- !u!114 &114986769356503162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334711390337900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bef8a3f903ac004a98f781b1ed26343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrowingHand: {fileID: 1252261837659354}
 --- !u!212 &212002199302902054
 SpriteRenderer:
   m_ObjectHideFlags: 1

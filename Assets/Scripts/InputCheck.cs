@@ -189,8 +189,9 @@ public class InputCheck : MonoBehaviour {
 
     private float GetShakingUp(LimbMovement limb)
     {
-        if (limb.GetLimbState() == 2)
-            return Mathf.Abs(limb.lastRotation - limb.transform.rotation.eulerAngles.z);
+        if (limb) {
+            if (limb.GetLimbState() == 2) return Mathf.Abs(limb.lastRotation - limb.transform.rotation.eulerAngles.z);
+        }
         return 0f;
     }
 }
