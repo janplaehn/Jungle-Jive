@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1176209007544614
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,6 +60,22 @@ GameObject:
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1984050851724414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4943282565308432}
+  - component: {fileID: 114814908244296100}
+  m_Layer: 0
+  m_Name: MiniGame
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,8 +118,22 @@ Transform:
   m_Children:
   - {fileID: 4334933266686718}
   - {fileID: 4367951183848144}
+  - {fileID: 4943282565308432}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4943282565308432
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984050851724414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4764533378347120}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &82982055185355104
 AudioSource:
@@ -273,8 +303,8 @@ MonoBehaviour:
   nextInstruction: {fileID: 0}
   musicSource: {fileID: 82982055185355104}
   stateFinished: 0
-  introTime: 0
-  timingSprite: {fileID: 21300000, guid: 18bee67797f8e7b4c964b6087c38f4b6, type: 3}
+  introTime: 7.1
+  timingSprite: {fileID: 21300000, guid: 2309722c37f09e04495fc5cd3c0d9427, type: 3}
   maxTimingSpriteSize: 1.5
   instructionTime: 2
   isPaused: 0
@@ -291,10 +321,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicInstruction1: {fileID: 1176209007544614}
   freestyle: {fileID: 1155745318368334}
+  miniGame1: {fileID: 1984050851724414}
   stateManager: {fileID: 114593276062097544}
   music: {fileID: 8300000, guid: 7c7c71f9e054b0a43a49bee491ca6390, type: 3}
   animationSpeed: 1
   moveReactionTime: 1
+--- !u!114 &114814908244296100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984050851724414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7b6873020e5b743883351e34ae1402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdSpawnPosition: {x: 0, y: 4, z: 0}
+  miniGameTimer: 8
+  miniGameInstruction: {fileID: 0}
+  bird: {fileID: 4525137313455878, guid: 0d254e04b13d5f74d84fb4c85f97d4c7, type: 2}
 --- !u!114 &114882818694792984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,4 +352,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freestylePrize: 0
   stateFinished: 0
