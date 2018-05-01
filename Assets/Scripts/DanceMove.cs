@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public struct DanceMove {
-    public float RightArmPosition;
-    public float LeftArmPosition;
-    public float RightLegPosition;
-    public float LeftLegPosition;
+    public int RightArmPosition;
+    public int LeftArmPosition;
+    public int RightLegPosition;
+    public int LeftLegPosition;
     public int instructionImageIndex;
-    public DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
+    public DanceMove(int rightArm, int leftArm, int rightLeg, int leftLeg, int index)
     {
         RightArmPosition = rightArm;
         LeftArmPosition = leftArm;

@@ -4,7 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 [RequireComponent(typeof(MusicInstructions))]
 public class GameControlling : MonoBehaviour {
-
+    enum LimbState
+    {
+        Down = 0,
+        Middle = 1,
+        Up = 2,
+        None = -1,
+    }
     public AudioClip music;
     public float animationSpeed = 1;
     public float moveReactionTime;
@@ -42,14 +48,19 @@ public class GameControlling : MonoBehaviour {
     void CreateInstructions()
     {
         //DanceMove(float rightArm, float leftArm, float rightLeg, float leftLeg, int index)
-        DanceMove leftArmUp = new DanceMove(0f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
-        DanceMove rightArmUp = new DanceMove(2f, 0f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.RightArmUp);
-        DanceMove bothArmsUp = new DanceMove(2f, 2f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.BothArmsUp);
-        DanceMove bothArmsDown = new DanceMove(0f, 0f, -1f, -1f, (int)MusicInstructions.DanceMoveEnum.BothArmsDown);
-        DanceMove splitArmsUp = new DanceMove(2f, 2f, 2f, 2f, (int)MusicInstructions.DanceMoveEnum.SplitArmsUp);
-        DanceMove splitArmsDown = new DanceMove(0f, 0f, 2f, 2f, (int)MusicInstructions.DanceMoveEnum.SplitArmsDown);
-        DanceMove leftArmLeftLegUp = new DanceMove(1f, 2f, 1f, 2f, (int)MusicInstructions.DanceMoveEnum.LeftArmLeftLegUp);
-        DanceMove rightArmRightLegUp = new DanceMove(2f, 1f, 2f, 1f, (int)MusicInstructions.DanceMoveEnum.RightArmRightLegUp);
+        DanceMove leftArmUp = new DanceMove((int)LimbState.Up, (int)LimbState.Up, -(int)LimbState.None, (int)LimbState.None, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
+        DanceMove rightArmUp = new DanceMove((int)LimbState.Up, (int)LimbState.Down, -(int)LimbState.Middle, -(int)LimbState.Middle, (int)MusicInstructions.DanceMoveEnum.RightArmUp);
+        DanceMove bothArmsUp = new DanceMove((int)LimbState.Up, (int)LimbState.Up, -(int)LimbState.Middle, -(int)LimbState.Middle, (int)MusicInstructions.DanceMoveEnum.BothArmsUp);
+        DanceMove bothArmsDown = new DanceMove((int)LimbState.Down, (int)LimbState.Down, -(int)LimbState.Middle, -(int)LimbState.Middle, (int)MusicInstructions.DanceMoveEnum.BothArmsDown);
+        DanceMove splitArmsUp = new DanceMove((int)LimbState.Up, (int)LimbState.Up, (int)LimbState.Up, (int)LimbState.Up, (int)MusicInstructions.DanceMoveEnum.SplitArmsUp);
+        DanceMove splitArmsDown = new DanceMove((int)LimbState.Down, (int)LimbState.Down, (int)LimbState.Up, (int)LimbState.Up, (int)MusicInstructions.DanceMoveEnum.SplitArmsDown);
+        DanceMove leftArmLeftLegUp = new DanceMove((int)LimbState.Middle, (int)LimbState.Up, (int)LimbState.Middle, (int)LimbState.Up, (int)MusicInstructions.DanceMoveEnum.LeftArmLeftLegUp);
+        DanceMove rightArmRightLegUp = new DanceMove((int)LimbState.Up, (int)LimbState.Middle, (int)LimbState.Up, (int)LimbState.Middle, (int)MusicInstructions.DanceMoveEnum.RightArmRightLegUp);
+        //DanceMove leftArmleftLegAside = new DanceMove((int)LimbState.Middle, (int)LimbState.Up, (int)LimbState.Middle, (int)LimbState.Up, (int)MusicInstructions.DanceMoveEnum.LeftArmleftLegAside);
+        //DanceMove rightArmrightLegAside = new DanceMove((int)LimbState.Up, (int)LimbState.Middle, (int)LimbState.Up, (int)LimbState.Middle, (int)MusicInstructions.DanceMoveEnum.RightArmrightLegAside);
+        //DanceMove leftArmRightLegSlash = new DanceMove((int)LimbState.Middle, (int)LimbState.Up, (int)LimbState.Middle, (int)LimbState.Down, (int)MusicInstructions.DanceMoveEnum.LeftArmRightLegSlash);
+        //DanceMove rightArmLeftLegSlash = new DanceMove((int)LimbState.Up, (int)LimbState.Middle, (int)LimbState.Down, (int)LimbState.Middle, (int)MusicInstructions.DanceMoveEnum.rightArmLeftLegSlash);
+
 
         //  moveReactionTime = 2f;
         GetComponent<MusicInstructions>().SetMusic(music, instructions);
