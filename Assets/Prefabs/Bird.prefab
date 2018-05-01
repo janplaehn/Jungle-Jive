@@ -148,10 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemType: 0
-  mushroomSprite: {fileID: 21300000, guid: 3a7af901761d7924bb4729ae44bad283, type: 3}
-  bananaSprite: {fileID: 0}
-  mirrorSprite: {fileID: 0}
-  smokeSprite: {fileID: 0}
+  mushroom: {fileID: 21300000, guid: 3a7af901761d7924bb4729ae44bad283, type: 3}
+  banana: {fileID: 0}
+  mirror: {fileID: 0}
+  smoke: {fileID: 0}
   throwForce: 300
 --- !u!212 &212568450380750804
 SpriteRenderer:

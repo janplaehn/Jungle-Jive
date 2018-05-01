@@ -7,12 +7,15 @@ public class Item : MonoBehaviour {
 
     public enum Type {Mushroom, Banana, Mirror, Smoke}
     public Type ItemType = Type.Mushroom;
+    [Space(7)]
 
-    public Sprite mushroomSprite;
-    public Sprite bananaSprite;
-    public Sprite mirrorSprite;
-    public Sprite smokeSprite;
+    [Header("Item Sprites")]
+    public Sprite mushroom;
+    public Sprite banana;
+    public Sprite mirror;
+    public Sprite smoke;
 
+    [Space(7)]
     public int throwForce;
 
     private Rigidbody2D rb;
@@ -29,16 +32,16 @@ public class Item : MonoBehaviour {
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         switch (ItemType) {
             case Type.Mushroom:
-                renderer.sprite = mushroomSprite;
+                renderer.sprite = mushroom;
                 break;
             case Type.Banana:
-                renderer.sprite = bananaSprite;
+                renderer.sprite = banana;
                 break;
             case Type.Mirror:
-                renderer.sprite = mirrorSprite;
+                renderer.sprite = mirror;
                 break;
             case Type.Smoke:
-                renderer.sprite = smokeSprite;
+                renderer.sprite = smoke;
                 break;
             default:
                 break;
