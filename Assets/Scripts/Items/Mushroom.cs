@@ -15,7 +15,7 @@ public class Mushroom : MonoBehaviour {
     static bool firstPlayerAffected = false;
     static bool secondPlayerAffected = false;
 
-    private void Start()
+    private void Awake()
     {
         firstPlayerDizzy = Resources.Load("Materials/LeftPlayerStunned", typeof(Material)) as Material;
         secondPlayerDizzy = Resources.Load("Materials/RightPlayerStunned", typeof(Material)) as Material;

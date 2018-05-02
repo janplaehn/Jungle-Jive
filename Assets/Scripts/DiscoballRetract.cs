@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DiscoballRetract : MonoBehaviour {
 
-    public float maxYPosition = 380;
+    public float maxYShift = 300;
     public float speed = 80;
 
     private Vector3 startPosition;
@@ -21,7 +21,7 @@ public class DiscoballRetract : MonoBehaviour {
                 break;
             case PullBackState.Retract:
                 transform.position += Vector3.up * speed * Time.deltaTime;
-                if (transform.position.y > maxYPosition) state = PullBackState.Default;
+                if (transform.position.y > startPosition.y + maxYShift) state = PullBackState.Default;
                 break;
             case PullBackState.Extend:
                 transform.position += Vector3.down * speed * Time.deltaTime;

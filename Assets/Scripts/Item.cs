@@ -82,6 +82,7 @@ public class Item : MonoBehaviour {
         rb.velocity = Vector3.zero;
         transform.position = body.ThrowingHand.transform.position;
         transform.rotation = body.ThrowingHand.transform.rotation;
+        transform.Rotate(Vector3.forward * 180);
         transform.parent = body.ThrowingHand.transform;
     }
 
