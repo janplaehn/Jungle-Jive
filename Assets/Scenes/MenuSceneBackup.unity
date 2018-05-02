@@ -2216,6 +2216,14 @@ Prefab:
       propertyPath: freestylePrize
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 1155745318368334, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176209007544614, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
