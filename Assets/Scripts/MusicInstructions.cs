@@ -148,7 +148,7 @@ public class MusicInstructions : State {
     void animateTiming (float perfectTime, float accumulatedTime)
     {
         timing.rectTransform.localScale = new Vector3(1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 0);
-        if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1) {
+        if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1.3f) {
             timing.sprite = voidSprite;
         }
     }

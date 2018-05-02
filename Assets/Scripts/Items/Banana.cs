@@ -6,7 +6,7 @@ public static class Banana  {
 
     public static void BananaHit(string playerTag)
     {
-        if (playerTag != "Player1" || playerTag != "Player2") {
+        if (playerTag != "Player1" && playerTag != "Player2") {
             Debug.LogWarning("Invalid Playertag!");
             return;
         }

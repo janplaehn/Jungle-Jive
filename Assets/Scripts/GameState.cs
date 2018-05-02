@@ -7,9 +7,12 @@ public class GameState : MonoBehaviour {
     int stateIndex = 0;
     public List<State> states;
 
-    bool started = false;
+    bool started = true;
     bool finished = false;
-	
+	void Start()
+    {
+        states[stateIndex].OnStart();
+    }
 	// Update is called once per frame
 	void Update () {
         if (!started || finished) return;
