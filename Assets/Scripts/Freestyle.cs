@@ -7,7 +7,7 @@ public class Freestyle : State {
     private bool isActive;
     private float activeTimelimit;
     private float accumulatedTime = 0 ;
-    private float activateTime;
+    public float activateTime;
     public List<DanceMove> recentMovesP1;
     public List<DanceMove> recentMovesP2;
     private ScoringSystem scoringSystem;
@@ -125,8 +125,4 @@ public class Freestyle : State {
         return temp;
     }
 
-    public void SetActiveFor (float activeDuration)
-    {
-        activeTimelimit = activeDuration;
-    }
 }
