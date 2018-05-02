@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class ApplyCameraEffect : MonoBehaviour {
-    public Material material;
+
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        Graphics.Blit(source, material);
+        Graphics.Blit(source, Mushroom.currentMat);
     }
 }
