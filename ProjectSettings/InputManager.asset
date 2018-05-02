@@ -261,3 +261,35 @@ InputManager:
     type: 2
     axis: 3
     joyNum: 4
+  - serializedVersion: 3
+    m_Name: P1ButtonA
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 0
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.2
+    sensitivity: 0.8
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 3
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: P2ButtonA
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 0
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.2
+    sensitivity: 0.8
+    snap: 0
+    invert: 1
+    type: 0
+    axis: 3
+    joyNum: 4
