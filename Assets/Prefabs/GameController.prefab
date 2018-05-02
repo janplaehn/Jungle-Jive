@@ -277,6 +277,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc28b26b23415142a7ff2f064c6eedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  states:
+  - {fileID: 114697358382732284}
+  - {fileID: 114814908244296100}
+  - {fileID: 114882818694792984}
 --- !u!114 &114697358382732284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,9 +339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0f7bda7d4009e46ad957038bf8d79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicInstruction1: {fileID: 1176209007544614}
-  freestyle: {fileID: 1155745318368334}
-  miniGame1: {fileID: 1984050851724414}
   stateManager: {fileID: 114593276062097544}
   music: {fileID: 8300000, guid: 7c7c71f9e054b0a43a49bee491ca6390, type: 3}
   animationSpeed: 1
