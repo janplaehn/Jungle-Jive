@@ -8,6 +8,7 @@ public class BirdControl : MonoBehaviour {
     [Range(0f, 8f)] public float maxYPosition;
     public float speed;
     public float screenBorder;
+
     private GameObject playerOneSpawn;
     private GameObject playerTwoSpawn;
 
