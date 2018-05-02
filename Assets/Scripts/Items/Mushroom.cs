@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Mushroom : MonoBehaviour {
     public static Material firstPlayerDizzy;
     public static Material secondPlayerDizzy;
