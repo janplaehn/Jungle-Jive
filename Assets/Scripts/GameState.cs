@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameState : MonoBehaviour {
 
     int stateIndex = 0;
-    List<GameObject> states = new List<GameObject>();
+    public List<State> states;
 
     bool started = false;
     bool finished = false;
@@ -13,14 +13,20 @@ public class GameState : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!started || finished) return;
-        if(states[stateIndex].GetComponent<State>().OnUpdate() == false) {
-            states[stateIndex].GetComponent<State>().OnEnd();
+        if(states[stateIndex].OnUpdate() == false) {
+            states[stateIndex].OnEnd();
             NextState();
         }
 	}
 
-    public void AddState (GameObject stateAdded)
+    public void AddState(GameObject gameObjectAdded)
     {
+        AddState(gameObject.GetComponent<State>());
+    }
+
+    public void AddState (State stateAdded)
+    {
+        if (stateAdded == null) return;
         states.Add(stateAdded);
         if (states.Count == 1) states[0].GetComponent<State>().OnStart();
         started = true;
@@ -28,7 +34,7 @@ public class GameState : MonoBehaviour {
     }
     
 
-    public GameObject GetCurrentState ()
+    public State GetCurrentState ()
     {
         return states[stateIndex];
     }
@@ -43,7 +49,7 @@ public class GameState : MonoBehaviour {
             GetComponent<GameControlling>().GameOver();
         } else
         {
-            states[stateIndex].GetComponent<State>().OnStart();
+            states[stateIndex].OnStart();
         }
     }
 
