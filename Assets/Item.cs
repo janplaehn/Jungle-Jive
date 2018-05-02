@@ -105,6 +105,7 @@ public class Item : MonoBehaviour {
                 break;
             case Type.Banana:
                 //Activate script here (Add playerTag as argument)
+                Banana.BananaHit(playerTag);
                 break;
             case Type.Mirror:
                 //Activate script here (Add playerTag as argument)

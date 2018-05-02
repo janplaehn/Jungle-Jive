@@ -8,9 +8,13 @@ public class LimbMovement : MonoBehaviour {
     [Range(-180, 180)]  public float maxRotation;
     [Range(0, 360)] public float startRotation;
     public bool isPaused;
+    private float stunTime;
     public float lastRotation;
 
+    private float accumulatedTime;
+
 	void Start () {
+        stunTime = -1;
         isPaused = false;
         transform.rotation = transform.rotation = Quaternion.Euler(0, 0, startRotation);
     }
@@ -20,8 +24,16 @@ public class LimbMovement : MonoBehaviour {
         {
             lastRotation = transform.rotation.eulerAngles.z;
             transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation + startRotation);
-
+        } else if (isPaused == true && stunTime != -1)
+        {
+            accumulatedTime += Time.deltaTime;
+            if (stunTime <= accumulatedTime)
+            {
+                isPaused = false;
+                stunTime = -1;
+            }
         }
+        
     }
 
     public int GetLimbState()
@@ -39,5 +51,11 @@ public class LimbMovement : MonoBehaviour {
         }
         if (gameObject.tag == "RightArm" || gameObject.tag == "RightLeg" || gameObject.tag == "RightArmP2" || gameObject.tag == "RightLegP2") tempLimbState -= 2; tempLimbState = Mathf.Abs(tempLimbState);
         return tempLimbState;
+    }
+
+    public void SetStun (float pauseTime)
+    {
+        stunTime = pauseTime;
+        isPaused = true;
     }
 }
