@@ -101,7 +101,7 @@ public class Item : MonoBehaviour {
         Debug.Log("Item Activated");
         switch (ItemType) {
             case Type.Mushroom:
-                //Activate script here (Add playerTag as argument)
+                Mushroom.Affect(playerTag);
                 break;
             case Type.Banana:
                 //Activate script here (Add playerTag as argument)

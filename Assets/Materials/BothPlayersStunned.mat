@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LeftPlayerStunned
+  m_Name: BothPlayersStunned
   m_Shader: {fileID: 4800000, guid: bc543e7ebdf537345a31805f85f0387e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -67,8 +67,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ScreenSplit: 0.5
-    - _ScreenSplitMax: 0.5
+    - _ScreenSplitMax: 1
     - _ScreenSplitMin: 0
     - _SineWaveHeight: 1
     - _SmoothnessTextureChannel: 0
