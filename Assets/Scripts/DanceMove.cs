@@ -1,19 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
+[System.Serializable]
 public struct DanceMove {
-    public int RightArmPosition;
-    public int LeftArmPosition;
-    public int RightLegPosition;
-    public int LeftLegPosition;
-    public int instructionImageIndex;
-    public DanceMove(int rightArm, int leftArm, int rightLeg, int leftLeg, int index)
+    public enum LimbState
     {
-        RightArmPosition = rightArm;
-        LeftArmPosition = leftArm;
-        RightLegPosition = rightLeg;
-        LeftLegPosition = leftLeg;
-        instructionImageIndex = index;
+        Down = 0,
+        Middle = 1,
+        Up = 2,
+        None = -1
     }
+
+    public LimbState RightArmPosition;
+    public LimbState LeftArmPosition;
+    public LimbState RightLegPosition;
+    public LimbState LeftLegPosition;
+    public int instructionImageIndex;
 }

@@ -74,49 +74,49 @@ public class InputCheck : MonoBehaviour {
         if (player == Players.PlayerOne)
         {
             if (leftArm == null) return 0;
-            if (currentMove.LeftArmPosition != -1)
+            if ((int)currentMove.LeftArmPosition != -1)
             {
                 index++;
-                if (leftArm.GetLimbState() == currentMove.LeftArmPosition) score++;
+                if (leftArm.GetLimbState() == (int)currentMove.LeftArmPosition) score++;
             }
-            if (currentMove.RightArmPosition != -1)
+            if ((int)currentMove.RightArmPosition != -1)
             {
                 index++;
-                if (rightArm.GetLimbState() == currentMove.RightArmPosition) score++;
+                if (rightArm.GetLimbState() == (int)currentMove.RightArmPosition) score++;
             }
-            if (currentMove.LeftLegPosition != -1)
+            if ((int)currentMove.LeftLegPosition != -1)
             {
                 index++;
-                if (leftLeg.GetLimbState() == currentMove.LeftLegPosition) score++;
+                if (leftLeg.GetLimbState() == (int)currentMove.LeftLegPosition) score++;
             }
-            if (currentMove.RightLegPosition != -1)
+            if ((int)currentMove.RightLegPosition != -1)
             {
                 index++;
-                if (rightLeg.GetLimbState() == currentMove.RightLegPosition) score++;
+                if (rightLeg.GetLimbState() == (int)currentMove.RightLegPosition) score++;
             }
         }
         else if (player == Players.PlayerTwo)
         {
             if (leftArmP2 == null) return 0;
-            if (currentMove.LeftArmPosition != -1)
+            if ((int)currentMove.LeftArmPosition != -1)
             {
                 index++;
-                if (leftArmP2.GetLimbState() == currentMove.LeftArmPosition) score++;
+                if (leftArmP2.GetLimbState() == (int)currentMove.LeftArmPosition) score++;
             }
-            if (currentMove.RightArmPosition != -1)
+            if ((int)currentMove.RightArmPosition != -1)
             {
                 index++;
-                if (rightArmP2.GetLimbState() == currentMove.RightArmPosition) score++;
+                if (rightArmP2.GetLimbState() == (int)currentMove.RightArmPosition) score++;
             }
-            if (currentMove.LeftLegPosition != -1)
+            if ((int)currentMove.LeftLegPosition != -1)
             {
                 index++;
-                if (leftLegP2.GetLimbState() == currentMove.LeftLegPosition) score++;
+                if (leftLegP2.GetLimbState() == (int)currentMove.LeftLegPosition) score++;
             }
-            if (currentMove.RightLegPosition != -1)
+            if ((int)currentMove.RightLegPosition != -1)
             {
                 index++;
-                if (rightLegP2.GetLimbState() == currentMove.RightLegPosition) score++;
+                if (rightLegP2.GetLimbState() == (int)currentMove.RightLegPosition) score++;
             }
         }
 
@@ -130,22 +130,22 @@ public class InputCheck : MonoBehaviour {
     private int GetLimbMultiplier (DanceMove currentMove)
     {
         int index = 0;
-        if (currentMove.LeftArmPosition != -1)
+        if ((int)currentMove.LeftArmPosition != -1)
         {
             index++;
             
         }
-        if (currentMove.RightArmPosition != -1)
+        if ((int)currentMove.RightArmPosition != -1)
         {
             index++;
             
         }
-        if (currentMove.LeftLegPosition != -1)
+        if ((int)currentMove.LeftLegPosition != -1)
         {
             index++;
             
         }
-        if (currentMove.RightLegPosition != -1)
+        if ((int)currentMove.RightLegPosition != -1)
         {
             index++;
             
@@ -155,19 +155,19 @@ public class InputCheck : MonoBehaviour {
 
     public DanceMove getCurrentMove (bool isPlayerOne) //Gets current position of limbs as DanceMove from player one or two
     {
-        DanceMove temp = new DanceMove(1, 1, 1, 1, 1);
+        DanceMove temp = new DanceMove();
         if (isPlayerOne == true)
         {
-            temp.LeftArmPosition = leftArm.GetLimbState();
-            temp.RightArmPosition = rightArm.GetLimbState();
-            temp.LeftLegPosition = leftLeg.GetLimbState();
-            temp.RightLegPosition = rightLeg.GetLimbState();
+            temp.LeftArmPosition = (DanceMove.LimbState)leftArm.GetLimbState();
+            temp.RightArmPosition = (DanceMove.LimbState)rightArm.GetLimbState();
+            temp.LeftLegPosition = (DanceMove.LimbState)leftLeg.GetLimbState();
+            temp.RightLegPosition = (DanceMove.LimbState)rightLeg.GetLimbState();
         } else
         {
-            temp.LeftArmPosition = leftArmP2.GetLimbState();
-            temp.RightArmPosition = rightArmP2.GetLimbState();
-            temp.LeftLegPosition = leftLegP2.GetLimbState();
-            temp.RightLegPosition = rightLegP2.GetLimbState();
+            temp.LeftArmPosition = (DanceMove.LimbState)leftArmP2.GetLimbState();
+            temp.RightArmPosition = (DanceMove.LimbState)rightArmP2.GetLimbState();
+            temp.LeftLegPosition = (DanceMove.LimbState)leftLegP2.GetLimbState();
+            temp.RightLegPosition = (DanceMove.LimbState)rightLegP2.GetLimbState();
         }
         return temp;
     }
