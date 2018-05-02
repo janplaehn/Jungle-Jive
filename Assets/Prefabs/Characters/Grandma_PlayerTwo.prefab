@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4044831275187216}
   - component: {fileID: 50079243887773884}
   - component: {fileID: 114802956976493984}
+  - component: {fileID: 114719078870184876}
   m_Layer: 0
   m_Name: Grandma_PlayerTwo
   m_TagString: Player2
@@ -1102,6 +1103,7 @@ MonoBehaviour:
   maxRotation: 90
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114485250654881302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1117,6 +1119,7 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 270
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114538556617247648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1132,6 +1135,7 @@ MonoBehaviour:
   maxRotation: -120
   startRotation: 90
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114543049012500368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1147,6 +1151,7 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114578295760880994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1162,6 +1167,19 @@ MonoBehaviour:
   maxRotation: -90
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
+--- !u!114 &114719078870184876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074067474174316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bef8a3f903ac004a98f781b1ed26343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrowingHand: {fileID: 1716026235897076}
 --- !u!114 &114768711094360204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1177,6 +1195,7 @@ MonoBehaviour:
   maxRotation: -120
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114775935634486340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1192,6 +1211,7 @@ MonoBehaviour:
   maxRotation: 90
   startRotation: 270
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114802956976493984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1203,6 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freestylePrize: 0
   stateFinished: 0
 --- !u!114 &114848782215518692
 MonoBehaviour:
@@ -1219,6 +1240,7 @@ MonoBehaviour:
   maxRotation: -90
   startRotation: 90
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114887328884547866
 MonoBehaviour:
   m_ObjectHideFlags: 1

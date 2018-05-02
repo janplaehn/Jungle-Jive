@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 4851591590248292}
   - component: {fileID: 50336000420806296}
   - component: {fileID: 114775173766746804}
+  - component: {fileID: 114840628653854872}
   m_Layer: 0
   m_Name: FakeJakob_PlayerOne
   m_TagString: Player1
@@ -1135,6 +1136,7 @@ MonoBehaviour:
   maxRotation: -90
   startRotation: 90
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114381688783105764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1150,6 +1152,7 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114411469067033830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1165,6 +1168,7 @@ MonoBehaviour:
   maxRotation: -120
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114476786867547620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1180,6 +1184,7 @@ MonoBehaviour:
   maxRotation: -90
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114706148616567580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1195,6 +1200,7 @@ MonoBehaviour:
   maxRotation: 120
   startRotation: 270
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114775173766746804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1206,6 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freestylePrize: 0
   stateFinished: 0
 --- !u!114 &114810878954754288
 MonoBehaviour:
@@ -1222,6 +1229,7 @@ MonoBehaviour:
   maxRotation: -120
   startRotation: 90
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114826861875343656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1237,6 +1245,19 @@ MonoBehaviour:
   maxRotation: 90
   startRotation: 0
   isPaused: 0
+  lastRotation: 0
+--- !u!114 &114840628653854872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931392894365526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bef8a3f903ac004a98f781b1ed26343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThrowingHand: {fileID: 1732914667223788}
 --- !u!114 &114928592983748676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1252,6 +1273,7 @@ MonoBehaviour:
   maxRotation: 90
   startRotation: 270
   isPaused: 0
+  lastRotation: 0
 --- !u!114 &114991561679709370
 MonoBehaviour:
   m_ObjectHideFlags: 1

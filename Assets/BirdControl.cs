@@ -70,6 +70,9 @@ public class BirdControl : MonoBehaviour {
             flightdirection = 1;
             if (transform.position.x > playerTwoSpawn.transform.position.x) {
                 state = FlightState.dropItem;
+                foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>()) {
+                    rb.gravityScale = 1;
+                }
             }
         }
         transform.position += Vector3.right * Time.deltaTime * flightdirection * speed * radiusModifier;
@@ -78,10 +81,6 @@ public class BirdControl : MonoBehaviour {
     }
 
     void DropItem() {
-        foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>()) {
-            rb.gravityScale = 1;
-        }
-
         Invoke("ChangeToLeave", 0.5f);
     }
 
