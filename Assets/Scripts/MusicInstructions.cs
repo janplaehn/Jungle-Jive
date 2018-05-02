@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MusicInstructions : State {
-    private Pair<DanceMove, float>[] timingPairs;
+    [SerializeField]public DanceMovePair[] timingPairs;
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
@@ -20,15 +20,17 @@ public class MusicInstructions : State {
     public bool stateFinished = false;
     private bool moveRatedP1 = false;
     private bool moveRatedP2 = false;
-    private bool intro;
+    private bool intro = true;
     public float introTime;
+    public float tempo;
     public Sprite timingSprite;
     [Range(1f, 4f)] public float maxTimingSpriteSize = 1.5f;
-    public float instructionTime;
 
     private float errorMargin = 0.2f;
-    public bool isPaused;
+    public bool isPaused = false;
     private float scaleTiming = 1;
+
+
     public enum DanceMoveEnum
     {
         LeftArmUp,
@@ -47,30 +49,27 @@ public class MusicInstructions : State {
 
 	// Use this for initialization
 	public override void OnStart () {
-        isPaused = false;
-        intro = true;
-        lastMove = timingPairs[0].firstValue;
-        nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
+        lastMove = timingPairs[lastPairIndex].firstValue;
+        nextInstruction.sprite = instructionImageArray[(int)lastMove.instructionImageIndex];
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
         if (timingPairs.Length == 0)
         {
             started = false;
         }
-
-        instructionTime = timingPairs[lastPairIndex].secondValue;
-        instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+        instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
         timing.sprite = timingSprite;
         timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
         if (lastPairIndex + 1 <= timingPairs.Length - 1)
         {
-            nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+            nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
         }
         else
         {
             nextInstruction.sprite = voidSprite;
         }
-        lastMove = timingPairs[lastPairIndex].firstValue;
+
+        musicSource.Play();
     }
 
     public override bool OnUpdate ()
@@ -79,9 +78,9 @@ public class MusicInstructions : State {
         {
             timing.enabled = true;
             accumulatedTime += Time.deltaTime;
-            if (accumulatedTime <= instructionTime)
+            if (accumulatedTime <= GetTiming())
             {
-                animateTiming(timingPairs[lastPairIndex].secondValue, accumulatedTime);
+                animateTiming(GetTiming(), accumulatedTime);
                 checkTiming(accumulatedTime);
             }
             else
@@ -104,13 +103,12 @@ public class MusicInstructions : State {
                 moveRatedP1 = false;
                 moveRatedP2 = false;
                 accumulatedTime = 0f;
-                instructionTime = timingPairs[lastPairIndex].secondValue;
-                instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
                 timing.sprite = timingSprite;
                 timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
                 if (lastPairIndex + 1 <= timingPairs.Length - 1)
                 {
-                    nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+                    nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
                 }
                 else
                 {
@@ -134,7 +132,12 @@ public class MusicInstructions : State {
         return true;
     }
 
-    public void SetMusic(AudioClip givenMusic, Pair<DanceMove, float>[] givenPairs)
+    public override void OnEnd()
+    {
+        musicSource.Stop();
+    }
+
+    public void SetMusic(AudioClip givenMusic, DanceMovePair[] givenPairs)
     {
         musicSource.clip = givenMusic;
         musicSource.Play();
@@ -154,7 +157,7 @@ public class MusicInstructions : State {
     {
         if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
         {
-            if (accTime > timingPairs[lastPairIndex].secondValue - errorMargin && accTime < timingPairs[lastPairIndex].secondValue + errorMargin)
+            if (accTime > GetTiming() - errorMargin && accTime < GetTiming() + errorMargin)
             {
                 scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
 
@@ -167,7 +170,7 @@ public class MusicInstructions : State {
         }
         if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerTwo) == 1 && moveRatedP2 == false)
         {
-            if (accTime > timingPairs[lastPairIndex].secondValue - errorMargin && accTime < timingPairs[lastPairIndex].secondValue + errorMargin)
+            if (accTime > GetTiming() - errorMargin && accTime < GetTiming() + errorMargin)
             {
                 scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
 
@@ -178,7 +181,11 @@ public class MusicInstructions : State {
             }
             moveRatedP2 = true;
         }
-        if (accTime >= timingPairs[lastPairIndex].secondValue) timing.sprite = voidSprite;
+        if (accTime >= GetTiming()) timing.sprite = voidSprite;
     }
 
+    float GetTiming()
+    {
+        return timingPairs[lastPairIndex].secondValue * tempo;
+    }
 }

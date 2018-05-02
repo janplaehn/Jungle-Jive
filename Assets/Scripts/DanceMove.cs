@@ -1,6 +1,6 @@
-﻿
-[System.Serializable]
-public struct DanceMove {
+﻿[System.Serializable]
+public class DanceMove : UnityEngine.MonoBehaviour
+{
     public enum LimbState
     {
         Down = 0,
@@ -13,5 +13,5 @@ public struct DanceMove {
     public LimbState LeftArmPosition;
     public LimbState RightLegPosition;
     public LimbState LeftLegPosition;
-    public int instructionImageIndex;
+    public MusicInstructions.DanceMoveEnum instructionImageIndex;
 }
