@@ -8,11 +8,9 @@ public class GameControlling : MonoBehaviour {
     public GameObject freestyle;
     public GameObject miniGame1;
     public GameState stateManager;
-    public DanceMove[] danceMoves;
     public AudioClip music;
     public float animationSpeed = 1;
     public float moveReactionTime;
-    private Pair<DanceMove, float>[] instructions = new Pair<DanceMove, float>[2];
     private bool isPaused;
 
 
@@ -72,26 +70,26 @@ public class GameControlling : MonoBehaviour {
         //instructions[1] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
         freestyle.GetComponent<Freestyle>().SetActiveFor (5);
 
-       /* instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
-        instructions[4] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
-        instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
-        instructions[7] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        instructions[9] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
-        instructions[10] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
-        //moveReactionTime = 2.5f;
-        instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, moveReactionTime);
-        //moveReactionTime = 2f;
-        instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
-        instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, moveReactionTime);
-        instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
-        //moveReactionTime = 1f;
-        instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);*/
-        MusicInstruction1.GetComponent<MusicInstructions>().SetMusic(music, instructions);
-        stateManager.AddState(miniGame1);
+        /* instructions[2] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+         instructions[3] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+         instructions[4] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+         instructions[5] = new Pair<DanceMove, float>(rightArmUp, moveReactionTime);
+         instructions[6] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+         instructions[7] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+         instructions[8] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+         instructions[9] = new Pair<DanceMove, float>(leftArmUp, moveReactionTime);
+         instructions[10] = new Pair<DanceMove, float>(bothArmsDown, moveReactionTime);
+         //moveReactionTime = 2.5f;
+         instructions[11] = new Pair<DanceMove, float>(leftArmLeftLegUp, moveReactionTime);
+         //moveReactionTime = 2f;
+         instructions[12] = new Pair<DanceMove, float>(bothArmsUp, moveReactionTime);
+         instructions[13] = new Pair<DanceMove, float>(rightArmRightLegUp, moveReactionTime);
+         instructions[14] = new Pair<DanceMove, float>(splitArmsDown, moveReactionTime);
+         //moveReactionTime = 1f;
+         instructions[15] = new Pair<DanceMove, float>(splitArmsUp, moveReactionTime);*/
+        //MusicInstruction1.GetComponent<MusicInstructions>().SetMusic(music, instructions);
         stateManager.AddState(MusicInstruction1);
+        stateManager.AddState(miniGame1);
         stateManager.AddState(freestyle);
 
     }

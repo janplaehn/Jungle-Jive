@@ -2182,6 +2182,16 @@ Prefab:
     m_Modifications:
     - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
+      propertyPath: danceMoves.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
       propertyPath: danceElements.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2256,6 +2266,66 @@ Prefab:
         type: 2}
       propertyPath: danceElements.Array.data[0].elementType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[0].firstValue
+      value: 
+      objectReference: {fileID: 114410907442614056, guid: 12fb3a4240f96384ea2e72825e50fac5,
+        type: 2}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[0].secondValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[1].firstValue
+      value: 
+      objectReference: {fileID: 114410907442614056, guid: 12fb3a4240f96384ea2e72825e50fac5,
+        type: 2}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[1].secondValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[2].firstValue
+      value: 
+      objectReference: {fileID: 114410907442614056, guid: 12fb3a4240f96384ea2e72825e50fac5,
+        type: 2}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[2].secondValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[3].firstValue
+      value: 
+      objectReference: {fileID: 114410907442614056, guid: 12fb3a4240f96384ea2e72825e50fac5,
+        type: 2}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[3].secondValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[4].firstValue
+      value: 
+      objectReference: {fileID: 114410907442614056, guid: 12fb3a4240f96384ea2e72825e50fac5,
+        type: 2}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingPairs.Array.data[4].secondValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: tempo
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
