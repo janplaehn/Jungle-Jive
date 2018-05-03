@@ -34,10 +34,10 @@ public class MirrorEffect : MonoBehaviour {
         yield return new WaitForSeconds(effectTime);
         GameObject.FindGameObjectWithTag(tag).GetComponent<MirrorMovement>().isMirrored = false;
         if (tag == "Player1") {
-            Destroy(mirrorInstanceOne);
+            Destroy(mirrorInstanceOne.gameObject);
         }
         else if (tag == "Player2") {
-            Destroy(mirrorInstanceTwo);
+            Destroy(mirrorInstanceTwo.gameObject);
         }
     }
 }
