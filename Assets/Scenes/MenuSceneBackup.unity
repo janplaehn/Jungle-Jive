@@ -2249,7 +2249,7 @@ Prefab:
         type: 2}
       propertyPath: states.Array.data[0]
       value: 
-      objectReference: {fileID: 1787078891}
+      objectReference: {fileID: 1769780238}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
@@ -2315,6 +2315,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769780238 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114814908244296100, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1565195995}
+  m_Script: {fileID: 11500000, guid: 3b7b6873020e5b743883351e34ae1402, type: 3}
 --- !u!114 &1787078891 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114697358382732284, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
@@ -2803,6 +2809,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1678255393180032, guid: cb2b3bdd2b4e7f04bb01c37f1b4fd4b7, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108800365180259606, guid: cb2b3bdd2b4e7f04bb01c37f1b4fd4b7,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108800365180259606, guid: cb2b3bdd2b4e7f04bb01c37f1b4fd4b7,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108800365180259606, guid: cb2b3bdd2b4e7f04bb01c37f1b4fd4b7,
+        type: 2}
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
