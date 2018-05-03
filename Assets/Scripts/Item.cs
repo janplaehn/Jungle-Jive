@@ -111,6 +111,7 @@ public class Item : MonoBehaviour {
                 break;
             case Type.Smoke:
                 //Activate script here (Add playerTag as argument)
+                Smoke.SmokeInpact(playerTag);
                 break;
             default:
                 break;
