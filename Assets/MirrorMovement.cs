@@ -5,8 +5,10 @@ using UnityEngine;
 public class MirrorMovement : MonoBehaviour {
 
     [HideInInspector] public bool isMirrored = false;
+    public LimbMovement[] movementScripts;
 
 	void Start () {
+        movementScripts = GetComponentsInChildren<LimbMovement>();
         isMirrored = false;
 	}
 	
@@ -16,10 +18,14 @@ public class MirrorMovement : MonoBehaviour {
 
     void SetMirror() {
         if (isMirrored) {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            foreach (LimbMovement script in movementScripts) {
+                script.inversion = -1;
+            }
         }
         else {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            foreach (LimbMovement script in movementScripts) {
+                script.inversion = 1;
+            }
         }
     }
 }

@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c202692a14113a342afbea0d5da4e793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 1
+  ItemType: 2
   mushroom: {fileID: 21300000, guid: 520f19029b19fe6429c7a004888d1696, type: 3}
   banana: {fileID: 21300000, guid: 49aa280b042388f4f99b83d2a2acd678, type: 3}
   mirror: {fileID: 21300000, guid: d7de7a014668b56488bbd7544438cf11, type: 3}

@@ -29,6 +29,12 @@ public class Item : MonoBehaviour {
         SetSprite();
     }
 
+    private void Update() {
+        if (Input.GetKey(KeyCode.Space)) {
+            AddThrowForce();
+        }    
+    }
+
 
     private void SetSprite() {
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
@@ -66,7 +72,7 @@ public class Item : MonoBehaviour {
 
     private void AttachToHand(Getbodyparts body) {
         if (body.hasItem && body.Item) {
-            Destroy(body.Item);
+            if (body.Item != this) Destroy(body.Item);
         }
         body.Item = this.gameObject;
         body.hasItem = true;
