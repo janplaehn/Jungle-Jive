@@ -13,6 +13,7 @@ public class Getbodyparts : MonoBehaviour {
             if ((gameObject.tag == "Player1" && Input.GetButton("P1ButtonA")) ||
                 (gameObject.tag == "Player2" && Input.GetButton("P2ButtonA"))) {
                 Item.GetComponent<Item>().AddThrowForce();
+                hasItem = false;
             }
         }
     }   
