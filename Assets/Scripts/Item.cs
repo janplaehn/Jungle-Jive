@@ -18,6 +18,7 @@ public class Item : MonoBehaviour {
     [Space(7)]
     public int throwForce;
     public bool isJanTesting = false;
+    public bool isRandomised;
 
     private Rigidbody2D rb;
     private bool isThrown;
@@ -27,6 +28,9 @@ public class Item : MonoBehaviour {
         isThrown = false;
         rb = GetComponent<Rigidbody2D>();
         mirrorScript = GameObject.Find("GameController").GetComponent<MirrorEffect>();
+        if (isRandomised) {
+            ItemType = (Type)Random.Range(0, System.Enum.GetValues(typeof(Type)).Length);
+        }
         SetSprite();
     }
 

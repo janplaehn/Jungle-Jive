@@ -171,7 +171,8 @@ MonoBehaviour:
   mirror: {fileID: 21300000, guid: d7de7a014668b56488bbd7544438cf11, type: 3}
   smoke: {fileID: 21300000, guid: 73ee2f6772b4cbf48bc49de8df06d26b, type: 3}
   throwForce: 300
-  isJanTesting: 1
+  isJanTesting: 0
+  isRandomised: 1
 --- !u!212 &212568450380750804
 SpriteRenderer:
   m_ObjectHideFlags: 1
