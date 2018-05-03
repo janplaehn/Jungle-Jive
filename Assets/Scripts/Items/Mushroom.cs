@@ -2,17 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Mushroom : MonoBehaviour {
     public static Material firstPlayerDizzy;
     public static Material secondPlayerDizzy;
     public static Material bothPlayersDizzy;
     public static Material noPlayerDizzy;
-    public static Material currentMat = noPlayerDizzy;
+    public static Material currentMat;
     static float affectedTimer = 10f;
     float firstPlayerTimer = 0f;
     float secondPlayerTimer = 0f;
     static bool firstPlayerAffected = false;
     static bool secondPlayerAffected = false;
+
+    private void Awake()
+    {
+        firstPlayerDizzy = Resources.Load("Materials/LeftPlayerStunned", typeof(Material)) as Material;
+        secondPlayerDizzy = Resources.Load("Materials/RightPlayerStunned", typeof(Material)) as Material;
+        bothPlayersDizzy = Resources.Load("Materials/BothPlayersStunned", typeof(Material)) as Material;
+        noPlayerDizzy = Resources.Load("Materials/NoPlayerStunned", typeof(Material)) as Material;
+        currentMat = noPlayerDizzy;
+    }
 
     public static void Affect(string playerTag)
     {

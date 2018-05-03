@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 461ad4695c29be446aec855b455509d4
-timeCreated: 1524051399
+guid: 1f4dd3a17c0e69a4a90ae109655fe8d7
+timeCreated: 1525284222
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Grandma_face - Copy_0
-    21300002: Grandma_face - Copy_1
-    21300004: Grandma_face - Copy_2
-    21300006: Grandma_face - Copy_3
-    21300008: Grandma_face - Copy_4
-    21300010: Grandma_face - Copy_5
-    21300012: Grandma_face - Copy_6
-    21300014: Grandma_face - Copy_7
+    21300000: ToucanAnimationSpriteSheet_0
+    21300002: ToucanAnimationSpriteSheet_1
+    21300004: ToucanAnimationSpriteSheet_2
+    21300006: ToucanAnimationSpriteSheet_3
+    21300008: ToucanAnimationSpriteSheet_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -118,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grandma_face - Copy_0
+      name: ToucanAnimationSpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 373.3333
-        width: 186.66667
-        height: 186.66667
+        y: 3819.3335
+        width: 2362.5
+        height: 1909.6666
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,13 +129,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grandma_face - Copy_1
+      name: ToucanAnimationSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 186
-        y: 373.3333
-        width: 186.66667
-        height: 186.66667
+        x: 2362
+        y: 3819.3335
+        width: 2362.5
+        height: 1909.6666
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,27 +143,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grandma_face - Copy_2
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 373.3333
-        width: 186.66667
-        height: 186.66667
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Grandma_face - Copy_3
+      name: ToucanAnimationSpriteSheet_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 187.33333
-        width: 186.66667
-        height: 186.66667
+        y: 1910.3334
+        width: 2362.5
+        height: 1909.6666
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,13 +157,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grandma_face - Copy_4
+      name: ToucanAnimationSpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 186
-        y: 187.33333
-        width: 186.66667
-        height: 186.66667
+        x: 2362
+        y: 1910.3334
+        width: 2362.5
+        height: 1909.6666
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,41 +171,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grandma_face - Copy_5
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 187.33333
-        width: 186.66667
-        height: 186.66667
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Grandma_face - Copy_6
+      name: ToucanAnimationSpriteSheet_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 1.3333282
-        width: 186.66667
-        height: 186.66667
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Grandma_face - Copy_7
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 1.3333282
-        width: 186.66667
-        height: 186.66667
+        y: 1.333374
+        width: 2362.5
+        height: 1909.6666
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

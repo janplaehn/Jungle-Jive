@@ -48,16 +48,6 @@ public class Item : MonoBehaviour {
         }
     }
 
-
-    void Update() {
-        if (transform.parent) {
-            //TODO: Replace this with actual button / wiimote input (probably call AddThrowForce from InputCheck script instead)
-            if (Input.GetKey(KeyCode.Space) && (transform.parent.tag == ("hand"))) {
-                AddThrowForce();
-            }
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.transform.parent) {
             if (collision.gameObject.transform.parent.tag == ("Player1") || collision.gameObject.transform.parent.tag == ("Player2")) {
@@ -82,6 +72,7 @@ public class Item : MonoBehaviour {
         rb.velocity = Vector3.zero;
         transform.position = body.ThrowingHand.transform.position;
         transform.rotation = body.ThrowingHand.transform.rotation;
+        transform.Rotate(Vector3.forward * 180);
         transform.parent = body.ThrowingHand.transform;
     }
 

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4525137313455878}
   - component: {fileID: 212645853224657420}
   - component: {fileID: 114232026445097830}
+  - component: {fileID: 95888211417687664}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -54,8 +55,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1392785763106996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.28, z: 0}
-  m_LocalScale: {x: 0.6439696, y: 0.6439696, z: 0.6439696}
+  m_LocalPosition: {x: -0.87, y: 3.91, z: 0}
+  m_LocalScale: {x: 0.33556786, y: 0.33556786, z: 0.33556786}
   m_Children:
   - {fileID: 4828576656811264}
   m_Father: {fileID: 0}
@@ -68,8 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1556356484791444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32, y: -2.2, z: 0}
-  m_LocalScale: {x: 0.3524571, y: 0.3524571, z: 0.3524571}
+  m_LocalPosition: {x: 2.86, y: -3.432, z: 0}
+  m_LocalScale: {x: 0.7920237, y: 0.7920237, z: 0.7920237}
   m_Children: []
   m_Father: {fileID: 4525137313455878}
   m_RootOrder: 0
@@ -119,6 +120,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.83, y: 4.8}
   m_EdgeRadius: 0
+--- !u!95 &95888211417687664
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392785763106996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bed978fad2dc8c04282a524130f75c68, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114232026445097830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,10 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c202692a14113a342afbea0d5da4e793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 1
+  ItemType: 0
   mushroom: {fileID: 21300000, guid: 520f19029b19fe6429c7a004888d1696, type: 3}
   banana: {fileID: 21300000, guid: 49aa280b042388f4f99b83d2a2acd678, type: 3}
-  mirror: {fileID: 0}
+  mirror: {fileID: 21300000, guid: d7de7a014668b56488bbd7544438cf11, type: 3}
   smoke: {fileID: 21300000, guid: 73ee2f6772b4cbf48bc49de8df06d26b, type: 3}
   throwForce: 300
 --- !u!212 &212568450380750804
@@ -231,7 +249,7 @@ SpriteRenderer:
   m_SortingLayerID: -1830013555
   m_SortingLayer: 1
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: e111bea96ec278d4190f15a1331b1c06, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 1f4dd3a17c0e69a4a90ae109655fe8d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

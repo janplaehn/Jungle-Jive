@@ -26,11 +26,12 @@ public class ItemMiniGame : State {
         canvas = GameObject.Find("Canvas");
         input = GameObject.Find("GameController").GetComponent<InputCheck>();
         birdInstance = Instantiate(bird, birdSpawnPosition, Quaternion.identity).gameObject;
-        Invoke("BeforeEnd", miniGameTimer - 2);
-        Invoke("QuitState", miniGameTimer);
         foreach (DiscoballRetract dr in canvas.GetComponentsInChildren<DiscoballRetract>()) {
             dr.Retract();
         }
+        Invoke("BeforeEnd", miniGameTimer - 2);
+        Invoke("QuitState", miniGameTimer);
+
     }
 
     public override bool OnUpdate () {

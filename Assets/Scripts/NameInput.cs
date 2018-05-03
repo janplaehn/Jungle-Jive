@@ -8,10 +8,9 @@ public class NameInput : MonoBehaviour {
 
     public enum Player {Player1, Player2};
     public Player player;
+    [Header("GameObjects")]
     public GameObject[] letterGameObjects;
-
     public GameObject[] PlayerButtons;
-    //public GameObject Character;
     public GameObject Canvas;
 
     [HideInInspector] public static string playerOneName;

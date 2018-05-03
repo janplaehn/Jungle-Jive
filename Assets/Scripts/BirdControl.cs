@@ -8,6 +8,7 @@ public class BirdControl : MonoBehaviour {
     [Range(0f, 8f)] public float maxYPosition;
     public float speed;
     public float screenBorder;
+
     private GameObject playerOneSpawn;
     private GameObject playerTwoSpawn;
 
@@ -43,6 +44,7 @@ public class BirdControl : MonoBehaviour {
             default:
                 break;              
         }
+        SetRotation();
         if (System.Math.Abs(transform.position.x) > screenBorder) {
             Destroy(this.gameObject);
         }
@@ -89,5 +91,14 @@ public class BirdControl : MonoBehaviour {
     }
     void LeaveScreen() {
         transform.position += Vector3.right * Time.deltaTime * flightdirection * speed * radiusModifier;
+    }
+
+    void SetRotation() {
+        if (flightdirection == 1) {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+        else {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 }
