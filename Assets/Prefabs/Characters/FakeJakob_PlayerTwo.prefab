@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 50412343033730984}
   - component: {fileID: 114784925402064062}
   - component: {fileID: 114986769356503162}
+  - component: {fileID: 114801459228380068}
   m_Layer: 0
   m_Name: FakeJakob_PlayerTwo
   m_TagString: Player2
@@ -1254,6 +1255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freestylePrize: 0
+  activateTime: 0
+  recentMovesP1: []
+  recentMovesP2: []
   stateFinished: 0
 --- !u!114 &114790781872469056
 MonoBehaviour:
@@ -1271,6 +1275,18 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+--- !u!114 &114801459228380068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334711390337900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e486b7e9cab8334ebc1507d4eace8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMirrored: 0
 --- !u!114 &114973762683060806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1299,6 +1315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThrowingHand: {fileID: 1252261837659354}
+  hasItem: 0
+  Item: {fileID: 0}
 --- !u!212 &212002199302902054
 SpriteRenderer:
   m_ObjectHideFlags: 1
