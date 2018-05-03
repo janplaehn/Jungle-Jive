@@ -17,6 +17,7 @@ public class Item : MonoBehaviour {
 
     [Space(7)]
     public int throwForce;
+    public bool isJanTesting = false;
 
     private Rigidbody2D rb;
     private bool isThrown;
@@ -30,7 +31,7 @@ public class Item : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetKey(KeyCode.Space) && isJanTesting) {
             AddThrowForce();
         }    
     }
