@@ -263,7 +263,7 @@ InputManager:
     joyNum: 4
   - serializedVersion: 3
     m_Name: P1ButtonA
-    descriptiveName: 
+    descriptiveName: A Button
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 0
@@ -275,7 +275,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 3
+    axis: 0
     joyNum: 1
   - serializedVersion: 3
     m_Name: P2ButtonA
@@ -292,4 +292,4 @@ InputManager:
     invert: 1
     type: 0
     axis: 3
-    joyNum: 4
+    joyNum: 2
