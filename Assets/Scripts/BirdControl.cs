@@ -66,6 +66,9 @@ public class BirdControl : MonoBehaviour {
             flightdirection = -1;
             if (transform.position.x < playerOneSpawn.transform.position.x) {
                 state = FlightState.dropItem;
+                foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>()) {
+                    rb.gravityScale = 1;
+                }
             }
         }
         else {
