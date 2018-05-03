@@ -53,7 +53,7 @@
 
 			fixed4 frag (v2f i) : SV_Target
 			{
-				if (i.vertex.x >= 1920 * _ScreenSplitMin && i.vertex.x <= 1920 * _ScreenSplitMax){
+				if (i.vertex.x >= _ScreenParams.x * _ScreenSplitMin && i.vertex.x <= _ScreenParams.x * _ScreenSplitMax){
 					fixed4 col = tex2D(_MainTex, i.uv + float2(0, sin(i.vertex.x/ _WaveLengthDiv + _Time[0] * _WobInt) * _SineWaveHeight / 10));
 					col = abs(1 * _IsInverted - col);
 					return col;

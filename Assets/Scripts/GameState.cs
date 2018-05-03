@@ -7,6 +7,7 @@ public class GameState : MonoBehaviour {
     int stateIndex = 0;
     public List<State> states;
 
+    bool isPaused = false;
     bool started = true;
     bool finished = false;
 	void Start()
@@ -15,7 +16,11 @@ public class GameState : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        if (!started || finished) return;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            changePauseState();
+        }
+        if (!started || finished || isPaused) return;
         if(states[stateIndex].OnUpdate() == false) {
             states[stateIndex].OnEnd();
             NextState();
@@ -56,4 +61,42 @@ public class GameState : MonoBehaviour {
         }
     }
 
+    public void changePauseState()
+    {
+        if (isPaused == false)
+        {
+            Time.timeScale = 0;
+            isPaused = true;
+            GetComponentInChildren<MusicInstructions>().isPaused = true;
+            LimbMovement[] limbMovements = GameObject.FindGameObjectWithTag("Player1").GetComponentsInChildren<LimbMovement>();
+            foreach (LimbMovement i in limbMovements)
+            {
+                i.isPaused = true;
+            }
+            LimbMovement[] limbMovements2 = GameObject.FindGameObjectWithTag("Player2").GetComponentsInChildren<LimbMovement>();
+            foreach (LimbMovement i in limbMovements2)
+            {
+                i.isPaused = true;
+            }
+            FindObjectOfType<AudioSource>().Pause();
+        }
+        else
+        {
+            Time.timeScale = 1;
+            isPaused = false;
+            GetComponentInChildren<MusicInstructions>().isPaused = false;
+            LimbMovement[] limbMovements = GameObject.FindGameObjectWithTag("Player1").GetComponentsInChildren<LimbMovement>();
+            foreach (LimbMovement i in limbMovements)
+            {
+                i.isPaused = false;
+            }
+            LimbMovement[] limbMovements2 = GameObject.FindGameObjectWithTag("Player2").GetComponentsInChildren<LimbMovement>();
+            foreach (LimbMovement i in limbMovements2)
+            {
+                i.isPaused = false;
+            }
+            FindObjectOfType<AudioSource>().UnPause();
+
+        }
+    }
 }
