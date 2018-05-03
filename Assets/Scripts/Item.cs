@@ -20,10 +20,12 @@ public class Item : MonoBehaviour {
 
     private Rigidbody2D rb;
     private bool isThrown;
+    private MirrorEffect mirrorScript;
     
     void Start() {
         isThrown = false;
         rb = GetComponent<Rigidbody2D>();
+        mirrorScript = GameObject.Find("GameController").GetComponent<MirrorEffect>();
         SetSprite();
     }
 
@@ -95,11 +97,10 @@ public class Item : MonoBehaviour {
                 Mushroom.Affect(playerTag);
                 break;
             case Type.Banana:
-                //Activate script here (Add playerTag as argument)
                 Banana.BananaHit(playerTag);
                 break;
             case Type.Mirror:
-                //Activate script here (Add playerTag as argument)
+                mirrorScript.ActivateMirror(playerTag);
                 break;
             case Type.Smoke:
                 //Activate script here (Add playerTag as argument)
