@@ -5,7 +5,7 @@ using UnityEngine;
 public class MirrorMovement : MonoBehaviour {
 
     [HideInInspector] public bool isMirrored = false;
-    public LimbMovement[] movementScripts;
+    [HideInInspector] public LimbMovement[] movementScripts;
 
 	void Start () {
         movementScripts = GetComponentsInChildren<LimbMovement>();
