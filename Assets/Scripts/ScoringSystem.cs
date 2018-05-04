@@ -23,7 +23,7 @@ public class ScoringSystem : MonoBehaviour {
         {
             firstPlayerTextFeedback = GameObject.FindGameObjectWithTag("Player1Feedback");
         }
-        TextFeedback temp = firstPlayerTextFeedback.GetComponent<TextFeedback>();
+        if(firstPlayerTextFeedback.GetComponent<TextFeedback>() != null)
         firstPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore);
         if(firstPlayerHead == null)
         {
