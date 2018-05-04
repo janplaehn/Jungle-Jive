@@ -482,7 +482,7 @@ SpriteRenderer:
   m_Size: {x: 4.87, y: 3.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &317612205
 GameObject:
@@ -1316,9 +1316,11 @@ MonoBehaviour:
   playerOnePrefabs:
   - {fileID: 1119703419588056, guid: 400a8d56524e36b4eadc9a553a68e200, type: 2}
   - {fileID: 1931392894365526, guid: 5001451daffe4e04da19f9c6f301fad6, type: 2}
+  - {fileID: 1064288732523550, guid: c183d96a5ce4a854185d64595c6b01c6, type: 2}
   playerTwoPrefabs:
   - {fileID: 1074067474174316, guid: 0bf11653895070446a196d1f8ee24058, type: 2}
   - {fileID: 1334711390337900, guid: d490d9648b1afbc44895ed2437802250, type: 2}
+  - {fileID: 1088626018725510, guid: 498c878b9477e5840b6efb873607f9af, type: 2}
   playerOne: {fileID: 0}
   playerTwo: {fileID: 0}
   playerOneSpawn: {fileID: 191288074}

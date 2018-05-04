@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222333717731987568}
   - component: {fileID: 114406263261770590}
   - component: {fileID: 95333828915055430}
+  - component: {fileID: 114276489806535858}
   m_Layer: 5
   m_Name: Discoball
   m_TagString: Untagged
@@ -46,6 +47,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114276489806535858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519443191346074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecac6a1556520a5468151d2f60582f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxYShift: 300
+  speed: 120
 --- !u!114 &114406263261770590
 MonoBehaviour:
   m_ObjectHideFlags: 1

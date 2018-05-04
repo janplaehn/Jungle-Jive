@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 50079243887773884}
   - component: {fileID: 114802956976493984}
   - component: {fileID: 114719078870184876}
+  - component: {fileID: 114242606554978382}
   m_Layer: 0
   m_Name: Grandma_PlayerTwo
   m_TagString: Player2
@@ -1104,6 +1105,18 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+--- !u!114 &114242606554978382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074067474174316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e486b7e9cab8334ebc1507d4eace8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMirrored: 0
 --- !u!114 &114485250654881302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1180,6 +1193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThrowingHand: {fileID: 1716026235897076}
+  hasItem: 0
+  Item: {fileID: 0}
 --- !u!114 &114768711094360204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1224,6 +1239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freestylePrize: 0
+  activateTime: 0
+  recentMovesP1: []
+  recentMovesP2: []
   stateFinished: 0
 --- !u!114 &114848782215518692
 MonoBehaviour:

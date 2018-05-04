@@ -17,14 +17,27 @@ public class Item : MonoBehaviour {
 
     [Space(7)]
     public int throwForce;
+    public bool isJanTesting = false;
+    public bool isRandomised;
 
     private Rigidbody2D rb;
     private bool isThrown;
+    private MirrorEffect mirrorScript;
     
     void Start() {
         isThrown = false;
         rb = GetComponent<Rigidbody2D>();
+        mirrorScript = GameObject.Find("GameController").GetComponent<MirrorEffect>();
+        if (isRandomised) {
+            ItemType = (Type)Random.Range(0, System.Enum.GetValues(typeof(Type)).Length);
+        }
         SetSprite();
+    }
+
+    private void Update() {
+        if (Input.GetKey(KeyCode.Space) && isJanTesting) {
+            AddThrowForce();
+        }    
     }
 
 
@@ -64,7 +77,7 @@ public class Item : MonoBehaviour {
 
     private void AttachToHand(Getbodyparts body) {
         if (body.hasItem && body.Item) {
-            Destroy(body.Item);
+            if (body.Item != this) Destroy(body.Item);
         }
         body.Item = this.gameObject;
         body.hasItem = true;
@@ -95,14 +108,14 @@ public class Item : MonoBehaviour {
                 Mushroom.Affect(playerTag);
                 break;
             case Type.Banana:
-                //Activate script here (Add playerTag as argument)
                 Banana.BananaHit(playerTag);
                 break;
             case Type.Mirror:
-                //Activate script here (Add playerTag as argument)
+                mirrorScript.ActivateMirror(playerTag);
                 break;
             case Type.Smoke:
                 //Activate script here (Add playerTag as argument)
+                Smoke.SmokeInpact(playerTag);
                 break;
             default:
                 break;

@@ -10,6 +10,7 @@ public class LimbMovement : MonoBehaviour {
     public bool isPaused;
     private float stunTime;
     public float lastRotation;
+    [HideInInspector] public float inversion = 1;
 
     private float accumulatedTime;
 
@@ -23,7 +24,7 @@ public class LimbMovement : MonoBehaviour {
         if (isPaused == false)
         {
             lastRotation = transform.rotation.eulerAngles.z;
-            transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation + startRotation);
+            transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation * inversion + startRotation);
         } else if (isPaused == true && stunTime != -1)
         {
             accumulatedTime += Time.deltaTime;

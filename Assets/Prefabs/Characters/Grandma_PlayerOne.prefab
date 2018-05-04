@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 50373777922386886}
   - component: {fileID: 114684912969623696}
   - component: {fileID: 114687883252529722}
+  - component: {fileID: 114960847384458644}
   m_Layer: 0
   m_Name: Grandma_PlayerOne
   m_TagString: Player1
@@ -1148,6 +1149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freestylePrize: 0
+  activateTime: 0
+  recentMovesP1: []
+  recentMovesP2: []
   stateFinished: 0
 --- !u!114 &114687883252529722
 MonoBehaviour:
@@ -1161,6 +1165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThrowingHand: {fileID: 1931366567925454}
+  hasItem: 0
+  Item: {fileID: 0}
 --- !u!114 &114709763015402402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1288,6 +1294,18 @@ MonoBehaviour:
   startRotation: 90
   isPaused: 0
   lastRotation: 0
+--- !u!114 &114960847384458644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119703419588056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e486b7e9cab8334ebc1507d4eace8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMirrored: 0
 --- !u!212 &212048379103235854
 SpriteRenderer:
   m_ObjectHideFlags: 1

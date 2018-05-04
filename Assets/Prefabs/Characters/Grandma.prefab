@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 4082469092883154}
   - component: {fileID: 50869596603595800}
   - component: {fileID: 114509128220889328}
+  - component: {fileID: 114409254651442908}
   m_Layer: 0
   m_Name: Grandma
   m_TagString: Untagged
@@ -1115,6 +1116,8 @@ MonoBehaviour:
   joystickAxis: LeftStickHorizontal2
   maxRotation: 90
   startRotation: 0
+  isPaused: 0
+  lastRotation: 0
 --- !u!114 &114081312718325312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1129,6 +1132,8 @@ MonoBehaviour:
   joystickAxis: RightStickVertical
   maxRotation: -120
   startRotation: 90
+  isPaused: 0
+  lastRotation: 0
 --- !u!114 &114087861345423734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1140,17 +1145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b1431e334cd3c4e91cdd48f8614aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  happyFace:
-  - {fileID: 21300000, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300004, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300002, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  neutralFace:
-  - {fileID: 21300006, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300008, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  sadFace:
-  - {fileID: 21300010, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300012, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
-  - {fileID: 21300014, guid: f25e17f8b23a5614393f3b88d9882801, type: 3}
+  sad: []
+  neutral: []
+  happy: []
 --- !u!114 &114119861681316228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1162,8 +1159,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 5
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114129548304730226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1175,8 +1178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 7
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114133870308262056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1188,8 +1197,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114198044542359150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1229,6 +1244,8 @@ MonoBehaviour:
   joystickAxis: LeftStickHorizontal2
   maxRotation: 120
   startRotation: 0
+  isPaused: 0
+  lastRotation: 0
 --- !u!114 &114238743151679602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1240,8 +1257,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 3
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114260770004586558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1253,8 +1276,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 3
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114265966890605998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1266,8 +1295,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114289743232044418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1282,6 +1317,8 @@ MonoBehaviour:
   joystickAxis: RightStickVertical
   maxRotation: -90
   startRotation: 90
+  isPaused: 0
+  lastRotation: 0
 --- !u!114 &114325120810008606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1296,6 +1333,8 @@ MonoBehaviour:
   joystickAxis: LeftStickVertical
   maxRotation: 90
   startRotation: 270
+  isPaused: 0
+  lastRotation: 0
 --- !u!114 &114371802438797082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1310,6 +1349,20 @@ MonoBehaviour:
   joystickAxis: RightStickHorizontal2
   maxRotation: -90
   startRotation: 0
+  isPaused: 0
+  lastRotation: 0
+--- !u!114 &114409254651442908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728021830205612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e486b7e9cab8334ebc1507d4eace8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMirrored: 0
 --- !u!114 &114509128220889328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1321,8 +1374,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114525973467556324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1334,8 +1393,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 7
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114538428688431938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1347,8 +1412,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 8
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114541179236765902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1360,8 +1431,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 13
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114599067377780378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1373,8 +1450,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 6
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114635293512431228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1389,6 +1472,8 @@ MonoBehaviour:
   joystickAxis: LeftStickVertical
   maxRotation: 120
   startRotation: 270
+  isPaused: 0
+  lastRotation: 0
 --- !u!114 &114647155221560626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1400,8 +1485,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 10
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114647648061078960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1413,8 +1504,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 11
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114831652394025850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1426,8 +1523,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 12
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114853639701109784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1439,8 +1542,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b186d1853afd44a5c6c92483b6643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 9
-  isFirstPlayer: 1
+  playerOnePrefabs: []
+  playerTwoPrefabs: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerOneSpawn: {fileID: 0}
+  playerTwoSpawn: {fileID: 0}
+  showSecondPlayer: 0
+  isInMenu: 0
 --- !u!114 &114955545107525826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1455,6 +1564,8 @@ MonoBehaviour:
   joystickAxis: RightStickHorizontal2
   maxRotation: -120
   startRotation: 0
+  isPaused: 0
+  lastRotation: 0
 --- !u!212 &212033381603864538
 SpriteRenderer:
   m_ObjectHideFlags: 1
