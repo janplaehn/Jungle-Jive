@@ -38,13 +38,17 @@ public class MusicInstructions : State {
         BothArmsUp,
         BothArmsDown,
         SplitArmsUp,
-        SplitArmsDown,
+        SplitBothArmsMiddle,
+        SplitBothArmsDown,
+        SplitLeftArmUp,
+        SplitRightArmUp,
         LeftArmLeftLegUp,
         RightArmRightLegUp,
-        LeftArmleftLegAside,
-        RightArmrightLegAside,
-        LeftArmRightLegSlash,
-        rightArmLeftLegSlash
+        LeftArmLeftLegAside,
+        RightArmRightLegAside,
+        LeftArmUpLeftLegBehind,
+        RightArmUpRightLegBehind,
+
     }
 
 	// Use this for initialization
