@@ -6,7 +6,7 @@ public class ItemMiniGame : State {
 
     public Vector3 birdSpawnPosition;
     public float miniGameTimer = 6f;
-    public GameObject miniGameInstruction;
+    public GameObject shakeText;
     public Transform bird;
 
     private GameObject canvas;
@@ -18,8 +18,14 @@ public class ItemMiniGame : State {
     private bool finished = false;
     private GameObject birdInstance;
 
+    private void Start() {
+        shakeText = GameObject.Find("ShakeText");
+        shakeText.SetActive(false);
+
+    }
 
     public override void OnStart() {
+        shakeText.SetActive(true);
         playerOne = GameObject.FindGameObjectWithTag("Player1");
         playerTwo = GameObject.FindGameObjectWithTag("Player2");
         canvas = GameObject.Find("Canvas");
@@ -54,6 +60,7 @@ public class ItemMiniGame : State {
         else {
             birdInstance.gameObject.GetComponent<BirdControl>().hasPlayerOneWon = false;
         }
+        shakeText.SetActive(false);
     }
 
     public override void OnEnd()

@@ -5,19 +5,15 @@ using UnityEngine;
 public class MirrorMovement : MonoBehaviour {
 
     [HideInInspector] public bool isMirrored = false;
-    public LimbMovement[] movementScripts;
+    [HideInInspector] public LimbMovement[] movementScripts;
 
 	void Start () {
         movementScripts = GetComponentsInChildren<LimbMovement>();
         isMirrored = false;
 	}
-	
-	void Update () {
-        SetMirror();
-	}
 
-    void SetMirror() {
-        if (isMirrored) {
+    public void SetInverted(bool isInverted) {
+        if (isInverted) {
             foreach (LimbMovement script in movementScripts) {
                 script.inversion = -1;
             }
@@ -27,5 +23,6 @@ public class MirrorMovement : MonoBehaviour {
                 script.inversion = 1;
             }
         }
+
     }
 }

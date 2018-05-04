@@ -10,6 +10,7 @@ public class Freestyle : State {
     public float activateTime;
     public List<DanceMove> recentMovesP1;
     public List<DanceMove> recentMovesP2;
+    private GameObject freestyleText;
     private ScoringSystem scoringSystem;
     private InputCheck inputCheck;
     private DanceMove lastMove;
@@ -19,8 +20,14 @@ public class Freestyle : State {
     private int playerOneScore;
     private int playerTwoScore;
 
-	public override void OnStart()
+    private void Start() {
+        freestyleText = GameObject.Find("FreestyleText");
+        freestyleText.SetActive(false);
+    }
+
+    public override void OnStart()
     {
+        freestyleText.SetActive(true);
         isActive = true;
         recentMovesP1 = new List<DanceMove>();
         recentMovesP2 = new List<DanceMove>();
@@ -100,6 +107,7 @@ public class Freestyle : State {
 
     public override void OnEnd ()
     {
+        freestyleText.SetActive(false);
         if (playerOneScore > playerTwoScore)
         {
             scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize);

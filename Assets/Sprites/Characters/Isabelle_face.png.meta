@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 6c5200afb01440a4e8f159a3c317ce80
-timeCreated: 1523609619
+guid: 6eea425f4402a444181fbad635996b15
+timeCreated: 1525422118
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: InstructionsSheet2_0
-    21300002: InstructionsSheet2_1
-    21300004: InstructionsSheet2_2
-    21300006: InstructionsSheet2_3
-    21300008: InstructionsSheet2_4
-    21300010: InstructionsSheet2_5
-    21300012: InstructionsSheet2_6
-    21300014: InstructionsSheet2_7
+    21300000: Isabelle_face_0
+    21300002: Isabelle_face_1
+    21300004: Isabelle_face_2
+    21300006: Isabelle_face_3
+    21300008: Isabelle_face_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -118,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: InstructionsSheet2_0
+      name: Isabelle_face_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 372.6667
-        width: 186.33333
-        height: 186.33333
+        y: 1090.5
+        width: 929.6667
+        height: 1090.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,13 +129,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InstructionsSheet2_1
+      name: Isabelle_face_1
       rect:
         serializedVersion: 2
-        x: 186
-        y: 372.6667
-        width: 186.33333
-        height: 186.33333
+        x: 929
+        y: 1090.5
+        width: 929.6667
+        height: 1090.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,13 +143,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InstructionsSheet2_2
+      name: Isabelle_face_2
       rect:
         serializedVersion: 2
-        x: 372
-        y: 372.6667
-        width: 186.33333
-        height: 186.33333
+        x: 1858
+        y: 1090.5
+        width: 929.6667
+        height: 1090.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,55 +157,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InstructionsSheet2_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 186.66667
-        width: 186.33333
-        height: 186.33333
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: InstructionsSheet2_4
-      rect:
-        serializedVersion: 2
-        x: 186
-        y: 186.66667
-        width: 186.33333
-        height: 186.33333
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: InstructionsSheet2_5
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 186.66667
-        width: 186.33333
-        height: 186.33333
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: InstructionsSheet2_6
+      name: Isabelle_face_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.66667175
-        width: 186.33333
-        height: 186.33333
+        y: 0.5
+        width: 929.6667
+        height: 1090.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,13 +171,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: InstructionsSheet2_7
+      name: Isabelle_face_4
       rect:
         serializedVersion: 2
-        x: 186
-        y: 0.66667175
-        width: 186.33333
-        height: 186.33333
+        x: 929
+        y: 0.5
+        width: 929.6667
+        height: 1090.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

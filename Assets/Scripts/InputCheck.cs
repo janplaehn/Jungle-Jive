@@ -13,6 +13,11 @@ public class InputCheck : MonoBehaviour {
     LimbMovement leftLegP2;
     LimbMovement rightLegP2;
 
+    float[] currentAccel1;
+    float[] lastAccel1;
+
+    float[] currentAccel2;
+    float[] lastAccel2;
 
     public enum Players
     {
@@ -127,6 +132,7 @@ public class InputCheck : MonoBehaviour {
     {
         return 100 * GetLimbMultiplier(currentMove) * 2; // times two is for when the player times their dance move perfectly
     }
+
     private int GetLimbMultiplier (DanceMove currentMove)
     {
         int index = 0;
@@ -193,5 +199,23 @@ public class InputCheck : MonoBehaviour {
             if (limb.GetLimbState() == 2) return Mathf.Abs(limb.lastRotation - limb.transform.rotation.eulerAngles.z);
         }
         return 0f;
+    }
+
+    public void SetAccel(float[] givenAccel, Players givenPlayer)
+    {
+        if(givenPlayer == Players.PlayerOne)
+        {
+            lastAccel1 = currentAccel1;
+            currentAccel1 = givenAccel;
+        } else
+        {
+            lastAccel2 = currentAccel2;
+            currentAccel2 = givenAccel;
+        }
+    }
+
+    public void GetAccel()
+    {
+
     }
 }
