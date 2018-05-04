@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 114148108668482360}
   - component: {fileID: 114327904279723198}
   m_Layer: 0
-  m_Name: Isabelle_PlayerTwo
+  m_Name: Cindy_PlayerTwo
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
