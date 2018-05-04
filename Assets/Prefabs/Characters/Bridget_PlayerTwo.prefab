@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114719078870184876}
   - component: {fileID: 114242606554978382}
   m_Layer: 0
-  m_Name: Grandma_PlayerTwo
+  m_Name: Bridget_PlayerTwo
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

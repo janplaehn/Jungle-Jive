@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 114986769356503162}
   - component: {fileID: 114801459228380068}
   m_Layer: 0
-  m_Name: FakeJakob_PlayerTwo
+  m_Name: Jakob_PlayerTwo
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
