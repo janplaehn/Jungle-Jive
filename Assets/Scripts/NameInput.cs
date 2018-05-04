@@ -23,7 +23,7 @@ public class NameInput : MonoBehaviour {
     private GameObject currentLetter;
     private int currentLetterIndex;
 
-	void Awake () {
+	void Start () {
 
         int[] temp = new int[10];
         for (int i = temp.Length - 1; i >= 0; i--) {

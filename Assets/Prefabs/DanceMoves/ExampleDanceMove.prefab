@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6c7fa50fadef94ca2e86d9d84d213a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightArmPosition: 2
-  LeftArmPosition: 1
-  RightLegPosition: 0
-  LeftLegPosition: 1
-  instructionImageIndex: 7
+  RightArmPosition: -1
+  LeftArmPosition: -1
+  RightLegPosition: -1
+  LeftLegPosition: -1
+  instructionImageIndex: 2

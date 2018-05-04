@@ -19,7 +19,7 @@ public class MirrorEffect : MonoBehaviour {
     }
 
     public void ActivateMirror(string tag) {
-        GameObject.FindGameObjectWithTag(tag).GetComponent<MirrorMovement>().SetInverted(true);
+        GameObject.FindGameObjectWithTag(tag).GetComponent<MirrorMovement>().isMirrored = true;
         StartCoroutine(DeactivateMirror(tag));
         if (tag == "Player1") {
             mirrorInstanceOne = Instantiate(mirror, playerOneSpawn.transform.position + Vector3.down * mirrorOffset, Quaternion.identity).gameObject;
@@ -32,12 +32,12 @@ public class MirrorEffect : MonoBehaviour {
 
     IEnumerator DeactivateMirror(string tag) {
         yield return new WaitForSeconds(effectTime);
-        GameObject.FindGameObjectWithTag(tag).GetComponent<MirrorMovement>().SetInverted(false);
+        GameObject.FindGameObjectWithTag(tag).GetComponent<MirrorMovement>().isMirrored = false;
         if (tag == "Player1") {
-            Destroy(mirrorInstanceOne);
+            Destroy(mirrorInstanceOne.gameObject);
         }
         else if (tag == "Player2") {
-            Destroy(mirrorInstanceTwo);
+            Destroy(mirrorInstanceTwo.gameObject);
         }
     }
 }

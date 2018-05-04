@@ -39,9 +39,6 @@ public class SkinSetting : MonoBehaviour {
         PlayerPrefs.SetInt("FirstPlayerSkin", playerOneIndex);
         Destroy(playerOne);
         playerOne = Instantiate(playerOnePrefabs[playerOneIndex], playerOneSpawn.transform.position, Quaternion.identity);
-        if (isInMenu) {
-            playerOne.GetComponent<Rigidbody2D>().gravityScale = 0;
-        }
     }
 
     public void ChangePlayerTwoSkin(int deltaIndex)
@@ -52,8 +49,5 @@ public class SkinSetting : MonoBehaviour {
         PlayerPrefs.SetInt("SecondPlayerSkin", playerTwoIndex);
         Destroy(playerTwo);
         playerTwo = Instantiate(playerTwoPrefabs[playerTwoIndex], playerTwoSpawn.transform.position, Quaternion.identity);
-        if (isInMenu) {
-            playerTwo.GetComponent<Rigidbody2D>().gravityScale = 0;
-        }
     }
 }

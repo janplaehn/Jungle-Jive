@@ -65,9 +65,7 @@ public class Item : MonoBehaviour {
         if (collision.gameObject.transform.parent) {
             if (collision.gameObject.transform.parent.tag == ("Player1") || collision.gameObject.transform.parent.tag == ("Player2")) {
                 if (isThrown) {
-                    isThrown = false;
                     ActivateItem(collision.gameObject.transform.parent.tag);
-                    Destroy(this.gameObject);
                 }
                 else {
                     AttachToHand(collision.gameObject.transform.parent.GetComponent<Getbodyparts>());
@@ -79,7 +77,7 @@ public class Item : MonoBehaviour {
 
     private void AttachToHand(Getbodyparts body) {
         if (body.hasItem && body.Item) {
-            if (body.Item != this.gameObject) Destroy(body.Item);
+            if (body.Item != this) Destroy(body.Item);
         }
         body.Item = this.gameObject;
         body.hasItem = true;
@@ -116,6 +114,7 @@ public class Item : MonoBehaviour {
                 mirrorScript.ActivateMirror(playerTag);
                 break;
             case Type.Smoke:
+                //Activate script here (Add playerTag as argument)
                 Smoke.SmokeInpact(playerTag);
                 break;
             default:
