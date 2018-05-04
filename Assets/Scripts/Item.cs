@@ -79,7 +79,7 @@ public class Item : MonoBehaviour {
 
     private void AttachToHand(Getbodyparts body) {
         if (body.hasItem && body.Item) {
-            if (body.Item != this) Destroy(body.Item);
+            if (body.Item != this.gameObject) Destroy(body.Item);
         }
         body.Item = this.gameObject;
         body.hasItem = true;
