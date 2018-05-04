@@ -81,6 +81,7 @@ public class MusicInstructions : State {
         timingP1.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player1").transform.position.x, GameObject.FindGameObjectWithTag("Player1").transform.position.y - 1.5f,1);
         timingP2.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player2").transform.position.x, GameObject.FindGameObjectWithTag("Player2").transform.position.y - 1.5f, 1);
         musicSource.Play();
+        if (introTime > 0) started = false;
     }
 
     public override bool OnUpdate ()
