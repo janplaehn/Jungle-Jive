@@ -1105,6 +1105,7 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114242606554978382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1117,6 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMirrored: 0
+  movementScripts: []
 --- !u!114 &114485250654881302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1133,6 +1135,7 @@ MonoBehaviour:
   startRotation: 270
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114538556617247648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1149,6 +1152,7 @@ MonoBehaviour:
   startRotation: 90
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114543049012500368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1165,6 +1169,7 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114578295760880994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1181,6 +1186,7 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114719078870184876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1192,6 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bef8a3f903ac004a98f781b1ed26343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Bridget
   ThrowingHand: {fileID: 1716026235897076}
   hasItem: 0
   Item: {fileID: 0}
@@ -1211,6 +1218,7 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114775935634486340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1227,6 +1235,7 @@ MonoBehaviour:
   startRotation: 270
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114802956976493984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1259,6 +1268,7 @@ MonoBehaviour:
   startRotation: 90
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114887328884547866
 MonoBehaviour:
   m_ObjectHideFlags: 1

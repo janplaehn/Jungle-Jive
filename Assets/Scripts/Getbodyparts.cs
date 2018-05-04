@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Getbodyparts : MonoBehaviour {
 
+
+    public string characterName;
     public GameObject ThrowingHand;
     [HideInInspector] public bool hasItem = false;
     [HideInInspector] public GameObject Item;

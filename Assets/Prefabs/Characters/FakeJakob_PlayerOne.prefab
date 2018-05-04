@@ -1138,6 +1138,7 @@ MonoBehaviour:
   startRotation: 90
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114381688783105764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1154,6 +1155,7 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114411469067033830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1170,6 +1172,7 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114476786867547620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1186,6 +1189,7 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114556883662967446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1198,6 +1202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMirrored: 0
+  movementScripts: []
 --- !u!114 &114706148616567580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1214,6 +1219,7 @@ MonoBehaviour:
   startRotation: 270
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114775173766746804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1246,6 +1252,7 @@ MonoBehaviour:
   startRotation: 90
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114826861875343656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1262,6 +1269,7 @@ MonoBehaviour:
   startRotation: 0
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114840628653854872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1273,6 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bef8a3f903ac004a98f781b1ed26343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: Jakob
   ThrowingHand: {fileID: 1732914667223788}
   hasItem: 0
   Item: {fileID: 0}
@@ -1292,6 +1301,7 @@ MonoBehaviour:
   startRotation: 270
   isPaused: 0
   lastRotation: 0
+  inversion: 1
 --- !u!114 &114991561679709370
 MonoBehaviour:
   m_ObjectHideFlags: 1

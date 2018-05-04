@@ -25,6 +25,7 @@ TagManager:
   - HatUnlockUI
   - FeedbackFace1
   - FeedbackFace2
+  - NameDisplay
   layers:
   - Default
   - TransparentFX

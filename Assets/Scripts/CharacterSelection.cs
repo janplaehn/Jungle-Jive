@@ -19,9 +19,6 @@ public class CharacterSelection : MonoBehaviour {
     private static int charactersConfirmed = 0;
     public static int skinCount = 2;
 
-    void Start() {
-    }
-
     public void NextCharacter() {
         switch (player) {
             case Player.Player1:
@@ -52,12 +49,12 @@ public class CharacterSelection : MonoBehaviour {
     public void ConfirmCharacters(string Scene) {
         charactersConfirmed++;
         foreach (GameObject button in PlayerButtons) {
-                button.gameObject.SetActive(false);
-            }
-            if (charactersConfirmed >= 2) {
-                charactersConfirmed = 0;
-                GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("MenuMusic");
-                SceneManager.LoadScene(Scene);
-            }
+            button.gameObject.SetActive(false);
+        }
+        if (charactersConfirmed >= 2) {
+            charactersConfirmed = 0;
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("MenuMusic");
+            SceneManager.LoadScene(Scene);
+        }
     }
 }
