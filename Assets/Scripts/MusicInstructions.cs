@@ -8,7 +8,8 @@ public class MusicInstructions : State {
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
-    public Image timing;
+    private SpriteRenderer timing;
+    public GameObject timingObject;
     public Image nextInstruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
@@ -24,11 +25,11 @@ public class MusicInstructions : State {
     public float introTime;
     public float tempo;
     public Sprite timingSprite;
-    [Range(1f, 4f)] public float maxTimingSpriteSize = 1.5f;
+    [Range(1f, 4f)] public float maxTimingSpriteSize = 4f;
 
     private float errorMargin = 0.2f;
     public bool isPaused = false;
-    private float scaleTiming = 1;
+    private float scaleTiming = 100;
 
 
     public enum DanceMoveEnum
@@ -49,6 +50,7 @@ public class MusicInstructions : State {
 
 	// Use this for initialization
 	public override void OnStart () {
+        timing = timingObject.GetComponent<SpriteRenderer>();
         lastMove = timingPairs[lastPairIndex].firstValue;
         nextInstruction.sprite = instructionImageArray[(int)lastMove.instructionImageIndex];
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
@@ -58,8 +60,8 @@ public class MusicInstructions : State {
             started = false;
         }
         instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
-        timing.sprite = timingSprite;
-        timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+        timing.sprite = instruction.sprite;
+        timing.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
         if (lastPairIndex + 1 <= timingPairs.Length - 1)
         {
             nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
@@ -68,7 +70,7 @@ public class MusicInstructions : State {
         {
             nextInstruction.sprite = voidSprite;
         }
-
+        timing.gameObject.transform.position = new Vector3( GameObject.FindGameObjectWithTag("Player1").transform.position.x, GameObject.FindGameObjectWithTag("Player1").transform.position.y - 1.5f,1) ;
         musicSource.Play();
     }
 
@@ -104,8 +106,7 @@ public class MusicInstructions : State {
                 moveRatedP2 = false;
                 accumulatedTime = 0f;
                 instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
-                timing.sprite = timingSprite;
-                timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+                
                 if (lastPairIndex + 1 <= timingPairs.Length - 1)
                 {
                     nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
@@ -114,7 +115,11 @@ public class MusicInstructions : State {
                 {
                     nextInstruction.sprite = voidSprite;
                 }
+                timing.sprite = instruction.sprite;
+                timing.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+                timing.color = new Color(1f, 1f, 1f, 0.25f);
                 lastMove = timingPairs[lastPairIndex].firstValue;
+
             }
         }
         else if (intro == true)
@@ -147,8 +152,9 @@ public class MusicInstructions : State {
 
     void animateTiming (float perfectTime, float accumulatedTime)
     {
-        timing.rectTransform.localScale = new Vector3(1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 0);
-        if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1.3f) {
+        timing.gameObject.transform.localScale = new Vector3(4 + (10 * (perfectTime - accumulatedTime)) / perfectTime, 4 + (10 * (perfectTime - accumulatedTime)) / perfectTime, 0);
+        timing.color = new Color(1f, 1f, 1f, 0.25f * accumulatedTime);
+        if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1f) {
             timing.sprite = voidSprite;
         }
     }
