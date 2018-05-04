@@ -8,8 +8,10 @@ public class MusicInstructions : State {
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
-    private SpriteRenderer timing;
-    public GameObject timingObject;
+    private SpriteRenderer timingP1;
+    private SpriteRenderer timingP2;
+    public GameObject timingObjectP1;
+    public GameObject timingObjectP2;
     public Image nextInstruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
@@ -29,7 +31,7 @@ public class MusicInstructions : State {
 
     private float errorMargin = 0.2f;
     public bool isPaused = false;
-    private float scaleTiming = 100;
+    private float scaleTiming = 1;
 
 
     public enum DanceMoveEnum
@@ -50,7 +52,8 @@ public class MusicInstructions : State {
 
 	// Use this for initialization
 	public override void OnStart () {
-        timing = timingObject.GetComponent<SpriteRenderer>();
+        timingP1 = timingObjectP1.GetComponent<SpriteRenderer>();
+        timingP2 = timingObjectP2.GetComponent<SpriteRenderer>();
         lastMove = timingPairs[lastPairIndex].firstValue;
         nextInstruction.sprite = instructionImageArray[(int)lastMove.instructionImageIndex];
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
@@ -60,8 +63,10 @@ public class MusicInstructions : State {
             started = false;
         }
         instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
-        timing.sprite = instruction.sprite;
-        timing.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+        timingP1.sprite = instruction.sprite;
+        timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+        timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
+        timingP2.sprite = timingP1.sprite;
         if (lastPairIndex + 1 <= timingPairs.Length - 1)
         {
             nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
@@ -70,7 +75,8 @@ public class MusicInstructions : State {
         {
             nextInstruction.sprite = voidSprite;
         }
-        timing.gameObject.transform.position = new Vector3( GameObject.FindGameObjectWithTag("Player1").transform.position.x, GameObject.FindGameObjectWithTag("Player1").transform.position.y - 1.5f,1) ;
+        timingP1.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player1").transform.position.x, GameObject.FindGameObjectWithTag("Player1").transform.position.y - 1.5f,1);
+        timingP2.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player2").transform.position.x, GameObject.FindGameObjectWithTag("Player2").transform.position.y - 1.5f, 1);
         musicSource.Play();
     }
 
@@ -78,7 +84,8 @@ public class MusicInstructions : State {
     {
         if (started == true && isPaused == false)
         {
-            timing.enabled = true;
+            timingP1.enabled = true;
+            timingP2.enabled = true;
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime <= GetTiming())
             {
@@ -115,9 +122,12 @@ public class MusicInstructions : State {
                 {
                     nextInstruction.sprite = voidSprite;
                 }
-                timing.sprite = instruction.sprite;
-                timing.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
-                timing.color = new Color(1f, 1f, 1f, 0.25f);
+                timingP1.sprite = instruction.sprite;
+                timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+                timingP1.color = new Color(1f, 1f, 1f, 0.25f);
+                timingP2.sprite = timingP1.sprite;
+                timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
+                timingP2.color = timingP1.color;
                 lastMove = timingPairs[lastPairIndex].firstValue;
 
             }
@@ -127,7 +137,8 @@ public class MusicInstructions : State {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime >= introTime)
             {
-                timing.enabled = true;
+                timingP1.enabled = true;
+                timingP2.enabled = true;
                 started = true;
                 intro = false;
                 accumulatedTime = 0f;
@@ -152,11 +163,14 @@ public class MusicInstructions : State {
 
     void animateTiming (float perfectTime, float accumulatedTime)
     {
-        timing.gameObject.transform.localScale = new Vector3(4 + (10 * (perfectTime - accumulatedTime)) / perfectTime, 4 + (10 * (perfectTime - accumulatedTime)) / perfectTime, 0);
-        timing.color = new Color(1f, 1f, 1f, 0.25f * accumulatedTime);
+        timingP1.gameObject.transform.localScale = new Vector3(4 + (10 * (perfectTime - accumulatedTime)) / perfectTime, 4 + (10 * (perfectTime - accumulatedTime)) / perfectTime, 0);
+        timingP1.color = new Color(1f, 1f, 1f, 0.25f * accumulatedTime);
         if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1f) {
-            timing.sprite = voidSprite;
+            timingP1.sprite = voidSprite;
+            timingP2.sprite = voidSprite;
         }
+        timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
+        timingP2.color = timingP1.color;
     }
 
     void checkTiming (float accTime)
@@ -187,7 +201,7 @@ public class MusicInstructions : State {
             }
             moveRatedP2 = true;
         }
-        if (accTime >= GetTiming()) timing.sprite = voidSprite;
+        if (accTime >= GetTiming()) timingP1.sprite = voidSprite;
     }
 
     float GetTiming()

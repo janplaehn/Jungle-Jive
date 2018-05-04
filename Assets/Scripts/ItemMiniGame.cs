@@ -18,7 +18,6 @@ public class ItemMiniGame : State {
     private bool finished = false;
     private GameObject birdInstance;
 
-    //
 
     public override void OnStart() {
         playerOne = GameObject.FindGameObjectWithTag("Player1");
