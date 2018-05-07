@@ -3,6 +3,7 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
+		_GradientTex("GradientTexture", 2D) = "white" {}
 		_ScreenSplitMin("Screen Split Minimum Percentage", float) = 0
 		_ScreenSplitMax("Screen Split Maximum Percentage", float) = 0
 		_SineWaveHeight("Sine Wave Height", float) = 0
@@ -44,6 +45,7 @@
 			}
 			
 			sampler2D _MainTex;
+			sampler2D _GradientTex;
 			float _ScreenSplitMax;
 			float _ScreenSplitMin;
 			float _SineWaveHeight;
@@ -51,16 +53,24 @@
 			float _WaveLengthDiv;
 			float _IsInverted;
 
+			fixed4 change(v2f i){
+				fixed4 col = tex2D(_MainTex, i.uv + float2(0, sin(i.vertex.x / _WaveLengthDiv + _Time[0] * _WobInt) * _SineWaveHeight / 10));
+				col = abs(1 * _IsInverted - col);
+				return col;
+			}
+
 			fixed4 frag (v2f i) : SV_Target
 			{
-				if (i.vertex.x >= _ScreenParams.x * _ScreenSplitMin && i.vertex.x <= _ScreenParams.x * _ScreenSplitMax){
-					fixed4 col = tex2D(_MainTex, i.uv + float2(0, sin(i.vertex.x/ _WaveLengthDiv + _Time[0] * _WobInt) * _SineWaveHeight / 10));
-					col = abs(1 * _IsInverted - col);
-					return col;
-				}
+				fixed4 changedcol = change(i);
 				fixed4 col = tex2D(_MainTex, i.uv);
 
-				return col;
+				changedcol *= abs(tex2D(_GradientTex, i.uv) - 1);
+				col *= tex2D(_GradientTex, i.uv);
+
+				fixed4 endcol = col + changedcol;
+
+				return endcol;
+				
 			}
 			ENDCG
 		}
