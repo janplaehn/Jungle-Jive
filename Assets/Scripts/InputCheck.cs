@@ -159,21 +159,21 @@ public class InputCheck : MonoBehaviour {
         return index;
     }
 
-    public DanceMove getCurrentMove (bool isPlayerOne) //Gets current position of limbs as DanceMove from player one or two
+    public TempMove getCurrentMove (bool isPlayerOne) //Gets current position of limbs as DanceMove from player one or two
     {
-        DanceMove temp = new DanceMove();
+        TempMove temp = new TempMove();
         if (isPlayerOne == true)
         {
-            temp.LeftArmPosition = (DanceMove.LimbState)leftArm.GetLimbState();
-            temp.RightArmPosition = (DanceMove.LimbState)rightArm.GetLimbState();
-            temp.LeftLegPosition = (DanceMove.LimbState)leftLeg.GetLimbState();
-            temp.RightLegPosition = (DanceMove.LimbState)rightLeg.GetLimbState();
+            temp.LeftArmPosition = (TempMove.LimbState)leftArm.GetLimbState();
+            temp.RightArmPosition = (TempMove.LimbState)rightArm.GetLimbState();
+            temp.LeftLegPosition = (TempMove.LimbState)leftLeg.GetLimbState();
+            temp.RightLegPosition = (TempMove.LimbState)rightLeg.GetLimbState();
         } else
         {
-            temp.LeftArmPosition = (DanceMove.LimbState)leftArmP2.GetLimbState();
-            temp.RightArmPosition = (DanceMove.LimbState)rightArmP2.GetLimbState();
-            temp.LeftLegPosition = (DanceMove.LimbState)leftLegP2.GetLimbState();
-            temp.RightLegPosition = (DanceMove.LimbState)rightLegP2.GetLimbState();
+            temp.LeftArmPosition = (TempMove.LimbState)leftArmP2.GetLimbState();
+            temp.RightArmPosition = (TempMove.LimbState)rightArmP2.GetLimbState();
+            temp.LeftLegPosition = (TempMove.LimbState)leftLegP2.GetLimbState();
+            temp.RightLegPosition = (TempMove.LimbState)rightLegP2.GetLimbState();
         }
         return temp;
     }

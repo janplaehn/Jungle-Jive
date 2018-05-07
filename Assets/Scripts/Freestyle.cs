@@ -5,16 +5,16 @@ using UnityEngine;
 public class Freestyle : State {
     public int freestylePrize;
     private bool isActive;
-    private float activeTimelimit;
+    public float activeTimelimit;
     private float accumulatedTime = 0 ;
     private float measureTimer = 0;
     public float activateTime;
-    public List<DanceMove> recentMovesP1;
-    public List<DanceMove> recentMovesP2;
+    public List<TempMove> recentMovesP1;
+    public List<TempMove> recentMovesP2;
     private GameObject freestyleText;
     private ScoringSystem scoringSystem;
     private InputCheck inputCheck;
-    private DanceMove lastMove;
+    private TempMove lastMove;
     int repitionScore = 25;
     int maxScore = 100;
     public bool stateFinished = false;
@@ -30,22 +30,20 @@ public class Freestyle : State {
     {
         freestyleText.SetActive(true);
         isActive = true;
-        recentMovesP1 = new List<DanceMove>();
-        recentMovesP2 = new List<DanceMove>();
+        recentMovesP1 = new List<TempMove>();
+        recentMovesP2 = new List<TempMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
     }
 
     public override bool OnUpdate ()
     {
-        Debug.Log(activeTimelimit); 
         accumulatedTime += Time.deltaTime;
         measureTimer += Time.deltaTime;
-        if (accumulatedTime < activeTimelimit && measureTimer > MusicInstructions.tempo) 
+        if (accumulatedTime < activeTimelimit && measureTimer > 1) 
         {
-
-            DanceMove tempMoveP1 = inputCheck.getCurrentMove(true);
-            DanceMove tempMoveP2 = inputCheck.getCurrentMove(false);
+            TempMove tempMoveP1 = inputCheck.getCurrentMove(true);
+            TempMove tempMoveP2 = inputCheck.getCurrentMove(false);
             if (recentMovesP1.Count >= 5 && !CheckIfSameMove(recentMovesP1[4], tempMoveP1))
             {
                 int tempScore = 0;
@@ -100,7 +98,7 @@ public class Freestyle : State {
             if (recentMovesP2.Count > 5) recentMovesP2.RemoveAt(0);
             measureTimer = 0;
         }
-        else 
+        else if (accumulatedTime >= activeTimelimit)
         {
             stateFinished = true;
             return false;
@@ -126,7 +124,7 @@ public class Freestyle : State {
         Debug.Log(playerOneScore + " " + playerTwoScore);
     }
 
-    bool CheckIfSameMove (DanceMove move1, DanceMove move2)
+    bool CheckIfSameMove (TempMove move1, TempMove move2)
     {
         bool temp = false;
         if (move1.LeftArmPosition == move2.LeftArmPosition && move1.RightArmPosition == move2.RightArmPosition && move1.LeftLegPosition == move2.LeftLegPosition && move1.RightLegPosition == move2.RightLegPosition) 

@@ -49,7 +49,6 @@ public class GameControlling : MonoBehaviour {
 
     void CreateInstructions()
     {
-
         //DanceMove leftArmUp = new DanceMove((int)LimbState.Up, (int)LimbState.Up, -(int)LimbState.None, (int)LimbState.None, (int)MusicInstructions.DanceMoveEnum.LeftArmUp);
         //DanceMove rightArmUp = new DanceMove((int)LimbState.Up, (int)LimbState.Down, -(int)LimbState.Middle, -(int)LimbState.Middle, (int)MusicInstructions.DanceMoveEnum.RightArmUp);
         //DanceMove bothArmsUp = new DanceMove((int)LimbState.Up, (int)LimbState.Up, -(int)LimbState.Middle, -(int)LimbState.Middle, (int)MusicInstructions.DanceMoveEnum.BothArmsUp);
