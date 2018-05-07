@@ -15,6 +15,9 @@ public class GameControlling : MonoBehaviour {
     void Start() {
         isPaused = false;
         CreateInstructions();
+        if (GameObject.Find("MusicManager")) {
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("DanceMusic");
+        }
     }
 
     void Update() {
@@ -34,6 +37,7 @@ public class GameControlling : MonoBehaviour {
                 face.GetComponent<AudienceFeedbackController>().BeHappy();
         }
         if (GameObject.Find("MusicManager")) {
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("DanceMusic");
             GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
         }
         Invoke("QuitToLeaderboard", 5f);
