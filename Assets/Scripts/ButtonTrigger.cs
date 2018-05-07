@@ -11,10 +11,12 @@ public class ButtonTrigger : MonoBehaviour {
 
     private float timeLeft;
     private bool isCharging;
+    private Animator chargeAnimator;
 
     private void Awake() {
         timeLeft = chargeTime;
-        chargeBar.GetComponent<Animator>().speed = chargeTime;
+        chargeAnimator = chargeBar.GetComponent<Animator>();
+        chargeAnimator.speed = 1 / chargeTime;
     }
 
     void Update () {
@@ -45,8 +47,11 @@ public class ButtonTrigger : MonoBehaviour {
     }
 
     public void SetChargeBarAnimation() {
-        if (timeLeft > 0) {
-            //charge
+        if (isCharging) {
+            chargeAnimator.Play("charging");
+        }
+        else {
+            chargeAnimator.Play("idle");
         }
     }
 }

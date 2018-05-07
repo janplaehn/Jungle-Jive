@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4422968731322810}
   - component: {fileID: 114602119706776116}
   m_Layer: 0
-  m_Name: SplitBothArmsUp
+  m_Name: 5. SplitBothArmsUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

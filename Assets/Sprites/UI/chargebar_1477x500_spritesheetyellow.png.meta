@@ -1,9 +1,35 @@
 fileFormatVersion: 2
 guid: c23da5d1ce994e1469fd8b017de96d6b
-timeCreated: 1525684384
+timeCreated: 1525687173
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: chargebar_1477x500_spritesheetyellow_0
+    21300002: chargebar_1477x500_spritesheetyellow_1
+    21300004: chargebar_1477x500_spritesheetyellow_2
+    21300006: chargebar_1477x500_spritesheetyellow_3
+    21300008: chargebar_1477x500_spritesheetyellow_4
+    21300010: chargebar_1477x500_spritesheetyellow_5
+    21300012: chargebar_1477x500_spritesheetyellow_6
+    21300014: chargebar_1477x500_spritesheetyellow_7
+    21300016: chargebar_1477x500_spritesheetyellow_8
+    21300018: chargebar_1477x500_spritesheetyellow_9
+    21300020: chargebar_1477x500_spritesheetyellow_10
+    21300022: chargebar_1477x500_spritesheetyellow_11
+    21300024: chargebar_1477x500_spritesheetyellow_12
+    21300026: chargebar_1477x500_spritesheetyellow_13
+    21300028: chargebar_1477x500_spritesheetyellow_14
+    21300030: chargebar_1477x500_spritesheetyellow_15
+    21300032: chargebar_1477x500_spritesheetyellow_16
+    21300034: chargebar_1477x500_spritesheetyellow_17
+    21300036: chargebar_1477x500_spritesheetyellow_18
+    21300038: chargebar_1477x500_spritesheetyellow_19
+    21300040: chargebar_1477x500_spritesheetyellow_20
+    21300042: chargebar_1477x500_spritesheetyellow_21
+    21300044: chargebar_1477x500_spritesheetyellow_22
+    21300046: chargebar_1477x500_spritesheetyellow_23
+    21300048: chargebar_1477x500_spritesheetyellow_24
+    21300050: chargebar_1477x500_spritesheetyellow_25
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +66,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +92,413 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_1
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 3596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_2
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 3596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_3
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 3596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_4
+      rect:
+        serializedVersion: 2
+        x: 5908
+        y: 3596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_6
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 3096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_7
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 3096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_8
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 3096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_9
+      rect:
+        serializedVersion: 2
+        x: 5908
+        y: 3096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_11
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 2596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_12
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 2596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_13
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 2596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_14
+      rect:
+        serializedVersion: 2
+        x: 5908
+        y: 2596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_16
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 2096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_17
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 2096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_18
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 2096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_19
+      rect:
+        serializedVersion: 2
+        x: 5908
+        y: 2096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_21
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 1596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_22
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 1596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_23
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 1596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_24
+      rect:
+        serializedVersion: 2
+        x: 5908
+        y: 1596
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: chargebar_1477x500_spritesheetyellow_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1096
+        width: 1477
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
