@@ -1778,7 +1778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bef8a3f903ac004a98f781b1ed26343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Isabell
+  characterName: Hector
   ThrowingHand: {fileID: 1867845741804706}
   hasItem: 0
   Item: {fileID: 0}
