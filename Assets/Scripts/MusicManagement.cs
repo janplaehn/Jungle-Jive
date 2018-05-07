@@ -31,10 +31,6 @@ public class MusicManagement : MonoBehaviour {
         }
     }
 
-    private void Start() {
-        if (isFirstInstance) Play(tracks[0].name);
-    }
-
     public void Play(string sound) {
         MusicTrack s = Array.Find(tracks, item => item.name == sound);
         if (s == null) {

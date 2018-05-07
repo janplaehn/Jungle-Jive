@@ -309,16 +309,17 @@ MonoBehaviour:
     secondValue: 3
   voidSprite: {fileID: 21300000, guid: 03450066823e90c4692f03232b66d51b, type: 3}
   instructionImageArray:
-  - {fileID: 21300008, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
-  - {fileID: 21300002, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
-  - {fileID: 21300000, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
-  - {fileID: 21300006, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
-  - {fileID: 21300004, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
-  - {fileID: 21300010, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
-  - {fileID: 21300012, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
-  - {fileID: 21300014, guid: 6c5200afb01440a4e8f159a3c317ce80, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   instruction: {fileID: 0}
-  timing: {fileID: 0}
+  timingObjectP1: {fileID: 0}
+  timingObjectP2: {fileID: 0}
   nextInstruction: {fileID: 0}
   musicSource: {fileID: 82982055185355104}
   stateFinished: 0
@@ -355,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdSpawnPosition: {x: 0, y: 4, z: 0}
   miniGameTimer: 8
-  miniGameInstruction: {fileID: 0}
+  shakeText: {fileID: 0}
   bird: {fileID: 4525137313455878, guid: 0d254e04b13d5f74d84fb4c85f97d4c7, type: 2}
 --- !u!114 &114882818694792984
 MonoBehaviour:
