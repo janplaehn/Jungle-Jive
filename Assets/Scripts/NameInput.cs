@@ -12,6 +12,8 @@ public class NameInput : MonoBehaviour {
     public GameObject[] letterGameObjects;
     public GameObject[] PlayerButtons;
     public GameObject Canvas;
+    public Color highlightColor;
+    public Color defaultColor;
 
     [HideInInspector] public static string playerOneName;
     [HideInInspector] public static string playerTwoName;
@@ -55,13 +57,12 @@ public class NameInput : MonoBehaviour {
         }
         currentLetter = letterGameObjects[0];
         currentLetterIndex = 0;
-        currentLetter.GetComponent<Text>().fontStyle = FontStyle.Bold;
+        currentLetter.GetComponent<Text>().color = highlightColor;
 
         if (!hasPlayerOneHighscore && player == Player.Player1) {
             foreach (GameObject button in PlayerButtons) {
                 button.gameObject.SetActive(false);
             }
-            //Character.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             namesEntered++;
             hasPlayerOneHighscore = true;
@@ -70,7 +71,6 @@ public class NameInput : MonoBehaviour {
             foreach (GameObject button in PlayerButtons) {
                 button.gameObject.SetActive(false);
             }
-            //Character.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
             namesEntered++;
             hasPlayerTwoHighscore = true;
@@ -105,7 +105,7 @@ public class NameInput : MonoBehaviour {
     }
 
     public void ConfirmLetters(string Scene) {
-        currentLetter.GetComponent<Text>().fontStyle = FontStyle.Normal;
+        currentLetter.GetComponent<Text>().color = defaultColor;
         if (currentLetterIndex == letterGameObjects.Length - 1) {
             switch (player) {
                 case Player.Player1:
@@ -138,7 +138,7 @@ public class NameInput : MonoBehaviour {
         else {
             currentLetter = letterGameObjects[currentLetterIndex + 1];
             currentLetterIndex++;
-            currentLetter.GetComponent<Text>().fontStyle = FontStyle.Bold;
+            currentLetter.GetComponent<Text>().color = highlightColor;
         }
     }
 
