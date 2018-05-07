@@ -14,6 +14,7 @@ public class ButtonTrigger : MonoBehaviour {
 
     private void Awake() {
         timeLeft = chargeTime;
+        chargeBar.GetComponent<Animator>().speed = chargeTime;
     }
 
     void Update () {
@@ -27,7 +28,7 @@ public class ButtonTrigger : MonoBehaviour {
             timeLeft = chargeTime;
             button.GetComponent<Button>().onClick.Invoke();
         }
-        SetChargeBarWidth();
+        SetChargeBarAnimation();
 	}
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -43,10 +44,9 @@ public class ButtonTrigger : MonoBehaviour {
         }
     }
 
-    public void SetChargeBarWidth() {
+    public void SetChargeBarAnimation() {
         if (timeLeft > 0) {
-            float NewWidth = 100 - timeLeft / chargeTime * 100;
-            chargeBar.GetComponent<RectTransform>().sizeDelta = new Vector2(NewWidth, chargeBar.GetComponent<RectTransform>().sizeDelta.y);
+            //charge
         }
     }
 }
