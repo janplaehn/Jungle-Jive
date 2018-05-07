@@ -1261,9 +1261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freestylePrize: 0
+  activeTimelimit: 0
   activateTime: 0
-  recentMovesP1: []
-  recentMovesP2: []
   stateFinished: 0
 --- !u!114 &114790781872469056
 MonoBehaviour:
