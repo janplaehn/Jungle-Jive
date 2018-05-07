@@ -5,6 +5,8 @@ licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Instructions 2_0
+    21300002: Instructions 2_1
+    21300004: Instructions 2_2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,6 +90,34 @@ TextureImporter:
         y: 1523
         width: 320
         height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Instructions 2_1
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1518
+        width: 302
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Instructions 2_2
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 1516
+        width: 303
+        height: 405
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
