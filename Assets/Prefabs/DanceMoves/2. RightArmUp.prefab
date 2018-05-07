@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4216986342549552}
   - component: {fileID: 114436193855374376}
   m_Layer: 0
-  m_Name: RightArmUp
+  m_Name: 2. RightArmUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
