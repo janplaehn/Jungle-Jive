@@ -51,6 +51,10 @@ public class MusicInstructions : State {
         RightArmRightLegAside,
         LeftArmUpLeftLegBehind,
         RightArmUpRightLegBehind,
+        L_poseRightArmLeftLeg,
+        L_poseLeftArmRightLeg,
+        RightLegUp,
+        LeftLegUp,
     }
 
 	// Use this for initialization
