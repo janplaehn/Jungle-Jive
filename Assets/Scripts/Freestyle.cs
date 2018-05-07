@@ -7,6 +7,7 @@ public class Freestyle : State {
     private bool isActive;
     private float activeTimelimit;
     private float accumulatedTime = 0 ;
+    private float measureTimer = 0;
     public float activateTime;
     public List<DanceMove> recentMovesP1;
     public List<DanceMove> recentMovesP2;
@@ -37,9 +38,10 @@ public class Freestyle : State {
 
     public override bool OnUpdate ()
     {
-        Debug.Log(activeTimelimit);
+        Debug.Log(activeTimelimit); 
         accumulatedTime += Time.deltaTime;
-        if (accumulatedTime < activeTimelimit)
+        measureTimer += Time.deltaTime;
+        if (accumulatedTime < activeTimelimit && measureTimer > MusicInstructions.tempo) 
         {
 
             DanceMove tempMoveP1 = inputCheck.getCurrentMove(true);
@@ -64,6 +66,7 @@ public class Freestyle : State {
                 }
                 playerOneScore += tempScore;
                 recentMovesP1.Add(tempMoveP1);
+                
             }
 
             if (recentMovesP1.Count < 5) recentMovesP1.Add(tempMoveP1);
@@ -95,7 +98,7 @@ public class Freestyle : State {
 
             if (recentMovesP1.Count > 5) recentMovesP1.RemoveAt(0);
             if (recentMovesP2.Count > 5) recentMovesP2.RemoveAt(0);
-
+            measureTimer = 0;
         }
         else 
         {

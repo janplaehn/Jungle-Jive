@@ -25,7 +25,7 @@ public class MusicInstructions : State {
     private bool moveRatedP2 = false;
     private bool intro = true;
     public float introTime;
-    public float tempo;
+    public static float tempo;
     public Sprite timingSprite;
     [Range(1f, 4f)] public float maxTimingSpriteSize = 4f;
 
