@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 632453345}
   - component: {fileID: 632453344}
   - component: {fileID: 632453343}
+  - component: {fileID: 632453347}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -259,6 +260,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632453347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 632453342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fbd3e9879935d6408a0a35c26c2de78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &791904409
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,12 +321,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 2950f47e932bfa446b77b2d150cfd44f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89213e2b470f94a4392fdce255483f48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6, y: 5}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -341,7 +353,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1074488994}
   - component: {fileID: 1074488995}
-  - component: {fileID: 1074488996}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -370,18 +381,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1074488993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd699bdd9fc9f142aad9e75904d5031, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1074488996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1074488993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d522a8444ca884e9c7004dc2d7f536, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f353223ede5ed40b7b2920e032f484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1327506868
@@ -425,7 +425,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1383609578317420, guid: 87bda510e7d10cb49a3821c93bf4fd43, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87bda510e7d10cb49a3821c93bf4fd43, type: 2}
