@@ -1,0 +1,387 @@
+fileFormatVersion: 2
+guid: a760ea5ef6ee4d544bc7f24e02d6b43f
+timeCreated: 1525699500
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Hector_0
+    21300002: Hector_1
+    21300004: Hector_2
+    21300006: Hector_3
+    21300008: Hector_4
+    21300010: Hector_5
+    21300012: Hector_6
+    21300014: Hector_7
+    21300016: Hector_8
+    21300018: Hector_9
+    21300020: Hector_10
+    21300022: Hector_11
+    21300024: Hector_12
+    21300026: Hector_13
+    21300028: Hector_14
+    21300030: Hector_15
+    21300032: Hector_16
+    21300034: Hector_17
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hector_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 2078
+        width: 262
+        height: 655
+      alignment: 9
+      pivot: {x: 0.49999988, y: 0.82813656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_1
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2435
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_2
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 2446
+        width: 38
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_3
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 2038
+        width: 794
+        height: 1440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_4
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1197
+        width: 423
+        height: 825
+      alignment: 9
+      pivot: {x: 0.56866324, y: 0.8661371}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_5
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 983
+        width: 636
+        height: 1032
+      alignment: 9
+      pivot: {x: 0.4908666, y: 0.37616652}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_6
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 2009
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1332
+        width: 198
+        height: 610
+      alignment: 9
+      pivot: {x: 0.50000036, y: 0.9285258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_8
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1210
+        width: 203
+        height: 783
+      alignment: 9
+      pivot: {x: 0.21384704, y: 0.9525457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_9
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 1203
+        width: 202
+        height: 781
+      alignment: 9
+      pivot: {x: 0.87384033, y: 0.9462669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_10
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1099
+        width: 439
+        height: 827
+      alignment: 9
+      pivot: {x: 0.4206073, y: 0.87227535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_11
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 1345
+        width: 191
+        height: 609
+      alignment: 9
+      pivot: {x: 0.5304128, y: 0.91969055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 871
+        width: 233
+        height: 351
+      alignment: 9
+      pivot: {x: 0.5747927, y: 0.89719003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_13
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 904
+        width: 241
+        height: 351
+      alignment: 9
+      pivot: {x: 0.45179388, y: 0.8806399}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 489
+        width: 403
+        height: 298
+      alignment: 9
+      pivot: {x: 0.19730254, y: 0.8508733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_15
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 188
+        width: 252
+        height: 652
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8474654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_16
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 63
+        width: 421
+        height: 290
+      alignment: 9
+      pivot: {x: 0.7897557, y: 0.86055255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hector_17
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 144
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
