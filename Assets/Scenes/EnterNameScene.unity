@@ -662,7 +662,7 @@ MonoBehaviour:
   - {fileID: 759461369}
   Canvas: {fileID: 2094115649}
   highlightColor: {r: 0.21568629, g: 0.82745105, b: 0.227451, a: 1}
-  defaultColor: {r: 0.19215688, g: 0.1254902, b: 0, a: 0}
+  defaultColor: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
 --- !u!4 &367221157
 Transform:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19215687, g: 0.1254902, b: 0, a: 1}
+  m_Color: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19215687, g: 0.1254902, b: 0, a: 1}
+  m_Color: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2334,7 +2334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19215687, g: 0.1254902, b: 0, a: 1}
+  m_Color: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2417,7 +2417,7 @@ MonoBehaviour:
   - {fileID: 1525340844}
   Canvas: {fileID: 853990387}
   highlightColor: {r: 0.21568629, g: 0.82745105, b: 0.227451, a: 1}
-  defaultColor: {r: 0.19215688, g: 0.1254902, b: 0, a: 0}
+  defaultColor: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
 --- !u!4 &913259133
 Transform:
   m_ObjectHideFlags: 0
@@ -2504,7 +2504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19215687, g: 0.1254902, b: 0, a: 1}
+  m_Color: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19215687, g: 0.1254902, b: 0, a: 1}
+  m_Color: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4299,7 +4299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19215687, g: 0.1254902, b: 0, a: 1}
+  m_Color: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
