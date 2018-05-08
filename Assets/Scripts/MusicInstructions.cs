@@ -158,7 +158,6 @@ public class MusicInstructions : State {
 
     public override void OnEnd()
     {
-        musicSource.Stop();
     }
 
     public void SetMusic(AudioClip givenMusic, DanceMovePair[] givenPairs)

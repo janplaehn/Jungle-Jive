@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   states:
-  - {fileID: 114697358382732284}
+  - {fileID: 114882818694792984}
   - {fileID: 114814908244296100}
   - {fileID: 114268563671881546}
 --- !u!114 &114697358382732284
@@ -402,9 +402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freestylePrize: 2000
+  activeTimelimit: 5
   activateTime: 0
-  recentMovesP1: []
-  recentMovesP2: []
   stateFinished: 0
 --- !u!114 &114986011608791186
 MonoBehaviour:

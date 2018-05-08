@@ -20,7 +20,7 @@ public class ItemMiniGame : State {
 
     private void Start() {
         shakeText = GameObject.Find("ShakeText");
-        //shakeText.SetActive(false);
+        shakeText.SetActive(false);
 
     }
 
@@ -65,7 +65,7 @@ public class ItemMiniGame : State {
 
     public override void OnEnd()
     {
-       
+        shakeText.SetActive(false);
     }
 
     void QuitState() {
