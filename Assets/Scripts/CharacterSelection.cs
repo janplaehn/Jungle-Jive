@@ -17,7 +17,6 @@ public class CharacterSelection : MonoBehaviour {
 
 
     private static int charactersConfirmed = 0;
-    public static int skinCount = 2;
 
     public void NextCharacter() {
         switch (player) {

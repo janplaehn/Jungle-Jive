@@ -37,24 +37,42 @@ public class SkinSetting : MonoBehaviour {
         Object[] temp = Resources.LoadAll("PlayerPrefabs") as Object[];
         foreach (Object t in temp)
         {
-            GameObject gm = (GameObject)t;
-            if(gm.tag == "Player1")
+            GameObject go = (GameObject)t;
+            if(go.tag == "Player1")
             {
-                playerOnePrefabs.Add(gm);
+                if(IsAlreadyInList(go, playerOnePrefabs) == false) playerOnePrefabs.Add(go);
             }
-            if(gm.tag == "Player2")
+            if(go.tag == "Player2")
             {
-                playerTwoPrefabs.Add(gm);
+                if (IsAlreadyInList(go, playerTwoPrefabs) == false) playerTwoPrefabs.Add(go);
             }
         }
     }
 
+    private bool IsAlreadyInList(GameObject o, List<GameObject> list)
+    {
+        foreach(GameObject g in list)
+        {
+            if (g == o) return true;
+        }
+        return false;
+    }
 
     public void ChangePlayerOneSkin(int deltaIndex)
     {
-        if (playerOneIndex + deltaIndex >= playerOnePrefabs.Count) deltaIndex = -playerOneIndex;
-        if (playerOneIndex + deltaIndex < 0) deltaIndex = playerOnePrefabs.Count - playerOneIndex - 1;
-        playerOneIndex += deltaIndex;
+        if (playerOneIndex + deltaIndex >= playerOnePrefabs.Count)
+        {
+            playerOneIndex = 0;
+        } else
+        {
+            if(playerOneIndex + deltaIndex < 0)
+            {
+                playerOneIndex = playerOnePrefabs.Count - 1;
+            } else
+            {
+                playerOneIndex += deltaIndex;
+            }
+        }
         PlayerPrefs.SetInt("FirstPlayerSkin", playerOneIndex);
         Destroy(playerOne);
         playerOne = Instantiate(playerOnePrefabs[playerOneIndex], playerOneSpawn.transform.position, Quaternion.identity);
@@ -65,9 +83,21 @@ public class SkinSetting : MonoBehaviour {
 
     public void ChangePlayerTwoSkin(int deltaIndex)
     {
-        if (playerTwoIndex + deltaIndex >= playerTwoPrefabs.Count) deltaIndex = -playerTwoIndex;
-        if (playerTwoIndex + deltaIndex < 0) deltaIndex = playerTwoPrefabs.Count - playerTwoIndex - 1;
-        playerTwoIndex += deltaIndex;
+        if (playerTwoIndex + deltaIndex >= playerTwoPrefabs.Count)
+        {
+            playerTwoIndex = 0;
+        }
+        else
+        {
+            if (playerTwoIndex + deltaIndex < 0)
+            {
+                playerTwoIndex = playerTwoPrefabs.Count - 1;
+            }
+            else
+            {
+                playerTwoIndex += deltaIndex;
+            }
+        }
         PlayerPrefs.SetInt("SecondPlayerSkin", playerTwoIndex);
         Destroy(playerTwo);
         playerTwo = Instantiate(playerTwoPrefabs[playerTwoIndex], playerTwoSpawn.transform.position, Quaternion.identity);
