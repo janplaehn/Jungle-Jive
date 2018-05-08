@@ -694,6 +694,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 3226cb56864eb8d4d92cde7bc5d47779,
+        type: 2}
+      propertyPath: instruction
+      value: 
+      objectReference: {fileID: 1241662687}
+    - target: {fileID: 114509728815516748, guid: 3226cb56864eb8d4d92cde7bc5d47779,
+        type: 2}
+      propertyPath: timingObjectP1
+      value: 
+      objectReference: {fileID: 1598922753}
+    - target: {fileID: 114509728815516748, guid: 3226cb56864eb8d4d92cde7bc5d47779,
+        type: 2}
+      propertyPath: timingObjectP2
+      value: 
+      objectReference: {fileID: 1960338988}
+    - target: {fileID: 114509728815516748, guid: 3226cb56864eb8d4d92cde7bc5d47779,
+        type: 2}
+      propertyPath: nextInstruction
+      value: 
+      objectReference: {fileID: 1183197442}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3226cb56864eb8d4d92cde7bc5d47779, type: 2}
   m_IsPrefabParent: 0
