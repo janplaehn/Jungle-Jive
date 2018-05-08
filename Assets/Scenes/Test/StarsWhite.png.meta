@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: fe100897567b7844891f1915bf1f5f71
-timeCreated: 1525438408
+guid: efa4f5a1a9363f9488de24abdd5b058b
+timeCreated: 1525696421
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Instructions 2_0
-    21300002: Instructions 2_1
-    21300004: Instructions 2_2
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -43,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +50,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -81,49 +78,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Instructions 2_0
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 1523
-        width: 320
-        height: 481
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Instructions 2_1
-      rect:
-        serializedVersion: 2
-        x: 486
-        y: 1518
-        width: 302
-        height: 417
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Instructions 2_2
-      rect:
-        serializedVersion: 2
-        x: 953
-        y: 1516
-        width: 303
-        height: 405
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 
