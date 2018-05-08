@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114947781935324012}
   m_Layer: 0
   m_Name: FeedBack
-  m_TagString: Player1Feedback
+  m_TagString: Player2Feedback
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 114341123957104150}
   m_Layer: 0
   m_Name: head
-  m_TagString: Head
+  m_TagString: HeadP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

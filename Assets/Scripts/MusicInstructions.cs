@@ -29,7 +29,7 @@ public class MusicInstructions : State {
     public Sprite timingSprite;
     [Range(1f, 4f)] public float maxTimingSpriteSize = 4f;
 
-    private float errorMargin = 0.2f;
+    private float errorMargin = 0.3f;
     public bool isPaused = false;
     private float scaleTiming = 1;
 
@@ -130,12 +130,14 @@ public class MusicInstructions : State {
                 {
                     nextInstruction.sprite = voidSprite;
                 }
-                timingP1.sprite = instruction.sprite;
+                timingP1.sprite = voidSprite;
+                timingP2.sprite = voidSprite;
                 timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
                 timingP1.color = new Color(1f, 1f, 1f, 0.25f);
-                timingP2.sprite = timingP1.sprite;
                 timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
                 timingP2.color = timingP1.color;
+                timingP1.sprite = instruction.sprite;
+                timingP2.sprite = timingP1.sprite;
                 lastMove = timingPairs[lastPairIndex].firstValue;
 
             }
