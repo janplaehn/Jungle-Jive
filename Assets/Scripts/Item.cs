@@ -64,14 +64,9 @@ public class Item : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.transform.parent) {
             if (collision.gameObject.transform.parent.tag == ("Player1") || collision.gameObject.transform.parent.tag == ("Player2")) {
-                if (isThrown) {
-                    isThrown = false;
-                    ActivateItem(collision.gameObject.transform.parent.tag);
-                    Destroy(this.gameObject);
-                }
-                else {
-                    AttachToHand(collision.gameObject.transform.parent.GetComponent<Getbodyparts>());
-                }
+                isThrown = false;
+                ActivateItem(collision.gameObject.transform.parent.tag);
+                Destroy(this.gameObject);
             }
         }       
     }

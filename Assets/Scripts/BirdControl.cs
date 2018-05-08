@@ -62,7 +62,7 @@ public class BirdControl : MonoBehaviour {
     }
 
     void FlyToPlayer() {
-        if (hasPlayerOneWon) {
+        if (!hasPlayerOneWon) {
             flightdirection = -1;
             if (transform.position.x < playerOneSpawn.transform.position.x) {
                 state = FlightState.dropItem;
