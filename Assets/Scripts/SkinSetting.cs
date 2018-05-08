@@ -19,6 +19,7 @@ public class SkinSetting : MonoBehaviour {
 
     void Start() {
         //PlayerPrefs.DeleteAll();
+        GetSkins();
         playerOneIndex = PlayerPrefs.GetInt("FirstPlayerSkin", 0);
         PlayerPrefs.SetInt("FirstPlayerSkin", playerOneIndex);
         playerTwoIndex = PlayerPrefs.GetInt("SecondPlayerSkin", playerTwoPrefabs.Count - 1);
@@ -33,16 +34,17 @@ public class SkinSetting : MonoBehaviour {
 
     private void GetSkins()
     {
-        GameObject[] temp = Resources.LoadAll("PlayerPrefabs", typeof(GameObject)) as GameObject[];
-        foreach(GameObject t in temp)
+        Object[] temp = Resources.LoadAll("PlayerPrefabs") as Object[];
+        foreach (Object t in temp)
         {
-            if(t.tag == "Player1")
+            GameObject gm = (GameObject)t;
+            if(gm.tag == "Player1")
             {
-                playerOnePrefabs.Add(t);
+                playerOnePrefabs.Add(gm);
             }
-            if(t.tag == "Player2")
+            if(gm.tag == "Player2")
             {
-                playerTwoPrefabs.Add(t);
+                playerTwoPrefabs.Add(gm);
             }
         }
     }
