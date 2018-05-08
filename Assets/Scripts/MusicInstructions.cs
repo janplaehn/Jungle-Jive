@@ -82,8 +82,8 @@ public class MusicInstructions : State {
         {
             nextInstruction.sprite = voidSprite;
         }
-        timingP1.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player1").transform.position.x, GameObject.FindGameObjectWithTag("Player1").transform.position.y - 1.5f,1);
-        timingP2.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player2").transform.position.x, GameObject.FindGameObjectWithTag("Player2").transform.position.y - 1.5f, 1);
+        timingP1.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player1").transform.position.x, -0.8f, 1);
+        timingP2.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player2").transform.position.x, -0.8f, 1);
         if (musicSource != null) musicSource.Play();
         if (introTime > 0) started = false;
     }
@@ -158,6 +158,8 @@ public class MusicInstructions : State {
 
     public override void OnEnd()
     {
+        timingP1.sprite = voidSprite;
+        timingP2.sprite = voidSprite;
     }
 
     public void SetMusic(AudioClip givenMusic, DanceMovePair[] givenPairs)
