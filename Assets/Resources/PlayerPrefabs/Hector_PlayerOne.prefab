@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4707150273212788}
   - component: {fileID: 50963933079097902}
-  - component: {fileID: 114127419013119566}
   - component: {fileID: 114018858410123764}
   - component: {fileID: 114665917928779594}
   m_Layer: 0
@@ -1663,21 +1662,6 @@ MonoBehaviour:
   ThrowingHand: {fileID: 1521026013807152}
   hasItem: 0
   Item: {fileID: 0}
---- !u!114 &114127419013119566
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1040573512552322}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freestylePrize: 0
-  activeTimelimit: 0
-  activateTime: 0
-  stateFinished: 0
 --- !u!114 &114284997433645110
 MonoBehaviour:
   m_ObjectHideFlags: 1
