@@ -40,7 +40,7 @@ public class Freestyle : State {
     {
         accumulatedTime += Time.deltaTime;
         measureTimer += Time.deltaTime;
-        if (accumulatedTime < activeTimelimit && measureTimer > 1) 
+        if (accumulatedTime < activeTimelimit && measureTimer > 0.25) 
         {
             TempMove tempMoveP1 = inputCheck.getCurrentMove(true);
             TempMove tempMoveP2 = inputCheck.getCurrentMove(false);
