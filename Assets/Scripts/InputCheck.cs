@@ -64,6 +64,7 @@ public class InputCheck : MonoBehaviour {
     {
         GameObject t = GameObject.FindGameObjectWithTag(givenTag);
         if (t) return t.GetComponent<LimbMovement>();
+        Debug.LogWarning(t);
         return null;
     }
 
@@ -161,6 +162,12 @@ public class InputCheck : MonoBehaviour {
 
     public TempMove getCurrentMove (bool isPlayerOne) //Gets current position of limbs as DanceMove from player one or two
     {
+        if (leftArm == null)
+        {
+            GetLimbs(Players.PlayerOne);
+            GetLimbs(Players.PlayerTwo);
+        }
+
         TempMove temp = new TempMove();
         if (isPlayerOne == true)
         {
