@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ControllerManager : MonoBehaviour {
-    
+    string[] joysticks;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +13,5 @@ public class ControllerManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
 }
