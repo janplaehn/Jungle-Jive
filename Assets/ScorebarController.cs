@@ -11,20 +11,21 @@ public class ScorebarController : MonoBehaviour {
 
     void Start () {
         image = GetComponent<Image>();
-	}
+        PlayerPrefs.SetInt("SecondPlayerScore", 0);
+        PlayerPrefs.SetInt("FirstPlayerScore", 0);
+    }
 	
 	void Update () {
         CalculateScoreBalance();	
 	}
 
     void CalculateScoreBalance() {
+        image.fillAmount = 0.5f;
         firstPlayerScore = PlayerPrefs.GetInt("FirstPlayerScore", 0);
         secondPlayerScore = PlayerPrefs.GetInt("SecondPlayerScore", 0);
         if (firstPlayerScore + secondPlayerScore != 0) {
             image.fillAmount = firstPlayerScore / (firstPlayerScore + secondPlayerScore);
         }
-        else {
-            image.fillAmount = 0.5f;
-        }
+        Debug.Log(image.fillAmount);
     }
 }
