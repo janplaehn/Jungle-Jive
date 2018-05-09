@@ -27,6 +27,7 @@ public class MusicInstructions : State {
     public float introTime;
     public static float tempo = 1;
     public Sprite timingSprite;
+    [Range(0f, 4f)] public float minTimingSpriteSize = 1.34f;
     [Range(1f, 4f)] public float maxTimingSpriteSize = 4f;
 
     private float errorMargin = 0.5f;
@@ -82,8 +83,8 @@ public class MusicInstructions : State {
         {
             nextInstruction.sprite = voidSprite;
         }
-        timingP1.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player1").transform.position.x, -0.8f, 1);
-        timingP2.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player2").transform.position.x, -0.8f, 1);
+        timingP1.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player1").transform.position.x, -3.9f, 1);
+        timingP2.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player2").transform.position.x, -3.9f, 1);
         if (musicSource != null) musicSource.Play();
         if (introTime > 0) started = false;
     }
