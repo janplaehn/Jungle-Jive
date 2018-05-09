@@ -144,11 +144,19 @@ public class MusicInstructions : State {
         }
         else if (intro == true)
         {
+            timingP1.sprite = voidSprite;
+            timingP2.sprite = voidSprite;
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime >= introTime)
             {
                 timingP1.enabled = true;
                 timingP2.enabled = true;
+                timingP1.sprite = instruction.sprite;
+                timingP2.sprite = instruction.sprite;
+                timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+                timingP1.color = new Color(1f, 1f, 1f, 0.25f);
+                timingP2.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+                timingP2.color = new Color(1f, 1f, 1f, 0.25f);
                 started = true;
                 intro = false;
                 accumulatedTime = 0f;
