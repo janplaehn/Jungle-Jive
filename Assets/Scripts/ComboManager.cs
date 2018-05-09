@@ -41,10 +41,12 @@ public class ComboManager : MonoBehaviour {
         if (isPlayerOne == true)
         {
             comboStreakP1 = 0;
+            ScoringSystem.comboMultiplierP1 = 1;
             comboP1.GetComponent<Text>().text = "Combo: " + comboStreakP1.ToString();
         }else
         {
             comboStreakP2 = 0;
+            ScoringSystem.comboMultiplierP2 = 1;
             comboP2.GetComponent<Text>().text = "Combo: " + comboStreakP2.ToString();
         }
 

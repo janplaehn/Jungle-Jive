@@ -15,9 +15,11 @@ public class ScoringSystem : MonoBehaviour {
     public GameObject firstPlayerHead;
     public GameObject secondPlayerHead;
     public GameObject comboManager;
+    public static float comboMultiplierP1 = 1;
+    public static float comboMultiplierP2 = 1;
 
     public void AddFirstPlayerScore(int scoreAmount, int maxScore) {
-        firstPlayerScore += scoreAmount;
+        firstPlayerScore += (int) (scoreAmount * comboMultiplierP1);
         firstPlayerScoreDisplay.text = firstPlayerScore.ToString();
         PlayerPrefs.SetInt(firstPlayerScoreKey, firstPlayerScore);
         if (firstPlayerTextFeedback == null)
@@ -40,7 +42,7 @@ public class ScoringSystem : MonoBehaviour {
     }
 
     public void AddSecondPlayerScore(int scoreAmount, int maxScore) {
-        secondPlayerScore += scoreAmount;
+        secondPlayerScore += (int)(scoreAmount * comboMultiplierP2);
         secondPlayerScoreDisplay.text = secondPlayerScore.ToString();
         PlayerPrefs.SetInt(secondPlayerScoreKey, secondPlayerScore);
         if (secondPlayerTextFeedback == null)
