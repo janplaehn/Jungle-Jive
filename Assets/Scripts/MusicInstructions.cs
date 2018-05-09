@@ -29,7 +29,7 @@ public class MusicInstructions : State {
     public Sprite timingSprite;
     [Range(1f, 4f)] public float maxTimingSpriteSize = 4f;
 
-    private float errorMargin = 0.3f;
+    private float errorMargin = 0.5f;
     public bool isPaused = false;
     private float scaleTiming = 1;
 
