@@ -16,5 +16,6 @@ public static class Banana  {
         {
             limbs[i].SetStun(7.88f);
         }
+        GameObject.Find("icecube").GetComponent<AudioSource>().Play();
     }
 }
