@@ -19,7 +19,6 @@ public class ItemMiniGame : State {
     private GameObject birdInstance;
 
     private void Start() {
-        shakeText = GameObject.Find("ShakeText");
         shakeText.SetActive(false);
 
     }
