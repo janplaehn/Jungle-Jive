@@ -108,6 +108,9 @@ public class Freestyle : State {
 
     public override void OnEnd ()
     {
+        if (GetComponent<AudioSource>()) {
+            GetComponent <AudioSource>().Play();
+        }
         freestyleText.SetActive(false);
         if (playerOneScore > playerTwoScore)
         {

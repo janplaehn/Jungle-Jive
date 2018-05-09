@@ -1135,6 +1135,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1091929708}
+--- !u!1 &1192204941 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1759392775496108, guid: aab7968c1718d1149808b7e3be9907fd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1923593658}
 --- !u!1 &1278142540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chargeTime: 2
   button: {fileID: 2117242944}
-  chargeBar: {fileID: 0}
+  chargeBar: {fileID: 1192204941}
 --- !u!61 &1920025373
 BoxCollider2D:
   m_ObjectHideFlags: 0

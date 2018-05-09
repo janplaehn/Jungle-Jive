@@ -13,6 +13,9 @@ public class GameState : MonoBehaviour {
 	void Start()
     {
         states[stateIndex].OnStart();
+        if (GameObject.Find("MusicManager")) {
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("DanceMusic");
+        }
     }
 	// Update is called once per frame
 	void Update () {

@@ -37,12 +37,14 @@ public class ButtonTrigger : MonoBehaviour {
         if (collision.gameObject.tag == "hand") {
             isCharging = true;
             timeLeft = chargeTime;
+            chargeBar.GetComponent<AudioSource>().Play();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.gameObject.tag == "hand") {
             isCharging = false;
+            chargeBar.GetComponent<AudioSource>().Stop();
         }
     }
 
