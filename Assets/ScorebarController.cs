@@ -26,6 +26,5 @@ public class ScorebarController : MonoBehaviour {
         if (firstPlayerScore + secondPlayerScore != 0) {
             image.fillAmount = firstPlayerScore / (firstPlayerScore + secondPlayerScore);
         }
-        Debug.Log(image.fillAmount);
     }
 }
