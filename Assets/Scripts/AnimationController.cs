@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour {
 
+    public bool isAnimated = true;
+
 	void Start () {
-        GetComponent<Animator>().speed = GameObject.Find("GameController").GetComponent<GameControlling>().animationSpeed;
-	}
+        if (isAnimated) GetComponent<Animator>().speed = GameObject.Find("GameController").GetComponent<GameControlling>().animationSpeed;
+        else GetComponent<Animator>().speed = 0;
+
+    }
 }

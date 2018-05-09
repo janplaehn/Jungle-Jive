@@ -11,5 +11,4 @@ public class MusicTrack {
     public bool loop = true;
     [HideInInspector]  public AudioMixerGroup mixerGroup;
     [HideInInspector]  public AudioSource source;
-
 }

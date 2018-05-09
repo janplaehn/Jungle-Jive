@@ -14,6 +14,7 @@ public class ScoringSystem : MonoBehaviour {
     public GameObject secondPlayerTextFeedback;
     public GameObject firstPlayerHead;
     public GameObject secondPlayerHead;
+    public GameObject comboManager;
 
     public void AddFirstPlayerScore(int scoreAmount, int maxScore) {
         firstPlayerScore += scoreAmount;
@@ -23,6 +24,10 @@ public class ScoringSystem : MonoBehaviour {
         {
             firstPlayerTextFeedback = GameObject.FindGameObjectWithTag("Player1Feedback");
         }
+<<<<<<< HEAD
+=======
+        if(firstPlayerTextFeedback.GetComponent<TextFeedback>() != null)
+>>>>>>> AlphaBuildIguess
         firstPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore);
         if(firstPlayerHead == null)
         {
@@ -32,6 +37,8 @@ public class ScoringSystem : MonoBehaviour {
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
             face.GetComponent<AudienceFeedbackController>().GiveFaceFeedback(scoreAmount, maxScore);
         }
+        if (scoreAmount == maxScore) comboManager.GetComponent<ComboManager>().increaseCombo(true);
+        else comboManager.GetComponent<ComboManager>().breakCombo(true);
     }
 
     public void AddSecondPlayerScore(int scoreAmount, int maxScore) {
@@ -51,6 +58,8 @@ public class ScoringSystem : MonoBehaviour {
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace2")) {
             face.GetComponent<AudienceFeedbackController>().GiveFaceFeedback(scoreAmount, maxScore);
         }
+        if (scoreAmount == maxScore) comboManager.GetComponent<ComboManager>().increaseCombo(false);
+        else comboManager.GetComponent<ComboManager>().breakCombo(false);
     }
 
     public int GetFirstPlayerScore() { return firstPlayerScore; }

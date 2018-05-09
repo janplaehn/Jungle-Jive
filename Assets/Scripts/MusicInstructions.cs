@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MusicInstructions : MonoBehaviour {
-    private Pair<DanceMove, float>[] timingPairs;
+public class MusicInstructions : State {
+    [SerializeField]public DanceMovePair[] timingPairs;
     public Sprite voidSprite;
     public Sprite[] instructionImageArray;
     public Image instruction;
-    public Image timing;
-    //public Image timing;
+    private SpriteRenderer timingP1;
+    private SpriteRenderer timingP2;
+    public GameObject timingObjectP1;
+    public GameObject timingObjectP2;
     public Image nextInstruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
@@ -21,15 +23,17 @@ public class MusicInstructions : MonoBehaviour {
     public bool stateFinished = false;
     private bool moveRatedP1 = false;
     private bool moveRatedP2 = false;
-    private bool intro;
+    private bool intro = true;
     public float introTime;
+    public static float tempo = 1;
     public Sprite timingSprite;
-    [Range(1f, 4f)] public float maxTimingSpriteSize = 1.5f;
-    public float instructionTime;
+    [Range(1f, 4f)] public float maxTimingSpriteSize = 4f;
 
-    private float errorMargin = 0.2f;
-    public bool isPaused;
+    private float errorMargin = 0.3f;
+    public bool isPaused = false;
     private float scaleTiming = 1;
+
+
     public enum DanceMoveEnum
     {
         LeftArmUp,
@@ -37,50 +41,63 @@ public class MusicInstructions : MonoBehaviour {
         BothArmsUp,
         BothArmsDown,
         SplitArmsUp,
-        SplitArmsDown,
+        SplitBothArmsMiddle,
+        SplitBothArmsDown,
+        SplitLeftArmUp,
+        SplitRightArmUp,
         LeftArmLeftLegUp,
         RightArmRightLegUp,
+        LeftArmLeftLegAside,
+        RightArmRightLegAside,
+        LeftArmUpLeftLegBehind,
+        RightArmUpRightLegBehind,
+        L_poseRightArmLeftLeg,
+        L_poseLeftArmRightLeg,
+        RightLegUp,
+        LeftLegUp,
     }
+
 	// Use this for initialization
-	void Start () {
-        isPaused = false;
-        intro = true;
-        lastMove = timingPairs[0].firstValue;
-        nextInstruction.sprite = instructionImageArray[lastMove.instructionImageIndex];
+	public override void OnStart () {
+        timingP1 = timingObjectP1.GetComponent<SpriteRenderer>();
+        timingP2 = timingObjectP2.GetComponent<SpriteRenderer>();
+        lastMove = timingPairs[lastPairIndex].firstValue;
+        nextInstruction.sprite = instructionImageArray[(int)lastMove.instructionImageIndex];
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
         if (timingPairs.Length == 0)
         {
             started = false;
         }
-
-        instructionTime = timingPairs[lastPairIndex].secondValue;
-        instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
-        timing.sprite = timingSprite;
-        timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+        instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+        timingP1.sprite = instruction.sprite;
+        timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+        timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
+        timingP2.sprite = timingP1.sprite;
         if (lastPairIndex + 1 <= timingPairs.Length - 1)
         {
-            nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+            nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
         }
         else
         {
             nextInstruction.sprite = voidSprite;
         }
-        lastMove = timingPairs[lastPairIndex].firstValue;
+        timingP1.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player1").transform.position.x, -0.8f, 1);
+        timingP2.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player2").transform.position.x, -0.8f, 1);
+        if (musicSource != null) musicSource.Play();
+        if (introTime > 0) started = false;
     }
-    public void OnStart()
-    {
 
-    }
-    public void OnUpdate ()
+    public override bool OnUpdate ()
     {
         if (started == true && isPaused == false)
         {
-            timing.enabled = true;
+            timingP1.enabled = true;
+            timingP2.enabled = true;
             accumulatedTime += Time.deltaTime;
-            if (accumulatedTime <= instructionTime)
+            if (accumulatedTime <= GetTiming())
             {
-                animateTiming(timingPairs[lastPairIndex].secondValue, accumulatedTime);
+                animateTiming(GetTiming(), accumulatedTime);
                 checkTiming(accumulatedTime);
             }
             else
@@ -97,25 +114,32 @@ public class MusicInstructions : MonoBehaviour {
                     lastPairIndex = 0;
                     accumulatedTime = 0f;
                     
-                    return;
+                    return false;
                 }
 
                 moveRatedP1 = false;
                 moveRatedP2 = false;
                 accumulatedTime = 0f;
-                instructionTime = timingPairs[lastPairIndex].secondValue;
-                instruction.sprite = instructionImageArray[timingPairs[lastPairIndex].firstValue.instructionImageIndex];
-                timing.sprite = timingSprite;
-                timing.rectTransform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+                instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                
                 if (lastPairIndex + 1 <= timingPairs.Length - 1)
                 {
-                    nextInstruction.sprite = instructionImageArray[timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+                    nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
                 }
                 else
                 {
                     nextInstruction.sprite = voidSprite;
                 }
+                timingP1.sprite = voidSprite;
+                timingP2.sprite = voidSprite;
+                timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
+                timingP1.color = new Color(1f, 1f, 1f, 0.25f);
+                timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
+                timingP2.color = timingP1.color;
+                timingP1.sprite = instruction.sprite;
+                timingP2.sprite = timingP1.sprite;
                 lastMove = timingPairs[lastPairIndex].firstValue;
+
             }
         }
         else if (intro == true)
@@ -123,15 +147,24 @@ public class MusicInstructions : MonoBehaviour {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime >= introTime)
             {
-                timing.enabled = true;
+                timingP1.enabled = true;
+                timingP2.enabled = true;
                 started = true;
                 intro = false;
                 accumulatedTime = 0f;
             }
         }
+
+        return true;
     }
 
-    public void SetMusic(AudioClip givenMusic, Pair<DanceMove, float>[] givenPairs)
+    public override void OnEnd()
+    {
+        timingP1.sprite = voidSprite;
+        timingP2.sprite = voidSprite;
+    }
+
+    public void SetMusic(AudioClip givenMusic, DanceMovePair[] givenPairs)
     {
         musicSource.clip = givenMusic;
         musicSource.Play();
@@ -141,17 +174,21 @@ public class MusicInstructions : MonoBehaviour {
 
     void animateTiming (float perfectTime, float accumulatedTime)
     {
-        timing.rectTransform.localScale = new Vector3(1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 1 + (maxTimingSpriteSize * (perfectTime - accumulatedTime)) / perfectTime, 0);
-        if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1) {
-            timing.sprite = voidSprite;
+        timingP1.gameObject.transform.localScale = new Vector3(1 + (3 * (perfectTime - accumulatedTime)) / perfectTime, 1 + (3 * (perfectTime - accumulatedTime)) / perfectTime, 0);
+        timingP1.color = new Color(1f, 1f, 1f, 0.25f * accumulatedTime);
+        if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1f) {
+            timingP1.sprite = voidSprite;
+            timingP2.sprite = voidSprite;
         }
+        timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
+        timingP2.color = timingP1.color;
     }
 
     void checkTiming (float accTime)
     {
         if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
         {
-            if (accTime > timingPairs[lastPairIndex].secondValue - errorMargin && accTime < timingPairs[lastPairIndex].secondValue + errorMargin)
+            if (accTime > GetTiming() - errorMargin && accTime < GetTiming() + errorMargin)
             {
                 scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove));
 
@@ -164,7 +201,7 @@ public class MusicInstructions : MonoBehaviour {
         }
         if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerTwo) == 1 && moveRatedP2 == false)
         {
-            if (accTime > timingPairs[lastPairIndex].secondValue - errorMargin && accTime < timingPairs[lastPairIndex].secondValue + errorMargin)
+            if (accTime > GetTiming() - errorMargin && accTime < GetTiming() + errorMargin)
             {
                 scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 2, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove));
 
@@ -175,7 +212,11 @@ public class MusicInstructions : MonoBehaviour {
             }
             moveRatedP2 = true;
         }
-        if (accTime >= timingPairs[lastPairIndex].secondValue) timing.sprite = voidSprite;
+        if (accTime >= GetTiming()) timingP1.sprite = voidSprite;
     }
 
+    float GetTiming()
+    {
+        return timingPairs[lastPairIndex].secondValue * tempo;
+    }
 }
