@@ -14,7 +14,7 @@ public static class Banana  {
         LimbMovement[] limbs = disabledPlayer.GetComponentsInChildren<LimbMovement>();
         for (int i = 0; i < limbs.Length; i++)
         {
-            limbs[i].SetStun(2);
+            limbs[i].SetStun(7.88f);
         }
     }
 }

@@ -9,7 +9,7 @@ public class Mushroom : MonoBehaviour {
     public static Material bothPlayersDizzy;
     public static Material noPlayerDizzy;
     public static Material currentMat;
-    static float affectedTimer = 10f;
+    static float affectedTimer = 7.88f;
     float firstPlayerTimer = 0f;
     float secondPlayerTimer = 0f;
     static bool firstPlayerAffected = false;
