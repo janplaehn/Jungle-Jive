@@ -12,6 +12,7 @@ public class LeaderBoard : MonoBehaviour {
     public Text[] leaderBoardText;
 
 	void Start () {
+        LeaderBoardTesting.TestAwake();
         GetLeaderBoard();
     }
 
@@ -106,4 +107,8 @@ public class LeaderBoard : MonoBehaviour {
         }
         return temp;
     }
+
+
+
+    
 }
