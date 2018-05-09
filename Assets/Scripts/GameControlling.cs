@@ -18,9 +18,7 @@ public class GameControlling : MonoBehaviour {
     }
 
     void Update() {
-        //Debug.Log("LeftArm: " + GameObject.FindGameObjectWithTag("LeftArm").GetComponent<LimbMovement>().GetLimbState() + "RightArm: " + GameObject.FindGameObjectWithTag("RightArm").GetComponent<LimbMovement>().GetLimbState());
-        //Debug.Log("LeftLeg: " + GameObject.FindGameObjectWithTag("LeftLeg").GetComponent<LimbMovement>().GetLimbState() + "RightLeg: " + GameObject.FindGameObjectWithTag("RightLeg").GetComponent<LimbMovement>().GetLimbState());
-
+       
     }
 
     public void GameOver() {
@@ -38,6 +36,7 @@ public class GameControlling : MonoBehaviour {
             GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
         }
         Invoke("QuitToLeaderboard", 5f);
+        if (GetComponent<AudioSource>()) GetComponent<AudioSource>().Play();
     }
 
     private void QuitToLeaderboard() {
