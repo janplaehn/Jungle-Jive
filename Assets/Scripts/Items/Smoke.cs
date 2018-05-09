@@ -10,6 +10,9 @@ public class Smoke : MonoBehaviour{
     {
         smoke = Resources.Load("Materials/Smoke") as GameObject;
         GameObject.Instantiate(smoke);
-        smoke.transform.position = new Vector3(GameObject.FindGameObjectWithTag(playerTag).transform.position.x, -4.4f, 0);
+        if (playerTag == "Player1") smoke.transform.position = new Vector3(4, -4.4f, 0);
+        else smoke.transform.position = new Vector3(-4, -4.4f, 0);
+        Debug.Log(playerTag);
+        //smoke.transform.position = new Vector3(GameObject.FindGameObjectWithTag(playerTag).transform.position.x, -4.4f, 0);
     }
 }
