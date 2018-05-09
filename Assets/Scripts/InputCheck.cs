@@ -64,7 +64,7 @@ public class InputCheck : MonoBehaviour {
     {
         GameObject t = GameObject.FindGameObjectWithTag(givenTag);
         if (t) return t.GetComponent<LimbMovement>();
-        Debug.LogWarning(t);
+        Debug.LogWarning(t + " " + givenTag);
         return null;
     }
 
