@@ -7,6 +7,8 @@ public class ComboManager : MonoBehaviour {
 
     public GameObject comboP1;
     public GameObject comboP2;
+    public GameObject comboP1Image;
+    public GameObject comboP2Image;
     private int comboStreakP1;
     private int comboStreakP2;
     [SerializeField] Color noCombo;
@@ -16,8 +18,9 @@ public class ComboManager : MonoBehaviour {
 	void Start () {
         comboStreakP1 = 0;
         comboStreakP2 = 0;
-        comboP1.GetComponent<Text>().text = "Combo: " + comboStreakP1.ToString();
-        comboP2.GetComponent<Text>().text = "Combo: " + comboStreakP1.ToString();
+        comboP1.GetComponent<Text>().text = comboStreakP1.ToString();
+        comboP2.GetComponent<Text>().text = comboStreakP1.ToString();
+
 
     }
 	
@@ -26,30 +29,36 @@ public class ComboManager : MonoBehaviour {
         if (comboStreakP1 >= 1 && comboStreakP1 <= 2)
         {
             comboP1.GetComponent<Text>().color = smallCombo;
+            comboP1Image.GetComponent<Image>().color = smallCombo;
         }
         if (comboStreakP1 >= 3)
         {
             ScoringSystem.comboMultiplierP1 = 2;
             comboP1.GetComponent<Text>().color = bigCombo;
+            comboP1Image.GetComponent<Image>().color = bigCombo;
         }
         if (comboStreakP1 < 1)
         {
             comboP1.GetComponent<Text>().color = noCombo;
+            comboP1Image.GetComponent<Image>().color = noCombo;
         }
 
 
         if (comboStreakP2 >= 1 && comboStreakP2 <= 2)
         {
             comboP2.GetComponent<Text>().color = smallCombo;
+            comboP2Image.GetComponent<Image>().color = smallCombo;
         }
         if (comboStreakP2 >= 3)
         {
             ScoringSystem.comboMultiplierP1 = 2;
             comboP2.GetComponent<Text>().color = bigCombo;
+            comboP2Image.GetComponent<Image>().color = bigCombo;
         }
         if (comboStreakP2 < 1)
         {
             comboP2.GetComponent<Text>().color = noCombo;
+            comboP2Image.GetComponent<Image>().color = noCombo;
         }
     }
 
@@ -59,11 +68,11 @@ public class ComboManager : MonoBehaviour {
         if (isPlayerOne == true)
         {
             comboStreakP1++;
-            comboP1.GetComponent<Text>().text = "Combo: " + comboStreakP1.ToString();
+            comboP1.GetComponent<Text>().text =comboStreakP1.ToString();
         } else
         {
             comboStreakP2++;
-            comboP2.GetComponent<Text>().text = "Combo: " + comboStreakP2.ToString();
+            comboP2.GetComponent<Text>().text =comboStreakP2.ToString();
         }
     }
 
@@ -73,12 +82,12 @@ public class ComboManager : MonoBehaviour {
         {
             comboStreakP1 = 0;
             ScoringSystem.comboMultiplierP1 = 1;
-            comboP1.GetComponent<Text>().text = "Combo: " + comboStreakP1.ToString();
+            comboP1.GetComponent<Text>().text =comboStreakP1.ToString();
         }else
         {
             comboStreakP2 = 0;
             ScoringSystem.comboMultiplierP2 = 1;
-            comboP2.GetComponent<Text>().text = "Combo: " + comboStreakP2.ToString();
+            comboP2.GetComponent<Text>().text =comboStreakP2.ToString();
         }
 
     }
