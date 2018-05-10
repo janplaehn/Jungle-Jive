@@ -20,8 +20,8 @@ public class InputCheck : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        GetLimbs(Players.PlayerOne);
-        GetLimbs(Players.PlayerTwo);
+        //GetLimbs(Players.PlayerOne);
+        //GetLimbs(Players.PlayerTwo);
     }
 	
 	// Update is called once per frame
@@ -41,24 +41,24 @@ public class InputCheck : MonoBehaviour {
     {
         if(player == Players.PlayerOne)
         {
-            leftArm = GetLimb("LeftArm");
-            rightArm = GetLimb("RightArm");
-            leftLeg = GetLimb("LeftLeg");
-            rightLeg = GetLimb("RightLeg");
+            leftArm = GetLimb("upperArm_lP1");
+            rightArm = GetLimb("upperArm_rP1");
+            leftLeg = GetLimb("upperLeg_lP1");
+            rightLeg = GetLimb("upperLeg_rP1");
         } else
         {
-            leftArmP2 = GetLimb("LeftArmP2");
-            rightArmP2 = GetLimb("RightArmP2");
-            leftLegP2 = GetLimb("LeftLegP2");
-            rightLegP2 = GetLimb("RightLegP2");
+            leftArmP2 = GetLimb("upperArm_lP2");
+            rightArmP2 = GetLimb("upperArm_rP2");
+            leftLegP2 = GetLimb("upperLeg_lP2");
+            rightLegP2 = GetLimb("upperLeg_rP2");
         }
     }
 
-    LimbMovement GetLimb(string givenTag)
+    LimbMovement GetLimb(string givenName)
     {
-        GameObject[] t = GameObject.FindGameObjectsWithTag(givenTag);
-        if (t.Length >= 1) return t[0].GetComponent<LimbMovement>();
-        Debug.LogWarning(t + " " + givenTag);
+        GameObject t = GameObject.Find(givenName);
+        if (t != null) return t.GetComponent<LimbMovement>();
+        Debug.LogWarning(t + " " + givenName);
         return null;
     }
 

@@ -259,12 +259,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &91450897 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114933997954691680, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-    type: 2}
-  m_PrefabInternal: {fileID: 2076924937}
-  m_Script: {fileID: 11500000, guid: 3b7b6873020e5b743883351e34ae1402, type: 3}
 --- !u!1 &125627098
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +482,41 @@ Prefab:
     - target: {fileID: 1493679181133630, guid: b7046954ca9583440890473d657838c2, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
         type: 2}
@@ -1992,10 +2021,6 @@ Prefab:
     - target: {fileID: 4031779920218702, guid: e92991d6fc7e10442b829c782cd53aee, type: 2}
       propertyPath: m_RootOrder
       value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 1851392287152092, guid: e92991d6fc7e10442b829c782cd53aee, type: 2}
-      propertyPath: m_Name
-      value: bananaSmashCollider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e92991d6fc7e10442b829c782cd53aee, type: 2}
@@ -3847,11 +3872,6 @@ Prefab:
       propertyPath: shakeText
       value: 
       objectReference: {fileID: 1078130464}
-    - target: {fileID: 114593276062097544, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: states.Array.data[0]
-      value: 
-      objectReference: {fileID: 91450897}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0

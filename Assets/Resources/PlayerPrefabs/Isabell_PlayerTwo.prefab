@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 60847424810400338}
   - component: {fileID: 114052524535173950}
   m_Layer: 0
-  m_Name: upperLeg_l
+  m_Name: upperLeg_lP2
   m_TagString: LeftLeg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 60286852054623226}
   - component: {fileID: 114207861009524840}
   m_Layer: 0
-  m_Name: upperArm_r
+  m_Name: upperArm_rP2
   m_TagString: RightArm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 60597735073882264}
   - component: {fileID: 114888197967066544}
   m_Layer: 0
-  m_Name: upperLeg_r
+  m_Name: upperLeg_rP2
   m_TagString: RightLeg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 60858498190148676}
   - component: {fileID: 114051023319318698}
   m_Layer: 0
-  m_Name: upperArm_l
+  m_Name: upperArm_lP2
   m_TagString: LeftArm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,7 +370,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088626018725510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 945.621, y: 548.3872, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4061723102178918}
