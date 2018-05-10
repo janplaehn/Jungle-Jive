@@ -50,6 +50,7 @@ public class Mushroom : MonoBehaviour {
                 secondPlayerAffected = true;
                 break;
         }
+        GameObject.Find("mushroom").GetComponent<AudioSource>().Play();
     }
 
     private void Update()

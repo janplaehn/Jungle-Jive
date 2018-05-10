@@ -5,7 +5,6 @@ using UnityEngine;
 public class Smoke : MonoBehaviour{
     public static GameObject smoke;
 
-
     public static void SmokeInpact (string playerTag)
     {
         smoke = Resources.Load("Materials/Smoke") as GameObject;
@@ -13,6 +12,6 @@ public class Smoke : MonoBehaviour{
         if (playerTag == "Player1") smoke.transform.position = new Vector3(4, -4.4f, 0);
         else smoke.transform.position = new Vector3(-4, -4.4f, 0);
         Debug.Log(playerTag);
-        //smoke.transform.position = new Vector3(GameObject.FindGameObjectWithTag(playerTag).transform.position.x, -4.4f, 0);
+        GameObject.Find("smoke").GetComponent<AudioSource>().Play();
     }
 }
