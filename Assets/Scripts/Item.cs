@@ -112,7 +112,7 @@ public class Item : MonoBehaviour {
                 mirrorScript.ActivateMirror(playerTag);
                 break;
             case Type.Smoke:
-                Smoke.SmokeInpact(playerTag);
+                Smoke.SmokeInpact(this.transform.position.x);
                 break;
             default:
                 break;

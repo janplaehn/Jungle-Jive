@@ -11,6 +11,7 @@ public class ComboManager : MonoBehaviour {
     public GameObject comboP2Image;
     private int comboStreakP1;
     private int comboStreakP2;
+    [SerializeField] Color invisible;
     [SerializeField] Color noCombo;
     [SerializeField] Color smallCombo;
     [SerializeField] Color bigCombo;
@@ -20,7 +21,8 @@ public class ComboManager : MonoBehaviour {
         comboStreakP2 = 0;
         comboP1.GetComponent<Text>().text = comboStreakP1.ToString();
         comboP2.GetComponent<Text>().text = comboStreakP1.ToString();
-
+        comboP1Image.GetComponent<Image>().color = invisible;
+        
 
     }
 	
@@ -39,8 +41,8 @@ public class ComboManager : MonoBehaviour {
         }
         if (comboStreakP1 < 1)
         {
-            comboP1.GetComponent<Text>().color = noCombo;
-            comboP1Image.GetComponent<Image>().color = noCombo;
+            comboP1.GetComponent<Text>().color = invisible;
+            comboP1Image.GetComponent<Image>().color = invisible;
         }
 
 
@@ -57,8 +59,8 @@ public class ComboManager : MonoBehaviour {
         }
         if (comboStreakP2 < 1)
         {
-            comboP2.GetComponent<Text>().color = noCombo;
-            comboP2Image.GetComponent<Image>().color = noCombo;
+            comboP2.GetComponent<Text>().color = invisible;
+            comboP1Image.GetComponent<Image>().color = invisible;
         }
     }
 
