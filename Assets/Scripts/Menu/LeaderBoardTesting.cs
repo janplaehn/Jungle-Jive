@@ -12,7 +12,7 @@ public class LeaderBoardTesting : MonoBehaviour {
     }
 
     public static void TestAwake() {
-        TestCase[] tests = new TestCase[1];
+        TestCase[] tests = new TestCase[2];
 
         //test number 0
         {
@@ -28,6 +28,27 @@ public class LeaderBoardTesting : MonoBehaviour {
                     tests[0].resultingHighscores[i] = (i + 2) * 1000;
                 }
                 tests[0].resultingHighscores[9] = tests[0].secondPScore;
+            }
+        }
+
+        {
+            tests[1].firstPScore = 5000;
+            tests[1].secondPScore = 5000;
+            tests[1].highscores = new int[10];
+            for (int i = 0; i < tests[0].highscores.Length; i++)
+            {
+                tests[1].highscores[i] = (i + 1) * 1000;
+            }
+            {
+                tests[1].resultingHighscores = new int[10];
+                for (int i = 0; i < tests[0].highscores.Length; i++)
+                {
+                    tests[1].resultingHighscores[i] = (i + 1) * 1000;
+                }
+                tests[1].resultingHighscores[3] = tests[1].secondPScore;
+                tests[1].resultingHighscores[2] = tests[1].firstPScore;
+                tests[1].resultingHighscores[1] = 4000;
+                tests[1].resultingHighscores[0] = 3000;
             }
         }
 
