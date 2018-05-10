@@ -15,7 +15,7 @@ public static class Banana  {
         LimbMovement[] limbs = disabledPlayer.GetComponentsInChildren<LimbMovement>();
         for (int i = 0; i < limbs.Length; i++)
         {
-            limbs[i].SetStun(3.94f);
+            limbs[i].SetStun(7.88f);
         }
         if (playerTag == "Player1") {
             GameObject.Find("bananaSmashCollider").GetComponent<Rigidbody2D>().AddForce(Vector3.left * 10000);
