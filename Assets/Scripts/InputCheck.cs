@@ -13,12 +13,6 @@ public class InputCheck : MonoBehaviour {
     LimbMovement leftLegP2;
     LimbMovement rightLegP2;
 
-    float[] currentAccel1;
-    float[] lastAccel1;
-
-    float[] currentAccel2;
-    float[] lastAccel2;
-
     public enum Players
     {
         PlayerOne,
@@ -62,8 +56,8 @@ public class InputCheck : MonoBehaviour {
 
     LimbMovement GetLimb(string givenTag)
     {
-        GameObject t = GameObject.FindGameObjectsWithTag(givenTag)[0];
-        if (t) return t.GetComponent<LimbMovement>();
+        GameObject[] t = GameObject.FindGameObjectsWithTag(givenTag);
+        if (t.Length >= 1) return t[0].GetComponent<LimbMovement>();
         Debug.LogWarning(t + " " + givenTag);
         return null;
     }
@@ -206,23 +200,5 @@ public class InputCheck : MonoBehaviour {
             if (limb.GetLimbState() == 2) return Mathf.Abs(limb.lastRotation - limb.transform.rotation.eulerAngles.z);
         }
         return 0f;
-    }
-
-    public void SetAccel(float[] givenAccel, Players givenPlayer)
-    {
-        if(givenPlayer == Players.PlayerOne)
-        {
-            lastAccel1 = currentAccel1;
-            currentAccel1 = givenAccel;
-        } else
-        {
-            lastAccel2 = currentAccel2;
-            currentAccel2 = givenAccel;
-        }
-    }
-
-    public void GetAccel()
-    {
-
     }
 }

@@ -21,11 +21,9 @@ public class Item : MonoBehaviour {
     public bool isRandomised;
 
     private Rigidbody2D rb;
-    private bool isThrown;
     private MirrorEffect mirrorScript;
     
     void Start() {
-        isThrown = false;
         rb = GetComponent<Rigidbody2D>();
         mirrorScript = GameObject.Find("GameController").GetComponent<MirrorEffect>();
         if (isRandomised) {
@@ -64,7 +62,6 @@ public class Item : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.transform.parent) {
             if (collision.gameObject.transform.parent.tag == ("Player1") || collision.gameObject.transform.parent.tag == ("Player2")) {
-                isThrown = false;
                 ActivateItem(collision.gameObject.transform.parent.tag);
                 Destroy(this.gameObject);
             }
@@ -87,7 +84,6 @@ public class Item : MonoBehaviour {
     }
 
     public void AddThrowForce() {
-        isThrown = true;
         gameObject.transform.parent = null;
         rb.gravityScale = 0.5f;
         if (transform.position.x > 0) {
