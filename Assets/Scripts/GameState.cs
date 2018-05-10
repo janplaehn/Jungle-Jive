@@ -23,6 +23,11 @@ public class GameState : MonoBehaviour {
         {
             changePauseState();
         }
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            Banana.BananaHit("Player2");
+            StartCoroutine(Banana.ResetPositions("Player2", GameObject.Find("bananaSmashCollider")));
+            StartCoroutine(Banana.FlyOff("Player2"));
+        }
         if (!started || finished || isPaused) return;
         if(states[stateIndex].OnUpdate() == false) {
             states[stateIndex].OnEnd();

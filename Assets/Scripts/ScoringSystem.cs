@@ -28,11 +28,14 @@ public class ScoringSystem : MonoBehaviour {
         }
         if(firstPlayerTextFeedback.GetComponent<TextFeedback>() != null)
         firstPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore);
-        if(firstPlayerHead == null)
+        if(!firstPlayerHead)
         {
             firstPlayerHead = GameObject.FindGameObjectWithTag("Head");
         }
-        firstPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount, maxScore);
+        else if (firstPlayerHead) {
+            if (firstPlayerHead.GetComponent<FaceFeedback>())
+            firstPlayerHead.GetComponent<FaceFeedback>().GiveFaceFeedback(scoreAmount, maxScore);
+        }
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
             if (face.GetComponent<AudienceFeedbackController>())
                 face.GetComponent<AudienceFeedbackController>().GiveFaceFeedback(scoreAmount, maxScore);

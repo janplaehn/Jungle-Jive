@@ -48,6 +48,11 @@ public class ItemMiniGame : State {
         return true;
     }
 
+    public void ResetPositions(string playerTag) {
+        StartCoroutine(Banana.ResetPositions(playerTag, GameObject.Find("bananaSmashCollider")));
+        StartCoroutine(Banana.FlyOff(playerTag));
+    }
+
     public void BeforeEnd() {
         foreach (DiscoballRetract dr in canvas.GetComponentsInChildren<DiscoballRetract>()) {
             dr.Extend();
