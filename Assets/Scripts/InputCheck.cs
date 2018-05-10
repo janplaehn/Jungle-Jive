@@ -62,7 +62,7 @@ public class InputCheck : MonoBehaviour {
 
     LimbMovement GetLimb(string givenTag)
     {
-        GameObject t = GameObject.FindGameObjectWithTag(givenTag);
+        GameObject t = GameObject.FindGameObjectsWithTag(givenTag)[0];
         if (t) return t.GetComponent<LimbMovement>();
         Debug.LogWarning(t + " " + givenTag);
         return null;
