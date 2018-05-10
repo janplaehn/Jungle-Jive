@@ -24,7 +24,7 @@ public static class Banana  {
             GameObject.Find("bananaSmashCollider").GetComponent<Rigidbody2D>().AddForce(Vector3.right * 10000);
         }
         disabledPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        GameObject.Find("icecube").GetComponent<AudioSource>().Play();
+        GameObject.Find("banana").GetComponent<AudioSource>().Play();
     }
 
     public static IEnumerator FlyOff(string playerTag) {

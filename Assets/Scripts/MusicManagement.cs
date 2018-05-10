@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class MusicManagement : MonoBehaviour {
 
@@ -19,7 +20,10 @@ public class MusicManagement : MonoBehaviour {
             instance = this;
             isFirstInstance = true;
         }
-        else if (instance != this) Destroy(gameObject);
+        else if (instance != this) {
+            Destroy(gameObject);
+            isFirstInstance = false;
+        }
         DontDestroyOnLoad(this.gameObject);
 
         foreach (MusicTrack t in tracks) {
@@ -29,6 +33,13 @@ public class MusicManagement : MonoBehaviour {
 
             t.source.outputAudioMixerGroup = mixerGroup;
         }
+    }
+
+    private void Start() {
+        if (isFirstInstance && SceneManager.GetActiveScene().name == "MenuScene") {
+                Play("MenuMusic");
+                isFirstInstance = false;
+            }
     }
 
     public void Play(string sound) {

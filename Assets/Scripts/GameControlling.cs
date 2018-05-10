@@ -10,6 +10,7 @@ public class GameControlling : MonoBehaviour {
     public float moveReactionTime;
 
     public void GameOver() {
+        Invoke("QuitToLeaderboard", 5f);
         GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
             if (face.GetComponent<AudienceFeedbackController>())
@@ -23,7 +24,6 @@ public class GameControlling : MonoBehaviour {
             GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("DanceMusic");
             GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
         }
-        Invoke("QuitToLeaderboard", 5f);
         if (GetComponent<AudioSource>()) GetComponent<AudioSource>().Play();
     }
 
