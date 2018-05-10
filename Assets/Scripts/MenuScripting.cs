@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuScripting : MonoBehaviour {
+    //we can just remove this tbh, alt f4 ftw
 	public void QuitGame()
     {
         Debug.Log("Quit Requested");
-        Application.Quit();
+        //Application.Quit();
     }
 
     public void ChangeScene(string scene)
