@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 4034806143787902}
   - component: {fileID: 82460149682943156}
   m_Layer: 0
-  m_Name: icecube
+  m_Name: banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d151d7e045dbd4e42accea6c7705896e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7774b5ed1bed87042be38314fb1c32f3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
