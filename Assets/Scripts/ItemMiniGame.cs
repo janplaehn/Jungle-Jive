@@ -65,6 +65,7 @@ public class ItemMiniGame : State {
 
     public override void OnEnd()
     {
+        Debug.Log(playerOneScore + " + " + playerTwoScore);
         shakeText.SetActive(false);
     }
 
