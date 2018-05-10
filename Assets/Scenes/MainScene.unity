@@ -678,6 +678,51 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7046954ca9583440890473d657838c2, type: 2}
   m_IsPrefabParent: 0
@@ -2021,7 +2066,7 @@ Animator:
   m_GameObject: {fileID: 1078130464}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 91a6f78e1ef277c4f98fe30c54fcd934, type: 2}
+  m_Controller: {fileID: 9100000, guid: ede5bf5340d67d447814dc4e8f81b1b1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3222,16 +3267,31 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: fb1f7754246d2cf4dbbd703c65348871, type: 2}
-    - target: {fileID: 114865862433789612, guid: 07664aeecf0fe43479345603b2b0af9e,
+    - target: {fileID: 224884403182522078, guid: 07664aeecf0fe43479345603b2b0af9e,
         type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 15
+      propertyPath: m_AnchoredPosition.x
+      value: 75.6001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224884403182522078, guid: 07664aeecf0fe43479345603b2b0af9e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -75.48999
+      objectReference: {fileID: 0}
+    - target: {fileID: 224737869995980058, guid: 07664aeecf0fe43479345603b2b0af9e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -76.6001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224737869995980058, guid: 07664aeecf0fe43479345603b2b0af9e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -75.30005
       objectReference: {fileID: 0}
     - target: {fileID: 114865862433789612, guid: 07664aeecf0fe43479345603b2b0af9e,
         type: 2}
-      propertyPath: m_FontData.m_MinSize
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 0968a7da85b89644aba061aff5fcbe62, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07664aeecf0fe43479345603b2b0af9e, type: 2}
   m_IsPrefabParent: 0
@@ -3576,41 +3636,86 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114933997954691680, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: shakeText
+      value: 
+      objectReference: {fileID: 1078130464}
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instruction
       value: 
       objectReference: {fileID: 1804847761}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP1
       value: 
       objectReference: {fileID: 1201393723}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP2
       value: 
       objectReference: {fileID: 1023665758}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: nextInstruction
       value: 
       objectReference: {fileID: 1804847762}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: musicSource
+      propertyPath: instruction
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+      objectReference: {fileID: 1804847761}
+    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: playerOneSpawn
+      propertyPath: timingObjectP1
       value: 
-      objectReference: {fileID: 1596589756}
-    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+      objectReference: {fileID: 1201393723}
+    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: playerTwoSpawn
+      propertyPath: timingObjectP2
       value: 
-      objectReference: {fileID: 993222371}
+      objectReference: {fileID: 1023665758}
+    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP1Small
+      value: 
+      objectReference: {fileID: 1499589035}
+    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP2Small
+      value: 
+      objectReference: {fileID: 453269822}
+    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: nextInstruction
+      value: 
+      objectReference: {fileID: 1804847762}
+    - target: {fileID: 114814908244296100, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: shakeText
+      value: 
+      objectReference: {fileID: 1078130464}
+    - target: {fileID: 114894100508332546, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: instruction
+      value: 
+      objectReference: {fileID: 1804847761}
+    - target: {fileID: 114894100508332546, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP1
+      value: 
+      objectReference: {fileID: 1201393723}
+    - target: {fileID: 114894100508332546, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP2
+      value: 
+      objectReference: {fileID: 1023665758}
+    - target: {fileID: 114894100508332546, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: nextInstruction
+      value: 
+      objectReference: {fileID: 1804847762}
     - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: firstPlayerScoreDisplay
@@ -3626,91 +3731,36 @@ Prefab:
       propertyPath: comboManager
       value: 
       objectReference: {fileID: 1804847758}
-    - target: {fileID: 114894100508332546, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: playerOneSpawn
+      value: 
+      objectReference: {fileID: 1596589756}
+    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: playerTwoSpawn
+      value: 
+      objectReference: {fileID: 993222371}
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instruction
       value: 
       objectReference: {fileID: 1804847761}
-    - target: {fileID: 114894100508332546, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP1
       value: 
       objectReference: {fileID: 1201393723}
-    - target: {fileID: 114894100508332546, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP2
       value: 
       objectReference: {fileID: 1023665758}
-    - target: {fileID: 114894100508332546, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: nextInstruction
       value: 
       objectReference: {fileID: 1804847762}
-    - target: {fileID: 114814908244296100, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: shakeText
-      value: 
-      objectReference: {fileID: 1078130464}
-    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: instruction
-      value: 
-      objectReference: {fileID: 1804847761}
-    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP1
-      value: 
-      objectReference: {fileID: 1201393723}
-    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2
-      value: 
-      objectReference: {fileID: 1023665758}
-    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: nextInstruction
-      value: 
-      objectReference: {fileID: 1804847762}
-    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: musicSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: instruction
-      value: 
-      objectReference: {fileID: 1804847761}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP1
-      value: 
-      objectReference: {fileID: 1201393723}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2
-      value: 
-      objectReference: {fileID: 1023665758}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: nextInstruction
-      value: 
-      objectReference: {fileID: 1804847762}
-    - target: {fileID: 114933997954691680, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: shakeText
-      value: 
-      objectReference: {fileID: 1078130464}
-    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP1Small
-      value: 
-      objectReference: {fileID: 1499589035}
-    - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2Small
-      value: 
-      objectReference: {fileID: 453269822}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
