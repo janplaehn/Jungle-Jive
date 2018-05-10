@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Freestyle : State {
     public int freestylePrize;
-    private bool isActive;
     public float activeTimelimit;
-    private float accumulatedTime = 0 ;
+    private float accumulatedTime = 0;
     private float measureTimer = 0;
     public float activateTime;
     public List<TempMove> recentMovesP1;
@@ -14,7 +13,6 @@ public class Freestyle : State {
     private GameObject freestyleText;
     private ScoringSystem scoringSystem;
     private InputCheck inputCheck;
-    private TempMove lastMove;
     int repitionScore = 25;
     int maxScore = 100;
     public bool stateFinished = false;
@@ -29,7 +27,6 @@ public class Freestyle : State {
     public override void OnStart()
     {
         freestyleText.SetActive(true);
-        isActive = true;
         recentMovesP1 = new List<TempMove>();
         recentMovesP2 = new List<TempMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
@@ -87,7 +84,7 @@ public class Freestyle : State {
                             tempScore = maxScore;
                         }
                     }
-                    playerOneScore += tempScore;
+                    playerTwoScore += tempScore;
                     recentMovesP1.Add(tempMoveP1);
                 }
             }

@@ -8,18 +8,6 @@ public class GameControlling : MonoBehaviour {
     public AudioClip music;
     public float animationSpeed = 1;
     public float moveReactionTime;
-    private bool isPaused;
-
-
-
-    void Start() {
-        isPaused = false;
-        CreateInstructions();
-    }
-
-    void Update() {
-       
-    }
 
     public void GameOver() {
         GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
@@ -42,11 +30,6 @@ public class GameControlling : MonoBehaviour {
     private void QuitToLeaderboard() {
         SceneManager.LoadScene("EnterNameScene");
     }
-
-    void CreateInstructions()
-    {
-    }
-    
 
     
 

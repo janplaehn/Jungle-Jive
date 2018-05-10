@@ -10,8 +10,6 @@ public class ItemMiniGame : State {
     public Transform bird;
 
     private GameObject canvas;
-    private GameObject playerOne;
-    private GameObject playerTwo;
     private float playerOneScore;
     private float playerTwoScore;
     private InputCheck input;
@@ -25,8 +23,6 @@ public class ItemMiniGame : State {
 
     public override void OnStart() {
         shakeText.SetActive(true);
-        playerOne = GameObject.FindGameObjectWithTag("Player1");
-        playerTwo = GameObject.FindGameObjectWithTag("Player2");
         canvas = GameObject.Find("Canvas");
         input = GameObject.Find("GameController").GetComponent<InputCheck>();
         birdInstance = Instantiate(bird, birdSpawnPosition, Quaternion.identity).gameObject;
