@@ -12,6 +12,8 @@ public class MusicInstructions : State {
     private SpriteRenderer timingP2;
     public GameObject timingObjectP1;
     public GameObject timingObjectP2;
+    public GameObject timingObjectP1Small;
+    public GameObject timingObjectP2Small;
     public Image nextInstruction;
     private float accumulatedTime = 0f;
     public AudioSource musicSource;
@@ -83,8 +85,10 @@ public class MusicInstructions : State {
         {
             nextInstruction.sprite = voidSprite;
         }
-        timingP1.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player1").transform.position.x, -3.9f, 1);
-        timingP2.gameObject.transform.position = new Vector3(GameObject.FindGameObjectWithTag("Player2").transform.position.x, -3.9f, 1);
+        timingP1.gameObject.transform.position = new Vector3(-3, -3.9f, 1);
+        timingP2.gameObject.transform.position = new Vector3(3, -3.9f, 1);
+        timingObjectP1Small.transform.position = timingP1.gameObject.transform.position;
+        timingObjectP2Small.transform.position = timingP2.gameObject.transform.position;
         if (musicSource != null) musicSource.Play();
         if (introTime > 0) started = false;
     }
@@ -133,12 +137,16 @@ public class MusicInstructions : State {
                 }
                 timingP1.sprite = voidSprite;
                 timingP2.sprite = voidSprite;
+                //timingObjectP1Small.GetComponent<SpriteRenderer>().sprite = voidSprite;
+                //timingObjectP2Small.GetComponent<SpriteRenderer>().sprite = voidSprite;
                 timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
                 timingP1.color = new Color(1f, 1f, 1f, 0.25f);
                 timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
                 timingP2.color = timingP1.color;
                 timingP1.sprite = instruction.sprite;
                 timingP2.sprite = timingP1.sprite;
+                timingObjectP1Small.GetComponent<SpriteRenderer>().sprite = timingP1.sprite;
+                timingObjectP2Small.GetComponent<SpriteRenderer>().sprite = timingP2.sprite;
                 lastMove = timingPairs[lastPairIndex].firstValue;
 
             }
@@ -154,6 +162,8 @@ public class MusicInstructions : State {
                 timingP2.enabled = true;
                 timingP1.sprite = instruction.sprite;
                 timingP2.sprite = instruction.sprite;
+                timingObjectP1Small.GetComponent<SpriteRenderer>().sprite = timingP1.sprite;
+                timingObjectP2Small.GetComponent<SpriteRenderer>().sprite = timingP2.sprite;
                 timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
                 timingP1.color = new Color(1f, 1f, 1f, 0.25f);
                 timingP2.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
@@ -171,6 +181,9 @@ public class MusicInstructions : State {
     {
         timingP1.sprite = voidSprite;
         timingP2.sprite = voidSprite;
+        timingObjectP1Small.GetComponent<SpriteRenderer>().sprite = voidSprite;
+        timingObjectP2Small.GetComponent<SpriteRenderer>().sprite = voidSprite;
+
     }
 
     public void SetMusic(AudioClip givenMusic, DanceMovePair[] givenPairs)
@@ -183,8 +196,8 @@ public class MusicInstructions : State {
 
     void animateTiming (float perfectTime, float accumulatedTime)
     {
-        timingP1.gameObject.transform.localScale = new Vector3(1 + (3 * (perfectTime - accumulatedTime)) / perfectTime, 1 + (3 * (perfectTime - accumulatedTime)) / perfectTime, 0);
-        timingP1.color = new Color(1f, 1f, 1f, 0.25f * accumulatedTime);
+        timingP1.gameObject.transform.localScale = new Vector3(1.8f + (3 * (perfectTime - accumulatedTime)) / perfectTime, 1.8f + (3 * (perfectTime - accumulatedTime)) / perfectTime, 0);
+        //timingP1.color = new Color(1f, 1f, 1f, 0.25f * accumulatedTime);
         if ((1 + (2 * (perfectTime - accumulatedTime)) / perfectTime) <= 1f) {
             timingP1.sprite = voidSprite;
             timingP2.sprite = voidSprite;
