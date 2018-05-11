@@ -27,13 +27,26 @@ public class InputCheck : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (leftArm == null)
+        if (GameObject.FindGameObjectWithTag("Player1"))
         {
-            GetLimbs(Players.PlayerOne);
+            if (leftArm == null)
+            {
+                GetLimbs(Players.PlayerOne);
+            }
+        } else
+        {
+            Debug.Log("player1 not found ");
         }
-        if (leftArmP2 == null)
+        if (GameObject.FindGameObjectWithTag("Player2"))
         {
-            GetLimbs(Players.PlayerTwo);
+            if (leftArmP2 == null)
+            {
+                GetLimbs(Players.PlayerTwo);
+            }
+        } else
+        {
+            Debug.Log("player1 not found ");
+
         }
     }
 

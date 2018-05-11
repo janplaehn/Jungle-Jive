@@ -22,18 +22,21 @@ public class ComboManager : MonoBehaviour {
         comboP1.GetComponent<Text>().text = comboStreakP1.ToString();
         comboP2.GetComponent<Text>().text = comboStreakP1.ToString();
         comboP1Image.GetComponent<Image>().color = invisible;
-        
+        comboP2Image.GetComponent<Image>().color = invisible;
+        ScoringSystem.comboMultiplierP1 = 1;
+        ScoringSystem.comboMultiplierP1 = 1;
+
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (comboStreakP1 >= 1 && comboStreakP1 <= 2)
+        if (comboStreakP1 >= 2 && comboStreakP1 <= 3)
         {
             comboP1.GetComponent<Text>().color = smallCombo;
             comboP1Image.GetComponent<Image>().color = smallCombo;
         }
-        if (comboStreakP1 >= 3)
+        if (comboStreakP1 >= 4)
         {
             ScoringSystem.comboMultiplierP1 = 2;
             comboP1.GetComponent<Text>().color = bigCombo;
@@ -46,12 +49,12 @@ public class ComboManager : MonoBehaviour {
         }
 
 
-        if (comboStreakP2 >= 1 && comboStreakP2 <= 2)
+        if (comboStreakP2 >= 2 && comboStreakP2 <= 3)
         {
             comboP2.GetComponent<Text>().color = smallCombo;
             comboP2Image.GetComponent<Image>().color = smallCombo;
         }
-        if (comboStreakP2 >= 3)
+        if (comboStreakP2 >= 4)
         {
             ScoringSystem.comboMultiplierP1 = 2;
             comboP2.GetComponent<Text>().color = bigCombo;
@@ -60,7 +63,7 @@ public class ComboManager : MonoBehaviour {
         if (comboStreakP2 < 1)
         {
             comboP2.GetComponent<Text>().color = invisible;
-            comboP1Image.GetComponent<Image>().color = invisible;
+            comboP2Image.GetComponent<Image>().color = invisible;
         }
     }
 
