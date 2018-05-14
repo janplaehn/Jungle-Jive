@@ -18,7 +18,7 @@ public class DanceMove : UnityEngine.MonoBehaviour
     public LimbState RightLegPosition;
     public LimbState LeftLegPosition;
     public Sprite moveInstruction;
-    public MusicInstructions.DanceMoveEnum instructionImageIndex;
+    //public MusicInstructions.DanceMoveEnum instructionImageIndex;
 }
 
 public struct TempMove 

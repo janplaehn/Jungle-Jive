@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114410907442614056}
   - component: {fileID: 212032481324195114}
   m_Layer: 0
-  m_Name: 1. LeftArmUp
+  m_Name: 1. RightArmUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,12 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6c7fa50fadef94ca2e86d9d84d213a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightArmPosition: 0
-  LeftArmPosition: 2
+  RightArmPosition: 2
+  LeftArmPosition: 0
   RightLegPosition: 1
   LeftLegPosition: 1
-  moveInstruction: {fileID: 21300000, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
-  instructionImageIndex: 0
+  moveInstruction: {fileID: 21300002, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
 --- !u!212 &212032481324195114
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -54,10 +54,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightArmPosition: 0
   LeftArmPosition: 0
-  RightLegPosition: 2
-  LeftLegPosition: 1
+  RightLegPosition: 1
+  LeftLegPosition: 2
   moveInstruction: {fileID: 21300004, guid: fe100897567b7844891f1915bf1f5f71, type: 3}
-  instructionImageIndex: 18
 --- !u!212 &212939039504643150
 SpriteRenderer:
   m_ObjectHideFlags: 1

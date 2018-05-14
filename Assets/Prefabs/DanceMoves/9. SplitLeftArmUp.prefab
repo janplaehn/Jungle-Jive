@@ -52,12 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6c7fa50fadef94ca2e86d9d84d213a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightArmPosition: 0
-  LeftArmPosition: 2
+  RightArmPosition: 2
+  LeftArmPosition: 0
   RightLegPosition: 2
   LeftLegPosition: 2
   moveInstruction: {fileID: 21300016, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
-  instructionImageIndex: 7
 --- !u!212 &212614360059011202
 SpriteRenderer:
   m_ObjectHideFlags: 1

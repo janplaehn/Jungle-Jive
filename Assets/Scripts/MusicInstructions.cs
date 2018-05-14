@@ -65,21 +65,21 @@ public class MusicInstructions : State {
         timingP1 = timingObjectP1.GetComponent<SpriteRenderer>();
         timingP2 = timingObjectP2.GetComponent<SpriteRenderer>();
         lastMove = timingPairs[lastPairIndex].firstValue;
-        nextInstruction.sprite = instructionImageArray[(int)lastMove.instructionImageIndex];
+        nextInstruction.sprite = lastMove.moveInstruction;
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
         if (timingPairs.Length == 0)
         {
             started = false;
         }
-        instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+        instruction.sprite = timingPairs[lastPairIndex].firstValue.moveInstruction;
         timingP1.sprite = instruction.sprite;
         timingP1.gameObject.transform.localScale = new Vector3(scaleTiming, scaleTiming, 1);
         timingP2.gameObject.transform.localScale = timingP1.gameObject.transform.localScale;
         timingP2.sprite = timingP1.sprite;
         if (lastPairIndex + 1 <= timingPairs.Length - 1)
         {
-            nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+            nextInstruction.sprite = timingPairs[lastPairIndex + 1].firstValue.moveInstruction;
         }
         else
         {
@@ -125,11 +125,11 @@ public class MusicInstructions : State {
                 moveRatedP1 = false;
                 moveRatedP2 = false;
                 accumulatedTime = 0f;
-                instruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex].firstValue.instructionImageIndex];
+                instruction.sprite = timingPairs[lastPairIndex].firstValue.moveInstruction;
                 
                 if (lastPairIndex + 1 <= timingPairs.Length - 1)
                 {
-                    nextInstruction.sprite = instructionImageArray[(int)timingPairs[lastPairIndex + 1].firstValue.instructionImageIndex];
+                    nextInstruction.sprite = timingPairs[lastPairIndex + 1].firstValue.moveInstruction;
                 }
                 else
                 {
