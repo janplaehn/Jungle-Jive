@@ -56,7 +56,7 @@ MonoBehaviour:
   LeftArmPosition: 2
   RightLegPosition: 0
   LeftLegPosition: 1
-  moveInstruction: {fileID: 21300028, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
+  moveInstruction: {fileID: 21300016, guid: 6987390205c57144db775239f691691e, type: 3}
 --- !u!212 &212077528936024556
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300028, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
+  m_Sprite: {fileID: 21300016, guid: 6987390205c57144db775239f691691e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

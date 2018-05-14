@@ -36,29 +36,7 @@ public class MusicInstructions : State {
     public bool isPaused = false;
     private float scaleTiming = 1;
 
-
-    public enum DanceMoveEnum
-    {
-        LeftArmUp,
-        RightArmUp,
-        BothArmsUp,
-        BothArmsDown,
-        SplitArmsUp,
-        SplitBothArmsMiddle,
-        SplitBothArmsDown,
-        SplitLeftArmUp,
-        SplitRightArmUp,
-        LeftArmLeftLegUp,
-        RightArmRightLegUp,
-        LeftArmLeftLegAside,
-        RightArmRightLegAside,
-        LeftArmUpLeftLegBehind,
-        RightArmUpRightLegBehind,
-        L_poseRightArmLeftLeg,
-        L_poseLeftArmRightLeg,
-        RightLegUp,
-        LeftLegUp,
-    }
+   
 
 	// Use this for initialization
 	public override void OnStart () {

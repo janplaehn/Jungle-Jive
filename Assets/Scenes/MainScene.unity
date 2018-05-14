@@ -1424,6 +1424,21 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198718307545491510, guid: b7046954ca9583440890473d657838c2,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7046954ca9583440890473d657838c2, type: 2}
   m_IsPrefabParent: 0
@@ -4407,7 +4422,7 @@ Prefab:
         type: 2}
       propertyPath: timingPairs.Array.data[0].firstValue
       value: 
-      objectReference: {fileID: 114410907442614056, guid: 12fb3a4240f96384ea2e72825e50fac5,
+      objectReference: {fileID: 114731098307876664, guid: 171f06b0691d0b246b8885e4e3adf4e1,
         type: 2}
     - target: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
