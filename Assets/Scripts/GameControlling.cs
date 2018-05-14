@@ -28,7 +28,7 @@ public class GameControlling : MonoBehaviour {
     }
 
     private void QuitToLeaderboard() {
-        SceneManager.LoadScene("EnterNameScene");
+        SceneManager.LoadScene("MenuScene");
     }
 
     
