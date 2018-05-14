@@ -1,4 +1,8 @@
-﻿[System.Serializable]
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
 public class DanceMove : UnityEngine.MonoBehaviour
 {
     public enum LimbState
@@ -13,10 +17,11 @@ public class DanceMove : UnityEngine.MonoBehaviour
     public LimbState LeftArmPosition;
     public LimbState RightLegPosition;
     public LimbState LeftLegPosition;
+    public Sprite moveInstruction;
     public MusicInstructions.DanceMoveEnum instructionImageIndex;
 }
 
-public struct TempMove
+public struct TempMove 
 {
     public enum LimbState
     {

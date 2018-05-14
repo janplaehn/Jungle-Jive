@@ -56,6 +56,7 @@ MonoBehaviour:
   LeftArmPosition: 2
   RightLegPosition: 0
   LeftLegPosition: 1
+  moveInstruction: {fileID: 21300026, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
   instructionImageIndex: 13
 --- !u!212 &212833552415321646
 SpriteRenderer:
