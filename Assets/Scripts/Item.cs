@@ -22,10 +22,12 @@ public class Item : MonoBehaviour {
 
     private Rigidbody2D rb;
     private MirrorEffect mirrorScript;
+    private Mushroom mushroomScript;
     
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         mirrorScript = GameObject.Find("GameController").GetComponent<MirrorEffect>();
+        mushroomScript = GameObject.Find("GameController").GetComponent<Mushroom>();
         if (isRandomised) {
             ItemType = (Type)Random.Range(0, System.Enum.GetValues(typeof(Type)).Length);
         }
@@ -98,7 +100,7 @@ public class Item : MonoBehaviour {
         Debug.Log("Item Activated");
         switch (ItemType) {
             case Type.Mushroom:
-                Mushroom.Affect(playerTag);
+                mushroomScript.Affect(playerTag);
                 break;
             case Type.Banana:
                 Banana.BananaHit(playerTag);
