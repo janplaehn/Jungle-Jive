@@ -56,7 +56,7 @@ public class ComboManager : MonoBehaviour {
         }
         if (comboStreakP2 >= 4)
         {
-            ScoringSystem.comboMultiplierP1 = 2;
+            ScoringSystem.comboMultiplierP2 = 2;
             comboP2.GetComponent<Text>().color = bigCombo;
             comboP2Image.GetComponent<Image>().color = bigCombo;
         }
