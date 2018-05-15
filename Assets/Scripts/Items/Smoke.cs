@@ -7,9 +7,9 @@ public class Smoke : MonoBehaviour{
 
     public static void SmokeInpact (float itemX)
     {
-        smoke = Resources.Load("Materials/Smoke") as GameObject;
-        GameObject.Instantiate(smoke);
-        smoke.transform.position = new Vector3(itemX, -4.4f, 0);
-        GameObject.Find("smoke").GetComponent<AudioSource>().Play();
+        if(!smoke) smoke = Resources.Load("Materials/Smoke") as GameObject;
+        GameObject tempSmoke = Instantiate(smoke);
+        tempSmoke.transform.position = new Vector3(itemX, -4.4f, 0);
+        //tempSmoke.GetComponent<AudioSource>().Play();
     }
 }
