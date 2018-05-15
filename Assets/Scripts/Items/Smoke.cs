@@ -10,6 +10,8 @@ public class Smoke : MonoBehaviour{
         if(!smoke) smoke = Resources.Load("Materials/Smoke") as GameObject;
         GameObject tempSmoke = Instantiate(smoke);
         tempSmoke.transform.position = new Vector3(itemX, -4.4f, 0);
-        //tempSmoke.GetComponent<AudioSource>().Play();
+        //smoke sound is something different than smoke prefab
+        GameObject t = GameObject.Find("smoke");
+        if(t) t.GetComponent<AudioSource>().Play();
     }
 }

@@ -15,16 +15,16 @@ public class Mushroom : MonoBehaviour {
     static bool firstPlayerAffected = false;
     static bool secondPlayerAffected = false;
 
-    private void Awake()
+    private void Start()
     {
-        firstPlayerDizzy = Resources.Load("Materials/LeftPlayerStunned", typeof(Material)) as Material;
-        secondPlayerDizzy = Resources.Load("Materials/RightPlayerStunned", typeof(Material)) as Material;
-        bothPlayersDizzy = Resources.Load("Materials/BothPlayersStunned", typeof(Material)) as Material;
-        noPlayerDizzy = Resources.Load("Materials/NoPlayerStunned", typeof(Material)) as Material;
+        if(!firstPlayerDizzy) firstPlayerDizzy = Resources.Load("Materials/LeftPlayerStunned", typeof(Material)) as Material;
+        if (!secondPlayerDizzy) secondPlayerDizzy = Resources.Load("Materials/RightPlayerStunned", typeof(Material)) as Material;
+        if (!bothPlayersDizzy) bothPlayersDizzy = Resources.Load("Materials/BothPlayersStunned", typeof(Material)) as Material;
+        if (!noPlayerDizzy) noPlayerDizzy = Resources.Load("Materials/NoPlayerStunned", typeof(Material)) as Material;
         currentMat = noPlayerDizzy;
     }
 
-    public static void Affect(string playerTag)
+    public void Affect(string playerTag)
     {
         switch (playerTag)
         {
@@ -36,7 +36,7 @@ public class Mushroom : MonoBehaviour {
                 {
                     currentMat = firstPlayerDizzy;
                 }
-                firstPlayerAffected = true;
+                Invoke("ResetFirstPlayer", affectedTimer);
                 break;
             case "Player2":
                 if (currentMat == firstPlayerDizzy)
@@ -47,33 +47,21 @@ public class Mushroom : MonoBehaviour {
                 {
                     currentMat = secondPlayerDizzy;
                 }
-                secondPlayerAffected = true;
+                Invoke("ResetSecondPlayer", affectedTimer);
                 break;
         }
         GameObject.Find("mushroom").GetComponent<AudioSource>().Play();
     }
 
-    private void Update()
+    private void ResetFirstPlayer()
     {
-        if (firstPlayerAffected)
-        {
-            firstPlayerTimer += Time.deltaTime;
-            if(firstPlayerTimer >= affectedTimer)
-            {
-                if (currentMat == bothPlayersDizzy) currentMat = secondPlayerDizzy;
-                if (currentMat == firstPlayerDizzy) currentMat = noPlayerDizzy;
-                firstPlayerTimer = 0f;
-            }
-        }
-        if (secondPlayerAffected)
-        {
-            secondPlayerTimer += Time.deltaTime;
-            if (secondPlayerTimer >= affectedTimer)
-            {
-                if (currentMat == bothPlayersDizzy) currentMat = firstPlayerDizzy;
-                if (currentMat == secondPlayerDizzy) currentMat = noPlayerDizzy;
-                secondPlayerTimer = 0f;
-            }
-        }
+        if (currentMat == bothPlayersDizzy) currentMat = secondPlayerDizzy;
+        if (currentMat == firstPlayerDizzy) currentMat = noPlayerDizzy;
+    }
+
+    private void ResetSecondPlayer()
+    {
+        if (currentMat == bothPlayersDizzy) currentMat = firstPlayerDizzy;
+        if (currentMat == secondPlayerDizzy) currentMat = noPlayerDizzy;
     }
 }
