@@ -10,9 +10,10 @@ public class TextFeedback : MonoBehaviour {
     public Sprite[] spritesOk;
     public Sprite[] spritesBad;
     public Sprite[] spritesHorrible;
+    public Sprite[] earlySprite;
     public float displayDuration;
 	
-    public void GiveTextFeedback(int score, int maxScore) {
+    public void GiveTextFeedback(int score, int maxScore, bool isEarly) {
         GameObject temp = Instantiate(feedbackObject, transform.position, transform.rotation);
         float percentage = ((float) (score) / (float) (maxScore)) * 100f;
         if (percentage == 0f)
@@ -39,7 +40,12 @@ public class TextFeedback : MonoBehaviour {
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesPerfect));
             Debug.LogWarning("Invalid score format " + percentage + " detected. Unable to display text feedback Sprite.");
-        }           /*switch (score/maxScore * 10) {
+        }
+        if (isEarly == true)
+        {
+            temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(earlySprite));
+        }
+        /*switch (score/maxScore * 10) {
             case 0:
                 temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(spritesHorrible));
                 break;

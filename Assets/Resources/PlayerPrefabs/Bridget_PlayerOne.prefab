@@ -1217,6 +1217,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a68a0f11db90a1b43a0355616d636bd5, type: 3}
   spritesHorrible:
   - {fileID: 21300000, guid: ff06772eb608a924c8771c8eeaeddd79, type: 3}
+  earlySprite:
+  - {fileID: 21300000, guid: 3ca7bc92bfaa8c54db07b6da6d5a8957, type: 3}
   displayDuration: 1
 --- !u!114 &114809873052198492
 MonoBehaviour:

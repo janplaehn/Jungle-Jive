@@ -111,15 +111,15 @@ public class Freestyle : State {
         freestyleText.SetActive(false);
         if (playerOneScore > playerTwoScore)
         {
-            scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize);
+            scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize,false);
         } else if (playerTwoScore > playerOneScore)
         {
-            scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize);
+            scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize,false);
         } else
         {
             int temp = Random.Range(0, 2);
-            if (temp == 0) scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize);
-            else scoringSystem.AddSecondPlayerScore(freestylePrize, freestylePrize);
+            if (temp == 0) scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize,false);
+            else scoringSystem.AddSecondPlayerScore(freestylePrize, freestylePrize,false);
         }
         Debug.Log(playerOneScore + " " + playerTwoScore);
     }
