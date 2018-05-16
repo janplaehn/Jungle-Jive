@@ -311,9 +311,10 @@ MonoBehaviour:
   - {fileID: 1717239134}
   - {fileID: 1150939575}
   - {fileID: 457512049}
-  - {fileID: 513218343}
-  - {fileID: 716518210}
-  - {fileID: 1705332589}
+  - {fileID: 1493467695}
+  - {fileID: 1705115472}
+  - {fileID: 796238096}
+  - {fileID: 1114705409}
   skinSetting: {fileID: 1740602797}
 --- !u!4 &69572745
 Transform:
@@ -994,6 +995,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37d8510ed687e03438c8e93d37f6d559, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &382553929 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1082303453255938, guid: 37d8510ed687e03438c8e93d37f6d559,
+    type: 2}
+  m_PrefabInternal: {fileID: 382553928}
 --- !u!1 &397402910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,6 +2663,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37d8510ed687e03438c8e93d37f6d559, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1114705409 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1082303453255938, guid: 37d8510ed687e03438c8e93d37f6d559,
+    type: 2}
+  m_PrefabInternal: {fileID: 1114705408}
 --- !u!1 &1150939575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,9 +3756,10 @@ MonoBehaviour:
   - {fileID: 1952930905}
   - {fileID: 1747533531}
   - {fileID: 479250616}
-  - {fileID: 1021626912}
-  - {fileID: 1281701996}
-  - {fileID: 523440564}
+  - {fileID: 1890494460}
+  - {fileID: 222710145}
+  - {fileID: 1926358488}
+  - {fileID: 382553929}
   skinSetting: {fileID: 1740602797}
 --- !u!4 &1740602796
 Transform:

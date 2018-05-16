@@ -18,19 +18,29 @@ public class Freestyle : State {
     public bool stateFinished = false;
     private int playerOneScore;
     private int playerTwoScore;
+    private GameObject canvas;
 
     private void Start() {
         freestyleText = GameObject.Find("FreestyleText");
+        if (freestyleText)
         freestyleText.SetActive(false);
     }
 
     public override void OnStart()
     {
-        freestyleText.SetActive(true);
+        if (freestyleText)
+            freestyleText.SetActive(true);
         recentMovesP1 = new List<TempMove>();
         recentMovesP2 = new List<TempMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
         scoringSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoringSystem>();
+        canvas = GameObject.Find("Canvas");
+        foreach (DiscoballRetract dr in canvas.GetComponentsInChildren<DiscoballRetract>()) {
+            dr.Retract();
+        }
+        foreach (FreestyleDiscoball dr in canvas.GetComponentsInChildren<FreestyleDiscoball>()) {
+            dr.Extend();
+        }
     }
 
     public override bool OnUpdate ()
@@ -120,6 +130,12 @@ public class Freestyle : State {
             int temp = Random.Range(0, 2);
             if (temp == 0) scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize,false);
             else scoringSystem.AddSecondPlayerScore(freestylePrize, freestylePrize,false);
+        }
+        foreach (DiscoballRetract dr in canvas.GetComponentsInChildren<DiscoballRetract>()) {
+            dr.Extend();
+        }
+        foreach (FreestyleDiscoball dr in canvas.GetComponentsInChildren<FreestyleDiscoball>()) {
+            dr.Retract();
         }
         Debug.Log(playerOneScore + " " + playerTwoScore);
     }

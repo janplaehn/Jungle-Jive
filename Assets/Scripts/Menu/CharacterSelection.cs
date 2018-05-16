@@ -53,6 +53,18 @@ public class CharacterSelection : MonoBehaviour {
 
     public void ConfirmCharacters(string Scene) {
         charactersConfirmed++;
+        if (player == Player.Player1) {
+            foreach (GameObject face in GameObject.FindGameObjectsWithTag("Head")) {
+                if (face.GetComponent<FaceFeedback>())
+                    face.GetComponent<FaceFeedback>().BeHappy();
+            }
+        }
+        if (player == Player.Player2) {
+            foreach (GameObject face in GameObject.FindGameObjectsWithTag("HeadP2")) {
+                if (face.GetComponent<FaceFeedback>())
+                    face.GetComponent<FaceFeedback>().BeHappy();
+            }
+        }
         foreach (GameObject button in PlayerButtons) {
             button.gameObject.SetActive(false);
         }

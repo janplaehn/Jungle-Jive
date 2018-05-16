@@ -12,6 +12,9 @@ public class ScoringSystem : MonoBehaviour {
     public Text secondPlayerScoreDisplay;
     public GameObject firstPlayerTextFeedback;
     public GameObject secondPlayerTextFeedback;
+
+    public LightsFeedback lightsFeedback;
+
     public GameObject firstPlayerHead;
     public GameObject secondPlayerHead;
     public GameObject comboManager;
@@ -19,15 +22,18 @@ public class ScoringSystem : MonoBehaviour {
     public static float comboMultiplierP2 = 1;
 
     public void AddFirstPlayerScore(int scoreAmount, int maxScore, bool isEarly) {
+        //change score
         firstPlayerScore += (int) (scoreAmount * comboMultiplierP1);
         firstPlayerScoreDisplay.text = firstPlayerScore.ToString();
         PlayerPrefs.SetInt(firstPlayerScoreKey, firstPlayerScore);
+        //display text feedback
         if (firstPlayerTextFeedback == null)
         {
             firstPlayerTextFeedback = GameObject.FindGameObjectWithTag("Player1Feedback");
         }
         if(firstPlayerTextFeedback.GetComponent<TextFeedback>() != null)
         firstPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore, isEarly);
+        //display avatar emotion
         if(!firstPlayerHead)
         {
             firstPlayerHead = GameObject.FindGameObjectWithTag("Head");
@@ -40,20 +46,26 @@ public class ScoringSystem : MonoBehaviour {
             if (face.GetComponent<AudienceFeedbackController>())
                 face.GetComponent<AudienceFeedbackController>().GiveFaceFeedback(scoreAmount, maxScore);
         }
+        //display lights feedback
+        lightsFeedback.GiveFirstPlayerFeedback(scoreAmount, maxScore);
+        //manage combo
         if (scoreAmount == maxScore) comboManager.GetComponent<ComboManager>().increaseCombo(true);
         else if (((float)(scoreAmount) / (float)(maxScore)) < 0.5f) comboManager.GetComponent<ComboManager>().breakCombo(true);
     }
 
     public void AddSecondPlayerScore(int scoreAmount, int maxScore, bool isEarly) {
+        //change score
         secondPlayerScore += (int)(scoreAmount * comboMultiplierP2);
         secondPlayerScoreDisplay.text = secondPlayerScore.ToString();
         PlayerPrefs.SetInt(secondPlayerScoreKey, secondPlayerScore);
+        //display text feedback
         if (secondPlayerTextFeedback == null)
         {
             secondPlayerTextFeedback = GameObject.FindGameObjectWithTag("Player2Feedback");
         }
         secondPlayerTextFeedback.GetComponent<TextFeedback>().GiveTextFeedback(scoreAmount, maxScore,isEarly);
-        if (secondPlayerHead == null)
+        //display avatar emotion
+        if (!secondPlayerHead)
         {
             secondPlayerHead = GameObject.FindGameObjectWithTag("HeadP2");
         }
@@ -62,6 +74,9 @@ public class ScoringSystem : MonoBehaviour {
             if (face.GetComponent<AudienceFeedbackController>())
             face.GetComponent<AudienceFeedbackController>().GiveFaceFeedback(scoreAmount, maxScore);
         }
+        //display lights feedback
+        lightsFeedback.GiveSecondPlayerFeedback(scoreAmount, maxScore);
+        //manage combo
         if (scoreAmount == maxScore) comboManager.GetComponent<ComboManager>().increaseCombo(false);
         else if (((float)(scoreAmount) / (float)(maxScore)) < 0.5f) comboManager.GetComponent<ComboManager>().breakCombo(false);
     }

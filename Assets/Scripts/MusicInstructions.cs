@@ -80,8 +80,8 @@ public class MusicInstructions : State {
             accumulatedTime += Time.deltaTime;
             if (accumulatedTime <= GetTiming())
             {
-                animateTiming(GetTiming(), accumulatedTime);
-                checkTiming(accumulatedTime);
+                AnimateTiming(GetTiming(), accumulatedTime);
+                CheckTiming(accumulatedTime);
             }
             else
             {
@@ -171,7 +171,7 @@ public class MusicInstructions : State {
         started = true;
     }
 
-    void animateTiming (float perfectTime, float accumulatedTime)
+    void AnimateTiming (float perfectTime, float accumulatedTime)
     {
         timingP1.gameObject.transform.localScale = new Vector3(1.8f + (3 * (perfectTime - accumulatedTime)) / perfectTime, 1.8f + (3 * (perfectTime - accumulatedTime)) / perfectTime, 0);
         //timingP1.color = new Color(1f, 1f, 1f, 0.25f * accumulatedTime);
@@ -183,7 +183,7 @@ public class MusicInstructions : State {
         timingP2.color = timingP1.color;
     }
 
-    void checkTiming (float accTime)
+    void CheckTiming (float accTime)
     {
         if (inputCheck.CheckLimbs(lastMove, InputCheck.Players.PlayerOne) == 1 && moveRatedP1 == false)
         {
