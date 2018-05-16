@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NameDisplay : MonoBehaviour {
 
-    [Range(1, 2)] public int player;
+    [Range(1, 2)] public int player = 1;
     private Text textField;
 
 	void Start () {
