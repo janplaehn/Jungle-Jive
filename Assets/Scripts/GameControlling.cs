@@ -11,7 +11,7 @@ public class GameControlling : MonoBehaviour {
     public float moveReactionTime;
 
     public void GameOver() {
-        Invoke("QuitToLeaderboard", 6f);
+        Invoke("QuitToLeaderboard", 8f);
         GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
             if (face.GetComponent<AudienceFeedbackController>())
@@ -23,10 +23,28 @@ public class GameControlling : MonoBehaviour {
         }
         if (GetComponent<AudioSource>()) GetComponent<AudioSource>().Play();
         StartCoroutine(ChangeMusic());
+        Invoke("ShootAwayLosingPlayer", 1f);
     }
 
     private void QuitToLeaderboard() {
         SceneManager.LoadScene("MenuScene");
+    }
+
+    private void ShootAwayLosingPlayer() {
+        if (PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0) > PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0)) {
+            Rigidbody2D losingPlayer = GameObject.FindGameObjectWithTag("Player2").GetComponent<Rigidbody2D>();
+            losingPlayer.gravityScale = 0;
+            losingPlayer.constraints = RigidbodyConstraints2D.None;
+            losingPlayer.AddForce(new Vector3(1, 0.8f) * 500);
+            losingPlayer.AddTorque(-500);
+        }
+        else if (PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0) < PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0)) {
+            Rigidbody2D losingPlayer = GameObject.FindGameObjectWithTag("Player1").GetComponent<Rigidbody2D>();
+            losingPlayer.constraints = RigidbodyConstraints2D.None;
+            losingPlayer.gravityScale = 0;
+            losingPlayer.AddForce(new Vector3(-1, 0.8f) * 500);
+            losingPlayer.AddTorque(500);
+        }
     }
 
     private IEnumerator ChangeMusic() {
