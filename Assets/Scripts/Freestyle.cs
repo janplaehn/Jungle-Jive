@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Freestyle : State {
     public int freestylePrize;
@@ -10,7 +11,7 @@ public class Freestyle : State {
     public float activateTime;
     public List<TempMove> recentMovesP1;
     public List<TempMove> recentMovesP2;
-    private GameObject freestyleText;
+    public GameObject freestyleText;
     private ScoringSystem scoringSystem;
     private InputCheck inputCheck;
     int repitionScore = 25;
@@ -20,16 +21,19 @@ public class Freestyle : State {
     private int playerTwoScore;
     private GameObject canvas;
 
+    public GameObject freestyleUI;
+    public Image scoreBarP1;
+    public Image scoreBarP2;
+
     private void Start() {
-        freestyleText = GameObject.Find("FreestyleText");
-        if (freestyleText)
         freestyleText.SetActive(false);
+        freestyleUI.SetActive(false);
     }
 
     public override void OnStart()
     {
-        if (freestyleText)
             freestyleText.SetActive(true);
+        freestyleUI.SetActive(true);
         recentMovesP1 = new List<TempMove>();
         recentMovesP2 = new List<TempMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
@@ -45,6 +49,7 @@ public class Freestyle : State {
 
     public override bool OnUpdate ()
     {
+        SetScoreBars();
         accumulatedTime += Time.deltaTime;
         measureTimer += Time.deltaTime;
         if (accumulatedTime < activeTimelimit && measureTimer > 0.25) 
@@ -111,6 +116,7 @@ public class Freestyle : State {
             return false;
         }
         return true;
+        
     }
 
     public override void OnEnd ()
@@ -119,6 +125,7 @@ public class Freestyle : State {
             GetComponent <AudioSource>().Play();
         }
         freestyleText.SetActive(false);
+        freestyleUI.SetActive(false);
         if (playerOneScore > playerTwoScore)
         {
             scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize,false);
@@ -148,6 +155,12 @@ public class Freestyle : State {
             temp = true;
         }
         return temp;
+    }
+
+    private void SetScoreBars() {
+        Debug.Log(playerOneScore + " " + playerTwoScore);
+        scoreBarP1.GetComponent<Image>().fillAmount = (float)playerOneScore / 2000;
+        scoreBarP2.GetComponent<Image>().fillAmount = (float)playerTwoScore / 2000;
     }
 
 }
