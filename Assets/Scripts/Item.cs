@@ -104,7 +104,7 @@ public class Item : MonoBehaviour {
                 break;
             case Type.Banana:
                 Banana.BananaHit(playerTag);
-                GameObject.Find("MiniGame").GetComponent<ItemMiniGame>().ResetPositions(playerTag);
+                GameObject.Find("MiniGameA").GetComponent<ItemMiniGame>().ResetPositions(playerTag);
                 break;
             case Type.Mirror:
                 mirrorScript.ActivateMirror(playerTag);

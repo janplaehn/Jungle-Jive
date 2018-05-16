@@ -11,7 +11,7 @@ public class GameControlling : MonoBehaviour {
     public float moveReactionTime;
 
     public void GameOver() {
-        Invoke("QuitToLeaderboard", 5f);
+        Invoke("QuitToLeaderboard", 6f);
         GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
             if (face.GetComponent<AudienceFeedbackController>())
@@ -21,15 +21,20 @@ public class GameControlling : MonoBehaviour {
             if (face.GetComponent<AudienceFeedbackController>())
                 face.GetComponent<AudienceFeedbackController>().BeHappy();
         }
-        if (GameObject.Find("MusicManager")) {
-            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("DanceMusic");
-            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
-        }
         if (GetComponent<AudioSource>()) GetComponent<AudioSource>().Play();
+        StartCoroutine(ChangeMusic());
     }
 
     private void QuitToLeaderboard() {
         SceneManager.LoadScene("MenuScene");
+    }
+
+    private IEnumerator ChangeMusic() {
+        yield return new WaitForSeconds(2f);
+        if (GameObject.Find("MusicManager")) {
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("DanceMusic");
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
+        }
     }
 
     
