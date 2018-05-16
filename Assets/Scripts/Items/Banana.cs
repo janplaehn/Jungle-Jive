@@ -17,6 +17,7 @@ public static class Banana  {
         {
             limbs[i].SetStun(0f);
         }
+        GameObject.Find("bananaSmashCollider").GetComponent<CircleCollider2D>().enabled = true;
         if (playerTag == "Player1") {
             GameObject.Find("bananaSmashCollider").GetComponent<Rigidbody2D>().AddForce(Vector3.left * 10000);
         }
@@ -52,12 +53,14 @@ public static class Banana  {
         GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().gravityScale = 1;
         GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
         if (playerTag == "Player1") {
             GameObject.FindGameObjectWithTag(playerTag).transform.position = GameObject.Find("playerOneSpawn").transform.position + Vector3.up * 10;
         }
         else if (playerTag == "Player2") {
             GameObject.FindGameObjectWithTag(playerTag).transform.position = GameObject.Find("playerTwoSpawn").transform.position + Vector3.up * 10;
         }
+        smashCollider.GetComponent<CircleCollider2D>().enabled = false;
         smashCollider.transform.position = new Vector3(0, 0.9f, 0);
         smashCollider.transform.rotation = Quaternion.identity;
         smashCollider.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
