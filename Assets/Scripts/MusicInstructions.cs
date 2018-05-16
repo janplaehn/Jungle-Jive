@@ -63,8 +63,8 @@ public class MusicInstructions : State {
         {
             nextInstruction.sprite = voidSprite;
         }
-        timingP1.gameObject.transform.position = new Vector3(-3, -1.75f, 1);
-        timingP2.gameObject.transform.position = new Vector3(3, -1.75f, 1);
+        timingP1.gameObject.transform.position = new Vector3(-3, -3.75f, 1);
+        timingP2.gameObject.transform.position = new Vector3(3, -3.75f, 1);
         timingObjectP1Small.transform.position = timingP1.gameObject.transform.position;
         timingObjectP2Small.transform.position = timingP2.gameObject.transform.position;
         if (musicSource != null) musicSource.Play();
