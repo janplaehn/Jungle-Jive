@@ -8,6 +8,12 @@ public class CharacterSelection : MonoBehaviour {
     public enum Player { Player1, Player2 };
     public Player player;
 
+    public AudioSource audioSource;
+    public AudioClip[] bridgetClips;
+    public AudioClip[] jakobClips;
+    public AudioClip[] hectorClips;
+    public AudioClip[] isabellClips;
+
     public GameObject[] PlayerButtons;
     public SkinSetting skinSetting;
 
@@ -62,10 +68,53 @@ public class CharacterSelection : MonoBehaviour {
         foreach (GameObject button in PlayerButtons) {
             button.gameObject.SetActive(false);
         }
+        if (player == Player.Player1)
+        {
+            switch (GameObject.FindGameObjectWithTag("Player1").name) 
+            {
+                case "Bridget_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(bridgetClips[Random.Range(0, bridgetClips.Length + 1)]);
+                    break;
+                case "Jakob_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(jakobClips[Random.Range(0, jakobClips.Length + 1)]);
+                    break;
+                case "Hector_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(hectorClips[Random.Range(0, hectorClips.Length + 1)]);
+                    break;
+                case "Isabell_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(isabellClips[Random.Range(0, isabellClips.Length + 1)]);
+                    break;
+                default:
+                    break;
+            }
+        } else if (player == Player.Player2)
+        {
+            switch (GameObject.FindGameObjectWithTag("Player2").name)
+            {
+                case "Bridget_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(bridgetClips[Random.Range(0, bridgetClips.Length + 1)]);
+                    break;
+                case "Jakob_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(jakobClips[Random.Range(0, jakobClips.Length + 1)]);
+                    break;
+                case "Hector_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(hectorClips[Random.Range(0, hectorClips.Length + 1)]);
+                    break;
+                case "Isabell_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(isabellClips[Random.Range(0, isabellClips.Length + 1)]);
+                    break;
+                default:
+                    break;
+            }
+        }
+        
+
+
         if (charactersConfirmed >= 2) {
             charactersConfirmed = 0;
             GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("MenuMusic");
             SceneManager.LoadScene(Scene);
         }
+
     }
 }
