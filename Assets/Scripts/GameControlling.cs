@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControlling : MonoBehaviour {
     public GameState stateManager;
     public AudioClip music;
+
     public float animationSpeed = 1;
     public float moveReactionTime;
 
