@@ -22,12 +22,14 @@ public class Freestyle : State {
 
     private void Start() {
         freestyleText = GameObject.Find("FreestyleText");
+        if (freestyleText)
         freestyleText.SetActive(false);
     }
 
     public override void OnStart()
     {
-        freestyleText.SetActive(true);
+        if (freestyleText)
+            freestyleText.SetActive(true);
         recentMovesP1 = new List<TempMove>();
         recentMovesP2 = new List<TempMove>();
         inputCheck = GameObject.FindGameObjectWithTag("GameController").GetComponent<InputCheck>();
@@ -35,6 +37,9 @@ public class Freestyle : State {
         canvas = GameObject.Find("Canvas");
         foreach (DiscoballRetract dr in canvas.GetComponentsInChildren<DiscoballRetract>()) {
             dr.Retract();
+        }
+        foreach (FreestyleDiscoball dr in canvas.GetComponentsInChildren<FreestyleDiscoball>()) {
+            dr.Extend();
         }
     }
 
@@ -128,6 +133,9 @@ public class Freestyle : State {
         }
         foreach (DiscoballRetract dr in canvas.GetComponentsInChildren<DiscoballRetract>()) {
             dr.Extend();
+        }
+        foreach (FreestyleDiscoball dr in canvas.GetComponentsInChildren<FreestyleDiscoball>()) {
+            dr.Retract();
         }
         Debug.Log(playerOneScore + " " + playerTwoScore);
     }
