@@ -325,12 +325,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 81647330}
---- !u!114 &86703416 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-    type: 2}
-  m_PrefabInternal: {fileID: 2076924937}
-  m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
 --- !u!1 &92552040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,6 +1771,12 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1371339108}
+--- !u!114 &1377555488 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114941550267735224, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2076924937}
+  m_Script: {fileID: 11500000, guid: 8c4e456d37abc8943a5416f09b77e993, type: 3}
 --- !u!1 &1396726758
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,7 +3403,7 @@ Prefab:
         type: 2}
       propertyPath: states.Array.data[0]
       value: 
-      objectReference: {fileID: 86703416}
+      objectReference: {fileID: 1377555488}
     - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingPairs.Array.data[6].secondValue
