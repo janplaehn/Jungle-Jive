@@ -26,9 +26,6 @@ public class NameInput : MonoBehaviour {
     private int currentLetterIndex;
 
 	void Awake () {
-
-        PlayerPrefs.SetInt(ScoringSystem.firstPlayerScoreKey, 1000000);
-        PlayerPrefs.SetInt(ScoringSystem.secondPlayerScoreKey, 0);
         int[] temp = new int[10];
         for (int i = temp.Length - 1; i >= 0; i--) {
             temp[i] = PlayerPrefs.GetInt("HighScore" + i.ToString(), (i + 1) * 100);
