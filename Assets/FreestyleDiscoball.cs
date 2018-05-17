@@ -25,7 +25,7 @@ public class FreestyleDiscoball : MonoBehaviour {
                 break;
             case PullBackState.Extend:
                 transform.position += Vector3.down * speed * Time.deltaTime;
-                if (transform.position.y < startPosition.y - maxYShift) state = PullBackState.Default;
+                if (transform.position.y < startPosition.y - maxYShift * Screen.height) state = PullBackState.Default;
                 break;
             default:
                 break;

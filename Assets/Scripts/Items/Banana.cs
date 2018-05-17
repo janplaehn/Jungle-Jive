@@ -60,7 +60,7 @@ public static class Banana  {
             GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().AddForce(new Vector3(-1, 0.6f) * 200);
             GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().AddTorque(10);
         }
-
+        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
         public static IEnumerator ResetPositions(string playerTag, GameObject smashCollider) {
