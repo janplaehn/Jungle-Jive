@@ -352,9 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3873410e85c710b46abb42ecbd01c1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perfectColor: {r: 1, g: 0.72413784, b: 0, a: 1}
+  perfectColor: {r: 1, g: 0.4044118, b: 0.9835701, a: 1}
   goodColor: {r: 0.034482718, g: 1, b: 0, a: 1}
-  okColor: {r: 0.15862082, g: 0, b: 1, a: 1}
+  okColor: {r: 1, g: 0.88965523, b: 0, a: 1}
   badColor: {r: 1, g: 0, b: 0, a: 1}
   leftPlayerColor: {r: 1, g: 0.5411765, b: 0, a: 1}
   rightPlayerColor: {r: 1, g: 0, b: 0.75294125, a: 1}
