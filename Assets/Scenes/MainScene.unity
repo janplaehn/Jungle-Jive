@@ -2348,6 +2348,9 @@ MonoBehaviour:
   stateManager: {fileID: 984638196}
   music: {fileID: 8300000, guid: 7c7c71f9e054b0a43a49bee491ca6390, type: 3}
   lights: {fileID: 92552041}
+  confetti: {fileID: 0}
+  alternativeBackground: {fileID: 21300000, guid: 15ecc4b592438664e9b7ffa6f7906d97,
+    type: 3}
   animationSpeed: 1
   moveReactionTime: 1
 --- !u!4 &984638201
@@ -4831,7 +4834,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1338787175256898, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
       propertyPath: m_Name
-      value: Background (1)
+      value: Background
       objectReference: {fileID: 0}
     - target: {fileID: 212303176517010362, guid: 11fb79e1e1a4a5e42b96a9a238a53305,
         type: 2}

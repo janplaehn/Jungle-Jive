@@ -9,12 +9,16 @@ public class GameControlling : MonoBehaviour {
     public LightsFeedback lights;
     public GameObject confetti;
 
+    public Sprite alternativeBackground;
+
     public float animationSpeed = 1;
     public float moveReactionTime;
 
     public void GameOver() {
         Invoke("QuitToLeaderboard", 8f);
         GameObject.Find("WinCanvas").GetComponent<WinCanvasController>().ShowWinText();
+
+        GameObject.Find("Background").GetComponent<SpriteRenderer>().sprite = alternativeBackground;
         foreach (GameObject face in GameObject.FindGameObjectsWithTag("FeedbackFace1")) {
             if (face.GetComponent<AudienceFeedbackController>())
                 face.GetComponent<AudienceFeedbackController>().BeHappy();
