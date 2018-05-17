@@ -7,6 +7,7 @@ public class GameControlling : MonoBehaviour {
     public GameState stateManager;
     public AudioClip music;
     public LightsFeedback lights;
+    public GameObject confetti;
 
     public float animationSpeed = 1;
     public float moveReactionTime;
@@ -32,6 +33,7 @@ public class GameControlling : MonoBehaviour {
     }
 
     private void ShootAwayLosingPlayer() {
+        confetti.SetActive(true);
         if (PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0) > PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0)) {
             lights.LeftPlayerWins();
             Rigidbody2D losingPlayer = GameObject.FindGameObjectWithTag("Player2").GetComponent<Rigidbody2D>();
