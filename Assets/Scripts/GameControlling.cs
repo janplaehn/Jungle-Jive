@@ -27,7 +27,7 @@ public class GameControlling : MonoBehaviour {
     }
 
     private void QuitToLeaderboard() {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("EnterNameScene");
     }
 
     private void ShootAwayLosingPlayer() {
