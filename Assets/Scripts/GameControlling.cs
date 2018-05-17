@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControlling : MonoBehaviour {
     public GameState stateManager;
     public AudioClip music;
+    public LightsFeedback lights;
 
     public float animationSpeed = 1;
     public float moveReactionTime;
@@ -32,6 +33,7 @@ public class GameControlling : MonoBehaviour {
 
     private void ShootAwayLosingPlayer() {
         if (PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0) > PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0)) {
+            lights.LeftPlayerWins();
             Rigidbody2D losingPlayer = GameObject.FindGameObjectWithTag("Player2").GetComponent<Rigidbody2D>();
             losingPlayer.gravityScale = 0;
             losingPlayer.constraints = RigidbodyConstraints2D.None;
@@ -39,6 +41,7 @@ public class GameControlling : MonoBehaviour {
             losingPlayer.AddTorque(-500);
         }
         else if (PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0) < PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0)) {
+            lights.RightPlayerWins();
             Rigidbody2D losingPlayer = GameObject.FindGameObjectWithTag("Player1").GetComponent<Rigidbody2D>();
             losingPlayer.constraints = RigidbodyConstraints2D.None;
             losingPlayer.gravityScale = 0;

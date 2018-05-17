@@ -356,6 +356,8 @@ MonoBehaviour:
   goodColor: {r: 0.034482718, g: 1, b: 0, a: 1}
   okColor: {r: 1, g: 0.9724138, b: 0, a: 1}
   badColor: {r: 1, g: 0.33823532, b: 0.33823532, a: 1}
+  leftPlayerColor: {r: 1, g: 0.5411765, b: 0, a: 0}
+  rightPlayerColor: {r: 1, g: 0, b: 0.75294125, a: 0}
   lightTimer: 1
   firstPlayerLight: {fileID: 1687816537}
   secondPlayerLight: {fileID: 649901732}
@@ -2345,6 +2347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateManager: {fileID: 984638196}
   music: {fileID: 8300000, guid: 7c7c71f9e054b0a43a49bee491ca6390, type: 3}
+  lights: {fileID: 92552041}
   animationSpeed: 1
   moveReactionTime: 1
 --- !u!4 &984638201
@@ -3368,7 +3371,7 @@ Prefab:
     - target: {fileID: 224059220320972410, guid: a551f0353e001ee4c987b6c4b92c64a1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -1.6999664
+      value: -1.6999512
       objectReference: {fileID: 0}
     - target: {fileID: 224059220320972410, guid: a551f0353e001ee4c987b6c4b92c64a1,
         type: 2}
