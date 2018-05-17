@@ -4265,12 +4265,6 @@ Prefab:
       propertyPath: m_Name
       value: Background (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 212303176517010362, guid: 11fb79e1e1a4a5e42b96a9a238a53305,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 15ecc4b592438664e9b7ffa6f7906d97,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
   m_IsPrefabParent: 0
