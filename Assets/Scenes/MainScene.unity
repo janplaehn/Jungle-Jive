@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -3368,7 +3368,7 @@ Prefab:
     - target: {fileID: 224059220320972410, guid: a551f0353e001ee4c987b6c4b92c64a1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -1.6999664
+      value: -1.6999512
       objectReference: {fileID: 0}
     - target: {fileID: 224059220320972410, guid: a551f0353e001ee4c987b6c4b92c64a1,
         type: 2}
