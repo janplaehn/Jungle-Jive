@@ -13,10 +13,15 @@ public class LightsFeedback : MonoBehaviour
     private Color okColor;
     [SerializeField]
     private Color badColor;
+    [SerializeField]
+    private Color leftPlayerColor;
+    [SerializeField]
+    private Color rightPlayerColor;
 
     public float lightTimer;
     public SpriteRenderer firstPlayerLight;
     public SpriteRenderer secondPlayerLight;
+    bool someoneWon = false;
 
     enum FeedBackType
     {
@@ -111,7 +116,7 @@ public class LightsFeedback : MonoBehaviour
 
     private void ResetFirstPlayerLight()
     {
-        firstPlayerLight.color = noFeedbackColor;
+        if (!someoneWon) firstPlayerLight.color = noFeedbackColor;
     }
 
     private void SetSecondPlayerLight(Color color)
@@ -122,6 +127,19 @@ public class LightsFeedback : MonoBehaviour
 
     private void ResetSecondPlayerLight()
     {
-        secondPlayerLight.color = noFeedbackColor;
+        if (!someoneWon) secondPlayerLight.color = noFeedbackColor;
+    }
+
+
+    public void LeftPlayerWins()
+    {
+        secondPlayerLight.color = firstPlayerLight.color = leftPlayerColor;
+        someoneWon = true;
+    }
+
+    public void RightPlayerWins()
+    {
+        secondPlayerLight.color = firstPlayerLight.color = rightPlayerColor;
+        someoneWon = true;
     }
 }

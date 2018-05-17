@@ -8,6 +8,7 @@ public class ButtonTrigger : MonoBehaviour {
     public float chargeTime;
     public GameObject button;
     public GameObject chargeBar;
+    public GameObject[] buttonDisplayObjects;
 
     private float timeLeft;
     private bool isCharging;
@@ -38,6 +39,10 @@ public class ButtonTrigger : MonoBehaviour {
             isCharging = true;
             timeLeft = chargeTime;
             chargeBar.GetComponent<AudioSource>().Play();
+            foreach (GameObject button in buttonDisplayObjects) {
+                if(button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = new Color32(200,200,200, 255);
+                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = new Color32(200, 200, 200, 255);
+            }
         }
     }
 
@@ -45,6 +50,10 @@ public class ButtonTrigger : MonoBehaviour {
         if (collision.gameObject.tag == "hand") {
             isCharging = false;
             chargeBar.GetComponent<AudioSource>().Stop();
+            foreach (GameObject button in buttonDisplayObjects) {
+                if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = Color.white;
+                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = Color.white;
+            }
         }
     }
 
