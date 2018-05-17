@@ -58,9 +58,10 @@ public class GameControlling : MonoBehaviour {
 
     private IEnumerator ChangeMusic() {
         yield return new WaitForSeconds(2f);
-        if (GameObject.Find("MusicManager")) {
-            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("DanceMusic");
-            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("MenuMusic");
+        GameObject t = GameObject.Find("MusicManager");
+        if (t) {
+            t.GetComponent<MusicManagement>().Stop("DanceMusic");
+            t.GetComponent<MusicManagement>().Play("MenuMusic");
         }
     }
 
