@@ -190,6 +190,8 @@ MonoBehaviour:
   chargeTime: 0.5
   button: {fileID: 2030294914}
   chargeBar: {fileID: 1759945466}
+  buttonDisplayObjects:
+  - {fileID: 386081621}
 --- !u!61 &154450524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -309,6 +311,8 @@ MonoBehaviour:
   chargeTime: 2
   button: {fileID: 1910677674}
   chargeBar: {fileID: 1305469257}
+  buttonDisplayObjects:
+  - {fileID: 2044815241}
 --- !u!61 &195910151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -720,6 +724,8 @@ MonoBehaviour:
   chargeTime: 0.5
   button: {fileID: 2089431021}
   chargeBar: {fileID: 1795013132}
+  buttonDisplayObjects:
+  - {fileID: 1955113693}
 --- !u!61 &645266532
 BoxCollider2D:
   m_ObjectHideFlags: 0

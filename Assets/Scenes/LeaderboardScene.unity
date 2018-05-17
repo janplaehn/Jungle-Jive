@@ -1784,6 +1784,8 @@ MonoBehaviour:
   chargeTime: 2
   button: {fileID: 2117242944}
   chargeBar: {fileID: 1192204941}
+  buttonDisplayObjects:
+  - {fileID: 502529406}
 --- !u!61 &1920025373
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1214,6 +1214,8 @@ MonoBehaviour:
   chargeTime: 0.6
   button: {fileID: 716518210}
   chargeBar: {fileID: 888120725}
+  buttonDisplayObjects:
+  - {fileID: 738061175}
 --- !u!61 &457512052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1459,6 +1461,8 @@ MonoBehaviour:
   chargeTime: 0.6
   button: {fileID: 1281701996}
   chargeBar: {fileID: 947307228}
+  buttonDisplayObjects:
+  - {fileID: 62002470}
 --- !u!61 &479250619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2745,6 +2749,8 @@ MonoBehaviour:
   chargeTime: 1.4
   button: {fileID: 1705332589}
   chargeBar: {fileID: 1393019659}
+  buttonDisplayObjects:
+  - {fileID: 173618913}
 --- !u!61 &1150939578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3647,6 +3653,8 @@ MonoBehaviour:
   chargeTime: 0.6
   button: {fileID: 513218343}
   chargeBar: {fileID: 461804778}
+  buttonDisplayObjects:
+  - {fileID: 397402910}
 --- !u!61 &1717239137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3989,6 +3997,8 @@ MonoBehaviour:
   chargeTime: 1.4
   button: {fileID: 523440564}
   chargeBar: {fileID: 130235890}
+  buttonDisplayObjects:
+  - {fileID: 1075830266}
 --- !u!61 &1747533534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4240,6 +4250,8 @@ MonoBehaviour:
   chargeTime: 0.6
   button: {fileID: 1021626912}
   chargeBar: {fileID: 1378390405}
+  buttonDisplayObjects:
+  - {fileID: 1196486772}
 --- !u!61 &1952930908
 BoxCollider2D:
   m_ObjectHideFlags: 0
