@@ -12,6 +12,7 @@ public class LeaderBoard : MonoBehaviour {
     public Text[] leaderBoardText;
 
 	void Start () {
+        LeaderBoardTesting.TestAwake();
         GetLeaderBoard();
     }
 
@@ -23,7 +24,7 @@ public class LeaderBoard : MonoBehaviour {
         {
             if (scoreArray[i] < PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0))
             {
-                ReplaceValueInIntArray(i, PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey), scoreArray, NameInput.playerOneName);
+                ReplaceScore(i, PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey), scoreArray, NameInput.playerOneName);
                 newScorePlayerOne = PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey);
                 break;
             }
@@ -34,25 +35,21 @@ public class LeaderBoard : MonoBehaviour {
             if (scoreArray[i] < PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0))
             {
                 newScorePlayerTwo = PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey);
-                ReplaceValueInIntArray(i, PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey), scoreArray, NameInput.playerTwoName);
+                ReplaceScore(i, PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey), scoreArray, NameInput.playerTwoName);
                 break;
             }
         }
-
-        bool playerOneShown = false;
-        bool playerTwoShown = false;
+        
         for(int i = leaderBoardText.Length - 1; i >= 0; i--)
         {
             string temp = (Mathf.Abs(i - scoreArray.Length + 1) + 1).ToString() + " : " + (PlayerPrefs.GetString("HighScoreString" + i.ToString(), "")) + " : " + scoreArray[i].ToString() + " PTS";
             leaderBoardText[i].fontStyle = FontStyle.Normal;
-            if (newScorePlayerOne == scoreArray[i] && !playerOneShown)
+            if (newScorePlayerOne == scoreArray[i])
             {
                 leaderBoardText[i].fontStyle = FontStyle.Bold;
-                playerOneShown = true;
             }
-            else if (newScorePlayerTwo == scoreArray[i] && !playerTwoShown) {
+            else if (newScorePlayerTwo == scoreArray[i]) {
                     leaderBoardText[i].fontStyle = FontStyle.Bold;
-                    playerTwoShown = true;
             }
             leaderBoardText[i].text = temp;
         }
@@ -66,7 +63,7 @@ public class LeaderBoard : MonoBehaviour {
         int[] temp = new int[leaderBoardLength];
         for (int i = temp.Length - 1; i >= 0; i--)
         {
-            temp[i] = PlayerPrefs.GetInt("HighScore" + i.ToString(), (i + 1) * 100);
+            temp[i] = PlayerPrefs.GetInt("HighScore" + i.ToString(), (i + 1) * 1000);
             PlayerPrefs.SetInt("HighScore" + i.ToString(), temp[i]);
         }
         return temp;
@@ -86,7 +83,7 @@ public class LeaderBoard : MonoBehaviour {
         return temp;
     }
 
-    void ReplaceValueInIntArray(int index, int valueToPlace, int[] array, string name)
+    void ReplaceScore(int index, int valueToPlace, int[] array, string name)
     {
         int a = array[index];
         string b = PlayerPrefs.GetString("HighScoreString" + index.ToString(), "");
@@ -96,7 +93,7 @@ public class LeaderBoard : MonoBehaviour {
 
         if (index > 0)
         {
-            ReplaceValueInIntArray(index-1, a, array, b);
+            ReplaceScore(index-1, a, array, b);
         }
     }
 
@@ -110,4 +107,8 @@ public class LeaderBoard : MonoBehaviour {
         }
         return temp;
     }
+
+
+
+    
 }

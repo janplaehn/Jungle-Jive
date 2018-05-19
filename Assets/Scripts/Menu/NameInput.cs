@@ -26,7 +26,6 @@ public class NameInput : MonoBehaviour {
     private int currentLetterIndex;
 
 	void Awake () {
-
         int[] temp = new int[10];
         for (int i = temp.Length - 1; i >= 0; i--) {
             temp[i] = PlayerPrefs.GetInt("HighScore" + i.ToString(), (i + 1) * 100);
@@ -75,16 +74,8 @@ public class NameInput : MonoBehaviour {
             namesEntered++;
             hasPlayerTwoHighscore = true;
         }
-    }
 
-    //private void Update()
-    //{
-    //    if(Character == null)
-    //    {
-    //        if (player == Player.Player1) Character = GameObject.FindGameObjectWithTag("Player1");
-    //        if (player == Player.Player2) Character = GameObject.FindGameObjectWithTag("Player2");
-    //    }
-    //}
+    }
 
     public void NextLetter() {
         if (currentLetter.GetComponent<Text>().text == "Z") {

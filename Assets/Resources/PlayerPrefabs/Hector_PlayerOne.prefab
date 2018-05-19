@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 60400484017513822}
   - component: {fileID: 114767767068966020}
   m_Layer: 0
-  m_Name: upperArm_l
+  m_Name: upperArm_lP1
   m_TagString: LeftArm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 60513109807832402}
   - component: {fileID: 114006991392274066}
   m_Layer: 0
-  m_Name: upperLeg_l
+  m_Name: upperLeg_lP1
   m_TagString: LeftLeg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 60690489475138494}
   - component: {fileID: 114696294199669166}
   m_Layer: 0
-  m_Name: upperArm_r
+  m_Name: upperArm_rP1
   m_TagString: RightArm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 60703604706813608}
   - component: {fileID: 114864575944264816}
   m_Layer: 0
-  m_Name: upperLeg_r
+  m_Name: upperLeg_rP1
   m_TagString: RightLeg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,7 +439,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1040573512552322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 946.4929, y: 549.25543, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4884227334465708}
@@ -534,7 +534,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!60 &60132150023803940
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -898,8 +898,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4908666, y: 0.37616652}
-    oldSize: {x: 6.36, y: 10.320001}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.746667, y: 13.425}
     newSize: {x: 0.8, y: 0.87}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1720,6 +1720,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a68a0f11db90a1b43a0355616d636bd5, type: 3}
   spritesHorrible:
   - {fileID: 21300000, guid: ff06772eb608a924c8771c8eeaeddd79, type: 3}
+  earlySprite:
+  - {fileID: 21300000, guid: 3ca7bc92bfaa8c54db07b6da6d5a8957, type: 3}
   displayDuration: 1
 --- !u!114 &114513986021820128
 MonoBehaviour:
@@ -1733,11 +1735,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sad:
-  - {fileID: 21300010, guid: a760ea5ef6ee4d544bc7f24e02d6b43f, type: 3}
+  - {fileID: 21300006, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
+  - {fileID: 21300004, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
   neutral:
-  - {fileID: 21300010, guid: a760ea5ef6ee4d544bc7f24e02d6b43f, type: 3}
+  - {fileID: 21300008, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
   happy:
-  - {fileID: 21300010, guid: a760ea5ef6ee4d544bc7f24e02d6b43f, type: 3}
+  - {fileID: 21300000, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
+  - {fileID: 21300002, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
 --- !u!114 &114665917928779594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2398,7 +2402,7 @@ SpriteRenderer:
   m_SortingLayerID: -1830013555
   m_SortingLayer: 1
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300010, guid: a760ea5ef6ee4d544bc7f24e02d6b43f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

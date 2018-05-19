@@ -21,13 +21,13 @@ public class Item : MonoBehaviour {
     public bool isRandomised;
 
     private Rigidbody2D rb;
-    private bool isThrown;
     private MirrorEffect mirrorScript;
+    private Mushroom mushroomScript;
     
     void Start() {
-        isThrown = false;
         rb = GetComponent<Rigidbody2D>();
         mirrorScript = GameObject.Find("GameController").GetComponent<MirrorEffect>();
+        mushroomScript = GameObject.Find("GameController").GetComponent<Mushroom>();
         if (isRandomised) {
             ItemType = (Type)Random.Range(0, System.Enum.GetValues(typeof(Type)).Length);
         }
@@ -64,7 +64,6 @@ public class Item : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.transform.parent) {
             if (collision.gameObject.transform.parent.tag == ("Player1") || collision.gameObject.transform.parent.tag == ("Player2")) {
-                isThrown = false;
                 ActivateItem(collision.gameObject.transform.parent.tag);
                 Destroy(this.gameObject);
             }
@@ -87,7 +86,6 @@ public class Item : MonoBehaviour {
     }
 
     public void AddThrowForce() {
-        isThrown = true;
         gameObject.transform.parent = null;
         rb.gravityScale = 0.5f;
         if (transform.position.x > 0) {
@@ -102,16 +100,17 @@ public class Item : MonoBehaviour {
         Debug.Log("Item Activated");
         switch (ItemType) {
             case Type.Mushroom:
-                Mushroom.Affect(playerTag);
+                mushroomScript.Affect(playerTag);
                 break;
             case Type.Banana:
                 Banana.BananaHit(playerTag);
+                GameObject.Find("MiniGameA").GetComponent<ItemMiniGame>().ResetPositions(playerTag);
                 break;
             case Type.Mirror:
                 mirrorScript.ActivateMirror(playerTag);
                 break;
             case Type.Smoke:
-                Smoke.SmokeInpact(playerTag);
+                Smoke.SmokeInpact(transform.parent.transform.position.x);
                 break;
             default:
                 break;

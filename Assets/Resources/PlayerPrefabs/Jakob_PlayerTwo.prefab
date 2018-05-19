@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 60250170767482862}
   - component: {fileID: 114573512213958434}
   m_Layer: 0
-  m_Name: upperLeg_r
+  m_Name: upperLeg_rP2
   m_TagString: RightLeg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 60470317045259314}
   - component: {fileID: 114195727575476464}
   m_Layer: 0
-  m_Name: upperArm_r
+  m_Name: upperArm_rP2
   m_TagString: RightArm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 60358945253519772}
   - component: {fileID: 114458474678671704}
   m_Layer: 0
-  m_Name: upperArm_l
+  m_Name: upperArm_lP2
   m_TagString: LeftArm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 60339302912622380}
   - component: {fileID: 114458675652376906}
   m_Layer: 0
-  m_Name: upperLeg_l
+  m_Name: upperLeg_lP2
   m_TagString: LeftLeg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1334711390337900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7108335, y: -1.3050387, z: 5}
+  m_LocalPosition: {x: -0.12417661, y: 1.9228312, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4357509162801054}
@@ -537,7 +537,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!60 &60144381875576802
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -1216,6 +1216,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a68a0f11db90a1b43a0355616d636bd5, type: 3}
   spritesHorrible:
   - {fileID: 21300000, guid: ff06772eb608a924c8771c8eeaeddd79, type: 3}
+  earlySprite:
+  - {fileID: 21300000, guid: 3ca7bc92bfaa8c54db07b6da6d5a8957, type: 3}
   displayDuration: 1
 --- !u!114 &114573512213958434
 MonoBehaviour:
@@ -1437,7 +1439,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1830013555
   m_SortingLayer: 1
-  m_SortingOrder: 6
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300028, guid: dbf97d3b28cae7444ac239fac03cb290, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -13,12 +13,6 @@ public class InputCheck : MonoBehaviour {
     LimbMovement leftLegP2;
     LimbMovement rightLegP2;
 
-    float[] currentAccel1;
-    float[] lastAccel1;
-
-    float[] currentAccel2;
-    float[] lastAccel2;
-
     public enum Players
     {
         PlayerOne,
@@ -26,20 +20,33 @@ public class InputCheck : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        GetLimbs(Players.PlayerOne);
-        GetLimbs(Players.PlayerTwo);
+        //GetLimbs(Players.PlayerOne);
+        //GetLimbs(Players.PlayerTwo);
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (leftArm == null)
+        if (GameObject.FindGameObjectWithTag("Player1"))
         {
-            GetLimbs(Players.PlayerOne);
+            if (leftArm == null)
+            {
+                GetLimbs(Players.PlayerOne);
+            }
+        } else
+        {
+            Debug.Log("player1 not found ");
         }
-        if (leftArmP2 == null)
+        if (GameObject.FindGameObjectWithTag("Player2"))
         {
-            GetLimbs(Players.PlayerTwo);
+            if (leftArmP2 == null)
+            {
+                GetLimbs(Players.PlayerTwo);
+            }
+        } else
+        {
+            Debug.Log("player1 not found ");
+
         }
     }
 
@@ -47,24 +54,24 @@ public class InputCheck : MonoBehaviour {
     {
         if(player == Players.PlayerOne)
         {
-            leftArm = GetLimb("LeftArm");
-            rightArm = GetLimb("RightArm");
-            leftLeg = GetLimb("LeftLeg");
-            rightLeg = GetLimb("RightLeg");
+            leftArm = GetLimb("upperArm_lP1");
+            rightArm = GetLimb("upperArm_rP1");
+            leftLeg = GetLimb("upperLeg_lP1");
+            rightLeg = GetLimb("upperLeg_rP1");
         } else
         {
-            leftArmP2 = GetLimb("LeftArmP2");
-            rightArmP2 = GetLimb("RightArmP2");
-            leftLegP2 = GetLimb("LeftLegP2");
-            rightLegP2 = GetLimb("RightLegP2");
+            leftArmP2 = GetLimb("upperArm_lP2");
+            rightArmP2 = GetLimb("upperArm_rP2");
+            leftLegP2 = GetLimb("upperLeg_lP2");
+            rightLegP2 = GetLimb("upperLeg_rP2");
         }
     }
 
-    LimbMovement GetLimb(string givenTag)
+    LimbMovement GetLimb(string givenName)
     {
-        GameObject t = GameObject.FindGameObjectWithTag(givenTag);
-        if (t) return t.GetComponent<LimbMovement>();
-        Debug.LogWarning(t);
+        GameObject t = GameObject.Find(givenName);
+        if (t != null) return t.GetComponent<LimbMovement>();
+        Debug.LogWarning(t + " " + givenName);
         return null;
     }
 
@@ -214,23 +221,5 @@ public class InputCheck : MonoBehaviour {
             if (limb.GetLimbState() == 2) return Mathf.Abs(limb.lastRotation - limb.transform.rotation.eulerAngles.z);
         }
         return 0f;
-    }
-
-    public void SetAccel(float[] givenAccel, Players givenPlayer)
-    {
-        if(givenPlayer == Players.PlayerOne)
-        {
-            lastAccel1 = currentAccel1;
-            currentAccel1 = givenAccel;
-        } else
-        {
-            lastAccel2 = currentAccel2;
-            currentAccel2 = givenAccel;
-        }
-    }
-
-    public void GetAccel()
-    {
-
     }
 }

@@ -10,8 +10,6 @@ public class ItemMiniGame : State {
     public Transform bird;
 
     private GameObject canvas;
-    private GameObject playerOne;
-    private GameObject playerTwo;
     private float playerOneScore;
     private float playerTwoScore;
     private InputCheck input;
@@ -19,15 +17,12 @@ public class ItemMiniGame : State {
     private GameObject birdInstance;
 
     private void Start() {
-        shakeText = GameObject.Find("ShakeText");
         shakeText.SetActive(false);
 
     }
 
     public override void OnStart() {
         shakeText.SetActive(true);
-        playerOne = GameObject.FindGameObjectWithTag("Player1");
-        playerTwo = GameObject.FindGameObjectWithTag("Player2");
         canvas = GameObject.Find("Canvas");
         input = GameObject.Find("GameController").GetComponent<InputCheck>();
         birdInstance = Instantiate(bird, birdSpawnPosition, Quaternion.identity).gameObject;
@@ -49,6 +44,11 @@ public class ItemMiniGame : State {
         return true;
     }
 
+    public void ResetPositions(string playerTag) {
+        StartCoroutine(Banana.ResetPositions(playerTag, GameObject.Find("bananaSmashCollider")));
+        StartCoroutine(Banana.FlyOff(playerTag));
+    }
+
     public void BeforeEnd() {
         foreach (DiscoballRetract dr in canvas.GetComponentsInChildren<DiscoballRetract>()) {
             dr.Extend();
@@ -65,6 +65,7 @@ public class ItemMiniGame : State {
 
     public override void OnEnd()
     {
+        Debug.Log(playerOneScore + " + " + playerTwoScore);
         shakeText.SetActive(false);
     }
 

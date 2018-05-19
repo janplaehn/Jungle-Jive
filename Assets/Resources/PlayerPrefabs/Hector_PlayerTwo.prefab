@@ -110,8 +110,8 @@ GameObject:
   - component: {fileID: 60939970990814526}
   - component: {fileID: 114120797328352174}
   m_Layer: 0
-  m_Name: upperLeg_l
-  m_TagString: LeftLeg
+  m_Name: upperLeg_lP2
+  m_TagString: LeftLegP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,8 +145,8 @@ GameObject:
   - component: {fileID: 60851823564118412}
   - component: {fileID: 114263629257648018}
   m_Layer: 0
-  m_Name: upperArm_r
-  m_TagString: RightArm
+  m_Name: upperArm_rP2
+  m_TagString: RightArmP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,8 +180,8 @@ GameObject:
   - component: {fileID: 60674440547330828}
   - component: {fileID: 114263719850030988}
   m_Layer: 0
-  m_Name: upperLeg_r
-  m_TagString: RightLeg
+  m_Name: upperLeg_rP2
+  m_TagString: RightLegP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,8 +215,8 @@ GameObject:
   - component: {fileID: 60873909276168786}
   - component: {fileID: 114391760650473318}
   m_Layer: 0
-  m_Name: upperArm_l
-  m_TagString: LeftArm
+  m_Name: upperArm_lP2
+  m_TagString: LeftArmP2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -368,7 +368,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859791453979966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.88, y: 0, z: -1}
+  m_LocalPosition: {x: 946.5545, y: 549.52234, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4481039275736090}
@@ -534,7 +534,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!60 &60203523725923350
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -1166,8 +1166,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4908666, y: 0.37616652}
-    oldSize: {x: 6.36, y: 10.320001}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.746667, y: 13.425}
     newSize: {x: 0.8, y: 0.87}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1693,11 +1693,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sad:
-  - {fileID: 21300010, guid: a760ea5ef6ee4d544bc7f24e02d6b43f, type: 3}
+  - {fileID: 21300006, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
+  - {fileID: 21300004, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
   neutral:
-  - {fileID: 21300010, guid: a760ea5ef6ee4d544bc7f24e02d6b43f, type: 3}
+  - {fileID: 21300008, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
   happy:
-  - {fileID: 21300010, guid: a760ea5ef6ee4d544bc7f24e02d6b43f, type: 3}
+  - {fileID: 21300000, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
+  - {fileID: 21300002, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
 --- !u!114 &114391705133215182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1835,6 +1837,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a68a0f11db90a1b43a0355616d636bd5, type: 3}
   spritesHorrible:
   - {fileID: 21300000, guid: ff06772eb608a924c8771c8eeaeddd79, type: 3}
+  earlySprite:
+  - {fileID: 21300000, guid: 3ca7bc92bfaa8c54db07b6da6d5a8957, type: 3}
   displayDuration: 1
 --- !u!212 &212245188695123042
 SpriteRenderer:
@@ -2398,7 +2402,7 @@ SpriteRenderer:
   m_SortingLayerID: -1830013555
   m_SortingLayer: 1
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300010, guid: a760ea5ef6ee4d544bc7f24e02d6b43f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce0c930a46724734d9b4ff075a5d2278, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -383,6 +383,8 @@ MonoBehaviour:
   chargeTime: 0.3
   button: {fileID: 975533407}
   chargeBar: {fileID: 850733102}
+  buttonDisplayObjects:
+  - {fileID: 2056729887}
 --- !u!61 &71211160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -727,9 +729,9 @@ MonoBehaviour:
   - {fileID: 799080060}
   - {fileID: 540144493}
   - {fileID: 71211157}
-  - {fileID: 1067849472}
-  - {fileID: 975533407}
-  - {fileID: 759461369}
+  - {fileID: 1627446182}
+  - {fileID: 197127515}
+  - {fileID: 1457377637}
   Canvas: {fileID: 2094115649}
   highlightColor: {r: 0.21568629, g: 0.82745105, b: 0.227451, a: 1}
   defaultColor: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
@@ -1317,6 +1319,8 @@ MonoBehaviour:
   chargeTime: 1.4
   button: {fileID: 759461369}
   chargeBar: {fileID: 1536279244}
+  buttonDisplayObjects:
+  - {fileID: 586954068}
 --- !u!61 &540144496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1541,6 +1545,8 @@ MonoBehaviour:
   chargeTime: 0.3
   button: {fileID: 1125274685}
   chargeBar: {fileID: 1403381984}
+  buttonDisplayObjects:
+  - {fileID: 3319101}
 --- !u!61 &569828427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1899,6 +1905,8 @@ MonoBehaviour:
   chargeTime: 0.3
   button: {fileID: 1067849472}
   chargeBar: {fileID: 388072297}
+  buttonDisplayObjects:
+  - {fileID: 1170813069}
 --- !u!61 &799080063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2353,6 +2361,18 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1900175709383288, guid: 78804ceee9af4c04798efce1bfe38053, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261842853371488, guid: 78804ceee9af4c04798efce1bfe38053, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799209266986302, guid: 78804ceee9af4c04798efce1bfe38053, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78804ceee9af4c04798efce1bfe38053, type: 2}
   m_IsPrefabParent: 0
@@ -2484,9 +2504,9 @@ MonoBehaviour:
   - {fileID: 939254752}
   - {fileID: 519622978}
   PlayerButtons:
-  - {fileID: 1125274685}
-  - {fileID: 449698317}
-  - {fileID: 1275126716}
+  - {fileID: 455954072}
+  - {fileID: 249281011}
+  - {fileID: 1863941772}
   - {fileID: 569828424}
   - {fileID: 1685550236}
   - {fileID: 1525340844}
@@ -3665,6 +3685,8 @@ MonoBehaviour:
   chargeTime: 0.3
   button: {fileID: 449698317}
   chargeBar: {fileID: 60461869}
+  buttonDisplayObjects:
+  - {fileID: 2050735597}
 --- !u!61 &1525340847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3964,6 +3986,8 @@ MonoBehaviour:
   chargeTime: 1.4
   button: {fileID: 1275126716}
   chargeBar: {fileID: 1811017490}
+  buttonDisplayObjects:
+  - {fileID: 1021201605}
 --- !u!61 &1685550239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4024,6 +4048,7 @@ Transform:
 <<<<<<< HEAD
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1720943041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,6 +4123,8 @@ Transform:
   m_RootOrder: 17
 >>>>>>> AlphaBuildIguess
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> AlphaBuildIguess
 --- !u!1 &1760918431
 GameObject:
   m_ObjectHideFlags: 0
@@ -4352,6 +4379,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1952788602
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4220084154091476, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220084154091476, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220084154091476, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220084154091476, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220084154091476, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220084154091476, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220084154091476, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220084154091476, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338787175256898, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_Name
+      value: Background (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1990737287
 GameObject:
   m_ObjectHideFlags: 0

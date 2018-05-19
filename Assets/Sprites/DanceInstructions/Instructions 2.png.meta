@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fe100897567b7844891f1915bf1f5f71
-timeCreated: 1525438408
+timeCreated: 1525867809
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,8 +90,8 @@ TextureImporter:
         y: 1523
         width: 320
         height: 481
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6695644, y: 0.03466721}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -104,8 +104,8 @@ TextureImporter:
         y: 1518
         width: 302
         height: 417
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.69090056, y: 0.052707735}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,8 +118,8 @@ TextureImporter:
         y: 1516
         width: 303
         height: 405
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.29853725, y: 0.056201775}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

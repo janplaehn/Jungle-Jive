@@ -61,7 +61,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: DanceMusic
-    clip: {fileID: 8300000, guid: 7c7c71f9e054b0a43a49bee491ca6390, type: 3}
+    clip: {fileID: 8300000, guid: 78e8864d81dd91e4ca49c8ab47cffc0f, type: 3}
     volume: 1
     pitch: 1
     loop: 0

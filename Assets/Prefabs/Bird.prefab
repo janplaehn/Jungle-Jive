@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212645853224657420}
   - component: {fileID: 114232026445097830}
   - component: {fileID: 95888211417687664}
+  - component: {fileID: 82185532504576146}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1392785763106996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.87, y: 3.91, z: 0}
+  m_LocalPosition: {x: 1.2434676, y: 3.4066184, z: 0}
   m_LocalScale: {x: 0.33556786, y: 0.33556786, z: 0.33556786}
   m_Children:
   - {fileID: 4828576656811264}
@@ -122,6 +123,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.83, y: 4.8}
   m_EdgeRadius: 0
+--- !u!82 &82185532504576146
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392785763106996}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e93c56a092738474a83f6138802ce234, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95888211417687664
 Animator:
   serializedVersion: 3
@@ -167,9 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c202692a14113a342afbea0d5da4e793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 2
   mushroom: {fileID: 21300000, guid: 520f19029b19fe6429c7a004888d1696, type: 3}
-  banana: {fileID: 21300000, guid: 49aa280b042388f4f99b83d2a2acd678, type: 3}
+  banana: {fileID: 21300000, guid: 144cd21513175dc42bbc82c2630cd360, type: 3}
   mirror: {fileID: 21300000, guid: d7de7a014668b56488bbd7544438cf11, type: 3}
   smoke: {fileID: 21300000, guid: 73ee2f6772b4cbf48bc49de8df06d26b, type: 3}
   throwForce: 300
@@ -242,7 +323,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7
+      scalar: 0.8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -795,7 +876,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 20
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1137,21 +1218,21 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 1, b: 0.048275948, a: 1}
-        key1: {r: 0.737931, g: 1, b: 0, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 1, g: 0, b: 0, a: 1}
+        key1: {r: 0.94482756, g: 1, b: 0, a: 1}
+        key2: {r: 0.07586217, g: 1, b: 0, a: 0}
+        key3: {r: 0, g: 1, b: 0.95862055, a: 0}
+        key4: {r: 0, g: 0.08965492, b: 1, a: 0}
+        key5: {r: 1, g: 0, b: 0.8896551, a: 0}
+        key6: {r: 1, g: 0, b: 0.8896551, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 22166
-        ctime2: 0
-        ctime3: 0
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
+        ctime1: 10486
+        ctime2: 23516
+        ctime3: 35273
+        ctime4: 44718
+        ctime5: 53006
+        ctime6: 53970
         ctime7: 0
         atime0: 0
         atime1: 65535
@@ -1162,7 +1243,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 2
+        m_NumColorKeys: 6
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -3551,7 +3632,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ba528bcbee4e274ca349ad58c5d6c77, type: 2}
+  - {fileID: 2100000, guid: 6b3fe8af19c9e7d44877854a4521baf1, type: 2}
   - {fileID: 2100000, guid: 5ba528bcbee4e274ca349ad58c5d6c77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3569,9 +3650,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1749715899
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -1830013555
+  m_SortingLayer: 1
+  m_SortingOrder: 99
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
