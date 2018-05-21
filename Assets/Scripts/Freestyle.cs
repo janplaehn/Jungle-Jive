@@ -8,7 +8,6 @@ public class Freestyle : State {
     public float activeTimelimit;
     private float accumulatedTime = 0;
     private float measureTimer = 0;
-    public float activateTime;
     public List<TempMove> recentMovesP1;
     public List<TempMove> recentMovesP2;
     public GameObject freestyleText;
@@ -131,7 +130,7 @@ public class Freestyle : State {
             scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize,false);
         } else if (playerTwoScore > playerOneScore)
         {
-            scoringSystem.AddFirstPlayerScore(freestylePrize, freestylePrize,false);
+            scoringSystem.AddSecondPlayerScore(freestylePrize, freestylePrize,false);
         } else
         {
             int temp = Random.Range(0, 2);
