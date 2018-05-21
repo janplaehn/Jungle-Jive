@@ -292,21 +292,21 @@ MonoBehaviour:
   player: 1
   audioSource: {fileID: 69572743}
   bridgetClips:
-  - {fileID: 8300000, guid: f8bfc0bdaceab4a46ac20864f3eed5d0, type: 3}
-  - {fileID: 8300000, guid: 99d50bec5b9fd154ba4d4a97d917a758, type: 3}
-  - {fileID: 8300000, guid: be4b719f7588ab44cb55a318146d9c06, type: 3}
+  - {fileID: 8300000, guid: 22d9bb927ba631245a4e6f2166064f31, type: 3}
+  - {fileID: 8300000, guid: e97dcc7d7c4f3874dbbf0aa0cfcf37ad, type: 3}
+  - {fileID: 8300000, guid: ffcccd7fd02ad6b48bb30acefcc836ca, type: 3}
   jakobClips:
-  - {fileID: 8300000, guid: 7a6839b43ec31ec4eb4a9a1e77224bb3, type: 3}
-  - {fileID: 8300000, guid: ee974d055a21c9146aae022f479de239, type: 3}
-  - {fileID: 8300000, guid: bfcd8d55ace2fe142a3244bf915a654a, type: 3}
+  - {fileID: 8300000, guid: fa89130434c90e94d9da720c2f612dda, type: 3}
+  - {fileID: 8300000, guid: 0b9e0b8ddfcdba849b1c99599580c836, type: 3}
+  - {fileID: 8300000, guid: f1936b03608fe0e43bbf53c1affd510a, type: 3}
   hectorClips:
-  - {fileID: 8300000, guid: 8d2e1ea5e48de65469f0d89c0414c7ef, type: 3}
-  - {fileID: 8300000, guid: 014f348a8911586449b9e2b082ce9566, type: 3}
-  - {fileID: 8300000, guid: bc66386bf79b50847a837a9e387069e9, type: 3}
+  - {fileID: 8300000, guid: 2dadd0b78ee2bf64a84d1047ee59e58e, type: 3}
+  - {fileID: 8300000, guid: f1df52e66dcc0ef4faf75a9478346bd1, type: 3}
+  - {fileID: 8300000, guid: bb104aaebeee76f4b9ea5ebbda86eb18, type: 3}
   isabellClips:
-  - {fileID: 8300000, guid: d12e0cf1d80588d43b98ad4045f52472, type: 3}
-  - {fileID: 8300000, guid: d03e6b95c1fc376459c7eaf0b56aa441, type: 3}
-  - {fileID: 8300000, guid: 1d94d58c9d90e2a448acb727eed2f98e, type: 3}
+  - {fileID: 8300000, guid: 7bf292825211bbc4aa5a1d985da1c832, type: 3}
+  - {fileID: 8300000, guid: 1d4774bf6ac037344a11e58b54edce13, type: 3}
+  - {fileID: 8300000, guid: 90fc747c6fcc54c44b5f51b06f2677b0, type: 3}
   PlayerButtons:
   - {fileID: 1717239134}
   - {fileID: 1150939575}
@@ -3760,21 +3760,21 @@ MonoBehaviour:
   player: 0
   audioSource: {fileID: 1740602798}
   bridgetClips:
-  - {fileID: 8300000, guid: f8bfc0bdaceab4a46ac20864f3eed5d0, type: 3}
-  - {fileID: 8300000, guid: 99d50bec5b9fd154ba4d4a97d917a758, type: 3}
-  - {fileID: 8300000, guid: be4b719f7588ab44cb55a318146d9c06, type: 3}
+  - {fileID: 8300000, guid: 22d9bb927ba631245a4e6f2166064f31, type: 3}
+  - {fileID: 8300000, guid: e97dcc7d7c4f3874dbbf0aa0cfcf37ad, type: 3}
+  - {fileID: 8300000, guid: ffcccd7fd02ad6b48bb30acefcc836ca, type: 3}
   jakobClips:
-  - {fileID: 8300000, guid: 7a6839b43ec31ec4eb4a9a1e77224bb3, type: 3}
-  - {fileID: 8300000, guid: ee974d055a21c9146aae022f479de239, type: 3}
-  - {fileID: 8300000, guid: bfcd8d55ace2fe142a3244bf915a654a, type: 3}
+  - {fileID: 8300000, guid: fa89130434c90e94d9da720c2f612dda, type: 3}
+  - {fileID: 8300000, guid: 0b9e0b8ddfcdba849b1c99599580c836, type: 3}
+  - {fileID: 8300000, guid: f1936b03608fe0e43bbf53c1affd510a, type: 3}
   hectorClips:
-  - {fileID: 8300000, guid: 8d2e1ea5e48de65469f0d89c0414c7ef, type: 3}
-  - {fileID: 8300000, guid: 014f348a8911586449b9e2b082ce9566, type: 3}
-  - {fileID: 8300000, guid: bc66386bf79b50847a837a9e387069e9, type: 3}
+  - {fileID: 8300000, guid: 2dadd0b78ee2bf64a84d1047ee59e58e, type: 3}
+  - {fileID: 8300000, guid: f1df52e66dcc0ef4faf75a9478346bd1, type: 3}
+  - {fileID: 8300000, guid: bb104aaebeee76f4b9ea5ebbda86eb18, type: 3}
   isabellClips:
-  - {fileID: 8300000, guid: d12e0cf1d80588d43b98ad4045f52472, type: 3}
-  - {fileID: 8300000, guid: d03e6b95c1fc376459c7eaf0b56aa441, type: 3}
-  - {fileID: 8300000, guid: 1d94d58c9d90e2a448acb727eed2f98e, type: 3}
+  - {fileID: 8300000, guid: 7bf292825211bbc4aa5a1d985da1c832, type: 3}
+  - {fileID: 8300000, guid: 1d4774bf6ac037344a11e58b54edce13, type: 3}
+  - {fileID: 8300000, guid: 90fc747c6fcc54c44b5f51b06f2677b0, type: 3}
   PlayerButtons:
   - {fileID: 1952930905}
   - {fileID: 1747533531}

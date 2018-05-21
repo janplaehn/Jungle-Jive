@@ -68,7 +68,7 @@ public class CharacterSelection : MonoBehaviour {
         foreach (GameObject button in PlayerButtons) {
             button.gameObject.SetActive(false);
         }
-        /*if (player == Player.Player1)
+        if (player == Player.Player1)
         {
             switch (GameObject.FindGameObjectWithTag("Player1").name) 
             {
@@ -106,7 +106,7 @@ public class CharacterSelection : MonoBehaviour {
                 default:
                     break;
             }
-        }*/
+        }
         
 
 
