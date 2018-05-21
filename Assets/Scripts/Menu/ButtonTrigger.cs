@@ -13,8 +13,10 @@ public class ButtonTrigger : MonoBehaviour {
     private float timeLeft;
     private bool isCharging;
     private Animator chargeAnimator;
+    private Color32 highlightColor;
 
     private void Awake() {
+        highlightColor = new Color32(180, 180, 180, 255);
         timeLeft = chargeTime;
         chargeAnimator = chargeBar.GetComponent<Animator>();
         chargeAnimator.speed = 1 / chargeTime;
@@ -40,8 +42,8 @@ public class ButtonTrigger : MonoBehaviour {
             timeLeft = chargeTime;
             chargeBar.GetComponent<AudioSource>().Play();
             foreach (GameObject button in buttonDisplayObjects) {
-                if(button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = new Color32(200,200,200, 255);
-                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = new Color32(200, 200, 200, 255);
+                if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = highlightColor;
+                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = highlightColor;
             }
         }
     }

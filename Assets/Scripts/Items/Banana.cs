@@ -69,8 +69,7 @@ public static class Banana  {
         GameObject.FindGameObjectWithTag(playerTag).transform.rotation = Quaternion.identity;
         GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().gravityScale = 1;
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
         if (playerTag == "Player1") {
             GameObject.FindGameObjectWithTag(playerTag).transform.position = GameObject.Find("playerOneSpawn").transform.position + Vector3.up * 10;
         }
