@@ -138,14 +138,14 @@ RectTransform:
   m_GameObject: {fileID: 62002470}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 222710146}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296, y: -110.5}
+  m_AnchoredPosition: {x: -286, y: -102.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62002472
@@ -292,21 +292,21 @@ MonoBehaviour:
   player: 1
   audioSource: {fileID: 69572743}
   bridgetClips:
-  - {fileID: 8300000, guid: f8bfc0bdaceab4a46ac20864f3eed5d0, type: 3}
-  - {fileID: 8300000, guid: 99d50bec5b9fd154ba4d4a97d917a758, type: 3}
-  - {fileID: 8300000, guid: be4b719f7588ab44cb55a318146d9c06, type: 3}
+  - {fileID: 8300000, guid: 22d9bb927ba631245a4e6f2166064f31, type: 3}
+  - {fileID: 8300000, guid: e97dcc7d7c4f3874dbbf0aa0cfcf37ad, type: 3}
+  - {fileID: 8300000, guid: ffcccd7fd02ad6b48bb30acefcc836ca, type: 3}
   jakobClips:
-  - {fileID: 8300000, guid: 7a6839b43ec31ec4eb4a9a1e77224bb3, type: 3}
-  - {fileID: 8300000, guid: ee974d055a21c9146aae022f479de239, type: 3}
-  - {fileID: 8300000, guid: bfcd8d55ace2fe142a3244bf915a654a, type: 3}
+  - {fileID: 8300000, guid: fa89130434c90e94d9da720c2f612dda, type: 3}
+  - {fileID: 8300000, guid: 0b9e0b8ddfcdba849b1c99599580c836, type: 3}
+  - {fileID: 8300000, guid: f1936b03608fe0e43bbf53c1affd510a, type: 3}
   hectorClips:
-  - {fileID: 8300000, guid: 8d2e1ea5e48de65469f0d89c0414c7ef, type: 3}
-  - {fileID: 8300000, guid: 014f348a8911586449b9e2b082ce9566, type: 3}
-  - {fileID: 8300000, guid: bc66386bf79b50847a837a9e387069e9, type: 3}
+  - {fileID: 8300000, guid: 2dadd0b78ee2bf64a84d1047ee59e58e, type: 3}
+  - {fileID: 8300000, guid: f1df52e66dcc0ef4faf75a9478346bd1, type: 3}
+  - {fileID: 8300000, guid: bb104aaebeee76f4b9ea5ebbda86eb18, type: 3}
   isabellClips:
-  - {fileID: 8300000, guid: d12e0cf1d80588d43b98ad4045f52472, type: 3}
-  - {fileID: 8300000, guid: d03e6b95c1fc376459c7eaf0b56aa441, type: 3}
-  - {fileID: 8300000, guid: 1d94d58c9d90e2a448acb727eed2f98e, type: 3}
+  - {fileID: 8300000, guid: 7bf292825211bbc4aa5a1d985da1c832, type: 3}
+  - {fileID: 8300000, guid: 1d4774bf6ac037344a11e58b54edce13, type: 3}
+  - {fileID: 8300000, guid: 90fc747c6fcc54c44b5f51b06f2677b0, type: 3}
   PlayerButtons:
   - {fileID: 1717239134}
   - {fileID: 1150939575}
@@ -529,7 +529,7 @@ Prefab:
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -6
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
@@ -742,12 +742,12 @@ Prefab:
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 28
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 74
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
@@ -1025,14 +1025,14 @@ RectTransform:
   m_GameObject: {fileID: 397402910}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1493467696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.4, y: 45}
+  m_AnchoredPosition: {x: 81.6, y: 41.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397402912
@@ -1324,7 +1324,7 @@ Prefab:
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 29.1
+      value: 39.770863
       objectReference: {fileID: 0}
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8745098, g: 0.57254905, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.3019608, b: 0.7529412, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2107,14 +2107,14 @@ RectTransform:
   m_GameObject: {fileID: 738061175}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 1705115473}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.1, y: -110}
+  m_AnchoredPosition: {x: 84.2, y: -103.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738061177
@@ -2261,7 +2261,7 @@ Prefab:
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 29
+      value: 42.9
       objectReference: {fileID: 0}
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
@@ -2664,6 +2664,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114980357982881000, guid: 37d8510ed687e03438c8e93d37f6d559,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114980357982881000, guid: 37d8510ed687e03438c8e93d37f6d559,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 114980357982881000, guid: 37d8510ed687e03438c8e93d37f6d559,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.7529412
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37d8510ed687e03438c8e93d37f6d559, type: 2}
   m_IsPrefabParent: 0
@@ -2834,14 +2849,14 @@ RectTransform:
   m_GameObject: {fileID: 1196486772}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1890494461}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: 45}
+  m_AnchoredPosition: {x: -285.4, y: 29.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196486774
@@ -3745,21 +3760,21 @@ MonoBehaviour:
   player: 0
   audioSource: {fileID: 1740602798}
   bridgetClips:
-  - {fileID: 8300000, guid: f8bfc0bdaceab4a46ac20864f3eed5d0, type: 3}
-  - {fileID: 8300000, guid: 99d50bec5b9fd154ba4d4a97d917a758, type: 3}
-  - {fileID: 8300000, guid: be4b719f7588ab44cb55a318146d9c06, type: 3}
+  - {fileID: 8300000, guid: 22d9bb927ba631245a4e6f2166064f31, type: 3}
+  - {fileID: 8300000, guid: e97dcc7d7c4f3874dbbf0aa0cfcf37ad, type: 3}
+  - {fileID: 8300000, guid: ffcccd7fd02ad6b48bb30acefcc836ca, type: 3}
   jakobClips:
-  - {fileID: 8300000, guid: 7a6839b43ec31ec4eb4a9a1e77224bb3, type: 3}
-  - {fileID: 8300000, guid: ee974d055a21c9146aae022f479de239, type: 3}
-  - {fileID: 8300000, guid: bfcd8d55ace2fe142a3244bf915a654a, type: 3}
+  - {fileID: 8300000, guid: fa89130434c90e94d9da720c2f612dda, type: 3}
+  - {fileID: 8300000, guid: 0b9e0b8ddfcdba849b1c99599580c836, type: 3}
+  - {fileID: 8300000, guid: f1936b03608fe0e43bbf53c1affd510a, type: 3}
   hectorClips:
-  - {fileID: 8300000, guid: 8d2e1ea5e48de65469f0d89c0414c7ef, type: 3}
-  - {fileID: 8300000, guid: 014f348a8911586449b9e2b082ce9566, type: 3}
-  - {fileID: 8300000, guid: bc66386bf79b50847a837a9e387069e9, type: 3}
+  - {fileID: 8300000, guid: 2dadd0b78ee2bf64a84d1047ee59e58e, type: 3}
+  - {fileID: 8300000, guid: f1df52e66dcc0ef4faf75a9478346bd1, type: 3}
+  - {fileID: 8300000, guid: bb104aaebeee76f4b9ea5ebbda86eb18, type: 3}
   isabellClips:
-  - {fileID: 8300000, guid: d12e0cf1d80588d43b98ad4045f52472, type: 3}
-  - {fileID: 8300000, guid: d03e6b95c1fc376459c7eaf0b56aa441, type: 3}
-  - {fileID: 8300000, guid: 1d94d58c9d90e2a448acb727eed2f98e, type: 3}
+  - {fileID: 8300000, guid: 7bf292825211bbc4aa5a1d985da1c832, type: 3}
+  - {fileID: 8300000, guid: 1d4774bf6ac037344a11e58b54edce13, type: 3}
+  - {fileID: 8300000, guid: 90fc747c6fcc54c44b5f51b06f2677b0, type: 3}
   PlayerButtons:
   - {fileID: 1952930905}
   - {fileID: 1747533531}
@@ -4304,8 +4319,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1952930905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.601, y: 1.34, z: 0}
-  m_LocalScale: {x: 0.46442777, y: 0.7937012, z: 0.5708517}
+  m_LocalPosition: {x: -6.418, y: 1.34, z: 0}
+  m_LocalScale: {x: 0.38925785, y: 0.7937012, z: 0.5708517}
   m_Children: []
   m_Father: {fileID: 787511076}
   m_RootOrder: 2
@@ -4360,7 +4375,7 @@ Prefab:
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 27
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 224464188661710724, guid: aab7968c1718d1149808b7e3be9907fd,
         type: 2}

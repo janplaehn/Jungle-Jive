@@ -26,23 +26,23 @@ public static class Banana  {
         }
         disabledPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         GameObject.Find("banana").GetComponent<AudioSource>().Play();
-        /*switch (GameObject.FindGameObjectWithTag(playerTag).name)
+        switch (GameObject.FindGameObjectWithTag(playerTag).name)
         {
             case "Bridget_PlayerOne(Clone)":
-                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/BridgetScream" ) as AudioClip);
+                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/BridgetScream.ogg" ) as AudioClip);
                 break;
             case "Jakob_PlayerOne(Clone)":
-                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/JakobScream") as AudioClip);
+                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/JakobScream.ogg") as AudioClip);
                 break;
             case "Hector_PlayerOne(Clone)":
-                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/HectorScream") as AudioClip);
+                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/HectorScream.ogg") as AudioClip);
                 break;
             case "Isabell_PlayerOne(Clone)":
-                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/IsabellScream") as AudioClip);
+                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/IsabellScream.ogg") as AudioClip);
                 break;
             default:
                 break;
-        }*/
+        }
     }
 
     public static IEnumerator FlyOff(string playerTag) {
@@ -69,8 +69,7 @@ public static class Banana  {
         GameObject.FindGameObjectWithTag(playerTag).transform.rotation = Quaternion.identity;
         GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().gravityScale = 1;
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
         if (playerTag == "Player1") {
             GameObject.FindGameObjectWithTag(playerTag).transform.position = GameObject.Find("playerOneSpawn").transform.position + Vector3.up * 10;
         }
