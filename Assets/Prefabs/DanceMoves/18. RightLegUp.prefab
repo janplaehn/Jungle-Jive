@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114569061543786436}
   - component: {fileID: 212190498180013264}
   m_Layer: 0
-  m_Name: 18. RightLeftUp
+  m_Name: 18. RightLegUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
