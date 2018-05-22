@@ -39,28 +39,28 @@ public class ControllerManager : MonoBehaviour {
         switch (checkedIndex)
         {
             case (int)LimbType.p1LeftArm:
-                if ((player1LeftArm = GetLimb()) != "") hasChecked = true;
+                if ((player1LeftArm = GetLimb(false)) != "") hasChecked = true;
                 break;
             case (int)LimbType.p1RightArm:
-                if ((player1RightArm = GetLimb()) != "") hasChecked = true;
+                if ((player1RightArm = GetLimb(false)) != "") hasChecked = true;
                 break;
             case (int)LimbType.p1LeftLeg:
-                if ((player1LeftLeg = GetLimb()) != "") hasChecked = true;
+                if ((player1LeftLeg = GetLimb(true)) != "") hasChecked = true;
                 break;
             case (int)LimbType.p1RightLeg:
-                if ((player1RightLeg = GetLimb()) != "") hasChecked = true;
+                if ((player1RightLeg = GetLimb(true)) != "") hasChecked = true;
                 break;
             case (int)LimbType.p2LeftArm:
-                if ((player2LeftArm = GetLimb()) != "") hasChecked = true;
+                if ((player2LeftArm = GetLimb(false)) != "") hasChecked = true;
                 break;
             case (int)LimbType.p2RightArm:
-                if ((player2RightArm = GetLimb()) != "") hasChecked = true;
+                if ((player2RightArm = GetLimb(false)) != "") hasChecked = true;
                 break;
             case (int)LimbType.p2LeftLeg:
-                if ((player2LeftLeg = GetLimb()) != "") hasChecked = true;
+                if ((player2LeftLeg = GetLimb(true)) != "") hasChecked = true;
                 break;
             case (int)LimbType.p2RightLeg:
-                if ((player2RightLeg = GetLimb()) != "") hasChecked = true;
+                if ((player2RightLeg = GetLimb(true)) != "") hasChecked = true;
                 break;
             default:
                 Debug.LogError("O fugg, something went really wrong");
@@ -99,9 +99,11 @@ public class ControllerManager : MonoBehaviour {
         }
     }
 
-    private string GetLimb()
+    private string GetLimb(bool isLeg)
     {
-        float threshold = 0.4f;
+        
+        float threshold = 0.5f;
+        if (isLeg) threshold -= 0.3f;
         if(CheckAxis("LeftStickVertical", threshold)){
             if(ConfirmAxis("LeftStickVertical") != "") return "LeftStickVertical";
         }
@@ -151,7 +153,6 @@ public class ControllerManager : MonoBehaviour {
     {
         if(axis == player1LeftArm 
             || axis == player1RightArm 
-            || axis == player1LeftLeg 
             || axis == player1LeftLeg 
             || axis == player1RightLeg
             || axis == player2LeftArm

@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475fc3def371f26448888fd79f11e44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invokeTimer: 0.2
+  invokeTimer: 1
   instructionText: {fileID: 844343487}
 --- !u!1 &45600367
 GameObject:
