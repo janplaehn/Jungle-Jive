@@ -98,36 +98,37 @@ public class ControllerManager : MonoBehaviour {
 
     private string GetLimb()
     {
-        if(CheckAxis("LeftStickVertical", 0.3f)){
+        float threshold = 0.4f;
+        if(CheckAxis("LeftStickVertical", threshold)){
             if(ConfirmAxis("LeftStickVertical") != "") return "LeftStickVertical";
         }
-        if (CheckAxis("RightStickVertical", 0.3f))
+        if (CheckAxis("RightStickVertical", threshold))
         {
             if (ConfirmAxis("RightStickVertical") != "") return "RightStickVertical";
         }
-        if (CheckAxis("LeftStickHorizontal", 0.3f))
+        if (CheckAxis("LeftStickHorizontal", threshold))
         {
             if (ConfirmAxis("LeftStickHorizontal") != "") return "LeftStickHorizontal";
         }
-        if (CheckAxis("RightStickHorizontal", 0.3f))
+        if (CheckAxis("RightStickHorizontal", threshold))
         {
             if (ConfirmAxis("RightStickHorizontal") != "") return "RightStickHorizontal";
         }
 
 
-        if (CheckAxis("P2LeftStickVertical", 0.3f))
+        if (CheckAxis("P2LeftStickVertical", threshold))
         {
             if (ConfirmAxis("P2LeftStickVertical") != "") return "P2LeftStickVertical";
         }
-        if (CheckAxis("P2RightStickVertical", 0.3f))
+        if (CheckAxis("P2RightStickVertical", threshold))
         {
             if (ConfirmAxis("P2RightStickVertical") != "") return "P2RightStickVertical";
         }
-        if (CheckAxis("P2LeftStickHorizontal", 0.3f))
+        if (CheckAxis("P2LeftStickHorizontal", threshold))
         {
             if (ConfirmAxis("P2LeftStickHorizontal") != "") return "P2LeftStickHorizontal";
         }
-        if (CheckAxis("P2RightStickHorizontal", 0.3f))
+        if (CheckAxis("P2RightStickHorizontal", threshold))
         {
             if (ConfirmAxis("P2RightStickHorizontal") != "") return "P2RightStickHorizontal";
         }
