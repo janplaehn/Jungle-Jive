@@ -10,13 +10,13 @@ public class ScoringSystem : MonoBehaviour {
     int secondPlayerScore = 0;
     public Text firstPlayerScoreDisplay;
     public Text secondPlayerScoreDisplay;
-    public GameObject firstPlayerTextFeedback;
-    public GameObject secondPlayerTextFeedback;
+    [HideInInspector] public GameObject firstPlayerTextFeedback;
+    [HideInInspector] public GameObject secondPlayerTextFeedback;
 
     public LightsFeedback lightsFeedback;
 
-    public GameObject firstPlayerHead;
-    public GameObject secondPlayerHead;
+    [HideInInspector]  public GameObject firstPlayerHead;
+    [HideInInspector]  public GameObject secondPlayerHead;
     public GameObject comboManager;
     public static float comboMultiplierP1 = 1;
     public static float comboMultiplierP2 = 1;
