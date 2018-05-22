@@ -58,7 +58,6 @@ public class LightsFeedback : MonoBehaviour
                 Debug.LogError("Couldn't give proper light feedback for player 1 :( ");
                 break;
         }
-        
     }
 
     public void GiveSecondPlayerFeedback(int score, int maxScore)
@@ -82,7 +81,6 @@ public class LightsFeedback : MonoBehaviour
                 Debug.LogError("Couldn't give proper light feedback for player 2 :( ");
                 break;
         }
-
     }
 
 
