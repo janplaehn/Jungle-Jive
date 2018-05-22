@@ -17,14 +17,14 @@ public class ControllerManager : MonoBehaviour {
 
     enum LimbType
     {
-        p1LeftArm,
-        p1RightArm,
-        p1LeftLeg,
-        p1RightLeg,
-        p2LeftArm,
-        p2RightArm,
-        p2LeftLeg,
-        p2RightLeg
+        p1LeftArm = 0,
+        p1RightArm = 1,
+        p1LeftLeg = 2,
+        p1RightLeg = 3,
+        p2LeftArm = 4,
+        p2RightArm = 5,
+        p2LeftLeg = 6,
+        p2RightLeg = 7
     }
 
 	// Use this for initialization
@@ -35,7 +35,6 @@ public class ControllerManager : MonoBehaviour {
 	
 	private void CheckLimbs()
     {
-        
         bool hasChecked = false;
         switch (checkedIndex)
         {
@@ -69,7 +68,7 @@ public class ControllerManager : MonoBehaviour {
         }
         if (hasChecked) checkedIndex++;
         DisplayInstructions(checkedIndex);
-        if (checkedIndex < 9) Invoke("CheckLimbs", invokeTimer);
+        if (checkedIndex < 8) Invoke("CheckLimbs", invokeTimer);
     }
 
     private void DisplayInstructions(int index)
@@ -100,37 +99,37 @@ public class ControllerManager : MonoBehaviour {
     private string GetLimb()
     {
         if(CheckAxis("LeftStickVertical", 0.3f)){
-            return ConfirmSelected("LeftStickVertical");
+            if(ConfirmAxis("LeftStickVertical") != "") return "LeftStickVertical";
         }
         if (CheckAxis("RightStickVertical", 0.3f))
         {
-            return ConfirmSelected("RightStickVertical");
+            if (ConfirmAxis("RightStickVertical") != "") return "RightStickVertical";
         }
         if (CheckAxis("LeftStickHorizontal", 0.3f))
         {
-            return ConfirmSelected("LeftStickHorizontal");
+            if (ConfirmAxis("LeftStickHorizontal") != "") return "LeftStickHorizontal";
         }
         if (CheckAxis("RightStickHorizontal", 0.3f))
         {
-            return ConfirmSelected("RightStickHorizontal");
+            if (ConfirmAxis("RightStickHorizontal") != "") return "RightStickHorizontal";
         }
 
 
         if (CheckAxis("P2LeftStickVertical", 0.3f))
         {
-            return ConfirmSelected("P2LeftStickVertical");
+            if (ConfirmAxis("P2LeftStickVertical") != "") return "P2LeftStickVertical";
         }
         if (CheckAxis("P2RightStickVertical", 0.3f))
         {
-            return ConfirmSelected("P2RightStickVertical");
+            if (ConfirmAxis("P2RightStickVertical") != "") return "P2RightStickVertical";
         }
         if (CheckAxis("P2LeftStickHorizontal", 0.3f))
         {
-            return ConfirmSelected("P2LeftStickHorizontal");
+            if (ConfirmAxis("P2LeftStickHorizontal") != "") return "P2LeftStickHorizontal";
         }
         if (CheckAxis("P2RightStickHorizontal", 0.3f))
         {
-            return ConfirmSelected("P2RightStickHorizontal");
+            if (ConfirmAxis("P2RightStickHorizontal") != "") return "P2RightStickHorizontal";
         }
         return "";
     }
@@ -144,22 +143,22 @@ public class ControllerManager : MonoBehaviour {
         return false;
     }
 
-    private string ConfirmSelected(string selected)
+    private string ConfirmAxis(string axis)
     {
-        if(selected == player1LeftArm 
-            || selected == player1RightArm 
-            || selected == player1LeftLeg 
-            || selected == player1LeftLeg 
-            || selected == player1RightLeg
-            || selected == player2LeftArm
-            || selected == player2RightArm
-            || selected == player2LeftLeg
-            || selected == player2RightLeg)
+        if(axis == player1LeftArm 
+            || axis == player1RightArm 
+            || axis == player1LeftLeg 
+            || axis == player1LeftLeg 
+            || axis == player1RightLeg
+            || axis == player2LeftArm
+            || axis == player2RightArm
+            || axis == player2LeftLeg
+            || axis == player2RightLeg)
         {
             return "";
         } else
         {
-            return selected;
+            return axis;
         }
         
     }                  
