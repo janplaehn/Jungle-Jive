@@ -66,8 +66,11 @@ public class ControllerManager : MonoBehaviour {
                 Debug.LogError("O fugg, something went really wrong");
                 break;
         }
-        if (hasChecked) checkedIndex++;
-        DisplayInstructions(checkedIndex);
+        if (hasChecked)
+        {
+            checkedIndex++;
+            DisplayInstructions(checkedIndex);
+        }
         if (checkedIndex < 8) Invoke("CheckLimbs", invokeTimer);
     }
 

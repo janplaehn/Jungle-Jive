@@ -449,7 +449,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AAAAAAAAAAAA
+  m_Text: Raise player one's left arm!
 --- !u!222 &844343488
 CanvasRenderer:
   m_ObjectHideFlags: 0
