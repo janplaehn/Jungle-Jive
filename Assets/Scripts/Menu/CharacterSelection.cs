@@ -51,7 +51,7 @@ public class CharacterSelection : MonoBehaviour {
         }
     }
 
-    public void ConfirmCharacters(string Scene) {
+    public void ConfirmCharacters() {
         charactersConfirmed++;
         if (player == Player.Player1) {
             foreach (GameObject face in GameObject.FindGameObjectsWithTag("Head")) {
@@ -111,10 +111,14 @@ public class CharacterSelection : MonoBehaviour {
 
 
         if (charactersConfirmed >= 2) {
-            charactersConfirmed = 0;
-            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("MenuMusic");
-            SceneManager.LoadScene(Scene);
+            Invoke("ChangeToNextScene", 1f);
         }
 
+    }
+
+    public void ChangeToNextScene() {
+        charactersConfirmed = 0;
+        if (GameObject.Find("MusicManager")) GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("MenuMusic");
+        SceneManager.LoadScene("MainScene");
     }
 }

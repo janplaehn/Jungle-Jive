@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightArmPosition: 1
   LeftArmPosition: 2
-  RightLegPosition: 0
+  RightLegPosition: 1
   LeftLegPosition: 2
   moveInstruction: {fileID: 21300006, guid: 93389a986cf2bd5498b9b21b06be748d, type: 3}
 --- !u!212 &212375137116642388

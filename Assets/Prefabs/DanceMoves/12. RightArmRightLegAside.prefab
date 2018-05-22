@@ -55,7 +55,7 @@ MonoBehaviour:
   RightArmPosition: 2
   LeftArmPosition: 1
   RightLegPosition: 1
-  LeftLegPosition: 1
+  LeftLegPosition: 2
   moveInstruction: {fileID: 21300010, guid: 93389a986cf2bd5498b9b21b06be748d, type: 3}
 --- !u!212 &212330926875743688
 SpriteRenderer:
