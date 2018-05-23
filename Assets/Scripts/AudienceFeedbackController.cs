@@ -9,7 +9,7 @@ public class AudienceFeedbackController : MonoBehaviour {
     public AudioClip[] okClip;
     public AudioClip[] wowClip;
     private AudioSource audio;
-
+    float initialPitch;
     public Sprite[] sad;
     public Sprite[] neutral;
     public Sprite[] happy;
@@ -17,6 +17,7 @@ public class AudienceFeedbackController : MonoBehaviour {
     private void Start()
     {
         audio = GetComponent<AudioSource>();
+        initialPitch = audio.pitch;
     }
 
     public void GiveFaceFeedback(int score, int maxScore) {
@@ -45,6 +46,7 @@ public class AudienceFeedbackController : MonoBehaviour {
         int index = Random.Range(0, c.Length);
         audio.Stop();
         audio.clip = c[index];
+        audio.pitch = Random.Range(initialPitch - 0.2f, initialPitch + 0.21f);
         audio.Play();
     }
 

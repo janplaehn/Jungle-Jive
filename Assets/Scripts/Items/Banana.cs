@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class Banana  {
-
     public static void BananaHit(string playerTag)
     {
         if (playerTag != "Player1" && playerTag != "Player2") {
@@ -29,16 +28,28 @@ public static class Banana  {
         switch (GameObject.FindGameObjectWithTag(playerTag).name)
         {
             case "Bridget_PlayerOne(Clone)":
-                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/BridgetScream.ogg" ) as AudioClip);
+                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Bridget");
+                break;
+            case "Bridget_PlayerTwo(Clone)":
+                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Bridget");
                 break;
             case "Jakob_PlayerOne(Clone)":
-                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/JakobScream.ogg") as AudioClip);
+                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Jakob");
+                break;
+            case "Jakob_PlayerTwo(Clone)":
+                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Jakob");
                 break;
             case "Hector_PlayerOne(Clone)":
-                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/HectorScream.ogg") as AudioClip);
+                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Hector");
+                break;
+            case "Hector_PlayerTwo(Clone)":
+                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Hector");
                 break;
             case "Isabell_PlayerOne(Clone)":
-                GameObject.Find("playerSound").GetComponent<AudioSource>().PlayOneShot(Resources.Load("Sound/IsabellScream.ogg") as AudioClip);
+                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Isabelle");
+                break;
+            case "Isabell_PlayerTwo(Clone)":
+                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Isabelle");
                 break;
             default:
                 break;
