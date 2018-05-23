@@ -1333,7 +1333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   states:
-  - {fileID: 1180045265}
+  - {fileID: 1059396120}
   - {fileID: 1180045265}
   - {fileID: 1556263181}
   - {fileID: 1870097399}
@@ -1587,6 +1587,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1988035997186532, guid: bf9b978192f77d94e902fe2f1f9bee92,
     type: 2}
   m_PrefabInternal: {fileID: 1424800640}
+--- !u!114 &1059396120 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114509728815516748, guid: 9c1b1accd20048940acd595b1021345a,
+    type: 2}
+  m_PrefabInternal: {fileID: 459661494}
+  m_Script: {fileID: 11500000, guid: 8c4e456d37abc8943a5416f09b77e993, type: 3}
 --- !u!1 &1078130464
 GameObject:
   m_ObjectHideFlags: 0
