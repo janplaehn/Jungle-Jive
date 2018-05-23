@@ -29,6 +29,7 @@ public class ItemMiniGame : State {
         foreach (DiscoballRetract dr in canvas.GetComponentsInChildren<DiscoballRetract>()) {
             dr.Retract();
         }
+        GameObject.Find("ComboManager").GetComponent<ComboManager>().isInUse = false;
         Invoke("BeforeEnd", miniGameTimer - 2);
         Invoke("QuitState", miniGameTimer);
 
@@ -67,6 +68,7 @@ public class ItemMiniGame : State {
     {
         Debug.Log(playerOneScore + " + " + playerTwoScore);
         shakeText.SetActive(false);
+        GameObject.Find("ComboManager").GetComponent<ComboManager>().isInUse = true;
     }
 
     void QuitState() {

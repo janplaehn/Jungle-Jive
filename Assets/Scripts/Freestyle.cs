@@ -44,6 +44,7 @@ public class Freestyle : State {
         foreach (FreestyleDiscoball dr in canvas.GetComponentsInChildren<FreestyleDiscoball>()) {
             dr.Extend();
         }
+        GameObject.Find("ComboManager").GetComponent<ComboManager>().isInUse = false;
     }
 
     public override bool OnUpdate ()
@@ -143,6 +144,7 @@ public class Freestyle : State {
         foreach (FreestyleDiscoball dr in canvas.GetComponentsInChildren<FreestyleDiscoball>()) {
             dr.Retract();
         }
+        GameObject.Find("ComboManager").GetComponent<ComboManager>().isInUse = true;
         Debug.Log(playerOneScore + " " + playerTwoScore);
     }
 

@@ -19,6 +19,8 @@ public class ComboManager : MonoBehaviour {
     [SerializeField] Color noCombo;
     [SerializeField] Color smallCombo;
     [SerializeField] Color bigCombo;
+
+    [HideInInspector] public bool isInUse;
 	// Use this for initialization
 	void Start () {
         comboStreakP1 = 0;
@@ -31,7 +33,7 @@ public class ComboManager : MonoBehaviour {
         ScoringSystem.comboMultiplierP1 = 1;
         fireP1Animator = fireP1.GetComponent<Animator>();
         fireP2Animator = fireP2.GetComponent<Animator>();
-
+        isInUse = true;
 
     }
 	
@@ -51,7 +53,7 @@ public class ComboManager : MonoBehaviour {
             fireP1.GetComponent<Image>().enabled = true;
             fireP1Animator.SetBool("FireCombo", true);
         }
-        if (comboStreakP1 < 1)
+        if (comboStreakP1 < 1 || !isInUse)
         {
             comboP1.GetComponent<Text>().color = invisible;
             comboP1Image.GetComponent<Image>().color = invisible;
@@ -73,7 +75,7 @@ public class ComboManager : MonoBehaviour {
             fireP2.GetComponent<Image>().enabled = true;
             fireP2Animator.SetBool("FireCombo", true);
         }
-        if (comboStreakP2 < 1)
+        if (comboStreakP2 < 1 || !isInUse)
         {
             comboP2.GetComponent<Text>().color = invisible;
             comboP2Image.GetComponent<Image>().color = invisible;
