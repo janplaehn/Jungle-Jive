@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4281290836567018}
   - component: {fileID: 212393925213021696}
   - component: {fileID: 114215342525829684}
+  - component: {fileID: 82879568636627512}
   m_Layer: 0
   m_Name: Head2
   m_TagString: FeedbackFace2
@@ -71,6 +72,86 @@ Transform:
   m_Father: {fileID: 4033800502916524}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.953001}
+--- !u!82 &82879568636627512
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1913920699877138}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114215342525829684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,6 +163,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0091cb50f30c114ebc7cb985d8af3f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sadClip:
+  - {fileID: 8300000, guid: 969261c36d5d63d46b389379b5e74005, type: 3}
+  - {fileID: 8300000, guid: 52c0e4c759d74964797738df44517acf, type: 3}
+  - {fileID: 8300000, guid: 15876690c1d829f41931ad7ba9985186, type: 3}
+  okClip:
+  - {fileID: 8300000, guid: 850bf9bc7dd6831408981f32346e2eec, type: 3}
+  - {fileID: 8300000, guid: 4a50b5083c668974799482f3a543a5a0, type: 3}
+  - {fileID: 8300000, guid: 9c13e563b3a4a9d43aa714adde19b4b9, type: 3}
+  - {fileID: 8300000, guid: f589dedf3909dd84da635e83c0f8c646, type: 3}
+  - {fileID: 8300000, guid: 61d922acd6c5b194d92186c88da920c2, type: 3}
+  wowClip:
+  - {fileID: 8300000, guid: 4a0fe2049623c9848b17093e27b9ecf7, type: 3}
+  - {fileID: 8300000, guid: c8ae133c42b6d9544b25888c3b3c9d7f, type: 3}
+  - {fileID: 8300000, guid: 8c87c319044fafe488bd96dd1d59961d, type: 3}
+  - {fileID: 8300000, guid: e713b9a3dd71f3449b6c9b4694eb0ba8, type: 3}
   sad:
   - {fileID: 21300010, guid: cb3c9149a640b43479e73564b93b8163, type: 3}
   - {fileID: 21300006, guid: cb3c9149a640b43479e73564b93b8163, type: 3}
