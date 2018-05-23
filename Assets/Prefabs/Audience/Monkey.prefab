@@ -167,16 +167,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3eb99bdc72240b64586f0a6c5d06d81a, type: 3}
   okClip:
   - {fileID: 8300000, guid: 5d2089cdae06e824f9b114c5577f7846, type: 3}
-  - {fileID: 8300000, guid: 290472b6abf4aac4986ef78373042a61, type: 3}
   - {fileID: 8300000, guid: ddda7df62903d2a46b51b8b31b36be94, type: 3}
-  - {fileID: 8300000, guid: e367237a4835bf948b12e2a8eceff8f8, type: 3}
-  - {fileID: 8300000, guid: a2ccca91312de9949b7ff37ade5ed97d, type: 3}
   wowClip:
   - {fileID: 8300000, guid: da536b70f8d8d2d45842b64f782e5915, type: 3}
   - {fileID: 8300000, guid: 81ac1ddc5ee43284d93596ea20318e6a, type: 3}
   - {fileID: 8300000, guid: 81ac1ddc5ee43284d93596ea20318e6a, type: 3}
-  - {fileID: 8300000, guid: a81d4b9a4f7024a48840873dbc23011c, type: 3}
-  - {fileID: 8300000, guid: 8188f5640738fbd40bcb0a9884f1b8f1, type: 3}
   - {fileID: 8300000, guid: c7251a67238318942823ac861db0119d, type: 3}
   sad:
   - {fileID: 21300008, guid: 673e09639b4e78d4a9cbd556099cb163, type: 3}
