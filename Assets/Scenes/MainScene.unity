@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectTime: 7.88
-  mirror: {fileID: 4692288528494030, guid: e5bf9839985bbce4594149eb5abc6568, type: 2}
+  mirror: {fileID: 4692288528494030, guid: c2846d97d99a9e94ab4b74970815154c, type: 2}
 --- !u!114 &984638195
 MonoBehaviour:
   m_ObjectHideFlags: 0
