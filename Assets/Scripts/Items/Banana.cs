@@ -58,29 +58,31 @@ public static class Banana  {
 
     public static IEnumerator FlyOff(string playerTag) {
         yield return new WaitForSeconds(2.5f);
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().gravityScale = 0;
+        Rigidbody2D rb = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>();
+        rb.velocity = Vector3.zero;
+        rb.gravityScale = 0;
         GameObject.FindGameObjectWithTag(playerTag).transform.localScale = new Vector3 (0.3f, 0.3f, 0.3f);
         if (playerTag == "Player1") {
             GameObject.FindGameObjectWithTag(playerTag).transform.position = new Vector3(-11, -3, -1);
-            GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().AddForce(new Vector3(1, 0.6f) * 200);
-            GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().AddTorque(-10);            
+            rb.AddForce(new Vector3(1, 0.6f) * 200);
+            rb.AddTorque(-10);            
         }
         else if (playerTag == "Player2") {
             GameObject.FindGameObjectWithTag(playerTag).transform.position = new Vector3(11, -3, -1);
-            GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().AddForce(new Vector3(-1, 0.6f) * 200);
-            GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().AddTorque(10);
+            rb.AddForce(new Vector3(-1, 0.6f) * 200);
+            rb.AddTorque(10);
         }
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().gravityScale = 0;
+        rb.gravityScale = 0;
     }
 
-        public static IEnumerator ResetPositions(string playerTag, GameObject smashCollider) {
+    public static IEnumerator ResetPositions(string playerTag, GameObject smashCollider) {
         yield return new WaitForSeconds(7.88f);
+        Rigidbody2D rb = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>();
         GameObject.FindGameObjectWithTag(playerTag).transform.localScale = new Vector3(1, 1, 1);
         GameObject.FindGameObjectWithTag(playerTag).transform.rotation = Quaternion.identity;
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().gravityScale = 1;
-        GameObject.FindGameObjectWithTag(playerTag).GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+        rb.velocity = Vector3.zero;
+        rb.gravityScale = 1;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
         if (playerTag == "Player1") {
             GameObject.FindGameObjectWithTag(playerTag).transform.position = GameObject.Find("playerOneSpawn").transform.position + Vector3.up * 10;
         }

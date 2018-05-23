@@ -8,7 +8,7 @@ public class AudienceFeedbackController : MonoBehaviour {
     public AudioClip[] sadClip;
     public AudioClip[] okClip;
     public AudioClip[] wowClip;
-    private AudioSource audio;
+    private new AudioSource audio;
     float initialPitch;
     public Sprite[] sad;
     public Sprite[] neutral;
