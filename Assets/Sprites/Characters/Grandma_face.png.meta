@@ -54,7 +54,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -122,9 +122,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 373.3333
-        width: 186.66667
-        height: 186.66667
+        y: 1199.3333
+        width: 600.6667
+        height: 599.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: Grandma_face_1
       rect:
         serializedVersion: 2
-        x: 186
-        y: 373.3333
-        width: 186.66667
-        height: 186.66667
+        x: 600
+        y: 1199.3333
+        width: 600.6667
+        height: 599.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Grandma_face_2
       rect:
         serializedVersion: 2
-        x: 372
-        y: 373.3333
-        width: 186.66667
-        height: 186.66667
+        x: 1200
+        y: 1199.3333
+        width: 600.6667
+        height: 599.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,9 +164,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 187.33333
-        width: 186.66667
-        height: 186.66667
+        y: 600.3333
+        width: 600.6667
+        height: 599.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,10 +177,10 @@ TextureImporter:
       name: Grandma_face_4
       rect:
         serializedVersion: 2
-        x: 186
-        y: 187.33333
-        width: 186.66667
-        height: 186.66667
+        x: 600
+        y: 600.3333
+        width: 600.6667
+        height: 599.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: Grandma_face_5
       rect:
         serializedVersion: 2
-        x: 372
-        y: 187.33333
-        width: 186.66667
-        height: 186.66667
+        x: 1200
+        y: 600.3333
+        width: 600.6667
+        height: 599.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,9 +206,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1.3333282
-        width: 186.66667
-        height: 186.66667
+        y: 1.333313
+        width: 600.6667
+        height: 599.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +219,10 @@ TextureImporter:
       name: Grandma_face_7
       rect:
         serializedVersion: 2
-        x: 186
-        y: 1.3333282
-        width: 186.66667
-        height: 186.66667
+        x: 600
+        y: 1.333313
+        width: 600.6667
+        height: 599.6667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

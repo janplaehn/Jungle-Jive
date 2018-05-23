@@ -1,17 +1,19 @@
 fileFormatVersion: 2
-guid: 673e09639b4e78d4a9cbd556099cb163
-timeCreated: 1524578441
+guid: 04d54b5a12ac2a941a25a5eab9bc7277
+timeCreated: 1526998435
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: MonkeyFacespritesheet_0
-    21300002: MonkeyFacespritesheet_1
-    21300004: MonkeyFacespritesheet_2
-    21300006: MonkeyFacespritesheet_3
-    21300008: MonkeyFacespritesheet_4
-    21300010: MonkeyFacespritesheet_5
-    21300012: MonkeyFacespritesheet_6
-    21300014: MonkeyFacespritesheet_7
+    21300000: a-goddamn-concept-fire_spritesheet_600x500_0
+    21300002: a-goddamn-concept-fire_spritesheet_600x500_1
+    21300004: a-goddamn-concept-fire_spritesheet_600x500_2
+    21300006: a-goddamn-concept-fire_spritesheet_600x500_3
+    21300008: a-goddamn-concept-fire_spritesheet_600x500_4
+    21300010: a-goddamn-concept-fire_spritesheet_600x500_5
+    21300012: a-goddamn-concept-fire_spritesheet_600x500_6
+    21300014: a-goddamn-concept-fire_spritesheet_600x500_7
+    21300016: a-goddamn-concept-fire_spritesheet_600x500_8
+    21300018: a-goddamn-concept-fire_spritesheet_600x500_9
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -54,7 +56,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -84,47 +86,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MonkeyFacespritesheet_0
+      name: a-goddamn-concept-fire_spritesheet_600x500_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1293.3333
-        width: 668.6667
-        height: 646.6667
+        y: 1548
+        width: 600
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,13 +104,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: MonkeyFacespritesheet_1
+      name: a-goddamn-concept-fire_spritesheet_600x500_1
       rect:
         serializedVersion: 2
-        x: 668
-        y: 1293.3333
-        width: 668.6667
-        height: 646.6667
+        x: 600
+        y: 1548
+        width: 600
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,13 +118,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: MonkeyFacespritesheet_2
+      name: a-goddamn-concept-fire_spritesheet_600x500_2
       rect:
         serializedVersion: 2
-        x: 1336
-        y: 1293.3333
-        width: 668.6667
-        height: 646.6667
+        x: 1200
+        y: 1548
+        width: 600
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,55 +132,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: MonkeyFacespritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 647.3333
-        width: 668.6667
-        height: 646.6667
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: MonkeyFacespritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 668
-        y: 647.3333
-        width: 668.6667
-        height: 646.6667
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: MonkeyFacespritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 1336
-        y: 647.3333
-        width: 668.6667
-        height: 646.6667
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: MonkeyFacespritesheet_6
+      name: a-goddamn-concept-fire_spritesheet_600x500_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 1.333313
-        width: 668.6667
-        height: 646.6667
+        y: 1048
+        width: 600
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,13 +146,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: MonkeyFacespritesheet_7
+      name: a-goddamn-concept-fire_spritesheet_600x500_4
       rect:
         serializedVersion: 2
-        x: 668
-        y: 1.333313
-        width: 668.6667
-        height: 646.6667
+        x: 600
+        y: 1048
+        width: 600
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: a-goddamn-concept-fire_spritesheet_600x500_5
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1048
+        width: 600
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: a-goddamn-concept-fire_spritesheet_600x500_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 548
+        width: 600
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: a-goddamn-concept-fire_spritesheet_600x500_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 548
+        width: 600
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: a-goddamn-concept-fire_spritesheet_600x500_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 548
+        width: 600
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: a-goddamn-concept-fire_spritesheet_600x500_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 600
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

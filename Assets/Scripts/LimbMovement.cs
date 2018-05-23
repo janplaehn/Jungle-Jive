@@ -11,7 +11,7 @@ public class LimbMovement : MonoBehaviour {
     private float stunTime;
     public float lastRotation;
     [HideInInspector] public float inversion = 1;
-
+    private static float dampenThreshold = 1f;
     private float accumulatedTime;
 
 	void Start () {
@@ -24,7 +24,8 @@ public class LimbMovement : MonoBehaviour {
         if (isPaused == false)
         {
             lastRotation = transform.rotation.eulerAngles.z;
-            transform.rotation = transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation * inversion + startRotation);
+            float currentRotation = Input.GetAxis(joystickAxis) * maxRotation * inversion + startRotation;
+            if(Mathf.Abs(currentRotation - lastRotation) > dampenThreshold) transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation * inversion + startRotation);
         } else if (isPaused == true && stunTime != -1)
         {
             accumulatedTime += Time.deltaTime;
