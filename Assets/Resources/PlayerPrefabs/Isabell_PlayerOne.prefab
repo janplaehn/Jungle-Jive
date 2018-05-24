@@ -1782,7 +1782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickHorizontal2
   maxRotation: -120
   startRotation: 0
   isPaused: 0
@@ -1814,7 +1813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickVertical
   maxRotation: 90
   startRotation: 270
   isPaused: 0
@@ -1858,7 +1856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickVertical
   maxRotation: -120
   startRotation: 90
   isPaused: 0
@@ -1894,7 +1891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickHorizontal2
   maxRotation: 120
   startRotation: 0
   isPaused: 0
@@ -1911,7 +1907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickHorizontal2
   maxRotation: -90
   startRotation: 0
   isPaused: 0
@@ -1928,7 +1923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickVertical
   maxRotation: -90
   startRotation: 90
   isPaused: 0
@@ -1945,7 +1939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickVertical
   maxRotation: 120
   startRotation: 270
   isPaused: 0
@@ -1975,7 +1968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickHorizontal2
   maxRotation: 90
   startRotation: 0
   isPaused: 0

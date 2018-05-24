@@ -15,7 +15,7 @@ public class ControllerManager : MonoBehaviour {
     public Text instructionText;
     private int checkedIndex = 0;
 
-    enum LimbType
+    public enum LimbType
     {
         p1LeftArm = 0,
         p1RightArm = 1,

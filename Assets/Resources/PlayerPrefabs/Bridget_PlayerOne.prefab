@@ -668,7 +668,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8666667, y: 1.8666667}
+    oldSize: {x: 2.0022223, y: 1.998889}
     newSize: {x: 0.8, y: 0.87}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1099,7 +1099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickHorizontal2
   maxRotation: -90
   startRotation: 0
   isPaused: 0
@@ -1116,7 +1115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickHorizontal2
   maxRotation: -120
   startRotation: 0
   isPaused: 0
@@ -1133,7 +1131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickVertical
   maxRotation: 90
   startRotation: 270
   isPaused: 0
@@ -1187,7 +1184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickVertical
   maxRotation: 120
   startRotation: 270
   isPaused: 0
@@ -1231,7 +1227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickHorizontal2
   maxRotation: 120
   startRotation: 0
   isPaused: 0
@@ -1248,7 +1243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickVertical
   maxRotation: -120
   startRotation: 90
   isPaused: 0
@@ -1265,7 +1259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: LeftStickHorizontal2
   maxRotation: 90
   startRotation: 0
   isPaused: 0
@@ -1282,7 +1275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616d1cc25d4e480448516dbe35679459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystickAxis: RightStickVertical
   maxRotation: -90
   startRotation: 90
   isPaused: 0

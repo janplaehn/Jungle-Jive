@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LimbMovement : MonoBehaviour {
-
-    public string joystickAxis;
+    private string joystickAxis;
     [Range(-180, 180)]  public float maxRotation;
     [Range(0, 360)] public float startRotation;
     public bool isPaused;
@@ -18,9 +17,11 @@ public class LimbMovement : MonoBehaviour {
         stunTime = -1;
         isPaused = false;
         transform.rotation = transform.rotation = Quaternion.Euler(0, 0, startRotation);
+        joystickAxis = GetAxis();
     }
 	
 	void Update () {
+        if (joystickAxis == "" || joystickAxis == null) joystickAxis = GetAxis();
         if (isPaused == false)
         {
             lastRotation = transform.rotation.eulerAngles.z;
@@ -38,6 +39,25 @@ public class LimbMovement : MonoBehaviour {
         
     }
 
+    private string GetAxis()
+    {
+        if(gameObject.tag == "RightArm" || gameObject.transform.parent.gameObject.tag == "RightArm") return GetValidAxis(ControllerManager.player1RightArm);
+        if (gameObject.tag == "RightArmP2" || gameObject.transform.parent.gameObject.tag == "RightArmP2") return GetValidAxis(ControllerManager.player2RightArm);
+        if (gameObject.tag == "LeftArm" || gameObject.transform.parent.gameObject.tag == "LeftArm") return GetValidAxis(ControllerManager.player1LeftArm);
+        if (gameObject.tag == "LeftArmP2" || gameObject.transform.parent.gameObject.tag == "LeftArmP2") return GetValidAxis(ControllerManager.player2LeftArm);
+        if (gameObject.tag == "RightLeg" || gameObject.transform.parent.gameObject.tag == "RightLeg") return GetValidAxis(ControllerManager.player1RightLeg);
+        if (gameObject.tag == "RightLegP2" || gameObject.transform.parent.gameObject.tag == "RightLegP2") return GetValidAxis(ControllerManager.player2RightLeg);
+        if (gameObject.tag == "LeftLeg" || gameObject.transform.parent.gameObject.tag == "LeftLeg") return GetValidAxis(ControllerManager.player1LeftLeg);
+        if (gameObject.tag == "LeftLegP2" || gameObject.transform.parent.gameObject.tag == "LeftLegP2") return GetValidAxis(ControllerManager.player2LeftLeg);
+        return "";
+    }
+
+    private string GetValidAxis(string axis)
+    {
+        if (axis != null) return axis;
+        return "";
+    }
+
     public int GetLimbState()
     {
         int tempLimbState = -1;
@@ -51,7 +71,8 @@ public class LimbMovement : MonoBehaviour {
         {
             tempLimbState = 2;
         }
-        if (gameObject.tag == "RightArm" || gameObject.tag == "RightLeg" || gameObject.tag == "RightArmP2" || gameObject.tag == "RightLegP2") tempLimbState -= 2; tempLimbState = Mathf.Abs(tempLimbState);
+        if (gameObject.tag == "RightArm" || gameObject.tag == "RightLeg" || gameObject.tag == "RightArmP2" || gameObject.tag == "RightLegP2") tempLimbState -= 2;
+        tempLimbState = Mathf.Abs(tempLimbState);
         return tempLimbState;
     }
 
