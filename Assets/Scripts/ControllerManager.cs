@@ -25,6 +25,8 @@ public class ControllerManager : MonoBehaviour {
     public Text instructionText;
     private int checkedIndex = 0;
 
+    private float checkThreshold = 0.3f;
+
     public enum LimbType
     {
         p1LeftArm = 0,
@@ -45,6 +47,7 @@ public class ControllerManager : MonoBehaviour {
 	
 	private void CheckLimbs()
     {
+        DisplayLimbState();
         bool hasChecked = false;
         switch (checkedIndex)
         {
@@ -121,44 +124,100 @@ public class ControllerManager : MonoBehaviour {
         }
     }
 
+    private void DisplayLimbState()
+    {
+        Debug.Log("LeftStickVertical : " + Input.GetAxis("LeftStickVertical"));
+        Debug.Log("RightStickVertical : " + Input.GetAxis("RightStickVertical"));
+        Debug.Log("LeftStickHorizontal : " + Input.GetAxis("LeftStickHorizontal"));
+        Debug.Log("RightStickHorizontal : " + Input.GetAxis("RightStickHorizontal"));
+
+        Debug.Log("LeftStickVertical2 : " + Input.GetAxis("LeftStickVertical2"));
+        Debug.Log("RightStickVertical2 : " + Input.GetAxis("RightStickVertical2"));
+        Debug.Log("LeftStickHorizontal2 : " + Input.GetAxis("LeftStickHorizontal2"));
+        Debug.Log("RightStickHorizontal2 : " + Input.GetAxis("RightStickHorizontal2"));
+
+        Debug.Log("P2LeftStickVertical : " + Input.GetAxis("P2LeftStickVertical"));
+        Debug.Log("P2RightStickVertical : " + Input.GetAxis("P2RightStickVertical"));
+        Debug.Log("P2LeftStickHorizontal : " + Input.GetAxis("P2LeftStickHorizontal"));
+        Debug.Log("P2RightStickHorizontal : " + Input.GetAxis("P2RightStickHorizontal"));
+
+        Debug.Log("P2LeftStickVertical2 : " + Input.GetAxis("P2LeftStickVertical2"));
+        Debug.Log("P2RightStickVertical2 : " + Input.GetAxis("P2RightStickVertical2"));
+        Debug.Log("P2LeftStickHorizontal2 : " + Input.GetAxis("P2LeftStickHorizontal2"));
+        Debug.Log("P2RightStickHorizontal2 : " + Input.GetAxis("P2RightStickHorizontal2"));
+    }
+
     private string GetLimb(bool isLeg)
     {
-        
-        float threshold = 0.5f;
-        if (isLeg) threshold -= 0.3f;
-        if(CheckAxis("LeftStickVertical", threshold)){
+        if(CheckAxis("LeftStickVertical", checkThreshold)){
             if(ConfirmAxis("LeftStickVertical") != "") return "LeftStickVertical";
         }
-        if (CheckAxis("RightStickVertical", threshold))
+        if (CheckAxis("RightStickVertical", checkThreshold))
         {
             if (ConfirmAxis("RightStickVertical") != "") return "RightStickVertical";
         }
-        if (CheckAxis("LeftStickHorizontal", threshold))
+        if (CheckAxis("LeftStickHorizontal", checkThreshold))
         {
             if (ConfirmAxis("LeftStickHorizontal") != "") return "LeftStickHorizontal";
         }
-        if (CheckAxis("RightStickHorizontal", threshold))
+        if (CheckAxis("RightStickHorizontal", checkThreshold))
         {
             if (ConfirmAxis("RightStickHorizontal") != "") return "RightStickHorizontal";
         }
 
 
-        if (CheckAxis("P2LeftStickVertical", threshold))
+        if (CheckAxis("LeftStickVertical2", checkThreshold))
+        {
+            if (ConfirmAxis("LeftStickVertical2") != "") return "LeftStickVertical2";
+        }
+        if (CheckAxis("RightStickVertical2", checkThreshold))
+        {
+            if (ConfirmAxis("RightStickVertical2") != "") return "RightStickVertical2";
+        }
+        if (CheckAxis("LeftStickHorizontal2", checkThreshold))
+        {
+            if (ConfirmAxis("LeftStickHorizontal2") != "") return "LeftStickHorizontal2";
+        }
+        if (CheckAxis("RightStickHorizontal2", checkThreshold))
+        {
+            if (ConfirmAxis("RightStickHorizontal2") != "") return "RightStickHorizontal2";
+        }
+
+
+        if (CheckAxis("P2LeftStickVertical", checkThreshold))
         {
             if (ConfirmAxis("P2LeftStickVertical") != "") return "P2LeftStickVertical";
         }
-        if (CheckAxis("P2RightStickVertical", threshold))
+        if (CheckAxis("P2RightStickVertical", checkThreshold))
         {
             if (ConfirmAxis("P2RightStickVertical") != "") return "P2RightStickVertical";
         }
-        if (CheckAxis("P2LeftStickHorizontal", threshold))
+        if (CheckAxis("P2LeftStickHorizontal", checkThreshold))
         {
             if (ConfirmAxis("P2LeftStickHorizontal") != "") return "P2LeftStickHorizontal";
         }
-        if (CheckAxis("P2RightStickHorizontal", threshold))
+        if (CheckAxis("P2RightStickHorizontal", checkThreshold))
         {
             if (ConfirmAxis("P2RightStickHorizontal") != "") return "P2RightStickHorizontal";
         }
+
+        if (CheckAxis("P2LeftStickVertical2", checkThreshold))
+        {
+            if (ConfirmAxis("P2LeftStickVertical2") != "") return "P2LeftStickVertical2";
+        }
+        if (CheckAxis("P2RightStickVertical2", checkThreshold))
+        {
+            if (ConfirmAxis("P2RightStickVertical2") != "") return "P2RightStickVertical2";
+        }
+        if (CheckAxis("P2LeftStickHorizontal2", checkThreshold))
+        {
+            if (ConfirmAxis("P2LeftStickHorizontal2") != "") return "P2LeftStickHorizontal2";
+        }
+        if (CheckAxis("P2RightStickHorizontal2", checkThreshold))
+        {
+            if (ConfirmAxis("P2RightStickHorizontal2") != "") return "P2RightStickHorizontal2";
+        }
+        
         return "";
     }
 
@@ -171,22 +230,35 @@ public class ControllerManager : MonoBehaviour {
         return false;
     }
 
+
+
+
     private string ConfirmAxis(string axis)
     {
         if(axis == player1LeftArm 
-            || axis == player1RightArm 
-            || axis == player1LeftLeg 
-            || axis == player1RightLeg
-            || axis == player2LeftArm
-            || axis == player2RightArm
-            || axis == player2LeftLeg
-            || axis == player2RightLeg)
+            || axis == player1RightArm || axis == player1RightArm + "2" || axis == TrimEnd(player1RightArm)
+            || axis == player1LeftLeg  || axis == player1LeftLeg + "2" || axis == TrimEnd(player1LeftLeg)
+            || axis == player1RightLeg || axis == player1RightLeg + "2" || axis == TrimEnd(player1RightLeg)
+            || axis == player2LeftArm || axis == player2LeftArm + "2" || axis == TrimEnd(player2LeftArm)
+            || axis == player2RightArm || axis == player2RightArm + "2" || axis == TrimEnd(player2RightArm)
+            || axis == player2LeftLeg || axis == player2LeftLeg + "2" || axis == TrimEnd(player2LeftLeg)
+            || axis == player2RightLeg || axis == player2RightLeg + "2" || axis == TrimEnd(player2RightLeg))
         {
             return "";
         } else
         {
             return axis;
         }
-        
-    }                  
+    }
+
+    private string TrimEnd(string original)
+    {
+        string result = "";
+        for(int i = 0; i < original.Length - 1; i++)
+        {
+            result += original[i];
+        }
+
+        return result;
+    }
 }
