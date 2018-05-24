@@ -119,6 +119,6 @@ public class CharacterSelection : MonoBehaviour {
     public void ChangeToNextScene() {
         charactersConfirmed = 0;
         if (GameObject.Find("MusicManager")) GameObject.Find("MusicManager").GetComponent<MusicManagement>().Stop("MenuMusic");
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("MainSceneShort");
     }
 }

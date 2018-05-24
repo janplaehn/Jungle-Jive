@@ -6,6 +6,7 @@ public class GameState : MonoBehaviour {
 
     int stateIndex = 0;
     public List<State> states;
+    public string track = "DanceMusic";
 
     bool isPaused = false;
     bool started = true;
@@ -14,7 +15,7 @@ public class GameState : MonoBehaviour {
     {
         states[stateIndex].OnStart();
         if (GameObject.Find("MusicManager")) {
-            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play("DanceMusic");
+            GameObject.Find("MusicManager").GetComponent<MusicManagement>().Play(track);
         }
     }
 	// Update is called once per frame

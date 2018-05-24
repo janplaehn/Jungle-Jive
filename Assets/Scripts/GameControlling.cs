@@ -60,7 +60,7 @@ public class GameControlling : MonoBehaviour {
         yield return new WaitForSeconds(2f);
         GameObject t = GameObject.Find("MusicManager");
         if (t) {
-            t.GetComponent<MusicManagement>().Stop("DanceMusic");
+            t.GetComponent<MusicManagement>().Stop(GetComponent<GameState>().track);
             t.GetComponent<MusicManagement>().Play("MenuMusic");
         }
     }

@@ -62,7 +62,14 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DanceMusic
     clip: {fileID: 8300000, guid: 78e8864d81dd91e4ca49c8ab47cffc0f, type: 3}
-    volume: 1
+    volume: 0.9
+    pitch: 1
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ShortDanceMusic
+    clip: {fileID: 8300000, guid: 5b09462c78b23ae469a445a1f13d97a8, type: 3}
+    volume: 0.9
     pitch: 1
     loop: 0
     mixerGroup: {fileID: 0}

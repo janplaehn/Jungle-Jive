@@ -160,8 +160,8 @@ public class Freestyle : State {
 
     private void SetScoreBars() {
         Debug.Log(playerOneScore + " " + playerTwoScore);
-        scoreBarP1.GetComponent<Image>().fillAmount = (float)playerOneScore / 2000;
-        scoreBarP2.GetComponent<Image>().fillAmount = (float)playerTwoScore / 2000;
+        scoreBarP1.GetComponent<Image>().fillAmount = (float)playerOneScore / 1000;
+        scoreBarP2.GetComponent<Image>().fillAmount = (float)playerTwoScore / 1000;
     }
 
 }

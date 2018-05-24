@@ -1584,7 +1584,7 @@ GameObject:
   - component: {fileID: 1598857095}
   - component: {fileID: 1598857094}
   m_Layer: 5
-  m_Name: Board bottom right
+  m_Name: Board center right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1605,7 +1605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.42, y: -111.17}
+  m_AnchoredPosition: {x: 3, y: -27}
   m_SizeDelta: {x: 209.11, y: 95.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1598857094
@@ -1765,7 +1765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.650578, y: -127.225006}
+  m_AnchoredPosition: {x: 62.070587, y: -43.055}
   m_SizeDelta: {x: 288.74, y: 93.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818538080
