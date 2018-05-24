@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class ControllerManager : MonoBehaviour {
-    public static string player1LeftArm;
-    public static string player1RightArm;
-    public static string player1LeftLeg;
-    public static string player1RightLeg;
-    public static string player2LeftArm;
-    public static string player2RightArm;
-    public static string player2LeftLeg;
-    public static string player2RightLeg;
+    public string player1LeftArm;
+    public string player1RightArm;
+    public string player1LeftLeg;
+    public string player1RightLeg;
+    public string player2LeftArm;
+    public string player2RightArm;
+    public string player2LeftLeg;
+    public string player2RightLeg;
+
+    public static string keyPlayer1LeftArm = "Player1LeftArm";
+    public static string keyPlayer1RightArm = "Player1RightArm";
+    public static string keyPlayer1LeftLeg = "Player1LeftLeg";
+    public static string keyPlayer1RightLeg = "Player1RightLeg";
+    public static string keyPlayer2LeftArm = "Player2LeftArm";
+    public static string keyPlayer2RightArm = "Player2RightArm";
+    public static string keyPlayer2LeftLeg = "Player2LeftLeg";
+    public static string keyPlayer2RightLeg = "Player2RightLeg";
+
     public float invokeTimer;
     public Text instructionText;
     private int checkedIndex = 0;
@@ -71,7 +81,19 @@ public class ControllerManager : MonoBehaviour {
             checkedIndex++;
             DisplayInstructions(checkedIndex);
         }
-        if (checkedIndex < 8) Invoke("CheckLimbs", invokeTimer);
+        if (checkedIndex < 8) {
+            Invoke("CheckLimbs", invokeTimer);
+        } else
+        {
+            PlayerPrefs.SetString(keyPlayer1LeftArm, player1LeftArm);
+            PlayerPrefs.SetString(keyPlayer1RightArm, player1RightArm);
+            PlayerPrefs.SetString(keyPlayer1LeftLeg, player1LeftLeg);
+            PlayerPrefs.SetString(keyPlayer1RightLeg, player1RightLeg);
+            PlayerPrefs.SetString(keyPlayer2LeftArm, player2LeftArm);
+            PlayerPrefs.SetString(keyPlayer2RightArm, player2RightArm);
+            PlayerPrefs.SetString(keyPlayer2LeftLeg, player2LeftLeg);
+            PlayerPrefs.SetString(keyPlayer2RightLeg, player2RightLeg);
+        }
     }
 
     private void DisplayInstructions(int index)

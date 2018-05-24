@@ -21,7 +21,6 @@ public class LimbMovement : MonoBehaviour {
     }
 	
 	void Update () {
-        if (joystickAxis == "" || joystickAxis == null) joystickAxis = GetAxis();
         if (isPaused == false)
         {
             lastRotation = transform.rotation.eulerAngles.z;
@@ -41,23 +40,16 @@ public class LimbMovement : MonoBehaviour {
 
     private string GetAxis()
     {
-        if(gameObject.tag == "RightArm" || gameObject.transform.parent.gameObject.tag == "RightArm") return GetValidAxis(ControllerManager.player1RightArm);
-        if (gameObject.tag == "RightArmP2" || gameObject.transform.parent.gameObject.tag == "RightArmP2") return GetValidAxis(ControllerManager.player2RightArm);
-        if (gameObject.tag == "LeftArm" || gameObject.transform.parent.gameObject.tag == "LeftArm") return GetValidAxis(ControllerManager.player1LeftArm);
-        if (gameObject.tag == "LeftArmP2" || gameObject.transform.parent.gameObject.tag == "LeftArmP2") return GetValidAxis(ControllerManager.player2LeftArm);
-        if (gameObject.tag == "RightLeg" || gameObject.transform.parent.gameObject.tag == "RightLeg") return GetValidAxis(ControllerManager.player1RightLeg);
-        if (gameObject.tag == "RightLegP2" || gameObject.transform.parent.gameObject.tag == "RightLegP2") return GetValidAxis(ControllerManager.player2RightLeg);
-        if (gameObject.tag == "LeftLeg" || gameObject.transform.parent.gameObject.tag == "LeftLeg") return GetValidAxis(ControllerManager.player1LeftLeg);
-        if (gameObject.tag == "LeftLegP2" || gameObject.transform.parent.gameObject.tag == "LeftLegP2") return GetValidAxis(ControllerManager.player2LeftLeg);
+        if (gameObject.tag == "RightArm" || gameObject.transform.parent.gameObject.tag == "RightArm") return PlayerPrefs.GetString(ControllerManager.keyPlayer1RightArm, "LeftStickVertical");
+        if (gameObject.tag == "RightArmP2" || gameObject.transform.parent.gameObject.tag == "RightArmP2") return PlayerPrefs.GetString(ControllerManager.keyPlayer2RightArm, "LeftStickVertical");
+        if (gameObject.tag == "LeftArm" || gameObject.transform.parent.gameObject.tag == "LeftArm") return PlayerPrefs.GetString(ControllerManager.keyPlayer1LeftArm, "LeftStickVertical");
+        if (gameObject.tag == "LeftArmP2" || gameObject.transform.parent.gameObject.tag == "LeftArmP2") return PlayerPrefs.GetString(ControllerManager.keyPlayer2LeftArm, "LeftStickVertical");
+        if (gameObject.tag == "RightLeg" || gameObject.transform.parent.gameObject.tag == "RightLeg") return PlayerPrefs.GetString(ControllerManager.keyPlayer1RightLeg, "LeftStickVertical");
+        if (gameObject.tag == "RightLegP2" || gameObject.transform.parent.gameObject.tag == "RightLegP2") return PlayerPrefs.GetString(ControllerManager.keyPlayer2RightLeg, "LeftStickVertical");
+        if (gameObject.tag == "LeftLeg" || gameObject.transform.parent.gameObject.tag == "LeftLeg") return PlayerPrefs.GetString(ControllerManager.keyPlayer1LeftLeg, "LeftStickVertical");
+        if (gameObject.tag == "LeftLegP2" || gameObject.transform.parent.gameObject.tag == "LeftLegP2") return PlayerPrefs.GetString(ControllerManager.keyPlayer2LeftLeg, "LeftStickVertical");
         return "";
     }
-
-    private string GetValidAxis(string axis)
-    {
-        if (axis != null) return axis;
-        return "";
-    }
-
     public int GetLimbState()
     {
         int tempLimbState = -1;
