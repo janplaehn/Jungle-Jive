@@ -256,19 +256,19 @@ MonoBehaviour:
   timingPairs:
   - firstValue: {fileID: 114410907442614056, guid: 12fb3a4240f96384ea2e72825e50fac5,
       type: 2}
-    secondValue: 3.94
+    secondValue: 3.96
   - firstValue: {fileID: 114584150843385612, guid: 22afe37a77bf80a4d92013534ebdc4e3,
       type: 2}
-    secondValue: 1.97
+    secondValue: 3
   - firstValue: {fileID: 114408077989194678, guid: 8c953294495eaa3428243a1be47d750d,
-      type: 2}
-    secondValue: 1.97
-  - firstValue: {fileID: 114436193855374376, guid: 3f76f1a2cf6ad8846838993d28245ce6,
       type: 2}
     secondValue: 4
+  - firstValue: {fileID: 114436193855374376, guid: 3f76f1a2cf6ad8846838993d28245ce6,
+      type: 2}
+    secondValue: 1.97
   - firstValue: {fileID: 114408077989194678, guid: 8c953294495eaa3428243a1be47d750d,
       type: 2}
-    secondValue: 2
+    secondValue: 1.97
   voidSprite: {fileID: 21300000, guid: 03450066823e90c4692f03232b66d51b, type: 3}
   instructionImageArray:
   - {fileID: 21300000, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
@@ -333,19 +333,19 @@ MonoBehaviour:
   timingPairs:
   - firstValue: {fileID: 114360778531139504, guid: 0e45e2c52520ff442a154aafc841cf23,
       type: 2}
-    secondValue: 1.97
+    secondValue: 2
   - firstValue: {fileID: 114599182610496304, guid: 532a73aa3874a9e49a6a938ad75ed029,
       type: 2}
-    secondValue: 3.94
+    secondValue: 2
   - firstValue: {fileID: 114011772691135118, guid: bd8d7ee8790079d4abcc0d60243fa1e0,
       type: 2}
-    secondValue: 4
+    secondValue: 3.96
   - firstValue: {fileID: 114757421641954650, guid: 1c63786e730a1bf41ab5a0ea8bfad3de,
       type: 2}
-    secondValue: 4
+    secondValue: 3.96
   - firstValue: {fileID: 114584150843385612, guid: 22afe37a77bf80a4d92013534ebdc4e3,
       type: 2}
-    secondValue: 1.97
+    secondValue: 2
   - firstValue: {fileID: 114408077989194678, guid: 8c953294495eaa3428243a1be47d750d,
       type: 2}
     secondValue: 2
@@ -728,6 +728,31 @@ Prefab:
       propertyPath: timingPairs.Array.data[5].secondValue
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 9c1b1accd20048940acd595b1021345a,
+        type: 2}
+      propertyPath: introTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 9c1b1accd20048940acd595b1021345a,
+        type: 2}
+      propertyPath: timingPairs.Array.data[0].secondValue
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 9c1b1accd20048940acd595b1021345a,
+        type: 2}
+      propertyPath: timingPairs.Array.data[2].secondValue
+      value: 3.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 9c1b1accd20048940acd595b1021345a,
+        type: 2}
+      propertyPath: timingPairs.Array.data[1].secondValue
+      value: 3.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 9c1b1accd20048940acd595b1021345a,
+        type: 2}
+      propertyPath: timingPairs.Array.data[3].secondValue
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1b1accd20048940acd595b1021345a, type: 2}
   m_IsPrefabParent: 0
@@ -777,13 +802,13 @@ MonoBehaviour:
   timingPairs:
   - firstValue: {fileID: 114602119706776116, guid: 3ab832568c82d8b42919d3c77216863f,
       type: 2}
-    secondValue: 1.97
+    secondValue: 2
   - firstValue: {fileID: 114408077989194678, guid: 8c953294495eaa3428243a1be47d750d,
       type: 2}
-    secondValue: 1.97
+    secondValue: 2
   - firstValue: {fileID: 114584150843385612, guid: 22afe37a77bf80a4d92013534ebdc4e3,
       type: 2}
-    secondValue: 4
+    secondValue: 3.96
   - firstValue: {fileID: 114198751408289642, guid: 17394ac7b94230d46988991e777b95a3,
       type: 2}
     secondValue: 2
@@ -792,7 +817,7 @@ MonoBehaviour:
     secondValue: 2
   - firstValue: {fileID: 114731098307876664, guid: 171f06b0691d0b246b8885e4e3adf4e1,
       type: 2}
-    secondValue: 4
+    secondValue: 3.96
   voidSprite: {fileID: 21300000, guid: 03450066823e90c4692f03232b66d51b, type: 3}
   instructionImageArray:
   - {fileID: 21300000, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
@@ -1975,7 +2000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdSpawnPosition: {x: 0, y: 4, z: 0}
-  miniGameTimer: 5
+  miniGameTimer: 8
   shakeText: {fileID: 1078130464}
   bird: {fileID: 4525137313455878, guid: 0d254e04b13d5f74d84fb4c85f97d4c7, type: 2}
 --- !u!1001 &1424800640
@@ -2102,7 +2127,7 @@ Prefab:
     - target: {fileID: 114509728815516748, guid: 588be0aa522d64f4e83151bf841542ac,
         type: 2}
       propertyPath: timingPairs.Array.data[2].secondValue
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114509728815516748, guid: 588be0aa522d64f4e83151bf841542ac,
         type: 2}
@@ -2163,6 +2188,26 @@ Prefab:
     - target: {fileID: 114509728815516748, guid: 588be0aa522d64f4e83151bf841542ac,
         type: 2}
       propertyPath: timingPairs.Array.data[4].secondValue
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 588be0aa522d64f4e83151bf841542ac,
+        type: 2}
+      propertyPath: timingPairs.Array.data[0].secondValue
+      value: 3.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 588be0aa522d64f4e83151bf841542ac,
+        type: 2}
+      propertyPath: timingPairs.Array.data[3].secondValue
+      value: 3.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 588be0aa522d64f4e83151bf841542ac,
+        type: 2}
+      propertyPath: introTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114509728815516748, guid: 588be0aa522d64f4e83151bf841542ac,
+        type: 2}
+      propertyPath: timingPairs.Array.data[1].secondValue
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2933,7 +2978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freestylePrize: 2000
-  activeTimelimit: 6
+  activeTimelimit: 8
   freestyleText: {fileID: 1610527599}
   stateFinished: 0
   freestyleUI: {fileID: 1019353713}
@@ -3036,7 +3081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdSpawnPosition: {x: 0, y: 4, z: 0}
-  miniGameTimer: 6
+  miniGameTimer: 8
   shakeText: {fileID: 1078130464}
   bird: {fileID: 4525137313455878, guid: 0d254e04b13d5f74d84fb4c85f97d4c7, type: 2}
 --- !u!1001 &2105048166

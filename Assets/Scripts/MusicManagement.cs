@@ -63,6 +63,11 @@ public class MusicManagement : MonoBehaviour {
 
         s.source.Stop();
     }
+    
+    public float GetAudioTime(string sound) {
+        MusicTrack s = Array.Find(tracks, item => item.name == sound);
+        return s.source.time;
+    }
 
     public void SetVolume(string sound, float Volume) {
         MusicTrack s = Array.Find(tracks, item => item.name == sound);

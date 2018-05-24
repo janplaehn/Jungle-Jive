@@ -17,7 +17,7 @@ public class AudienceFeedbackController : MonoBehaviour {
     private void Start()
     {
         audio = GetComponent<AudioSource>();
-        initialPitch = audio.pitch;
+        initialPitch = audio.pitch * 2;
     }
 
     public void GiveFaceFeedback(int score, int maxScore) {

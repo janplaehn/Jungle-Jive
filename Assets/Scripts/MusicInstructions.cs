@@ -26,20 +26,24 @@ public class MusicInstructions : State {
     private bool moveRatedP1 = false;
     private bool moveRatedP2 = false;
     private bool intro = true;
+    private float lastBeatTime;
     public float introTime;
     public static float tempo = 1;
     public Sprite timingSprite;
     [Range(0f, 4f)] public float minTimingSpriteSize = 1.34f;
     [Range(1f, 4f)] public float maxTimingSpriteSize = 4f;
 
+    private string track;
     private float errorMargin = 0.5f;
     public bool isPaused = false;
     private float scaleTiming = 1;
+    private MusicManagement musicManagement;
 
    
 
 	// Use this for initialization
 	public override void OnStart () {
+        track = transform.parent.GetComponent<GameState>().track;
         timingP1 = timingObjectP1.GetComponent<SpriteRenderer>();
         timingP2 = timingObjectP2.GetComponent<SpriteRenderer>();
         lastMove = timingPairs[lastPairIndex].firstValue;
@@ -69,6 +73,7 @@ public class MusicInstructions : State {
         timingObjectP2Small.transform.position = timingP2.gameObject.transform.position;
         if (musicSource != null) musicSource.Play();
         if (introTime > 0) started = false;
+        musicManagement = GameObject.Find("MusicManager").GetComponent<MusicManagement>();
     }
 
     public override bool OnUpdate ()
@@ -77,7 +82,7 @@ public class MusicInstructions : State {
         {
             timingP1.enabled = true;
             timingP2.enabled = true;
-            accumulatedTime += Time.deltaTime;
+            accumulatedTime = musicManagement.GetAudioTime(track) - lastBeatTime;
             if (accumulatedTime <= GetTiming())
             {
                 AnimateTiming(GetTiming(), accumulatedTime);
@@ -85,6 +90,7 @@ public class MusicInstructions : State {
             }
             else
             {
+                lastBeatTime = musicManagement.GetAudioTime(track);
                 if (moveRatedP1 == false) scoringSystem.AddFirstPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerOne), inputCheck.GetMaxScore(lastMove),false);
                 if (moveRatedP2 == false) scoringSystem.AddSecondPlayerScore(inputCheck.CheckScore(lastMove, 1, InputCheck.Players.PlayerTwo), inputCheck.GetMaxScore(lastMove),false);
                 lastPairIndex++;
@@ -95,13 +101,11 @@ public class MusicInstructions : State {
                     instruction.sprite = voidSprite;
                     nextInstruction.sprite = voidSprite;
                     lastPairIndex = 0;
-                    accumulatedTime = 0f;
                     return false;
                 }
 
                 moveRatedP1 = false;
                 moveRatedP2 = false;
-                accumulatedTime = 0f;
                 instruction.sprite = timingPairs[lastPairIndex].firstValue.moveInstruction;
                 
                 if (lastPairIndex + 1 <= timingPairs.Length - 1)
@@ -132,8 +136,7 @@ public class MusicInstructions : State {
         {
             timingP1.sprite = voidSprite;
             timingP2.sprite = voidSprite;
-            accumulatedTime += Time.deltaTime;
-            if (accumulatedTime >= introTime)
+            if (musicManagement.GetAudioTime(track) >= introTime)
             {
                 timingP1.enabled = true;
                 timingP2.enabled = true;
@@ -147,7 +150,7 @@ public class MusicInstructions : State {
                 timingP2.color = new Color(1f, 1f, 1f, 0.25f);
                 started = true;
                 intro = false;
-                accumulatedTime = 0f;
+                lastBeatTime = musicManagement.GetAudioTime(track);
             }
         }
 
