@@ -1343,6 +1343,7 @@ MonoBehaviour:
   - {fileID: 194504149}
   - {fileID: 1298367932}
   - {fileID: 179066859}
+  track: DanceMusic
 --- !u!114 &984638197
 MonoBehaviour:
   m_ObjectHideFlags: 0
