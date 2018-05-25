@@ -25,7 +25,7 @@ public static class Banana  {
         }
         disabledPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         GameObject.Find("banana").GetComponent<AudioSource>().Play();
-        switch (GameObject.FindGameObjectWithTag(playerTag).name)
+        /*switch (GameObject.FindGameObjectWithTag(playerTag).name)
         {
             case "Bridget_PlayerOne(Clone)":
                 GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Bridget");
@@ -53,7 +53,7 @@ public static class Banana  {
                 break;
             default:
                 break;
-        }
+        }*/
     }
 
     public static IEnumerator FlyOff(string playerTag) {
