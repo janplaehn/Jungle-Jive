@@ -18,6 +18,9 @@ public class LimbMovement : MonoBehaviour {
         stunTime = -1;
         isPaused = false;
         transform.rotation = transform.rotation = Quaternion.Euler(0, 0, startRotation);
+        lastRotation = transform.rotation.eulerAngles.z;
+        float currentRotation = Input.GetAxis(joystickAxis) * maxRotation * inversion + startRotation;
+        if (Mathf.Abs(currentRotation - lastRotation) > dampenThreshold) transform.rotation = Quaternion.Euler(0, 0, Input.GetAxis(joystickAxis) * maxRotation * inversion + startRotation);
     }
 	
 	void Update () {
