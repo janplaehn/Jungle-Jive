@@ -15,7 +15,7 @@ public class LeaderBoard : MonoBehaviour {
     public Color playerTwoColor;
 
     void Start () {
-        LeaderBoardTesting.TestAwake();
+        //LeaderBoardTesting.TestAwake();
         GetLeaderBoard();
     }
 
