@@ -35,7 +35,7 @@ public class Freestyle : State {
 
     public override void OnStart()
     {
-            freestyleText.SetActive(true);
+        freestyleText.SetActive(true);
         freestyleUI.SetActive(true);
         recentMovesP1 = new List<TempMove>();
         recentMovesP2 = new List<TempMove>();
