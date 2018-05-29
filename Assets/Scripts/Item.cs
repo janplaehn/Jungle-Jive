@@ -7,6 +7,7 @@ public class Item : MonoBehaviour {
 
     public enum Type {Mushroom, Banana, Mirror, Smoke}
     public Type ItemType = Type.Mushroom;
+    private static Type LastType = Type.Mirror;
     [Space(7)]
 
     [Header("Item Sprites")]
@@ -29,6 +30,7 @@ public class Item : MonoBehaviour {
         mirrorScript = GameObject.Find("GameController").GetComponent<MirrorEffect>();
         mushroomScript = GameObject.Find("GameController").GetComponent<Mushroom>();
         if (isRandomised) {
+            while(ItemType == LastType)
             ItemType = (Type)Random.Range(0, System.Enum.GetValues(typeof(Type)).Length);
         }
         SetSprite();

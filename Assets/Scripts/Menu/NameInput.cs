@@ -14,6 +14,7 @@ public class NameInput : MonoBehaviour {
     public GameObject Canvas;
     public Color highlightColor;
     public Color defaultColor;
+    public GameObject ConfirmButton;
 
     [HideInInspector] public static string playerOneName;
     [HideInInspector] public static string playerTwoName;

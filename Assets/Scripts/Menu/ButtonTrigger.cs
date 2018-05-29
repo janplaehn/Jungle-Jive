@@ -14,12 +14,29 @@ public class ButtonTrigger : MonoBehaviour {
     private bool isCharging;
     private Animator chargeAnimator;
     private Color32 highlightColor;
+    private bool isColliding;
 
     private void Awake() {
         highlightColor = new Color32(180, 180, 180, 255);
         timeLeft = chargeTime;
         chargeAnimator = chargeBar.GetComponent<Animator>();
         chargeAnimator.speed = 1 / chargeTime;
+        if (!isColliding) {
+            isCharging = false;
+            chargeBar.GetComponent<AudioSource>().Stop();
+            foreach (GameObject button in buttonDisplayObjects) {
+                if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = highlightColor;
+                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = highlightColor;
+            }
+        }
+        isColliding = false;
+    }
+
+    private void Start() {
+        foreach (GameObject button in buttonDisplayObjects) {
+            if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = highlightColor;
+            if (button.GetComponent<Image>()) button.GetComponent<Image>().color = highlightColor;
+        }
     }
 
     void Update () {
@@ -42,9 +59,15 @@ public class ButtonTrigger : MonoBehaviour {
             timeLeft = chargeTime;
             chargeBar.GetComponent<AudioSource>().Play();
             foreach (GameObject button in buttonDisplayObjects) {
-                if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = highlightColor;
-                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = highlightColor;
+                if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = Color.white;
+                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = Color.white;
             }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision) {
+        if (collision.gameObject.tag == "hand") {
+            isColliding = true;
         }
     }
 
@@ -53,8 +76,8 @@ public class ButtonTrigger : MonoBehaviour {
             isCharging = false;
             chargeBar.GetComponent<AudioSource>().Stop();
             foreach (GameObject button in buttonDisplayObjects) {
-                if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = Color.white;
-                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = Color.white;
+                if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = highlightColor;
+                if (button.GetComponent<Image>()) button.GetComponent<Image>().color = highlightColor;
             }
         }
     }
