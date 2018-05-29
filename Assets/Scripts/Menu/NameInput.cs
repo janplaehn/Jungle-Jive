@@ -96,6 +96,41 @@ public class NameInput : MonoBehaviour {
         }
     }
 
+    public void SkipInput(string Scene) {
+        currentLetter.GetComponent<Text>().color = defaultColor;
+        switch (player) {
+            case Player.Player1:
+                playerOneName = "";
+                foreach (GameObject go in letterGameObjects) {
+                    string randomLetter = GetRandomLetter().ToString();
+                    playerOneName = playerOneName + randomLetter;
+                    go.GetComponent<Text>().text = randomLetter;
+                }
+                Debug.Log(playerOneName + " entered");
+                namesEntered++;
+                break;
+            case Player.Player2:
+                playerTwoName = "";
+                foreach (GameObject go in letterGameObjects) {
+                    string randomLetter = GetRandomLetter().ToString();
+                    playerTwoName = playerTwoName + randomLetter;
+                    go.GetComponent<Text>().text = randomLetter;
+                }
+                Debug.Log(playerTwoName + " entered");
+                namesEntered++;
+                break;
+            default:
+                break;
+        }
+        foreach (GameObject button in PlayerButtons) {
+            button.gameObject.SetActive(false);
+        }
+        if (namesEntered >= 2) {
+            namesEntered = 0;
+            SceneManager.LoadScene(Scene);
+        }
+    }
+
     public void ConfirmLetters(string Scene) {
         currentLetter.GetComponent<Text>().color = defaultColor;
         if (currentLetterIndex == letterGameObjects.Length - 1) {
@@ -103,7 +138,7 @@ public class NameInput : MonoBehaviour {
                 case Player.Player1:
                     playerOneName = "";
                     foreach (GameObject go in letterGameObjects) {
-                        playerOneName = playerOneName + ((char)(go.GetComponent<Text>().text[0])).ToString();
+                        playerOneName = playerOneName + ((go.GetComponent<Text>().text[0])).ToString();
                     }
                     Debug.Log(playerOneName + " entered");
                     namesEntered++;
@@ -111,7 +146,7 @@ public class NameInput : MonoBehaviour {
                 case Player.Player2:
                     playerTwoName = "";
                     foreach (GameObject go in letterGameObjects) {
-                        playerTwoName = playerTwoName + ((char)(go.GetComponent<Text>().text[0])).ToString();
+                        playerTwoName = playerTwoName + ((go.GetComponent<Text>().text[0])).ToString();
                     }
                     Debug.Log(playerTwoName + " entered");
                     namesEntered++;
@@ -132,6 +167,11 @@ public class NameInput : MonoBehaviour {
             currentLetterIndex++;
             currentLetter.GetComponent<Text>().color = highlightColor;
         }
+    }
+
+    private char GetRandomLetter() {
+        string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        return letters[Random.Range(0, letters.Length)];
     }
 
 }
