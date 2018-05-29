@@ -11,7 +11,10 @@ public class LeaderBoard : MonoBehaviour {
     const int leaderBoardLength = 10;
     public Text[] leaderBoardText;
 
-	void Start () {
+    public Color playerOneColor;
+    public Color playerTwoColor;
+
+    void Start () {
         LeaderBoardTesting.TestAwake();
         GetLeaderBoard();
     }
@@ -46,10 +49,10 @@ public class LeaderBoard : MonoBehaviour {
             leaderBoardText[i].fontStyle = FontStyle.Normal;
             if (newScorePlayerOne == scoreArray[i])
             {
-                leaderBoardText[i].fontStyle = FontStyle.Bold;
+                leaderBoardText[i].color = playerOneColor;
             }
             else if (newScorePlayerTwo == scoreArray[i]) {
-                    leaderBoardText[i].fontStyle = FontStyle.Bold;
+                leaderBoardText[i].color = playerTwoColor;
             }
             leaderBoardText[i].text = temp;
         }
