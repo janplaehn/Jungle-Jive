@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 522821495}
   - component: {fileID: 522821494}
   - component: {fileID: 522821496}
+  - component: {fileID: 522821497}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -391,6 +392,38 @@ MonoBehaviour:
   playerTwoSpawn: {fileID: 0}
   showSecondPlayer: 0
   isInMenu: 1
+--- !u!114 &522821497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522821493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ccc832ecb3b23408c4094d6253de50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previewScene: TrailerScene
+  axes:
+  - LeftStickVertical
+  - RightStickVertical
+  - LeftStickHorizontal2
+  - RightStickHorizontal2
+  - P2LeftStickVertical
+  - P2RightStickVertical
+  - P2LeftStickHorizontal2
+  - P2RightStickHorizontal2
+  movementThreshold: 0.1
+  waitTime: 10
+  axesLastInput:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1001 &532985622
 Prefab:
   m_ObjectHideFlags: 0

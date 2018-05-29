@@ -44,6 +44,7 @@ public class TextFeedback : MonoBehaviour {
         if (isEarly == true)
         {
             temp.GetComponent<FeedBackSprite>().SetSprite(SetSprite(earlySprite));
+            temp.transform.localScale *= 1.5f;
         }
         /*switch (score/maxScore * 10) {
             case 0:
