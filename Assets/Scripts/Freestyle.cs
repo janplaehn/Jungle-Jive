@@ -8,6 +8,8 @@ public class Freestyle : State {
     public float activeTimelimit;
     private float accumulatedTime = 0;
     private float measureTimer = 0;
+    private float pointDecayTimer = 0;
+    public float pointDecayRate;
     public List<TempMove> recentMovesP1;
     public List<TempMove> recentMovesP2;
     public GameObject freestyleText;
@@ -15,6 +17,8 @@ public class Freestyle : State {
     private InputCheck inputCheck;
     int repitionScore = 25;
     int maxScore = 100;
+    int scoreDecay = 50;
+
     public bool stateFinished = false;
     private int playerOneScore;
     private int playerTwoScore;
@@ -52,6 +56,7 @@ public class Freestyle : State {
         SetScoreBars();
         accumulatedTime += Time.deltaTime;
         measureTimer += Time.deltaTime;
+        pointDecayTimer += Time.deltaTime;
         if (accumulatedTime < activeTimelimit && measureTimer > 0.25) 
         {
             TempMove tempMoveP1 = inputCheck.getCurrentMove(true);
@@ -115,8 +120,15 @@ public class Freestyle : State {
             stateFinished = true;
             return false;
         }
+        if (pointDecayTimer >= pointDecayRate)
+        {
+            playerOneScore -= scoreDecay;
+            playerTwoScore -= scoreDecay;
+            if (playerOneScore < 0) playerOneScore = 0;
+            if (playerTwoScore < 0) playerTwoScore = 0;
+            pointDecayTimer = 0;
+        }
         return true;
-        
     }
 
     public override void OnEnd ()
@@ -160,8 +172,8 @@ public class Freestyle : State {
 
     private void SetScoreBars() {
         Debug.Log(playerOneScore + " " + playerTwoScore);
-        scoreBarP1.GetComponent<Image>().fillAmount = (float)playerOneScore / 1000;
-        scoreBarP2.GetComponent<Image>().fillAmount = (float)playerTwoScore / 1000;
+        scoreBarP1.GetComponent<Image>().fillAmount = (float)playerOneScore / 2000;
+        scoreBarP2.GetComponent<Image>().fillAmount = (float)playerTwoScore / 2000;
     }
 
 }
