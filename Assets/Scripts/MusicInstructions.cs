@@ -43,6 +43,7 @@ public class MusicInstructions : State {
 
 	// Use this for initialization
 	public override void OnStart () {
+        if (introTime <= 0) introTime = 1;
         track = transform.parent.GetComponent<GameState>().track;
         timingP1 = timingObjectP1.GetComponent<SpriteRenderer>();
         timingP2 = timingObjectP2.GetComponent<SpriteRenderer>();
