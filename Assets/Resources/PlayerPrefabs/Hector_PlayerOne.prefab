@@ -551,7 +551,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.19730254, y: 0.8508733}
-    oldSize: {x: 4.03, y: 2.98}
+    oldSize: {x: 4.0299997, y: 2.98}
     newSize: {x: 0.68, y: 0.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -691,7 +691,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5304128, y: 0.91969055}
-    oldSize: {x: 1.91, y: 6.0899997}
+    oldSize: {x: 1.91, y: 6.09}
     newSize: {x: 0.36, y: 0.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1007,7 +1007,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4206073, y: 0.87227535}
-    oldSize: {x: 4.39, y: 8.2699995}
+    oldSize: {x: 4.39, y: 8.27}
     newSize: {x: 0.73, y: 1.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1107,7 +1107,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.49999988, y: 0.82813656}
-    oldSize: {x: 2.62, y: 6.55}
+    oldSize: {x: 2.62, y: 6.5499997}
     newSize: {x: 0.43, y: 1.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1530,7 +1530,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.45179388, y: 0.8806399}
-    oldSize: {x: 2.4099998, y: 3.51}
+    oldSize: {x: 2.41, y: 3.51}
     newSize: {x: 0.4, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1721,7 +1721,7 @@ MonoBehaviour:
   spritesHorrible:
   - {fileID: 21300000, guid: ff06772eb608a924c8771c8eeaeddd79, type: 3}
   earlySprite:
-  - {fileID: 21300000, guid: 3ca7bc92bfaa8c54db07b6da6d5a8957, type: 3}
+  - {fileID: 21300000, guid: a7103ed0273f4c744963c4abf2b6741e, type: 3}
   displayDuration: 1
 --- !u!114 &114513986021820128
 MonoBehaviour:
