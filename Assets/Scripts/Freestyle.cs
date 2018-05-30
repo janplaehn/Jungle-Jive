@@ -104,9 +104,10 @@ public class Freestyle : State {
                             tempScore = maxScore;
                         }
                     }
-                    playerTwoScore += tempScore;
-                    recentMovesP1.Add(tempMoveP1);
+
                 }
+                playerTwoScore += tempScore;
+                recentMovesP1.Add(tempMoveP1);
             }
 
             if (recentMovesP2.Count < 5) recentMovesP2.Add(tempMoveP2);
