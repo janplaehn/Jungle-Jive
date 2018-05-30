@@ -322,106 +322,111 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114689727545395842, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: shakeText
+      value: 
+      objectReference: {fileID: 1078130464}
+    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instruction
       value: 
       objectReference: {fileID: 1804847761}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP1
       value: 
       objectReference: {fileID: 1201393723}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP2
       value: 
       objectReference: {fileID: 1023665758}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP1Small
       value: 
       objectReference: {fileID: 1499589035}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP2Small
       value: 
       objectReference: {fileID: 453269822}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: nextInstruction
       value: 
       objectReference: {fileID: 1804847762}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114882818694792984, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: freestyleText
+      value: 
+      objectReference: {fileID: 1610527599}
+    - target: {fileID: 114882818694792984, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: freestyleUI
+      value: 
+      objectReference: {fileID: 1019353713}
+    - target: {fileID: 114882818694792984, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: scoreBarP1
+      value: 
+      objectReference: {fileID: 298072540}
+    - target: {fileID: 114882818694792984, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: scoreBarP2
+      value: 
+      objectReference: {fileID: 330485411}
+    - target: {fileID: 114814908244296100, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: shakeText
+      value: 
+      objectReference: {fileID: 1078130464}
+    - target: {fileID: 114933997954691680, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: shakeText
+      value: 
+      objectReference: {fileID: 1078130464}
+    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: instruction
       value: 
       objectReference: {fileID: 1804847761}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP1
       value: 
       objectReference: {fileID: 1201393723}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP2
       value: 
       objectReference: {fileID: 1023665758}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP1Small
       value: 
       objectReference: {fileID: 1499589035}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: timingObjectP2Small
       value: 
       objectReference: {fileID: 453269822}
-    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: nextInstruction
       value: 
       objectReference: {fileID: 1804847762}
-    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: instruction
+      propertyPath: lights
       value: 
-      objectReference: {fileID: 1804847761}
-    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+      objectReference: {fileID: 92552041}
+    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: timingObjectP1
+      propertyPath: confetti
       value: 
-      objectReference: {fileID: 1201393723}
-    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2
-      value: 
-      objectReference: {fileID: 1023665758}
-    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP1Small
-      value: 
-      objectReference: {fileID: 1499589035}
-    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2Small
-      value: 
-      objectReference: {fileID: 453269822}
-    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: nextInstruction
-      value: 
-      objectReference: {fileID: 1804847762}
-    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: playerOneSpawn
-      value: 
-      objectReference: {fileID: 1596589756}
-    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: playerTwoSpawn
-      value: 
-      objectReference: {fileID: 993222371}
+      objectReference: {fileID: 510194668}
     - target: {fileID: 114447834668686820, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
       propertyPath: firstPlayerScoreDisplay
@@ -442,156 +447,126 @@ Prefab:
       propertyPath: comboManager
       value: 
       objectReference: {fileID: 1804847758}
-    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: lights
+      propertyPath: playerOneSpawn
       value: 
-      objectReference: {fileID: 92552041}
-    - target: {fileID: 114803011154840648, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+      objectReference: {fileID: 1596589756}
+    - target: {fileID: 114198203017466294, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: confetti
+      propertyPath: playerTwoSpawn
       value: 
-      objectReference: {fileID: 510194668}
-    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: instruction
-      value: 
-      objectReference: {fileID: 1804847761}
-    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP1
-      value: 
-      objectReference: {fileID: 1201393723}
-    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2
-      value: 
-      objectReference: {fileID: 1023665758}
-    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP1Small
-      value: 
-      objectReference: {fileID: 1499589035}
-    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2Small
-      value: 
-      objectReference: {fileID: 453269822}
-    - target: {fileID: 114199349500436496, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: nextInstruction
-      value: 
-      objectReference: {fileID: 1804847762}
-    - target: {fileID: 114933997954691680, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: shakeText
-      value: 
-      objectReference: {fileID: 1078130464}
-    - target: {fileID: 114814908244296100, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: shakeText
-      value: 
-      objectReference: {fileID: 1078130464}
-    - target: {fileID: 114882818694792984, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: freestyleText
-      value: 
-      objectReference: {fileID: 1610527599}
-    - target: {fileID: 114882818694792984, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: freestyleUI
-      value: 
-      objectReference: {fileID: 1019353713}
-    - target: {fileID: 114882818694792984, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: scoreBarP1
-      value: 
-      objectReference: {fileID: 298072540}
-    - target: {fileID: 114882818694792984, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: scoreBarP2
-      value: 
-      objectReference: {fileID: 330485411}
-    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: instruction
-      value: 
-      objectReference: {fileID: 1804847761}
-    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP1
-      value: 
-      objectReference: {fileID: 1201393723}
-    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2
-      value: 
-      objectReference: {fileID: 1023665758}
-    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP1Small
-      value: 
-      objectReference: {fileID: 1499589035}
-    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: timingObjectP2Small
-      value: 
-      objectReference: {fileID: 453269822}
-    - target: {fileID: 114297375670934286, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: nextInstruction
-      value: 
-      objectReference: {fileID: 1804847762}
-    - target: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: freestyleText
-      value: 
-      objectReference: {fileID: 1610527599}
-    - target: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: freestyleUI
-      value: 
-      objectReference: {fileID: 1019353713}
-    - target: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: scoreBarP1
-      value: 
-      objectReference: {fileID: 298072540}
-    - target: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: scoreBarP2
-      value: 
-      objectReference: {fileID: 330485411}
-    - target: {fileID: 114689727545395842, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: shakeText
-      value: 
-      objectReference: {fileID: 1078130464}
-    - target: {fileID: 114593276062097544, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: states.Array.data[0]
-      value: 
-      objectReference: {fileID: 819076305}
-    - target: {fileID: 114593276062097544, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: states.Array.data[1]
-      value: 
-      objectReference: {fileID: 489009987}
-    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: introTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-        type: 2}
-      propertyPath: introTime
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 993222371}
     - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
         type: 2}
-      propertyPath: introTime
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: instruction
+      value: 
+      objectReference: {fileID: 1804847761}
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP1
+      value: 
+      objectReference: {fileID: 1201393723}
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP2
+      value: 
+      objectReference: {fileID: 1023665758}
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP1Small
+      value: 
+      objectReference: {fileID: 1499589035}
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP2Small
+      value: 
+      objectReference: {fileID: 453269822}
+    - target: {fileID: 114511983946637050, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: nextInstruction
+      value: 
+      objectReference: {fileID: 1804847762}
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: instruction
+      value: 
+      objectReference: {fileID: 1804847761}
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP1
+      value: 
+      objectReference: {fileID: 1201393723}
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP2
+      value: 
+      objectReference: {fileID: 1023665758}
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP1Small
+      value: 
+      objectReference: {fileID: 1499589035}
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP2Small
+      value: 
+      objectReference: {fileID: 453269822}
+    - target: {fileID: 114961130916021790, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: nextInstruction
+      value: 
+      objectReference: {fileID: 1804847762}
+    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: instruction
+      value: 
+      objectReference: {fileID: 1804847761}
+    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP1
+      value: 
+      objectReference: {fileID: 1201393723}
+    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP2
+      value: 
+      objectReference: {fileID: 1023665758}
+    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP1Small
+      value: 
+      objectReference: {fileID: 1499589035}
+    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: timingObjectP2Small
+      value: 
+      objectReference: {fileID: 453269822}
+    - target: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: nextInstruction
+      value: 
+      objectReference: {fileID: 1804847762}
+    - target: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: freestyleText
+      value: 
+      objectReference: {fileID: 1610527599}
+    - target: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: freestyleUI
+      value: 
+      objectReference: {fileID: 1019353713}
+    - target: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: scoreBarP1
+      value: 
+      objectReference: {fileID: 298072540}
+    - target: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
+        type: 2}
+      propertyPath: scoreBarP2
+      value: 
+      objectReference: {fileID: 330485411}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a3eaba5d459c94b8678d2c7c9b410b, type: 2}
   m_IsPrefabParent: 0
@@ -733,12 +708,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1021856276410182, guid: 0aa117a569457af4abc203828003f3d0,
     type: 2}
   m_PrefabInternal: {fileID: 995340796}
---- !u!114 &489009987 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114596254844860116, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-    type: 2}
-  m_PrefabInternal: {fileID: 368373060}
-  m_Script: {fileID: 11500000, guid: 8c4e456d37abc8943a5416f09b77e993, type: 3}
 --- !u!1001 &492087188
 Prefab:
   m_ObjectHideFlags: 0
@@ -905,12 +874,6 @@ Transform:
   m_Father: {fileID: 92552042}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &819076305 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114039265193189058, guid: 57a3eaba5d459c94b8678d2c7c9b410b,
-    type: 2}
-  m_PrefabInternal: {fileID: 368373060}
-  m_Script: {fileID: 11500000, guid: fac5041f21ee9214d9150edc003dc79b, type: 3}
 --- !u!1 &901024989
 GameObject:
   m_ObjectHideFlags: 0
