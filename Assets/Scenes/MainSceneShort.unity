@@ -265,7 +265,7 @@ MonoBehaviour:
     secondValue: 4
   - firstValue: {fileID: 114436193855374376, guid: 3f76f1a2cf6ad8846838993d28245ce6,
       type: 2}
-    secondValue: 1.97
+    secondValue: 1
   - firstValue: {fileID: 114408077989194678, guid: 8c953294495eaa3428243a1be47d750d,
       type: 2}
     secondValue: 1.97
@@ -808,7 +808,7 @@ MonoBehaviour:
     secondValue: 2
   - firstValue: {fileID: 114584150843385612, guid: 22afe37a77bf80a4d92013534ebdc4e3,
       type: 2}
-    secondValue: 3.96
+    secondValue: 2
   - firstValue: {fileID: 114198751408289642, guid: 17394ac7b94230d46988991e777b95a3,
       type: 2}
     secondValue: 2
@@ -817,7 +817,7 @@ MonoBehaviour:
     secondValue: 2
   - firstValue: {fileID: 114731098307876664, guid: 171f06b0691d0b246b8885e4e3adf4e1,
       type: 2}
-    secondValue: 3.96
+    secondValue: 2
   voidSprite: {fileID: 21300000, guid: 03450066823e90c4692f03232b66d51b, type: 3}
   instructionImageArray:
   - {fileID: 21300000, guid: 2fc5a4de44deaa24ab1bfde8fbc28048, type: 3}
@@ -2979,6 +2979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freestylePrize: 2000
   activeTimelimit: 8
+  pointDecayRate: 0
   freestyleText: {fileID: 1610527599}
   stateFinished: 0
   freestyleUI: {fileID: 1019353713}
