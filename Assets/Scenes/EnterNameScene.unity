@@ -385,6 +385,9 @@ MonoBehaviour:
   chargeBar: {fileID: 850733102}
   buttonDisplayObjects:
   - {fileID: 2056729887}
+  doesAccelerate: 1
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &71211160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1439,6 +1442,9 @@ MonoBehaviour:
   chargeBar: {fileID: 1536279244}
   buttonDisplayObjects:
   - {fileID: 586954068}
+  doesAccelerate: 0
+  accelerationSpeed: 0.95
+  minChargeTime: 0
 --- !u!61 &540144496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1665,6 +1671,9 @@ MonoBehaviour:
   chargeBar: {fileID: 1403381984}
   buttonDisplayObjects:
   - {fileID: 3319101}
+  doesAccelerate: 1
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &569828427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2020,6 +2029,9 @@ MonoBehaviour:
   chargeBar: {fileID: 388072297}
   buttonDisplayObjects:
   - {fileID: 1170813069}
+  doesAccelerate: 1
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &799080063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3269,6 +3281,9 @@ MonoBehaviour:
   chargeBar: {fileID: 2050233390}
   buttonDisplayObjects:
   - {fileID: 269392426}
+  doesAccelerate: 0
+  accelerationSpeed: 0.95
+  minChargeTime: 0
 --- !u!61 &1117538997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4093,6 +4108,9 @@ MonoBehaviour:
   chargeBar: {fileID: 60461869}
   buttonDisplayObjects:
   - {fileID: 2050735597}
+  doesAccelerate: 1
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &1525340847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4360,6 +4378,9 @@ MonoBehaviour:
   chargeBar: {fileID: 324591684}
   buttonDisplayObjects:
   - {fileID: 294200427}
+  doesAccelerate: 0
+  accelerationSpeed: 0.95
+  minChargeTime: 0
 --- !u!61 &1546151002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4774,6 +4795,9 @@ MonoBehaviour:
   chargeBar: {fileID: 1811017490}
   buttonDisplayObjects:
   - {fileID: 1021201605}
+  doesAccelerate: 0
+  accelerationSpeed: 0.95
+  minChargeTime: 0
 --- !u!61 &1685550239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5128,6 +5152,18 @@ Prefab:
     - target: {fileID: 1338787175256898, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
       propertyPath: m_Name
       value: Background (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153349861716988, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.130645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153349861716988, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.130645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153349861716988, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.130645
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11fb79e1e1a4a5e42b96a9a238a53305, type: 2}

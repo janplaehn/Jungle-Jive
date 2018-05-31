@@ -9,12 +9,16 @@ public class ButtonTrigger : MonoBehaviour {
     public GameObject button;
     public GameObject chargeBar;
     public GameObject[] buttonDisplayObjects;
+    public bool doesAccelerate;
+    public float accelerationSpeed = 0.97f;
+    public float minChargeTime = 0.2f;
 
     private float timeLeft;
     private bool isCharging;
     private Animator chargeAnimator;
     private Color32 highlightColor;
     private bool isColliding;
+    private float acceleratedTime;
 
     private void Awake() {
         highlightColor = new Color32(180, 180, 180, 255);
@@ -24,6 +28,7 @@ public class ButtonTrigger : MonoBehaviour {
         if (!isColliding) {
             isCharging = false;
             chargeBar.GetComponent<AudioSource>().Stop();
+            acceleratedTime = chargeTime;
             foreach (GameObject button in buttonDisplayObjects) {
                 if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = highlightColor;
                 if (button.GetComponent<Image>()) button.GetComponent<Image>().color = highlightColor;
@@ -37,6 +42,7 @@ public class ButtonTrigger : MonoBehaviour {
             if (button.GetComponent<SpriteRenderer>()) button.GetComponent<SpriteRenderer>().color = highlightColor;
             if (button.GetComponent<Image>()) button.GetComponent<Image>().color = highlightColor;
         }
+        acceleratedTime = chargeTime;
     }
 
     void Update () {
@@ -49,6 +55,11 @@ public class ButtonTrigger : MonoBehaviour {
         if (timeLeft <= 0 && isCharging) {
             timeLeft = chargeTime;
             button.GetComponent<Button>().onClick.Invoke();
+            if (acceleratedTime >= minChargeTime)
+            acceleratedTime *= accelerationSpeed;
+            if (doesAccelerate) {
+                timeLeft = acceleratedTime;
+            }
         }
         SetChargeBarAnimation();
 	}
@@ -80,6 +91,7 @@ public class ButtonTrigger : MonoBehaviour {
                 if (button.GetComponent<Image>()) button.GetComponent<Image>().color = highlightColor;
             }
         }
+        acceleratedTime = chargeTime;
     }
 
     public void SetChargeBarAnimation() {
