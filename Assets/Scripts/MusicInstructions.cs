@@ -160,6 +160,7 @@ public class MusicInstructions : State {
 
     public override void OnEnd()
     {
+        Debug.Log("END");
         timingP1.sprite = voidSprite;
         timingP2.sprite = voidSprite;
         timingObjectP1Small.GetComponent<SpriteRenderer>().sprite = voidSprite;

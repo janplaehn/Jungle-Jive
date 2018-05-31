@@ -30,8 +30,11 @@ public class Item : MonoBehaviour {
         mirrorScript = GameObject.Find("GameController").GetComponent<MirrorEffect>();
         mushroomScript = GameObject.Find("GameController").GetComponent<Mushroom>();
         if (isRandomised) {
-            while(ItemType == LastType)
-            ItemType = (Type)Random.Range(0, System.Enum.GetValues(typeof(Type)).Length);
+            while (ItemType == LastType)
+            {
+                ItemType = (Type)Random.Range(0, System.Enum.GetValues(typeof(Type)).Length);
+            }
+            LastType = ItemType;
         }
         SetSprite();
     }

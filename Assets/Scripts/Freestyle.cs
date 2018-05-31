@@ -17,7 +17,8 @@ public class Freestyle : State {
     private InputCheck inputCheck;
     int repitionScore = 25;
     int maxScore = 100;
-    int scoreDecay = 50;
+    int scoreDecay = 25;
+
 
     public bool stateFinished = false;
     private int playerOneScore;
