@@ -15,7 +15,7 @@ public class Freestyle : State {
     public GameObject freestyleText;
     private ScoringSystem scoringSystem;
     private InputCheck inputCheck;
-    int repitionScore = 25;
+    int repitionScore = 20;
     int maxScore = 100;
     int scoreDecay = 25;
 
