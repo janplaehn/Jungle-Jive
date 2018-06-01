@@ -10,12 +10,12 @@ public class LeaderBoardPlayerSpawn : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        if (PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 1) > PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0))
-        {
-            playerTwoSpawn.transform.position = outsideScreen;
-        } else
+        if (PlayerPrefs.GetInt(ScoringSystem.firstPlayerScoreKey, 0) > PlayerPrefs.GetInt(ScoringSystem.secondPlayerScoreKey, 0))
         {
             playerOneSpawn.transform.position = outsideScreen;
+        } else
+        {
+            playerTwoSpawn.transform.position = outsideScreen;
         }
     }
 }
