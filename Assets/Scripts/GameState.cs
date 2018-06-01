@@ -29,6 +29,7 @@ public class GameState : MonoBehaviour {
             states[stateIndex].OnEnd();
             NextState();
         }
+
 	}
 
     public void AddState(GameObject gameObjectAdded)

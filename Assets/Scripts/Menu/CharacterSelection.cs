@@ -91,7 +91,8 @@ public class CharacterSelection : MonoBehaviour {
                 default:
                     break;
             }
-        } else if (player == Player.Player2)
+        }
+        if (player == Player.Player2)
         {
             switch (GameObject.FindGameObjectWithTag("Player2").name)
             {
