@@ -307,6 +307,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7bf292825211bbc4aa5a1d985da1c832, type: 3}
   - {fileID: 8300000, guid: 1d4774bf6ac037344a11e58b54edce13, type: 3}
   - {fileID: 8300000, guid: 90fc747c6fcc54c44b5f51b06f2677b0, type: 3}
+  monicaClips:
+  - {fileID: 8300000, guid: ea76bac36d4d75d4fb5689d6e82593e3, type: 3}
+  - {fileID: 8300000, guid: b4b8575fdf268ca4f9d29135e729a205, type: 3}
+  - {fileID: 8300000, guid: a7b792bba2fb8a044944e9957a991304, type: 3}
   PlayerButtons:
   - {fileID: 1717239134}
   - {fileID: 1150939575}
@@ -1216,6 +1220,9 @@ MonoBehaviour:
   chargeBar: {fileID: 888120725}
   buttonDisplayObjects:
   - {fileID: 738061175}
+  doesAccelerate: 0
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &457512052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1463,6 +1470,9 @@ MonoBehaviour:
   chargeBar: {fileID: 947307228}
   buttonDisplayObjects:
   - {fileID: 62002470}
+  doesAccelerate: 0
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &479250619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2782,6 +2792,9 @@ MonoBehaviour:
   chargeBar: {fileID: 1393019659}
   buttonDisplayObjects:
   - {fileID: 173618913}
+  doesAccelerate: 0
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &1150939578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3686,6 +3699,9 @@ MonoBehaviour:
   chargeBar: {fileID: 461804778}
   buttonDisplayObjects:
   - {fileID: 397402910}
+  doesAccelerate: 0
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &1717239137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3791,6 +3807,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7bf292825211bbc4aa5a1d985da1c832, type: 3}
   - {fileID: 8300000, guid: 1d4774bf6ac037344a11e58b54edce13, type: 3}
   - {fileID: 8300000, guid: 90fc747c6fcc54c44b5f51b06f2677b0, type: 3}
+  monicaClips:
+  - {fileID: 8300000, guid: ea76bac36d4d75d4fb5689d6e82593e3, type: 3}
+  - {fileID: 8300000, guid: b4b8575fdf268ca4f9d29135e729a205, type: 3}
+  - {fileID: 8300000, guid: a7b792bba2fb8a044944e9957a991304, type: 3}
   PlayerButtons:
   - {fileID: 1952930905}
   - {fileID: 1747533531}
@@ -4030,6 +4050,9 @@ MonoBehaviour:
   chargeBar: {fileID: 130235890}
   buttonDisplayObjects:
   - {fileID: 1075830266}
+  doesAccelerate: 0
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &1747533534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4283,6 +4306,9 @@ MonoBehaviour:
   chargeBar: {fileID: 1378390405}
   buttonDisplayObjects:
   - {fileID: 1196486772}
+  doesAccelerate: 0
+  accelerationSpeed: 0.97
+  minChargeTime: 0.2
 --- !u!61 &1952930908
 BoxCollider2D:
   m_ObjectHideFlags: 0

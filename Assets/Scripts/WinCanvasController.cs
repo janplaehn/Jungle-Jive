@@ -13,6 +13,7 @@ public class WinCanvasController : MonoBehaviour {
     public AudioClip jakobWin;
     public AudioClip hectorWin;
     public AudioClip IsabellWin;
+    public AudioClip MonicaWin;
 
     void Start () {
         player1Text.SetActive(false);
@@ -64,6 +65,9 @@ public class WinCanvasController : MonoBehaviour {
                 break;
             case "Isabell_PlayerOne(Clone)":
                 audioSource.PlayOneShot(IsabellWin);
+                break;
+            case "Monica_PlayerOne(Clone)":
+                audioSource.PlayOneShot(MonicaWin);
                 break;
             default:
                 break;

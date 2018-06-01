@@ -13,6 +13,7 @@ public class CharacterSelection : MonoBehaviour {
     public AudioClip[] jakobClips;
     public AudioClip[] hectorClips;
     public AudioClip[] isabellClips;
+    public AudioClip[] monicaClips;
 
     public GameObject[] PlayerButtons;
     public SkinSetting skinSetting;
@@ -73,16 +74,19 @@ public class CharacterSelection : MonoBehaviour {
             switch (GameObject.FindGameObjectWithTag("Player1").name) 
             {
                 case "Bridget_PlayerOne(Clone)":
-                    audioSource.PlayOneShot(bridgetClips[Random.Range(0, bridgetClips.Length + 1)]);
+                    audioSource.PlayOneShot(bridgetClips[Random.Range(0, bridgetClips.Length)]);
                     break;
                 case "Jakob_PlayerOne(Clone)":
-                    audioSource.PlayOneShot(jakobClips[Random.Range(0, jakobClips.Length + 1)]);
+                    audioSource.PlayOneShot(jakobClips[Random.Range(0, jakobClips.Length)]);
                     break;
                 case "Hector_PlayerOne(Clone)":
-                    audioSource.PlayOneShot(hectorClips[Random.Range(0, hectorClips.Length + 1)]);
+                    audioSource.PlayOneShot(hectorClips[Random.Range(0, hectorClips.Length)]);
                     break;
                 case "Isabell_PlayerOne(Clone)":
-                    audioSource.PlayOneShot(isabellClips[Random.Range(0, isabellClips.Length + 1)]);
+                    audioSource.PlayOneShot(isabellClips[Random.Range(0, isabellClips.Length)]);
+                    break;
+                case "Monica_PlayerOne(Clone)":
+                    audioSource.PlayOneShot(monicaClips[Random.Range(0, monicaClips.Length)]);
                     break;
                 default:
                     break;
@@ -92,16 +96,16 @@ public class CharacterSelection : MonoBehaviour {
             switch (GameObject.FindGameObjectWithTag("Player2").name)
             {
                 case "Bridget_PlayerOne(Clone)":
-                    audioSource.PlayOneShot(bridgetClips[Random.Range(0, bridgetClips.Length + 1)]);
+                    audioSource.PlayOneShot(bridgetClips[Random.Range(0, bridgetClips.Length)]);
                     break;
                 case "Jakob_PlayerOne(Clone)":
-                    audioSource.PlayOneShot(jakobClips[Random.Range(0, jakobClips.Length + 1)]);
+                    audioSource.PlayOneShot(jakobClips[Random.Range(0, jakobClips.Length)]);
                     break;
                 case "Hector_PlayerOne(Clone)":
-                    audioSource.PlayOneShot(hectorClips[Random.Range(0, hectorClips.Length + 1)]);
+                    audioSource.PlayOneShot(hectorClips[Random.Range(0, hectorClips.Length)]);
                     break;
                 case "Isabell_PlayerOne(Clone)":
-                    audioSource.PlayOneShot(isabellClips[Random.Range(0, isabellClips.Length + 1)]);
+                    audioSource.PlayOneShot(isabellClips[Random.Range(0, isabellClips.Length)]);
                     break;
                 default:
                     break;

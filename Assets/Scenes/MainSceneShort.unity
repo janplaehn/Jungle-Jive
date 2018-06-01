@@ -210,6 +210,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &176582795 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1291470390895008, guid: 93ccbe043d84eaa4e8770674a0d7909b,
+    type: 2}
+  m_PrefabInternal: {fileID: 42697775}
+--- !u!114 &176582796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 176582795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd8f587783e63b43b93899328cecbeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bridgetScream: {fileID: 8300000, guid: 157c131a4dfc370439d083a82277f4d8, type: 3}
+  jakobScream: {fileID: 8300000, guid: 219ec7533f426264e9317579a5a42118, type: 3}
+  hectorScream: {fileID: 8300000, guid: 3ea7cb54adec3994694795bb556b9adf, type: 3}
+  isabelleScream: {fileID: 8300000, guid: 9dca9f9d446f47f4594d0333768d283e, type: 3}
+  monicaScream: {fileID: 8300000, guid: a6822a3aada89b044967ebe2871707b5, type: 3}
 --- !u!1 &179066857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2300,7 @@ MonoBehaviour:
   jakobWin: {fileID: 8300000, guid: 33e6d6217a1f1ae4c93c4d8cb0ec8fc9, type: 3}
   hectorWin: {fileID: 8300000, guid: 5aa8ed7199b7aef438b1f207fb144fe6, type: 3}
   IsabellWin: {fileID: 8300000, guid: ca9f49143d942e745af2f8e3bd5c0b3d, type: 3}
+  MonicaWin: {fileID: 8300000, guid: 6c9494c34d6b46c4b82556fe934ce624, type: 3}
 --- !u!114 &1556658391
 MonoBehaviour:
   m_ObjectHideFlags: 0

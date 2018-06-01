@@ -25,35 +25,41 @@ public static class Banana  {
         }
         disabledPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         GameObject.Find("banana").GetComponent<AudioSource>().Play();
-        /*switch (GameObject.FindGameObjectWithTag(playerTag).name)
+        switch (GameObject.FindGameObjectWithTag(playerTag).name)
         {
             case "Bridget_PlayerOne(Clone)":
-                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Bridget");
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Bridget");
                 break;
             case "Bridget_PlayerTwo(Clone)":
-                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Bridget");
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Bridget");
                 break;
             case "Jakob_PlayerOne(Clone)":
-                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Jakob");
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Jakob");
                 break;
             case "Jakob_PlayerTwo(Clone)":
-                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Jakob");
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Jakob");
                 break;
             case "Hector_PlayerOne(Clone)":
-                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Hector");
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Hector");
                 break;
             case "Hector_PlayerTwo(Clone)":
-                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Hector");
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Hector");
                 break;
             case "Isabell_PlayerOne(Clone)":
-                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Isabelle");
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Isabelle");
                 break;
             case "Isabell_PlayerTwo(Clone)":
-                GameObject.Find("GameController").GetComponent<BananaSounds>().PlayClip("Isabelle");
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Isabelle");
+                break;
+            case "Monica_PlayerOne(Clone)":
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Monica");
+                break;
+            case "Monica_PlayerTwo(Clone)":
+                GameObject.Find("Sounds").GetComponent<BananaSounds>().PlayClip("Monica");
                 break;
             default:
                 break;
-        }*/
+        } 
     }
 
     public static IEnumerator FlyOff(string playerTag) {
