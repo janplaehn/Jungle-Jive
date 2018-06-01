@@ -14,7 +14,9 @@ public class NameInput : MonoBehaviour {
     public GameObject Canvas;
     public Color highlightColor;
     public Color defaultColor;
-    public GameObject ConfirmButton;
+
+    public Image buttonImage;
+    public Sprite confirmNameImage;
 
     [HideInInspector] public static string playerOneName;
     [HideInInspector] public static string playerTwoName;
@@ -133,7 +135,7 @@ public class NameInput : MonoBehaviour {
 
     public void ConfirmLetters(string Scene) {
         currentLetter.GetComponent<Text>().color = defaultColor;
-        if (currentLetterIndex == letterGameObjects.Length - 1) {
+            if (currentLetterIndex == letterGameObjects.Length - 1) {
             switch (player) {
                 case Player.Player1:
                     playerOneName = "";
@@ -163,6 +165,9 @@ public class NameInput : MonoBehaviour {
             }
         }
         else {
+            if (currentLetterIndex == letterGameObjects.Length - 2) {
+                buttonImage.sprite = confirmNameImage;
+            }
             currentLetter = letterGameObjects[currentLetterIndex + 1];
             currentLetterIndex++;
             currentLetter.GetComponent<Text>().color = highlightColor;
